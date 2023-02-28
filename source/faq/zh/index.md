@@ -2,6 +2,9 @@
 ### 文件排版设计
 歌曲、歌词及歌手最佳实践.
 #### 网盘歌曲（推荐）
+暂时支持阿里云盘、WebDAV、OneDrive、Google Drive  
+对于其他网盘可以参考 https://github.com/alist-org/alist （后续会出详细教程）
+
 专辑名文件夹: 专辑名-歌手  
 专辑封面图: 歌曲图片和专辑封面用同一张，放在专辑文件夹下命名为cover.png(jpg)  
 歌手封面：新建artist文件夹，命名为歌手名.png(jpg)  
