@@ -12,10 +12,11 @@
 
 网盘歌曲播放时自动缓存，仅需下载一次。
 
+![image](../file_folder_design.png)
+
 ### 本地手机歌曲
 遵循google 官方规范，Android手机自动识别整理生成数据。
 
 
-**文件改动后需要在app 歌曲源内重新刷新同步数据**
+**所以文件改动后需要在app歌曲源内重新刷新同步数据**
 
-![image](../file_folder_design.png)
