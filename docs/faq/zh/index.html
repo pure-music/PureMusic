@@ -1249,7 +1249,7 @@ pre[class*="language-"] {
 </head>
 <body>
   <article class="markdown-body"><h2 class="atx" id="最佳实践">最佳实践</h2>
-<h3 class="atx" id="文件排版设计">文件排版设计</h3>
+<h3 class="atx" id="1-文件排版设计">1 文件排版设计</h3>
 <p>歌曲、歌词及歌手最佳实践.</p>
 <h4 class="atx" id="网盘歌曲（推荐）">网盘歌曲（推荐）</h4>
 <p>暂时支持阿里云盘、WebDAV、OneDrive、Google Drive、Dropbox<br>对于其他网盘可以转为WebDAV协议适用，参考 <a href="https://github.com/alist-org/alist">https://github.com/alist-org/alist</a> （非技术用户有一定的门槛，后续会出详细教程）</p>
@@ -1269,9 +1269,13 @@ pre[class*="language-"] {
 </ul>
 <p>网盘歌曲播放时自动缓存，仅需下载一次。</p>
 <p><img alt="image" src="../file_folder_design.png"></p>
-<h3 class="atx" id="本地手机歌曲">本地手机歌曲</h3>
+<h4 class="atx" id="本地手机歌曲">本地手机歌曲</h4>
 <p>遵循google 官方规范，Android手机自动识别整理生成数据。</p>
 <p><strong>所有文件改动后需要在app歌曲源内重新刷新同步数据</strong></p>
+<h3 class="atx" id="2-歌曲时长为0">2 歌曲时长为0</h3>
+<p>由于网络歌曲无法知道时长问题，为了提高性能，没有在同步网盘的下载歌曲，需要歌曲播放后才能记录歌曲时长。</p>
+<h3 class="atx" id="3-网盘歌曲是全部自动下载到本地吗？">3 网盘歌曲是全部自动下载到本地吗？</h3>
+<p>不是，只有播放的时候才会分段下载歌曲文件，并且配置了缓存，减少本地磁盘占用。</p>
 </article>
 </body>
 </html>
