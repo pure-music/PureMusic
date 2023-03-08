@@ -19,7 +19,7 @@
 
 网盘歌曲播放时自动缓存，仅需下载一次。
 
-![image](../file_folder_design.png)
+![image](../file_folder_design.webp)
 
 #### 本地手机歌曲
 遵循google 官方规范，Android手机自动识别整理生成数据。
