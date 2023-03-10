@@ -1,6 +1,6 @@
 ## 介绍
 
-Pure Music 一款轻量、简单音乐播放器。 支持本地歌曲、WebDAV、GoogleDrive、OneDrive、Dropbox、阿里云盘等网盘歌曲播放。
+Pure Music 一款轻量、简单音乐播放器。 支持本地歌曲、百度云盘、阿里云盘、WebDAV、GoogleDrive、OneDrive、Dropbox等网盘歌曲播放。
 
 <img alt="" src="https://gitee.com/seefree/see/raw/master/images/screenshot-20230215-142131.jpeg" title="" referrerpolicy="no-referrer">
 
