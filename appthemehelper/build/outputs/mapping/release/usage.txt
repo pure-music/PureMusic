@@ -1,0 +1,176 @@
+code.name.monkey.appthemehelper.ATH:
+    public final boolean didThemeValuesChange(android.content.Context,long)
+    public final void setBackgroundTint(android.view.View,int)
+code.name.monkey.appthemehelper.ATHActivity
+code.name.monkey.appthemehelper.BuildConfig
+code.name.monkey.appthemehelper.ColorPaletteKt
+code.name.monkey.appthemehelper.ThemeStore$Companion:
+    public final int activityTheme(android.content.Context)
+    public final boolean autoGeneratePrimaryDark(android.content.Context)
+    public final boolean coloredNavigationBar(android.content.Context)
+    public final boolean coloredStatusBar(android.content.Context)
+    public final code.name.monkey.appthemehelper.ThemeStore editTheme(android.content.Context)
+    public final boolean isConfigured(android.content.Context)
+    public final boolean isConfigured(android.content.Context,int)
+    public final void markChanged(android.content.Context)
+    public final int navigationBarColor(android.content.Context)
+    public final int primaryColor(android.content.Context)
+    public final void setThemeValue(code.name.monkey.appthemehelper.ThemeStore$ThemeValue)
+    public final int textColorPrimary(android.content.Context)
+    public final int textColorPrimaryInverse(android.content.Context)
+    public final int textColorSecondary(android.content.Context)
+    public final int textColorSecondaryInverse(android.content.Context)
+code.name.monkey.appthemehelper.ThemeStore:
+    private final android.content.Context mContext
+    private final android.content.SharedPreferences$Editor mEditor
+    private void <init>(android.content.Context)
+    public synthetic void <init>(android.content.Context,kotlin.jvm.internal.DefaultConstructorMarker)
+    public code.name.monkey.appthemehelper.ThemeStore accentColor(int)
+    public code.name.monkey.appthemehelper.ThemeStore accentColorAttr(int)
+    public code.name.monkey.appthemehelper.ThemeStore accentColorRes(int)
+    public static final synthetic void access$setThemeValue$cp(code.name.monkey.appthemehelper.ThemeStore$ThemeValue)
+    public code.name.monkey.appthemehelper.ThemeStore activityTheme(int)
+    public code.name.monkey.appthemehelper.ThemeStore autoGeneratePrimaryDark(boolean)
+    public code.name.monkey.appthemehelper.ThemeStore coloredNavigationBar(boolean)
+    public code.name.monkey.appthemehelper.ThemeStore coloredStatusBar(boolean)
+    public void commit()
+    public code.name.monkey.appthemehelper.ThemeStore navigationBarColor(int)
+    public code.name.monkey.appthemehelper.ThemeStore navigationBarColorAttr(int)
+    public code.name.monkey.appthemehelper.ThemeStore navigationBarColorRes(int)
+    public code.name.monkey.appthemehelper.ThemeStore primaryColor(int)
+    public code.name.monkey.appthemehelper.ThemeStore primaryColorAttr(int)
+    public code.name.monkey.appthemehelper.ThemeStore primaryColorDark(int)
+    public code.name.monkey.appthemehelper.ThemeStore primaryColorDarkAttr(int)
+    public code.name.monkey.appthemehelper.ThemeStore primaryColorDarkRes(int)
+    public code.name.monkey.appthemehelper.ThemeStore primaryColorRes(int)
+    public code.name.monkey.appthemehelper.ThemeStore statusBarColor(int)
+    public code.name.monkey.appthemehelper.ThemeStore statusBarColorAttr(int)
+    public code.name.monkey.appthemehelper.ThemeStore statusBarColorRes(int)
+    public code.name.monkey.appthemehelper.ThemeStore textColorPrimary(int)
+    public code.name.monkey.appthemehelper.ThemeStore textColorPrimaryAttr(int)
+    public code.name.monkey.appthemehelper.ThemeStore textColorPrimaryInverse(int)
+    public code.name.monkey.appthemehelper.ThemeStore textColorPrimaryInverseAttr(int)
+    public code.name.monkey.appthemehelper.ThemeStore textColorPrimaryInverseRes(int)
+    public code.name.monkey.appthemehelper.ThemeStore textColorPrimaryRes(int)
+    public code.name.monkey.appthemehelper.ThemeStore textColorSecondary(int)
+    public code.name.monkey.appthemehelper.ThemeStore textColorSecondaryAttr(int)
+    public code.name.monkey.appthemehelper.ThemeStore textColorSecondaryInverse(int)
+    public code.name.monkey.appthemehelper.ThemeStore textColorSecondaryInverseAttr(int)
+    public code.name.monkey.appthemehelper.ThemeStore textColorSecondaryInverseRes(int)
+    public code.name.monkey.appthemehelper.ThemeStore textColorSecondaryRes(int)
+    public code.name.monkey.appthemehelper.ThemeStore wallpaperColor(android.content.Context,int)
+code.name.monkey.appthemehelper.ThemeStoreInterface
+code.name.monkey.appthemehelper.ThemeStorePrefKeys$Companion
+code.name.monkey.appthemehelper.ThemeStorePrefKeys
+code.name.monkey.appthemehelper.common.ATHActionBarActivity
+code.name.monkey.appthemehelper.common.ATHToolbarActivity
+code.name.monkey.appthemehelper.common.prefs.ATEColorPreference:
+    public void <init>(android.content.Context)
+    public void <init>(android.content.Context,android.util.AttributeSet,int)
+    public final void setColor(int,int)
+code.name.monkey.appthemehelper.common.prefs.supportv7.ATEColorPreference:
+    public void <init>(android.content.Context)
+    public final void setColor(int,int)
+code.name.monkey.appthemehelper.common.prefs.supportv7.ATEDialogPreference:
+    public void <init>(android.content.Context)
+    public void <init>(android.content.Context,android.util.AttributeSet,int)
+code.name.monkey.appthemehelper.common.prefs.supportv7.ATEListPreference:
+    public void <init>(android.content.Context)
+    public void <init>(android.content.Context,android.util.AttributeSet,int)
+code.name.monkey.appthemehelper.common.prefs.supportv7.ATEPreference:
+    public void <init>(android.content.Context)
+    public void <init>(android.content.Context,android.util.AttributeSet,int)
+code.name.monkey.appthemehelper.common.prefs.supportv7.ATEPreferenceCategory:
+    public void <init>(android.content.Context,android.util.AttributeSet,int)
+code.name.monkey.appthemehelper.common.prefs.supportv7.ATEPreferenceFragmentCompat
+code.name.monkey.appthemehelper.common.prefs.supportv7.ATESeekBarPreference:
+    public void <init>(android.content.Context)
+    public void <init>(android.content.Context,android.util.AttributeSet,int)
+    public final java.lang.String getUnit()
+    public final void setUnit(java.lang.String)
+code.name.monkey.appthemehelper.common.prefs.supportv7.ATESwitchPreference:
+    public void <init>(android.content.Context)
+    public void <init>(android.content.Context,android.util.AttributeSet,int)
+code.name.monkey.appthemehelper.common.prefs.supportv7.dialogs.ATEListPreferenceDialogFragmentCompat
+code.name.monkey.appthemehelper.common.prefs.supportv7.dialogs.ATEPreferenceDialogFragment
+code.name.monkey.appthemehelper.common.views.ATEAccentTextView
+code.name.monkey.appthemehelper.util.ATHUtil:
+    public final int resolveColor(android.content.Context,int)
+code.name.monkey.appthemehelper.util.ColorUtil:
+    public final int darkenColor(int)
+    public final int darkenColor(int,float)
+    public final int darkenColorTheme(int)
+    private final double getColorDarkness(int)
+    public final int getContrastColor(int)
+    private final double getDifference(int,int)
+    public final int getInverseColor(int)
+    public final int getMixedColor(int,int)
+    public final int getReadableColorDark(int,int)
+    public final int getReadableColorLight(int,int)
+    public final int getReadableText(int,int)
+    public final int getReadableText(int,int,int)
+    public final int invertColor(int)
+    public final boolean isColorSaturated(int)
+    public final int lightenColor(int)
+    public final int lightenColor(int,float)
+    public final int withAlpha(int,float)
+code.name.monkey.appthemehelper.util.MaterialUtil
+code.name.monkey.appthemehelper.util.MaterialValueHelper
+code.name.monkey.appthemehelper.util.TextInputLayoutUtil
+code.name.monkey.appthemehelper.util.TintHelper:
+    public void <init>()
+    public static void colorHandles(android.widget.TextView,int)
+    public static android.graphics.drawable.Drawable createTintedDrawable(android.content.Context,int,int)
+code.name.monkey.appthemehelper.util.ToolbarContentTintHelper$1
+code.name.monkey.appthemehelper.util.ToolbarContentTintHelper$2
+code.name.monkey.appthemehelper.util.ToolbarContentTintHelper$ATHMenuPresenterCallback
+code.name.monkey.appthemehelper.util.ToolbarContentTintHelper$ATHOnMenuItemClickListener
+code.name.monkey.appthemehelper.util.ToolbarContentTintHelper$InternalToolbarContentTintUtil$1
+code.name.monkey.appthemehelper.util.ToolbarContentTintHelper$InternalToolbarContentTintUtil$2
+code.name.monkey.appthemehelper.util.ToolbarContentTintHelper$InternalToolbarContentTintUtil$SearchViewTintUtil
+code.name.monkey.appthemehelper.util.ToolbarContentTintHelper$InternalToolbarContentTintUtil
+code.name.monkey.appthemehelper.util.ToolbarContentTintHelper
+code.name.monkey.appthemehelper.util.VersionUtils:
+    public final boolean hasMarshmallow()
+    public final boolean hasNougat()
+    public final boolean hasNougatMR()
+    public final boolean hasOreo()
+    public final boolean hasOreoMR1()
+    public final boolean hasP()
+    public static final boolean hasQ()
+    public static final boolean hasR()
+code.name.monkey.appthemehelper.util.ViewUtil:
+    public final void removeOnGlobalLayoutListener(android.view.View,android.view.ViewTreeObserver$OnGlobalLayoutListener)
+code.name.monkey.appthemehelper.ThemeStore$Companion$themeValue$1:
+    public final void isBlack(android.content.Context)
+    public final void isMD3Enabled(android.content.Context)
+    public final void isWallpaperAccentEnabled(android.content.Context)
+code.name.monkey.appthemehelper.ThemeStore$Companion:
+    public final void getThemeValue()
+    public final int wallpaperColor(android.content.Context,boolean)
+code.name.monkey.appthemehelper.ThemeStore$ThemeValue
+code.name.monkey.appthemehelper.ThemeStore:
+    public static final synthetic void access$getThemeValue$cp()
+code.name.monkey.appthemehelper.common.prefs.ATEColorPreference:
+    public int border
+    public int color
+    public android.view.View mView
+    public final void invalidateColor()
+code.name.monkey.appthemehelper.common.prefs.supportv7.ATEColorPreference:
+    public int border
+    public int color
+    public android.view.View mView
+    public final void invalidateColor()
+code.name.monkey.appthemehelper.common.prefs.supportv7.ATESeekBarPreference:
+    public final void appendUnit(android.widget.TextView,android.text.Editable)
+code.name.monkey.appthemehelper.util.ColorUtil:
+    public final int adjustAlpha(int,float)
+    public final int blendColors(int,int,float)
+    public final int desaturateColor(int,float)
+    public final int stripAlpha(int)
+code.name.monkey.appthemehelper.util.TintHelper:
+    public static android.graphics.drawable.Drawable createTintedDrawable(android.graphics.drawable.Drawable,android.content.res.ColorStateList)
+    public static android.graphics.drawable.Drawable modifySwitchDrawable(android.content.Context,android.graphics.drawable.Drawable,int,boolean,boolean,boolean)
+    public static void setTintAuto(android.view.View,int,boolean)
+code.name.monkey.appthemehelper.util.VersionUtils
+code.name.monkey.appthemehelper.util.ViewUtil

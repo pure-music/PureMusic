@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="MissingPrefix">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/songCurrentProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:gravity="center"
+        android:minWidth="40dp"
+        android:singleLine="true"
+        android:textColor="?android:attr/textColorSecondary"
+        app:layout_constraintBottom_toBottomOf="@+id/progressSlider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/progressSlider"
+        tools:text="@tools:sample/date/hhmmss" />
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/progressSlider"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxHeight="2dp"
+        android:paddingVertical="@dimen/seekbar_padding"
+        android:progressDrawable="@drawable/color_progress_seek"
+        android:splitTrack="false"
+        android:thumb="@drawable/switch_square"
+        app:layout_constraintEnd_toStartOf="@id/songTotalTime"
+        app:layout_constraintStart_toEndOf="@id/songCurrentProgress"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:progress="20" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/songTotalTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:minWidth="40dp"
+        android:singleLine="true"
+        android:textColor="?android:attr/textColorSecondary"
+        app:layout_constraintBottom_toBottomOf="@+id/progressSlider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/progressSlider"
+        tools:text="@tools:sample/date/hhmmss" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/songInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/md_red_500"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:padding="4dp"
+        android:textAllCaps="true"
+        android:textColor="?android:attr/textColorSecondary"
+        android:textSize="12sp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toTopOf="@+id/text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressSlider"
+        tools:text="@tools:sample/full_names" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/md_red_500"
+        android:ellipsize="end"
+        android:letterSpacing="0.1"
+        android:maxLines="1"
+        android:padding="4dp"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextViewBody2"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toTopOf="@+id/titleContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/songInfo"
+        tools:text="@tools:sample/full_names" />
+
+    <LinearLayout
+        android:id="@+id/titleContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toTopOf="@+id/playerMediaControllerContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/md_red_500"
+            android:clickable="true"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:fontFeatureSettings="smcp"
+            android:freezesText="true"
+            android:gravity="center"
+            android:letterSpacing="0.2"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:padding="4dp"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            tools:text="@tools:sample/full_names" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/playerMediaControllerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutDirection="ltr"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/volumeFragmentContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleContainer"
+        tools:ignore="ContentDescription,UnusedAttribute"
+        tools:showIn="@layout/fragment_player_playback_controls">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/playPauseButton"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_centerVertical="true"
+            android:background="?colorAccent"
+            android:padding="12dp"
+            android:scaleType="fitCenter"
+            tools:ignore="MissingPrefix"
+            tools:src="@drawable/ic_pause" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="8dp">
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/repeatButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:background="?attr/roundSelector"
+                android:padding="22dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/ic_repeat"
+                tools:ignore="MissingPrefix" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/shuffleButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:background="?attr/roundSelector"
+                android:padding="22dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/ic_shuffle"
+                tools:ignore="MissingPrefix" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/volumeFragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:backgroundTint="@color/md_red_400"
+        tools:layout_height="52dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

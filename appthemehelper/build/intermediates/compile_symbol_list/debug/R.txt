@@ -1,0 +1,88 @@
+int attr ateKey_pref 0x0
+int attr ateKey_prefCategory_textColor 0x0
+int attr ateKey_pref_color 0x0
+int attr ateKey_pref_dialog 0x0
+int attr ateKey_pref_editText 0x0
+int attr ateKey_pref_list 0x0
+int attr ateKey_pref_multiSelect 0x0
+int attr ateKey_pref_switch 0x0
+int attr ateKey_pref_unit 0x0
+int color ate_button_disabled_dark 0x0
+int color ate_button_disabled_light 0x0
+int color ate_button_text_disabled_dark 0x0
+int color ate_button_text_disabled_light 0x0
+int color ate_control_disabled_dark 0x0
+int color ate_control_disabled_light 0x0
+int color ate_control_normal_dark 0x0
+int color ate_control_normal_light 0x0
+int color ate_primary_text_dark 0x0
+int color ate_primary_text_light 0x0
+int color ate_secondary_text_dark 0x0
+int color ate_secondary_text_light 0x0
+int color ate_switch_thumb_disabled_dark 0x0
+int color ate_switch_thumb_disabled_light 0x0
+int color ate_switch_thumb_normal_dark 0x0
+int color ate_switch_thumb_normal_light 0x0
+int color ate_switch_track_disabled_dark 0x0
+int color ate_switch_track_disabled_light 0x0
+int color ate_switch_track_normal_dark 0x0
+int color ate_switch_track_normal_light 0x0
+int color ate_text_disabled_dark 0x0
+int color ate_text_disabled_light 0x0
+int color m3_accent_color 0x0
+int color m3_accent_color2 0x0
+int color m3_accent_color2_night 0x0
+int color m3_selection_color 0x0
+int color md_black_1000 0x0
+int color md_black_800 0x0
+int color md_blue_500 0x0
+int color md_blue_A400 0x0
+int color md_cyan_400 0x0
+int color md_deep_orange_A400 0x0
+int color md_deep_purple_300 0x0
+int color md_deep_purple_400 0x0
+int color md_deep_purple_500 0x0
+int color md_deep_purple_600 0x0
+int color md_deep_purple_700 0x0
+int color md_deep_purple_800 0x0
+int color md_deep_purple_A200 0x0
+int color md_deep_purple_A400 0x0
+int color md_green_500 0x0
+int color md_green_A700 0x0
+int color md_grey_200 0x0
+int color md_grey_400 0x0
+int color md_grey_500 0x0
+int color md_grey_600 0x0
+int color md_grey_700 0x0
+int color md_grey_800 0x0
+int color md_light_green_A400 0x0
+int color md_red_400 0x0
+int color md_red_500 0x0
+int color md_red_A400 0x0
+int color md_teal_A400 0x0
+int color md_white_1000 0x0
+int color md_yellow_A400 0x0
+int dimen ate_circleview_border 0x0
+int drawable ate_check 0x0
+int id circle 0x0
+int layout ate_preference_color 0x0
+int layout ate_preference_switch_support 0x0
+int string app_name 0x0
+int[] styleable ATEColorPreference { 0x0 }
+int styleable ATEColorPreference_ateKey_pref_color 0
+int[] styleable ATEDialogPreference { 0x0 }
+int styleable ATEDialogPreference_ateKey_pref_dialog 0
+int[] styleable ATEEditTextPreference { 0x0 }
+int styleable ATEEditTextPreference_ateKey_pref_editText 0
+int[] styleable ATEListPreference { 0x0 }
+int styleable ATEListPreference_ateKey_pref_list 0
+int[] styleable ATEMultiSelectPreference { 0x0 }
+int styleable ATEMultiSelectPreference_ateKey_pref_multiSelect 0
+int[] styleable ATEPreference { 0x0 }
+int styleable ATEPreference_ateKey_pref 0
+int[] styleable ATEPreferenceCategory { 0x0 }
+int styleable ATEPreferenceCategory_ateKey_prefCategory_textColor 0
+int[] styleable ATESeekBarPreference { 0x0 }
+int styleable ATESeekBarPreference_ateKey_pref_unit 0
+int[] styleable ATESwitchPreference { 0x0 }
+int styleable ATESwitchPreference_ateKey_pref_switch 0

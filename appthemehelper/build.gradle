@@ -1,0 +1,38 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+android {
+    compileSdk 33
+    namespace "code.name.monkey.appthemehelper"
+
+    defaultConfig {
+        minSdk 21
+        targetSdk 32
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    lint {
+        abortOnError false
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    def lifecycle_version= '2.5.1'
+    def navigation_version = '2.5.1'
+    def mdc_version = '1.7.0-rc01'
+    def preference_version = '1.2.0'
+    def appcompat_version = '1.5.0'
+    def core_version='1.8.0'
+
+    implementation "androidx.appcompat:appcompat:$appcompat_version"
+    implementation "com.google.android.material:material:$mdc_version"
+    implementation "androidx.preference:preference-ktx:$preference_version"
+}

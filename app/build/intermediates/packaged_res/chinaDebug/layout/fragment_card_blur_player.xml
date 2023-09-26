@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface"
+    android:clickable="true"
+    android:focusable="true">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/colorBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorSurface"
+        android:scaleType="centerCrop"
+        app:srcCompat="@color/black_color" />
+
+    <View
+        android:id="@+id/mask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#20000000" />
+
+    <include layout="@layout/shadow_statusbar_toolbar" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/status_bar" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:clickable="true"
+            android:ellipsize="end"
+            android:focusable="true"
+            android:freezesText="true"
+            android:paddingHorizontal="24dp"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textAppearance="@style/TextViewHeadline6"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textStyle="bold"
+            tools:text="@tools:sample/lorem" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            android:ellipsize="end"
+            android:focusable="true"
+            android:freezesText="true"
+            android:paddingHorizontal="24dp"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textAppearance="@style/TextViewBody1"
+            android:textColor="?android:attr/textColorPrimary"
+            tools:text="@tools:sample/lorem" />
+
+        <FrameLayout
+            android:id="@+id/cardContainer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/playerAlbumCoverFragment"
+                android:name="com.caij.puremusic.fragments.player.PlayerAlbumCoverFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:layout="@layout/fragment_album_full_card_cover" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/cover_lyrics"
+                android:name="com.caij.puremusic.fragments.player.CoverLyricsFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                tools:layout="@layout/fragment_cover_lyrics" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/playbackControlsFragment"
+                android:name="com.caij.puremusic.fragments.player.cardblur.CardBlurPlaybackControlsFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                tools:layout="@layout/fragment_card_blur_player_playback_controls" />
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/playerToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="bottom">
+
+            <include
+                android:id="@+id/include_play_menu"
+                layout="@layout/include_player_menu" />
+
+        </FrameLayout>
+    </LinearLayout>
+
+</FrameLayout>

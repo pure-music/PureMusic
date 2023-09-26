@@ -1,0 +1,1292 @@
+-- Merging decision tree log ---
+application
+INJECTED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:47:5-345:19
+MERGED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:47:5-345:19
+MERGED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:47:5-345:19
+MERGED from [:vip] /Users/bytedance/StudioProjects/pure-music/vip/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-12:19
+MERGED from [:vip] /Users/bytedance/StudioProjects/pure-music/vip/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-12:19
+MERGED from [com.afollestad.material-dialogs:input:3.3.0] /Users/bytedance/.gradle/caches/transforms-3/baa9c3c06f3c96cb01fb78b2f863e6f2/transformed/jetified-input-3.3.0/AndroidManifest.xml:11:5-47
+MERGED from [com.afollestad.material-dialogs:input:3.3.0] /Users/bytedance/.gradle/caches/transforms-3/baa9c3c06f3c96cb01fb78b2f863e6f2/transformed/jetified-input-3.3.0/AndroidManifest.xml:11:5-47
+MERGED from [com.afollestad.material-dialogs:color:3.3.0] /Users/bytedance/.gradle/caches/transforms-3/e2c854e37a7fa6cbb1d699216974fde7/transformed/jetified-color-3.3.0/AndroidManifest.xml:11:5-47
+MERGED from [com.afollestad.material-dialogs:color:3.3.0] /Users/bytedance/.gradle/caches/transforms-3/e2c854e37a7fa6cbb1d699216974fde7/transformed/jetified-color-3.3.0/AndroidManifest.xml:11:5-47
+MERGED from [com.afollestad.material-dialogs:core:3.3.0] /Users/bytedance/.gradle/caches/transforms-3/2cc38df4cf74bd449fb839822644571b/transformed/jetified-core-3.3.0/AndroidManifest.xml:11:5-47
+MERGED from [com.afollestad.material-dialogs:core:3.3.0] /Users/bytedance/.gradle/caches/transforms-3/2cc38df4cf74bd449fb839822644571b/transformed/jetified-core-3.3.0/AndroidManifest.xml:11:5-47
+MERGED from [io.insert-koin:koin-android:3.3.3] /Users/bytedance/.gradle/caches/transforms-3/ab3610bebbf4cc7f36a6ea1307f0c715/transformed/jetified-koin-android-3.3.3/AndroidManifest.xml:9:5-20
+MERGED from [io.insert-koin:koin-android:3.3.3] /Users/bytedance/.gradle/caches/transforms-3/ab3610bebbf4cc7f36a6ea1307f0c715/transformed/jetified-koin-android-3.3.3/AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:okhttp3-integration:4.15.1] /Users/bytedance/.gradle/caches/transforms-3/2e3b13e41a159e45834f1372094f3d3c/transformed/jetified-okhttp3-integration-4.15.1/AndroidManifest.xml:9:5-13:19
+MERGED from [com.github.bumptech.glide:okhttp3-integration:4.15.1] /Users/bytedance/.gradle/caches/transforms-3/2e3b13e41a159e45834f1372094f3d3c/transformed/jetified-okhttp3-integration-4.15.1/AndroidManifest.xml:9:5-13:19
+MERGED from [com.github.dhaval2404:imagepicker:2.1] /Users/bytedance/.gradle/caches/transforms-3/ff97037da9e7fbf862cd71624b486304/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:21:5-40:19
+MERGED from [com.github.dhaval2404:imagepicker:2.1] /Users/bytedance/.gradle/caches/transforms-3/ff97037da9e7fbf862cd71624b486304/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:21:5-40:19
+MERGED from [com.google.android.material:material:1.8.0] /Users/bytedance/.gradle/caches/transforms-3/c9291eca4cbb4de075ef56502c9cb188/transformed/material-1.8.0/AndroidManifest.xml:24:5-20
+MERGED from [com.google.android.material:material:1.8.0] /Users/bytedance/.gradle/caches/transforms-3/c9291eca4cbb4de075ef56502c9cb188/transformed/material-1.8.0/AndroidManifest.xml:24:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/bytedance/.gradle/caches/transforms-3/912974a0d9516528955ecbd208a18eb1/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/bytedance/.gradle/caches/transforms-3/912974a0d9516528955ecbd208a18eb1/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
+MERGED from [com.afollestad:material-cab:2.0.1] /Users/bytedance/.gradle/caches/transforms-3/f79ab138f53a0aa3ac0b1bf0a12499b6/transformed/jetified-material-cab-2.0.1/AndroidManifest.xml:11:5-20
+MERGED from [com.afollestad:material-cab:2.0.1] /Users/bytedance/.gradle/caches/transforms-3/f79ab138f53a0aa3ac0b1bf0a12499b6/transformed/jetified-material-cab-2.0.1/AndroidManifest.xml:11:5-20
+MERGED from [io.github.caij:EasyPermissions:3.1.1] /Users/bytedance/.gradle/caches/transforms-3/d04614fb1bd6a9d70fd3be5cb3006696/transformed/jetified-EasyPermissions-3.1.1/AndroidManifest.xml:9:5-12:19
+MERGED from [io.github.caij:EasyPermissions:3.1.1] /Users/bytedance/.gradle/caches/transforms-3/d04614fb1bd6a9d70fd3be5cb3006696/transformed/jetified-EasyPermissions-3.1.1/AndroidManifest.xml:9:5-12:19
+MERGED from [com.caij.lib:lifemanager:1.1.3.0] /Users/bytedance/.gradle/caches/transforms-3/73d306b643338dfc432890c6b3e34ded/transformed/jetified-lifemanager-1.1.3.0/AndroidManifest.xml:11:5-15:19
+MERGED from [com.caij.lib:lifemanager:1.1.3.0] /Users/bytedance/.gradle/caches/transforms-3/73d306b643338dfc432890c6b3e34ded/transformed/jetified-lifemanager-1.1.3.0/AndroidManifest.xml:11:5-15:19
+MERGED from [com.github.bumptech.glide:glide:4.15.1] /Users/bytedance/.gradle/caches/transforms-3/4bd74b401bb965b7f4f688430e27fad6/transformed/jetified-glide-4.15.1/AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:glide:4.15.1] /Users/bytedance/.gradle/caches/transforms-3/4bd74b401bb965b7f4f688430e27fad6/transformed/jetified-glide-4.15.1/AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.gms:play-services-auth:20.4.1] /Users/bytedance/.gradle/caches/transforms-3/d63127a709fc6a083197384e24c3e269/transformed/jetified-play-services-auth-20.4.1/AndroidManifest.xml:22:5-38:19
+MERGED from [com.google.android.gms:play-services-auth:20.4.1] /Users/bytedance/.gradle/caches/transforms-3/d63127a709fc6a083197384e24c3e269/transformed/jetified-play-services-auth-20.4.1/AndroidManifest.xml:22:5-38:19
+MERGED from [com.r0adkll:slidableactivity:2.1.0] /Users/bytedance/.gradle/caches/transforms-3/300ff858904ac7932b3a2929a7fe6ad0/transformed/jetified-slidableactivity-2.1.0/AndroidManifest.xml:9:5-20
+MERGED from [com.r0adkll:slidableactivity:2.1.0] /Users/bytedance/.gradle/caches/transforms-3/300ff858904ac7932b3a2929a7fe6ad0/transformed/jetified-slidableactivity-2.1.0/AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.gms:play-services-fido:19.0.1] /Users/bytedance/.gradle/caches/transforms-3/80ae9af5d5b462a24ec77b4c22b684a1/transformed/jetified-play-services-fido-19.0.1/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.android.gms:play-services-fido:19.0.1] /Users/bytedance/.gradle/caches/transforms-3/80ae9af5d5b462a24ec77b4c22b684a1/transformed/jetified-play-services-fido-19.0.1/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.android.gms:play-services-base:18.0.1] /Users/bytedance/.gradle/caches/transforms-3/d13b636cef8b9415d1cad567ec5a9065/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-base:18.0.1] /Users/bytedance/.gradle/caches/transforms-3/d13b636cef8b9415d1cad567ec5a9065/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] /Users/bytedance/.gradle/caches/transforms-3/708ebdaf30f77d6b88c571568e98283c/transformed/jetified-play-services-tasks-18.0.1/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] /Users/bytedance/.gradle/caches/transforms-3/708ebdaf30f77d6b88c571568e98283c/transformed/jetified-play-services-tasks-18.0.1/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/bytedance/.gradle/caches/transforms-3/75ea85cec0d7596770e308b0eab55d61/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:20:5-24:19
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/bytedance/.gradle/caches/transforms-3/75ea85cec0d7596770e308b0eab55d61/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:20:5-24:19
+MERGED from [androidx.window:window:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/8b77a247549c44b86eb3b18f870f535b/transformed/jetified-window-1.0.0/AndroidManifest.xml:24:5-31:19
+MERGED from [androidx.window:window:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/8b77a247549c44b86eb3b18f870f535b/transformed/jetified-window-1.0.0/AndroidManifest.xml:24:5-31:19
+MERGED from [com.tencent.vasdolly:helper:3.0.6] /Users/bytedance/.gradle/caches/transforms-3/4017495fe8e63b3b1e505c511cd977b3/transformed/jetified-helper-3.0.6/AndroidManifest.xml:9:5-10:19
+MERGED from [com.tencent.vasdolly:helper:3.0.6] /Users/bytedance/.gradle/caches/transforms-3/4017495fe8e63b3b1e505c511cd977b3/transformed/jetified-helper-3.0.6/AndroidManifest.xml:9:5-10:19
+MERGED from [com.facebook.soloader:soloader:0.10.3] /Users/bytedance/.gradle/caches/transforms-3/f30412b7fd5d16a0810ab6ac3cd69528/transformed/jetified-soloader-0.10.3/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.soloader:soloader:0.10.3] /Users/bytedance/.gradle/caches/transforms-3/f30412b7fd5d16a0810ab6ac3cd69528/transformed/jetified-soloader-0.10.3/AndroidManifest.xml:11:5-20
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/bytedance/.gradle/caches/transforms-3/42d4acb4322ab6a7a315952c435f3adb/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/bytedance/.gradle/caches/transforms-3/42d4acb4322ab6a7a315952c435f3adb/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.core:core:1.9.0] /Users/bytedance/.gradle/caches/transforms-3/62cf0fca72429c0b2d34ee3065e27d4d/transformed/core-1.9.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.9.0] /Users/bytedance/.gradle/caches/transforms-3/62cf0fca72429c0b2d34ee3065e27d4d/transformed/core-1.9.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/bytedance/.gradle/caches/transforms-3/35312deb7d45ac4a7f3c02b0263cafa2/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/bytedance/.gradle/caches/transforms-3/35312deb7d45ac4a7f3c02b0263cafa2/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:25:5-35:19
+MERGED from [com.github.bumptech.glide:gifdecoder:4.15.1] /Users/bytedance/.gradle/caches/transforms-3/e7f15036603caf2183a583ef79e529ff/transformed/jetified-gifdecoder-4.15.1/AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.15.1] /Users/bytedance/.gradle/caches/transforms-3/e7f15036603caf2183a583ef79e529ff/transformed/jetified-gifdecoder-4.15.1/AndroidManifest.xml:9:5-20
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/bytedance/.gradle/caches/transforms-3/a50d6668e39363b85c2a230608beec35/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/bytedance/.gradle/caches/transforms-3/a50d6668e39363b85c2a230608beec35/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [com.android.billingclient:billing:6.0.0] /Users/bytedance/.gradle/caches/transforms-3/f1ad32224ba619ceda352ca547b567fd/transformed/jetified-billing-6.0.0/AndroidManifest.xml:18:5-28:19
+MERGED from [com.android.billingclient:billing:6.0.0] /Users/bytedance/.gradle/caches/transforms-3/f1ad32224ba619ceda352ca547b567fd/transformed/jetified-billing-6.0.0/AndroidManifest.xml:18:5-28:19
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/bytedance/.gradle/caches/transforms-3/ae08fbfa277194a7f7362afc81108854/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:27:5-35:19
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/bytedance/.gradle/caches/transforms-3/ae08fbfa277194a7f7362afc81108854/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:27:5-35:19
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/bytedance/.gradle/caches/transforms-3/bf6a590a41fdc664fcaff307e06947ab/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:25:5-39:19
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/bytedance/.gradle/caches/transforms-3/bf6a590a41fdc664fcaff307e06947ab/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:25:5-39:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/bytedance/.gradle/caches/transforms-3/17099d0eee1b28d298fe11da032479d3/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/bytedance/.gradle/caches/transforms-3/17099d0eee1b28d298fe11da032479d3/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [com.github.bosphere.android-fadingedgelayout:fadingedgelayout:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/e05ea525e1b81aa01bc0b92987bb5564/transformed/jetified-fadingedgelayout-1.0.0/AndroidManifest.xml:8:5-20
+MERGED from [com.github.bosphere.android-fadingedgelayout:fadingedgelayout:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/e05ea525e1b81aa01bc0b92987bb5564/transformed/jetified-fadingedgelayout-1.0.0/AndroidManifest.xml:8:5-20
+MERGED from [com.github.jetradarmobile:android-snowfall:1.2.1] /Users/bytedance/.gradle/caches/transforms-3/5825264ad5334c947819eb0c58103cc5/transformed/jetified-android-snowfall-1.2.1/AndroidManifest.xml:7:5-20
+MERGED from [com.github.jetradarmobile:android-snowfall:1.2.1] /Users/bytedance/.gradle/caches/transforms-3/5825264ad5334c947819eb0c58103cc5/transformed/jetified-android-snowfall-1.2.1/AndroidManifest.xml:7:5-20
+MERGED from [me.tankery.lib:circularSeekBar:1.4.1] /Users/bytedance/.gradle/caches/transforms-3/162f8f5538ecc90e8426f1fd72f90548/transformed/jetified-circularSeekBar-1.4.1/AndroidManifest.xml:9:5-20
+MERGED from [me.tankery.lib:circularSeekBar:1.4.1] /Users/bytedance/.gradle/caches/transforms-3/162f8f5538ecc90e8426f1fd72f90548/transformed/jetified-circularSeekBar-1.4.1/AndroidManifest.xml:9:5-20
+MERGED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:32:5-76:19
+MERGED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:32:5-76:19
+	android:requestLegacyExternalStorage
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:53:9-52
+	android:roundIcon
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:55:9-55
+	android:configChanges
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:50:9-55
+	android:restoreAnyVersion
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:54:9-41
+	android:largeHeap
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:60:9-33
+	android:icon
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:51:9-44
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.9.0] /Users/bytedance/.gradle/caches/transforms-3/62cf0fca72429c0b2d34ee3065e27d4d/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
+	android:supportsRtl
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:56:9-35
+	android:label
+		INJECTED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:52:9-36
+	tools:targetApi
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:61:9-28
+	android:allowBackup
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:49:9-48
+		REJECTED from [io.github.caij:EasyPermissions:3.1.1] /Users/bytedance/.gradle/caches/transforms-3/d04614fb1bd6a9d70fd3be5cb3006696/transformed/jetified-EasyPermissions-3.1.1/AndroidManifest.xml:10:9-35
+	android:theme
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:57:9-61
+	tools:replace
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:59:9-44
+	android:usesCleartextTraffic
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:58:9-44
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:48:9-28
+provider#androidx.core.content.FileProvider
+INJECTED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:217:9-225:20
+	android:authorities
+		INJECTED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml
+manifest
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:2:1-355:12
+INJECTED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:2:1-355:12
+INJECTED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:2:1-355:12
+INJECTED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:2:1-355:12
+MERGED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:2:1-355:12
+MERGED from [androidx.databinding:viewbinding:7.2.2] /Users/bytedance/.gradle/caches/transforms-3/bbf07dd4f74b0e55c3dbb186c4ce5a23/transformed/jetified-viewbinding-7.2.2/AndroidManifest.xml:17:1-24:12
+MERGED from [:appthemehelper] /Users/bytedance/StudioProjects/pure-music/appthemehelper/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:vip] /Users/bytedance/StudioProjects/pure-music/vip/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-14:12
+MERGED from [:shared] /Users/bytedance/StudioProjects/pure-music/shared/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [com.afollestad.material-dialogs:input:3.3.0] /Users/bytedance/.gradle/caches/transforms-3/baa9c3c06f3c96cb01fb78b2f863e6f2/transformed/jetified-input-3.3.0/AndroidManifest.xml:2:1-13:12
+MERGED from [com.afollestad.material-dialogs:color:3.3.0] /Users/bytedance/.gradle/caches/transforms-3/e2c854e37a7fa6cbb1d699216974fde7/transformed/jetified-color-3.3.0/AndroidManifest.xml:2:1-13:12
+MERGED from [com.afollestad.material-dialogs:core:3.3.0] /Users/bytedance/.gradle/caches/transforms-3/2cc38df4cf74bd449fb839822644571b/transformed/jetified-core-3.3.0/AndroidManifest.xml:2:1-13:12
+MERGED from [io.insert-koin:koin-android:3.3.3] /Users/bytedance/.gradle/caches/transforms-3/ab3610bebbf4cc7f36a6ea1307f0c715/transformed/jetified-koin-android-3.3.3/AndroidManifest.xml:2:1-11:12
+MERGED from [net.yslibrary.keyboardvisibilityevent:keyboardvisibilityevent:3.0.0-RC3] /Users/bytedance/.gradle/caches/transforms-3/e425461a9e6236cdf612e731e13f6df4/transformed/jetified-keyboardvisibilityevent-3.0.0-RC3/AndroidManifest.xml:2:1-9:12
+MERGED from [app.cash.sqldelight:android-driver:2.0.0-alpha05] /Users/bytedance/.gradle/caches/transforms-3/bfc1d520dcb1317ad57fce7709ef5a84/transformed/jetified-android-driver-2.0.0-alpha05-debug/AndroidManifest.xml:2:1-7:12
+MERGED from [com.facebook.flipper:flipper-network-plugin:0.145.0] /Users/bytedance/.gradle/caches/transforms-3/c7564b5eca32219a863f311c7200f00b/transformed/jetified-flipper-network-plugin-0.145.0/AndroidManifest.xml:8:1-15:12
+MERGED from [com.github.bumptech.glide:okhttp3-integration:4.15.1] /Users/bytedance/.gradle/caches/transforms-3/2e3b13e41a159e45834f1372094f3d3c/transformed/jetified-okhttp3-integration-4.15.1/AndroidManifest.xml:2:1-15:12
+MERGED from [com.github.thegrizzlylabs:sardine-android:0.8] /Users/bytedance/.gradle/caches/transforms-3/8cd42e27edb52b6185bb599db06e04a9/transformed/jetified-sardine-android-0.8/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.exoplayer:extension-okhttp:2.18.2] /Users/bytedance/.gradle/caches/transforms-3/de735279c3abb0da5e6db435f1434fd3/transformed/jetified-extension-okhttp-2.18.2/AndroidManifest.xml:17:1-24:12
+MERGED from [com.github.dhaval2404:imagepicker:2.1] /Users/bytedance/.gradle/caches/transforms-3/ff97037da9e7fbf862cd71624b486304/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:2:1-42:12
+MERGED from [com.github.yalantis:ucrop:2.2.6] /Users/bytedance/.gradle/caches/transforms-3/c47629daee5cde0d2561ee818a80a6db/transformed/jetified-ucrop-2.2.6/AndroidManifest.xml:2:1-11:12
+MERGED from [io.github.aakira:napier-android-debug:2.6.1] /Users/bytedance/.gradle/caches/transforms-3/8b5271976dc5fb219480f65e47bbd691/transformed/jetified-napier-debug/AndroidManifest.xml:2:1-9:12
+MERGED from [com.soywiz.korlibs.krypto:krypto-android:4.0.0] /Users/bytedance/.gradle/caches/transforms-3/3c81be2924241af50df6581ec76b19e7/transformed/jetified-krypto-debug/AndroidManifest.xml:2:1-9:12
+MERGED from [com.github.allenymt.PrivacySentry:privacy-proxy:1.2.7] /Users/bytedance/.gradle/caches/transforms-3/a2f588ab3d03fe263427a762ee1c1e43/transformed/jetified-privacy-proxy-1.2.7/AndroidManifest.xml:2:1-12:12
+MERGED from [com.github.allenymt.PrivacySentry:privacy-replace:1.2.7] /Users/bytedance/.gradle/caches/transforms-3/e161cf5bf69e8f6af5d607bfccef0314/transformed/jetified-privacy-replace-1.2.7/AndroidManifest.xml:2:1-9:12
+MERGED from [com.github.allenymt.PrivacySentry:hook-sentry:1.2.7] /Users/bytedance/.gradle/caches/transforms-3/300eb4116ad0b32ed4cbe4bea20f3936/transformed/jetified-hook-sentry-1.2.7/AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.preference:preference-ktx:1.2.0] /Users/bytedance/.gradle/caches/transforms-3/9fc6871040acae9a1c6012ffe6b2d9f6/transformed/jetified-preference-ktx-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.preference:preference:1.2.0] /Users/bytedance/.gradle/caches/transforms-3/80eb40ef5766cdc453e2fe08accca0d3/transformed/preference-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment-ktx:1.5.5] /Users/bytedance/.gradle/caches/transforms-3/fa0e2971ae55f53f106fc648f2221d50/transformed/jetified-fragment-ktx-1.5.5/AndroidManifest.xml:17:1-24:12
+MERGED from [com.facebook.flipper:flipper:0.145.0] /Users/bytedance/.gradle/caches/transforms-3/40ce0fab91d84e5ffcc8e38ffd166016/transformed/jetified-flipper-0.145.0/AndroidManifest.xml:8:1-18:12
+MERGED from [com.github.577fkj:StatusBarApiExample:v2.0] /Users/bytedance/.gradle/caches/transforms-3/6cc0b66fb501b0c2b5b0a9a57ebc3d7e/transformed/jetified-StatusBarApiExample-v2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.material:material:1.8.0] /Users/bytedance/.gradle/caches/transforms-3/c9291eca4cbb4de075ef56502c9cb188/transformed/material-1.8.0/AndroidManifest.xml:17:1-26:12
+MERGED from [com.heinrichreimersoftware:material-intro:2.0.0] /Users/bytedance/.gradle/caches/transforms-3/c323c18d4c510f903fbc75bb535e4af8/transformed/jetified-material-intro-2.0.0/AndroidManifest.xml:25:1-34:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/bytedance/.gradle/caches/transforms-3/912974a0d9516528955ecbd208a18eb1/transformed/constraintlayout-2.1.4/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.mediarouter:mediarouter:1.3.1] /Users/bytedance/.gradle/caches/transforms-3/3e6360ed6c52b3d52004f333f3262537/transformed/mediarouter-1.3.1/AndroidManifest.xml:17:1-24:12
+MERGED from [com.afollestad:material-cab:2.0.1] /Users/bytedance/.gradle/caches/transforms-3/f79ab138f53a0aa3ac0b1bf0a12499b6/transformed/jetified-material-cab-2.0.1/AndroidManifest.xml:2:1-13:12
+MERGED from [me.zhanghai.android.fastscroll:library:1.2.0] /Users/bytedance/.gradle/caches/transforms-3/77008dab4e3d643e13f251331281da74/transformed/jetified-library-1.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [io.github.caij:EasyPermissions:3.1.1] /Users/bytedance/.gradle/caches/transforms-3/d04614fb1bd6a9d70fd3be5cb3006696/transformed/jetified-EasyPermissions-3.1.1/AndroidManifest.xml:2:1-14:12
+MERGED from [com.caij.lib:toast:2.0.0.3] /Users/bytedance/.gradle/caches/transforms-3/881ce994b057df263ad224c122599bdc/transformed/jetified-toast-2.0.0.3/AndroidManifest.xml:2:1-11:12
+MERGED from [com.caij.lib:lifemanager:1.1.3.0] /Users/bytedance/.gradle/caches/transforms-3/73d306b643338dfc432890c6b3e34ded/transformed/jetified-lifemanager-1.1.3.0/AndroidManifest.xml:2:1-17:12
+MERGED from [com.caij.lib:system:1.1.8] /Users/bytedance/.gradle/caches/transforms-3/f842e07ac7a862d5afba6729fca65f68/transformed/jetified-system-1.1.8/AndroidManifest.xml:2:1-11:12
+MERGED from [com.caij.lib:encrypt:1.0.4] /Users/bytedance/.gradle/caches/transforms-3/8f47aab94b1a8003cec6585c7713e0a7/transformed/jetified-encrypt-1.0.4/AndroidManifest.xml:2:1-11:12
+MERGED from [com.afollestad:viewpagerdots:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/8a2525a0e2c76259afa1ddf4ac997c35/transformed/jetified-viewpagerdots-1.0.0/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.appcompat:appcompat-resources:1.6.0] /Users/bytedance/.gradle/caches/transforms-3/acd8cf1c580c53677adbe5f75a62cfe4/transformed/jetified-appcompat-resources-1.6.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat:1.6.0] /Users/bytedance/.gradle/caches/transforms-3/59367575a634f4e923bbd00a0a4d3ad9/transformed/appcompat-1.6.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:glide:4.15.1] /Users/bytedance/.gradle/caches/transforms-3/4bd74b401bb965b7f4f688430e27fad6/transformed/jetified-glide-4.15.1/AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.gms:play-services-auth:20.4.1] /Users/bytedance/.gradle/caches/transforms-3/d63127a709fc6a083197384e24c3e269/transformed/jetified-play-services-auth-20.4.1/AndroidManifest.xml:17:1-40:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/42e3fc2d2f88f788831046c92f91dfde/transformed/jetified-viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.r0adkll:slidableactivity:2.1.0] /Users/bytedance/.gradle/caches/transforms-3/300ff858904ac7932b3a2929a7fe6ad0/transformed/jetified-slidableactivity-2.1.0/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/a8828126ef5b4ccb15688a6d50b1a1e6/transformed/legacy-support-v4-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.1] /Users/bytedance/.gradle/caches/transforms-3/5c20ff921ce52ab6b4498d242eb81eb1/transformed/jetified-play-services-auth-api-phone-18.0.1/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-auth-base:18.0.4] /Users/bytedance/.gradle/caches/transforms-3/9d073d7dd90c4d83cdee933ba5d6dd7d/transformed/jetified-play-services-auth-base-18.0.4/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-fido:19.0.1] /Users/bytedance/.gradle/caches/transforms-3/80ae9af5d5b462a24ec77b4c22b684a1/transformed/jetified-play-services-fido-19.0.1/AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.android.gms:play-services-base:18.0.1] /Users/bytedance/.gradle/caches/transforms-3/d13b636cef8b9415d1cad567ec5a9065/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:16:1-24:12
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] /Users/bytedance/.gradle/caches/transforms-3/708ebdaf30f77d6b88c571568e98283c/transformed/jetified-play-services-tasks-18.0.1/AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/bytedance/.gradle/caches/transforms-3/75ea85cec0d7596770e308b0eab55d61/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:16:1-26:12
+MERGED from [androidx.fragment:fragment:1.5.5] /Users/bytedance/.gradle/caches/transforms-3/3632f9aea3ebb6da27315c3edf52e215/transformed/fragment-1.5.5/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.6.0] /Users/bytedance/.gradle/caches/transforms-3/2211beb54a9b59b0499d9b1149ab07bb/transformed/jetified-activity-1.6.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity-ktx:1.6.0] /Users/bytedance/.gradle/caches/transforms-3/062866e6457336b8ffcb16028d404b0b/transformed/jetified-activity-ktx-1.6.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1] /Users/bytedance/.gradle/caches/transforms-3/99e49e6fb96570b0ff52c1d679e8dc04/transformed/jetified-lifecycle-viewmodel-ktx-2.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.5.1] /Users/bytedance/.gradle/caches/transforms-3/b9de23d048ccd33f98fb607d50cf7969/transformed/jetified-lifecycle-runtime-ktx-2.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.gridlayout:gridlayout:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/729717e297be1bd6b8ff283f01347b3b/transformed/gridlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/fb4eee792b37b22d08b4b37f092a3733/transformed/legacy-support-core-ui-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.2.0] /Users/bytedance/.gradle/caches/transforms-3/9e387c3e0e524ed5966c14389648be83/transformed/slidingpanelayout-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.window:window:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/8b77a247549c44b86eb3b18f870f535b/transformed/jetified-window-1.0.0/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.palette:palette-ktx:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/f8183aaca54da90eef9d8a08c08a5865/transformed/jetified-palette-ktx-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.palette:palette:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/9bdea667fbe23306719b9e643c17ac49/transformed/palette-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/bb41219d441365f43d663aa3bab79b85/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/a5d8ad4dc361def0b5002b64852015fb/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/75cc59822bd5dc8b0b48274dd092bc11/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] /Users/bytedance/.gradle/caches/transforms-3/d4aba6426956753789de9fa15d976708/transformed/lifecycle-viewmodel-2.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] /Users/bytedance/.gradle/caches/transforms-3/839964cac21ba8407371ba4d37d9f713/transformed/jetified-lifecycle-viewmodel-savedstate-2.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.5.1] /Users/bytedance/.gradle/caches/transforms-3/a01efc8db301aaaa66fe32116ca7df21/transformed/jetified-lifecycle-livedata-ktx-2.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [com.umeng.umsdk:asms:1.4.1] /Users/bytedance/.gradle/caches/transforms-3/aed646872df7560d96122c0015984a15/transformed/jetified-asms-1.4.1/AndroidManifest.xml:2:1-11:12
+MERGED from [com.tencent.bugly:crashreport:4.1.9] /Users/bytedance/.gradle/caches/transforms-3/ee64e71056ba1434f4afb58cde569d99/transformed/jetified-crashreport-4.1.9/AndroidManifest.xml:2:1-11:12
+MERGED from [com.tencent.vasdolly:helper:3.0.6] /Users/bytedance/.gradle/caches/transforms-3/4017495fe8e63b3b1e505c511cd977b3/transformed/jetified-helper-3.0.6/AndroidManifest.xml:2:1-12:12
+MERGED from [com.facebook.soloader:soloader:0.10.3] /Users/bytedance/.gradle/caches/transforms-3/f30412b7fd5d16a0810ab6ac3cd69528/transformed/jetified-soloader-0.10.3/AndroidManifest.xml:2:1-13:12
+MERGED from [androidx.recyclerview:recyclerview:1.2.1] /Users/bytedance/.gradle/caches/transforms-3/2f6cff2373e271ffdca6dfe3d248ac97/transformed/recyclerview-1.2.1/AndroidManifest.xml:17:1-24:12
+MERGED from [dev.chrisbanes.insetter:insetter:0.6.1] /Users/bytedance/.gradle/caches/transforms-3/e56c36d07f2aaf4e74798557edcd933d/transformed/jetified-insetter-0.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] /Users/bytedance/.gradle/caches/transforms-3/eed7230c413d8246be4e70068c094a77/transformed/swiperefreshlayout-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.media:media:1.4.1] /Users/bytedance/.gradle/caches/transforms-3/cefbfc7639c3167dea85471f9834f93c/transformed/media-1.4.1/AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/bytedance/.gradle/caches/transforms-3/09d6506d38e317166bad711756f63633/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/bytedance/.gradle/caches/transforms-3/59fdc631393980ef329061b2de1e38de/transformed/drawerlayout-1.1.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/bytedance/.gradle/caches/transforms-3/be14da77909aa86f13fc2e24bd06c988/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/bytedance/.gradle/caches/transforms-3/559208a4f97baadb58a5e5862ba2c93b/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.caij.lib:exoplayer:1.3.9] /Users/bytedance/.gradle/caches/transforms-3/a24f3352d89b343f234d992ab5cf9bf9/transformed/jetified-exoplayer-1.3.9/AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.18.2] /Users/bytedance/.gradle/caches/transforms-3/845a9349445aba305f8402141618a3eb/transformed/jetified-exoplayer-core-2.18.2/AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/bytedance/.gradle/caches/transforms-3/d86545aff34ebc391b51b580376fb9dc/transformed/jetified-emoji2-views-helper-1.2.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/bytedance/.gradle/caches/transforms-3/42d4acb4322ab6a7a315952c435f3adb/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/c658783949e89ec2da96e063fbcc8fce/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/2edb4c3af5dafb9f6ffd20e723f8c8ff/transformed/asynclayoutinflater-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.1.0] /Users/bytedance/.gradle/caches/transforms-3/73979f8dd0a9e125d01e33e9aa0fab48/transformed/customview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core-ktx:1.9.0] /Users/bytedance/.gradle/caches/transforms-3/984a764d33a117b7f285eae71dd2ee4f/transformed/jetified-core-ktx-1.9.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.transition:transition:1.4.1] /Users/bytedance/.gradle/caches/transforms-3/9186ad364d8f14587809ecffe0c9c82b/transformed/transition-1.4.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.9.0] /Users/bytedance/.gradle/caches/transforms-3/62cf0fca72429c0b2d34ee3065e27d4d/transformed/core-1.9.0/AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/bytedance/.gradle/caches/transforms-3/35312deb7d45ac4a7f3c02b0263cafa2/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:17:1-37:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] /Users/bytedance/.gradle/caches/transforms-3/2b2d0e9f4eed502d47ff38260c119edc/transformed/lifecycle-runtime-2.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.0] /Users/bytedance/.gradle/caches/transforms-3/b9366b623ddfaf833f25500ba9fe7dbc/transformed/jetified-savedstate-ktx-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.2.0] /Users/bytedance/.gradle/caches/transforms-3/61eb7c39d2f1089849d56031f70cad16/transformed/jetified-savedstate-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.5.1] /Users/bytedance/.gradle/caches/transforms-3/81708b7e56404a28440df1d6c7746987/transformed/lifecycle-livedata-2.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.5.1] /Users/bytedance/.gradle/caches/transforms-3/44ad8b8158a8d9105ff8cf76a9c7162d/transformed/jetified-lifecycle-livedata-core-ktx-2.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] /Users/bytedance/.gradle/caches/transforms-3/c46ec6e27c74d71c162b805a236175dd/transformed/lifecycle-livedata-core-2.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core-splashscreen:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/513afb1e0f1c1c2f9597bf61c4677ed6/transformed/jetified-core-splashscreen-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.caij.lib:player:1.3.9] /Users/bytedance/.gradle/caches/transforms-3/d15f36f71bb444873e022d23ce48d5e3/transformed/jetified-player-1.3.9/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.sqlite:sqlite-framework:2.2.0] /Users/bytedance/.gradle/caches/transforms-3/a5aae6eed941f0aa7570a0cbf41a98c4/transformed/sqlite-framework-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/3abfc4c5972ae945e8c7dc713859f93a/transformed/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.15.1] /Users/bytedance/.gradle/caches/transforms-3/e7f15036603caf2183a583ef79e529ff/transformed/jetified-gifdecoder-4.15.1/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.exifinterface:exifinterface:1.3.3] /Users/bytedance/.gradle/caches/transforms-3/642a720b665f3e150d431c8b6893ff25/transformed/exifinterface-1.3.3/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/bytedance/.gradle/caches/transforms-3/a50d6668e39363b85c2a230608beec35/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/78effae570a3b3e013f136d7ec9984de/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.documentfile:documentfile:1.0.1] /Users/bytedance/.gradle/caches/transforms-3/28da48ac3d012fe9cb857ecf5801cb44/transformed/documentfile-1.0.1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.exoplayer:exoplayer-datasource:2.18.2] /Users/bytedance/.gradle/caches/transforms-3/51ff286f45a1ad7954a55ff857b78239/transformed/jetified-exoplayer-datasource-2.18.2/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-extractor:2.18.2] /Users/bytedance/.gradle/caches/transforms-3/a30ea6d0065dbf997040f9ac89825a54/transformed/jetified-exoplayer-extractor-2.18.2/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-decoder:2.18.2] /Users/bytedance/.gradle/caches/transforms-3/27605d8c40abc8808808982d2736c577/transformed/jetified-exoplayer-decoder-2.18.2/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-database:2.18.2] /Users/bytedance/.gradle/caches/transforms-3/a2accc810164975b470ac0c5c2f9895d/transformed/jetified-exoplayer-database-2.18.2/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-common:2.18.2] /Users/bytedance/.gradle/caches/transforms-3/d30d6d9d69bbd2476c15cd9c078b7d63/transformed/jetified-exoplayer-common-2.18.2/AndroidManifest.xml:17:1-26:12
+MERGED from [io.github.caij:MMKVSharedPreferences:1.0.2] /Users/bytedance/.gradle/caches/transforms-3/29bcfc636241b96db0715f29b1c751e5/transformed/jetified-MMKVSharedPreferences-1.0.2/AndroidManifest.xml:2:1-9:12
+MERGED from [com.tencent:mmkv-static:1.2.10] /Users/bytedance/.gradle/caches/transforms-3/32ecad0cbc95f04c41adbfa732e9c2b7/transformed/jetified-mmkv-static-1.2.10/AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.sqlite:sqlite:2.2.0] /Users/bytedance/.gradle/caches/transforms-3/52846b002a75495f9dd3d7a8a9ef942b/transformed/sqlite-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/4c3e7fe9e5c11f191f0735b5ba124984/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/3eb2715da76297185d879e1a40bb87bb/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.billingclient:billing:6.0.0] /Users/bytedance/.gradle/caches/transforms-3/f1ad32224ba619ceda352ca547b567fd/transformed/jetified-billing-6.0.0/AndroidManifest.xml:2:1-30:12
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/bytedance/.gradle/caches/transforms-3/ae08fbfa277194a7f7362afc81108854/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:15:1-37:12
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/bytedance/.gradle/caches/transforms-3/bf6a590a41fdc664fcaff307e06947ab/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:15:1-41:12
+MERGED from [com.google.android.datatransport:transport-api:3.0.0] /Users/bytedance/.gradle/caches/transforms-3/75f8f466a4f5f3c71f2bb1d3c5ab83e3/transformed/jetified-transport-api-3.0.0/AndroidManifest.xml:15:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/bytedance/.gradle/caches/transforms-3/17099d0eee1b28d298fe11da032479d3/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/bytedance/.gradle/caches/transforms-3/daa9c8c6a98eb72e16797b86afbe7d67/transformed/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] /Users/bytedance/.gradle/caches/transforms-3/e02fb699e6ff39a202d658139ac1adb1/transformed/jetified-firebase-encoders-json-18.0.0/AndroidManifest.xml:15:1-23:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/9b6da4c33dd669fd470650582a897684/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/9900da2a82098f78b55501c1f563ed76/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bosphere.android-fadingedgelayout:fadingedgelayout:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/e05ea525e1b81aa01bc0b92987bb5564/transformed/jetified-fadingedgelayout-1.0.0/AndroidManifest.xml:2:1-10:12
+MERGED from [com.github.jetradarmobile:android-snowfall:1.2.1] /Users/bytedance/.gradle/caches/transforms-3/5825264ad5334c947819eb0c58103cc5/transformed/jetified-android-snowfall-1.2.1/AndroidManifest.xml:2:1-9:12
+MERGED from [me.tankery.lib:circularSeekBar:1.4.1] /Users/bytedance/.gradle/caches/transforms-3/162f8f5538ecc90e8426f1fd72f90548/transformed/jetified-circularSeekBar-1.4.1/AndroidManifest.xml:2:1-11:12
+MERGED from [io.github.caij:simpleadapter:1.0.1] /Users/bytedance/.gradle/caches/transforms-3/e1c0251218db1f42f8047e322a0596ce/transformed/jetified-simpleadapter-1.0.1/AndroidManifest.xml:2:1-9:12
+MERGED from [com.caij.lib.downs:core:2.0.5] /Users/bytedance/.gradle/caches/transforms-3/cdcc04dd527c12621eadf892fc0659b2/transformed/jetified-core-2.0.5/AndroidManifest.xml:2:1-11:12
+MERGED from [com.caij.lib.downs:asynctask:2.0.5] /Users/bytedance/.gradle/caches/transforms-3/a9da871ff6c71db0abc6c2adbe5c4c35/transformed/jetified-asynctask-2.0.5/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/bytedance/.gradle/caches/transforms-3/cc2e47cc0127094ffd87379fb6ac521b/transformed/jetified-annotation-experimental-1.3.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.ndk.thirdparty:openssl:1.1.1l-beta-1] /Users/bytedance/.gradle/caches/transforms-3/2684181f76f183fc59c244b5173c5305/transformed/jetified-openssl-1.1.1l-beta-1/AndroidManifest.xml:1:1-3:12
+MERGED from [com.facebook.fbjni:fbjni:0.3.0] /Users/bytedance/.gradle/caches/transforms-3/d791f71d8c3d30ccbba823af11d072bf/transformed/jetified-fbjni-0.3.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.tencent.mm.opensdk:wechat-sdk-android:6.8.11] /Users/bytedance/.gradle/caches/transforms-3/d108bf8fc53358aeb5164b6cddbabd72/transformed/jetified-wechat-sdk-android-6.8.11/AndroidManifest.xml:2:1-9:12
+MERGED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:2:1-78:12
+INJECTED from /Users/bytedance/StudioProjects/pure-music/app/src/debug/AndroidManifest.xml:2:1-13:12
+INJECTED from /Users/bytedance/StudioProjects/pure-music/app/src/debug/AndroidManifest.xml:2:1-13:12
+INJECTED from /Users/bytedance/StudioProjects/pure-music/app/src/debug/AndroidManifest.xml:2:1-13:12
+	package
+		INJECTED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:2:1-355:12
+		INJECTED from /Users/bytedance/StudioProjects/pure-music/app/src/debug/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:2:1-355:12
+		INJECTED from /Users/bytedance/StudioProjects/pure-music/app/src/debug/AndroidManifest.xml
+	xmlns:tools
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:3:5-51
+	android:versionCode
+		INJECTED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:2:1-355:12
+		INJECTED from /Users/bytedance/StudioProjects/pure-music/app/src/debug/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#com.android.vending.BILLING
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:5:5-67
+MERGED from [com.android.billingclient:billing:6.0.0] /Users/bytedance/.gradle/caches/transforms-3/f1ad32224ba619ceda352ca547b567fd/transformed/jetified-billing-6.0.0/AndroidManifest.xml:10:5-67
+MERGED from [com.android.billingclient:billing:6.0.0] /Users/bytedance/.gradle/caches/transforms-3/f1ad32224ba619ceda352ca547b567fd/transformed/jetified-billing-6.0.0/AndroidManifest.xml:10:5-67
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:5:22-64
+uses-permission#android.permission.BLUETOOTH
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:6:5-8:38
+MERGED from [com.github.allenymt.PrivacySentry:privacy-proxy:1.2.7] /Users/bytedance/.gradle/caches/transforms-3/a2f588ab3d03fe263427a762ee1c1e43/transformed/jetified-privacy-proxy-1.2.7/AndroidManifest.xml:9:5-68
+MERGED from [com.github.allenymt.PrivacySentry:privacy-proxy:1.2.7] /Users/bytedance/.gradle/caches/transforms-3/a2f588ab3d03fe263427a762ee1c1e43/transformed/jetified-privacy-proxy-1.2.7/AndroidManifest.xml:9:5-68
+	android:maxSdkVersion
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:8:9-35
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:7:9-52
+uses-permission#android.permission.DISABLE_KEYGUARD
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:9:5-75
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:9:22-72
+uses-permission#android.permission.SCHEDULE_EXACT_ALARM
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:10:5-79
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:10:22-76
+uses-permission#android.permission.VIBRATE
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:11:5-66
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:11:22-63
+uses-permission#android.permission.WAKE_LOCK
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:12:5-68
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:12:22-65
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:13:5-80
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:13:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:14:5-16:38
+	android:maxSdkVersion
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:16:9-35
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:15:9-65
+uses-permission#android.permission.INTERNET
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:17:5-67
+MERGED from [com.facebook.flipper:flipper:0.145.0] /Users/bytedance/.gradle/caches/transforms-3/40ce0fab91d84e5ffcc8e38ffd166016/transformed/jetified-flipper-0.145.0/AndroidManifest.xml:15:5-67
+MERGED from [com.facebook.flipper:flipper:0.145.0] /Users/bytedance/.gradle/caches/transforms-3/40ce0fab91d84e5ffcc8e38ffd166016/transformed/jetified-flipper-0.145.0/AndroidManifest.xml:15:5-67
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/bytedance/.gradle/caches/transforms-3/ae08fbfa277194a7f7362afc81108854/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:25:5-67
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/bytedance/.gradle/caches/transforms-3/ae08fbfa277194a7f7362afc81108854/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:25:5-67
+MERGED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:28:5-67
+MERGED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:28:5-67
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:17:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:18:5-79
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.18.2] /Users/bytedance/.gradle/caches/transforms-3/845a9349445aba305f8402141618a3eb/transformed/jetified-exoplayer-core-2.18.2/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.18.2] /Users/bytedance/.gradle/caches/transforms-3/845a9349445aba305f8402141618a3eb/transformed/jetified-exoplayer-core-2.18.2/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.exoplayer:exoplayer-common:2.18.2] /Users/bytedance/.gradle/caches/transforms-3/d30d6d9d69bbd2476c15cd9c078b7d63/transformed/jetified-exoplayer-common-2.18.2/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.exoplayer:exoplayer-common:2.18.2] /Users/bytedance/.gradle/caches/transforms-3/d30d6d9d69bbd2476c15cd9c078b7d63/transformed/jetified-exoplayer-common-2.18.2/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/bytedance/.gradle/caches/transforms-3/ae08fbfa277194a7f7362afc81108854/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/bytedance/.gradle/caches/transforms-3/ae08fbfa277194a7f7362afc81108854/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/bytedance/.gradle/caches/transforms-3/bf6a590a41fdc664fcaff307e06947ab/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:22:5-79
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/bytedance/.gradle/caches/transforms-3/bf6a590a41fdc664fcaff307e06947ab/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:22:5-79
+MERGED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:29:5-79
+MERGED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:29:5-79
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:18:22-76
+uses-permission#android.permission.BROADCAST_STICKY
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:19:5-75
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:19:22-72
+uses-permission#android.permission.FOREGROUND_SERVICE
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:20:5-77
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:20:22-74
+uses-permission#android.permission.WRITE_SETTINGS
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:21:5-23:47
+	tools:ignore
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:23:9-44
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:22:9-57
+uses-permission#android.permission.USE_FULL_SCREEN_INTENT
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:24:5-81
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:24:22-78
+uses-permission#android.permission.BLUETOOTH_CONNECT
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:25:5-28:31
+	android:usesPermissionFlags
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:27:9-55
+	tools:targetApi
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:28:9-28
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:26:9-60
+uses-permission#android.permission.SYSTEM_ALERT_WINDOW
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:29:5-78
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:29:22-75
+queries
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:31:5-38:15
+MERGED from [com.github.dhaval2404:imagepicker:2.1] /Users/bytedance/.gradle/caches/transforms-3/ff97037da9e7fbf862cd71624b486304/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:9:5-19:15
+MERGED from [com.github.dhaval2404:imagepicker:2.1] /Users/bytedance/.gradle/caches/transforms-3/ff97037da9e7fbf862cd71624b486304/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:9:5-19:15
+MERGED from [androidx.media:media:1.4.1] /Users/bytedance/.gradle/caches/transforms-3/cefbfc7639c3167dea85471f9834f93c/transformed/media-1.4.1/AndroidManifest.xml:24:5-28:15
+MERGED from [androidx.media:media:1.4.1] /Users/bytedance/.gradle/caches/transforms-3/cefbfc7639c3167dea85471f9834f93c/transformed/media-1.4.1/AndroidManifest.xml:24:5-28:15
+MERGED from [com.android.billingclient:billing:6.0.0] /Users/bytedance/.gradle/caches/transforms-3/f1ad32224ba619ceda352ca547b567fd/transformed/jetified-billing-6.0.0/AndroidManifest.xml:12:5-16:15
+MERGED from [com.android.billingclient:billing:6.0.0] /Users/bytedance/.gradle/caches/transforms-3/f1ad32224ba619ceda352ca547b567fd/transformed/jetified-billing-6.0.0/AndroidManifest.xml:12:5-16:15
+MERGED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:9:5-19:15
+MERGED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:9:5-19:15
+package#com.tencent.minihd.qq
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:32:9-57
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:32:18-54
+package#com.tencent.tim
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:33:9-51
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:33:18-48
+package#com.tencent.qqlite
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:34:9-54
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:34:18-51
+package#com.tencent.mobileqq
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:35:9-56
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:35:18-53
+package#com.tencent.mm
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:36:9-50
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:36:18-47
+package#com.eg.android.AlipayGphone
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:37:9-63
+MERGED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:16:9-63
+MERGED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:16:9-63
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:37:18-60
+uses-sdk
+INJECTED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml
+INJECTED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml
+MERGED from [androidx.databinding:viewbinding:7.2.2] /Users/bytedance/.gradle/caches/transforms-3/bbf07dd4f74b0e55c3dbb186c4ce5a23/transformed/jetified-viewbinding-7.2.2/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.databinding:viewbinding:7.2.2] /Users/bytedance/.gradle/caches/transforms-3/bbf07dd4f74b0e55c3dbb186c4ce5a23/transformed/jetified-viewbinding-7.2.2/AndroidManifest.xml:20:5-22:41
+MERGED from [:appthemehelper] /Users/bytedance/StudioProjects/pure-music/appthemehelper/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:appthemehelper] /Users/bytedance/StudioProjects/pure-music/appthemehelper/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:vip] /Users/bytedance/StudioProjects/pure-music/vip/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:vip] /Users/bytedance/StudioProjects/pure-music/vip/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:shared] /Users/bytedance/StudioProjects/pure-music/shared/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:shared] /Users/bytedance/StudioProjects/pure-music/shared/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [com.afollestad.material-dialogs:input:3.3.0] /Users/bytedance/.gradle/caches/transforms-3/baa9c3c06f3c96cb01fb78b2f863e6f2/transformed/jetified-input-3.3.0/AndroidManifest.xml:7:5-9:41
+MERGED from [com.afollestad.material-dialogs:input:3.3.0] /Users/bytedance/.gradle/caches/transforms-3/baa9c3c06f3c96cb01fb78b2f863e6f2/transformed/jetified-input-3.3.0/AndroidManifest.xml:7:5-9:41
+MERGED from [com.afollestad.material-dialogs:color:3.3.0] /Users/bytedance/.gradle/caches/transforms-3/e2c854e37a7fa6cbb1d699216974fde7/transformed/jetified-color-3.3.0/AndroidManifest.xml:7:5-9:41
+MERGED from [com.afollestad.material-dialogs:color:3.3.0] /Users/bytedance/.gradle/caches/transforms-3/e2c854e37a7fa6cbb1d699216974fde7/transformed/jetified-color-3.3.0/AndroidManifest.xml:7:5-9:41
+MERGED from [com.afollestad.material-dialogs:core:3.3.0] /Users/bytedance/.gradle/caches/transforms-3/2cc38df4cf74bd449fb839822644571b/transformed/jetified-core-3.3.0/AndroidManifest.xml:7:5-9:41
+MERGED from [com.afollestad.material-dialogs:core:3.3.0] /Users/bytedance/.gradle/caches/transforms-3/2cc38df4cf74bd449fb839822644571b/transformed/jetified-core-3.3.0/AndroidManifest.xml:7:5-9:41
+MERGED from [io.insert-koin:koin-android:3.3.3] /Users/bytedance/.gradle/caches/transforms-3/ab3610bebbf4cc7f36a6ea1307f0c715/transformed/jetified-koin-android-3.3.3/AndroidManifest.xml:5:5-7:41
+MERGED from [io.insert-koin:koin-android:3.3.3] /Users/bytedance/.gradle/caches/transforms-3/ab3610bebbf4cc7f36a6ea1307f0c715/transformed/jetified-koin-android-3.3.3/AndroidManifest.xml:5:5-7:41
+MERGED from [net.yslibrary.keyboardvisibilityevent:keyboardvisibilityevent:3.0.0-RC3] /Users/bytedance/.gradle/caches/transforms-3/e425461a9e6236cdf612e731e13f6df4/transformed/jetified-keyboardvisibilityevent-3.0.0-RC3/AndroidManifest.xml:5:5-7:41
+MERGED from [net.yslibrary.keyboardvisibilityevent:keyboardvisibilityevent:3.0.0-RC3] /Users/bytedance/.gradle/caches/transforms-3/e425461a9e6236cdf612e731e13f6df4/transformed/jetified-keyboardvisibilityevent-3.0.0-RC3/AndroidManifest.xml:5:5-7:41
+MERGED from [app.cash.sqldelight:android-driver:2.0.0-alpha05] /Users/bytedance/.gradle/caches/transforms-3/bfc1d520dcb1317ad57fce7709ef5a84/transformed/jetified-android-driver-2.0.0-alpha05-debug/AndroidManifest.xml:5:5-44
+MERGED from [app.cash.sqldelight:android-driver:2.0.0-alpha05] /Users/bytedance/.gradle/caches/transforms-3/bfc1d520dcb1317ad57fce7709ef5a84/transformed/jetified-android-driver-2.0.0-alpha05-debug/AndroidManifest.xml:5:5-44
+MERGED from [com.facebook.flipper:flipper-network-plugin:0.145.0] /Users/bytedance/.gradle/caches/transforms-3/c7564b5eca32219a863f311c7200f00b/transformed/jetified-flipper-network-plugin-0.145.0/AndroidManifest.xml:11:5-13:41
+MERGED from [com.facebook.flipper:flipper-network-plugin:0.145.0] /Users/bytedance/.gradle/caches/transforms-3/c7564b5eca32219a863f311c7200f00b/transformed/jetified-flipper-network-plugin-0.145.0/AndroidManifest.xml:11:5-13:41
+MERGED from [com.github.bumptech.glide:okhttp3-integration:4.15.1] /Users/bytedance/.gradle/caches/transforms-3/2e3b13e41a159e45834f1372094f3d3c/transformed/jetified-okhttp3-integration-4.15.1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:okhttp3-integration:4.15.1] /Users/bytedance/.gradle/caches/transforms-3/2e3b13e41a159e45834f1372094f3d3c/transformed/jetified-okhttp3-integration-4.15.1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.thegrizzlylabs:sardine-android:0.8] /Users/bytedance/.gradle/caches/transforms-3/8cd42e27edb52b6185bb599db06e04a9/transformed/jetified-sardine-android-0.8/AndroidManifest.xml:5:5-44
+MERGED from [com.github.thegrizzlylabs:sardine-android:0.8] /Users/bytedance/.gradle/caches/transforms-3/8cd42e27edb52b6185bb599db06e04a9/transformed/jetified-sardine-android-0.8/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.exoplayer:extension-okhttp:2.18.2] /Users/bytedance/.gradle/caches/transforms-3/de735279c3abb0da5e6db435f1434fd3/transformed/jetified-extension-okhttp-2.18.2/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:extension-okhttp:2.18.2] /Users/bytedance/.gradle/caches/transforms-3/de735279c3abb0da5e6db435f1434fd3/transformed/jetified-extension-okhttp-2.18.2/AndroidManifest.xml:20:5-22:41
+MERGED from [com.github.dhaval2404:imagepicker:2.1] /Users/bytedance/.gradle/caches/transforms-3/ff97037da9e7fbf862cd71624b486304/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.dhaval2404:imagepicker:2.1] /Users/bytedance/.gradle/caches/transforms-3/ff97037da9e7fbf862cd71624b486304/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.yalantis:ucrop:2.2.6] /Users/bytedance/.gradle/caches/transforms-3/c47629daee5cde0d2561ee818a80a6db/transformed/jetified-ucrop-2.2.6/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.yalantis:ucrop:2.2.6] /Users/bytedance/.gradle/caches/transforms-3/c47629daee5cde0d2561ee818a80a6db/transformed/jetified-ucrop-2.2.6/AndroidManifest.xml:7:5-9:41
+MERGED from [io.github.aakira:napier-android-debug:2.6.1] /Users/bytedance/.gradle/caches/transforms-3/8b5271976dc5fb219480f65e47bbd691/transformed/jetified-napier-debug/AndroidManifest.xml:5:5-7:41
+MERGED from [io.github.aakira:napier-android-debug:2.6.1] /Users/bytedance/.gradle/caches/transforms-3/8b5271976dc5fb219480f65e47bbd691/transformed/jetified-napier-debug/AndroidManifest.xml:5:5-7:41
+MERGED from [com.soywiz.korlibs.krypto:krypto-android:4.0.0] /Users/bytedance/.gradle/caches/transforms-3/3c81be2924241af50df6581ec76b19e7/transformed/jetified-krypto-debug/AndroidManifest.xml:5:5-7:41
+MERGED from [com.soywiz.korlibs.krypto:krypto-android:4.0.0] /Users/bytedance/.gradle/caches/transforms-3/3c81be2924241af50df6581ec76b19e7/transformed/jetified-krypto-debug/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.allenymt.PrivacySentry:privacy-proxy:1.2.7] /Users/bytedance/.gradle/caches/transforms-3/a2f588ab3d03fe263427a762ee1c1e43/transformed/jetified-privacy-proxy-1.2.7/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.allenymt.PrivacySentry:privacy-proxy:1.2.7] /Users/bytedance/.gradle/caches/transforms-3/a2f588ab3d03fe263427a762ee1c1e43/transformed/jetified-privacy-proxy-1.2.7/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.allenymt.PrivacySentry:privacy-replace:1.2.7] /Users/bytedance/.gradle/caches/transforms-3/e161cf5bf69e8f6af5d607bfccef0314/transformed/jetified-privacy-replace-1.2.7/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.allenymt.PrivacySentry:privacy-replace:1.2.7] /Users/bytedance/.gradle/caches/transforms-3/e161cf5bf69e8f6af5d607bfccef0314/transformed/jetified-privacy-replace-1.2.7/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.allenymt.PrivacySentry:hook-sentry:1.2.7] /Users/bytedance/.gradle/caches/transforms-3/300eb4116ad0b32ed4cbe4bea20f3936/transformed/jetified-hook-sentry-1.2.7/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.allenymt.PrivacySentry:hook-sentry:1.2.7] /Users/bytedance/.gradle/caches/transforms-3/300eb4116ad0b32ed4cbe4bea20f3936/transformed/jetified-hook-sentry-1.2.7/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.preference:preference-ktx:1.2.0] /Users/bytedance/.gradle/caches/transforms-3/9fc6871040acae9a1c6012ffe6b2d9f6/transformed/jetified-preference-ktx-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.preference:preference-ktx:1.2.0] /Users/bytedance/.gradle/caches/transforms-3/9fc6871040acae9a1c6012ffe6b2d9f6/transformed/jetified-preference-ktx-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.preference:preference:1.2.0] /Users/bytedance/.gradle/caches/transforms-3/80eb40ef5766cdc453e2fe08accca0d3/transformed/preference-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.preference:preference:1.2.0] /Users/bytedance/.gradle/caches/transforms-3/80eb40ef5766cdc453e2fe08accca0d3/transformed/preference-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment-ktx:1.5.5] /Users/bytedance/.gradle/caches/transforms-3/fa0e2971ae55f53f106fc648f2221d50/transformed/jetified-fragment-ktx-1.5.5/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment-ktx:1.5.5] /Users/bytedance/.gradle/caches/transforms-3/fa0e2971ae55f53f106fc648f2221d50/transformed/jetified-fragment-ktx-1.5.5/AndroidManifest.xml:20:5-22:41
+MERGED from [com.facebook.flipper:flipper:0.145.0] /Users/bytedance/.gradle/caches/transforms-3/40ce0fab91d84e5ffcc8e38ffd166016/transformed/jetified-flipper-0.145.0/AndroidManifest.xml:11:5-13:41
+MERGED from [com.facebook.flipper:flipper:0.145.0] /Users/bytedance/.gradle/caches/transforms-3/40ce0fab91d84e5ffcc8e38ffd166016/transformed/jetified-flipper-0.145.0/AndroidManifest.xml:11:5-13:41
+MERGED from [com.github.577fkj:StatusBarApiExample:v2.0] /Users/bytedance/.gradle/caches/transforms-3/6cc0b66fb501b0c2b5b0a9a57ebc3d7e/transformed/jetified-StatusBarApiExample-v2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.577fkj:StatusBarApiExample:v2.0] /Users/bytedance/.gradle/caches/transforms-3/6cc0b66fb501b0c2b5b0a9a57ebc3d7e/transformed/jetified-StatusBarApiExample-v2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.material:material:1.8.0] /Users/bytedance/.gradle/caches/transforms-3/c9291eca4cbb4de075ef56502c9cb188/transformed/material-1.8.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.material:material:1.8.0] /Users/bytedance/.gradle/caches/transforms-3/c9291eca4cbb4de075ef56502c9cb188/transformed/material-1.8.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.heinrichreimersoftware:material-intro:2.0.0] /Users/bytedance/.gradle/caches/transforms-3/c323c18d4c510f903fbc75bb535e4af8/transformed/jetified-material-intro-2.0.0/AndroidManifest.xml:30:5-32:41
+MERGED from [com.heinrichreimersoftware:material-intro:2.0.0] /Users/bytedance/.gradle/caches/transforms-3/c323c18d4c510f903fbc75bb535e4af8/transformed/jetified-material-intro-2.0.0/AndroidManifest.xml:30:5-32:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/bytedance/.gradle/caches/transforms-3/912974a0d9516528955ecbd208a18eb1/transformed/constraintlayout-2.1.4/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/bytedance/.gradle/caches/transforms-3/912974a0d9516528955ecbd208a18eb1/transformed/constraintlayout-2.1.4/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.mediarouter:mediarouter:1.3.1] /Users/bytedance/.gradle/caches/transforms-3/3e6360ed6c52b3d52004f333f3262537/transformed/mediarouter-1.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.mediarouter:mediarouter:1.3.1] /Users/bytedance/.gradle/caches/transforms-3/3e6360ed6c52b3d52004f333f3262537/transformed/mediarouter-1.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [com.afollestad:material-cab:2.0.1] /Users/bytedance/.gradle/caches/transforms-3/f79ab138f53a0aa3ac0b1bf0a12499b6/transformed/jetified-material-cab-2.0.1/AndroidManifest.xml:7:5-9:41
+MERGED from [com.afollestad:material-cab:2.0.1] /Users/bytedance/.gradle/caches/transforms-3/f79ab138f53a0aa3ac0b1bf0a12499b6/transformed/jetified-material-cab-2.0.1/AndroidManifest.xml:7:5-9:41
+MERGED from [me.zhanghai.android.fastscroll:library:1.2.0] /Users/bytedance/.gradle/caches/transforms-3/77008dab4e3d643e13f251331281da74/transformed/jetified-library-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [me.zhanghai.android.fastscroll:library:1.2.0] /Users/bytedance/.gradle/caches/transforms-3/77008dab4e3d643e13f251331281da74/transformed/jetified-library-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [io.github.caij:EasyPermissions:3.1.1] /Users/bytedance/.gradle/caches/transforms-3/d04614fb1bd6a9d70fd3be5cb3006696/transformed/jetified-EasyPermissions-3.1.1/AndroidManifest.xml:5:5-7:41
+MERGED from [io.github.caij:EasyPermissions:3.1.1] /Users/bytedance/.gradle/caches/transforms-3/d04614fb1bd6a9d70fd3be5cb3006696/transformed/jetified-EasyPermissions-3.1.1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.caij.lib:toast:2.0.0.3] /Users/bytedance/.gradle/caches/transforms-3/881ce994b057df263ad224c122599bdc/transformed/jetified-toast-2.0.0.3/AndroidManifest.xml:7:5-9:41
+MERGED from [com.caij.lib:toast:2.0.0.3] /Users/bytedance/.gradle/caches/transforms-3/881ce994b057df263ad224c122599bdc/transformed/jetified-toast-2.0.0.3/AndroidManifest.xml:7:5-9:41
+MERGED from [com.caij.lib:lifemanager:1.1.3.0] /Users/bytedance/.gradle/caches/transforms-3/73d306b643338dfc432890c6b3e34ded/transformed/jetified-lifemanager-1.1.3.0/AndroidManifest.xml:7:5-9:41
+MERGED from [com.caij.lib:lifemanager:1.1.3.0] /Users/bytedance/.gradle/caches/transforms-3/73d306b643338dfc432890c6b3e34ded/transformed/jetified-lifemanager-1.1.3.0/AndroidManifest.xml:7:5-9:41
+MERGED from [com.caij.lib:system:1.1.8] /Users/bytedance/.gradle/caches/transforms-3/f842e07ac7a862d5afba6729fca65f68/transformed/jetified-system-1.1.8/AndroidManifest.xml:7:5-9:41
+MERGED from [com.caij.lib:system:1.1.8] /Users/bytedance/.gradle/caches/transforms-3/f842e07ac7a862d5afba6729fca65f68/transformed/jetified-system-1.1.8/AndroidManifest.xml:7:5-9:41
+MERGED from [com.caij.lib:encrypt:1.0.4] /Users/bytedance/.gradle/caches/transforms-3/8f47aab94b1a8003cec6585c7713e0a7/transformed/jetified-encrypt-1.0.4/AndroidManifest.xml:7:5-9:41
+MERGED from [com.caij.lib:encrypt:1.0.4] /Users/bytedance/.gradle/caches/transforms-3/8f47aab94b1a8003cec6585c7713e0a7/transformed/jetified-encrypt-1.0.4/AndroidManifest.xml:7:5-9:41
+MERGED from [com.afollestad:viewpagerdots:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/8a2525a0e2c76259afa1ddf4ac997c35/transformed/jetified-viewpagerdots-1.0.0/AndroidManifest.xml:7:5-9:41
+MERGED from [com.afollestad:viewpagerdots:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/8a2525a0e2c76259afa1ddf4ac997c35/transformed/jetified-viewpagerdots-1.0.0/AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.appcompat:appcompat-resources:1.6.0] /Users/bytedance/.gradle/caches/transforms-3/acd8cf1c580c53677adbe5f75a62cfe4/transformed/jetified-appcompat-resources-1.6.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.6.0] /Users/bytedance/.gradle/caches/transforms-3/acd8cf1c580c53677adbe5f75a62cfe4/transformed/jetified-appcompat-resources-1.6.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.0] /Users/bytedance/.gradle/caches/transforms-3/59367575a634f4e923bbd00a0a4d3ad9/transformed/appcompat-1.6.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.0] /Users/bytedance/.gradle/caches/transforms-3/59367575a634f4e923bbd00a0a4d3ad9/transformed/appcompat-1.6.0/AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:glide:4.15.1] /Users/bytedance/.gradle/caches/transforms-3/4bd74b401bb965b7f4f688430e27fad6/transformed/jetified-glide-4.15.1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:glide:4.15.1] /Users/bytedance/.gradle/caches/transforms-3/4bd74b401bb965b7f4f688430e27fad6/transformed/jetified-glide-4.15.1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.gms:play-services-auth:20.4.1] /Users/bytedance/.gradle/caches/transforms-3/d63127a709fc6a083197384e24c3e269/transformed/jetified-play-services-auth-20.4.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth:20.4.1] /Users/bytedance/.gradle/caches/transforms-3/d63127a709fc6a083197384e24c3e269/transformed/jetified-play-services-auth-20.4.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/42e3fc2d2f88f788831046c92f91dfde/transformed/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/42e3fc2d2f88f788831046c92f91dfde/transformed/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.r0adkll:slidableactivity:2.1.0] /Users/bytedance/.gradle/caches/transforms-3/300ff858904ac7932b3a2929a7fe6ad0/transformed/jetified-slidableactivity-2.1.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.r0adkll:slidableactivity:2.1.0] /Users/bytedance/.gradle/caches/transforms-3/300ff858904ac7932b3a2929a7fe6ad0/transformed/jetified-slidableactivity-2.1.0/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/a8828126ef5b4ccb15688a6d50b1a1e6/transformed/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/a8828126ef5b4ccb15688a6d50b1a1e6/transformed/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.1] /Users/bytedance/.gradle/caches/transforms-3/5c20ff921ce52ab6b4498d242eb81eb1/transformed/jetified-play-services-auth-api-phone-18.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.1] /Users/bytedance/.gradle/caches/transforms-3/5c20ff921ce52ab6b4498d242eb81eb1/transformed/jetified-play-services-auth-api-phone-18.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:18.0.4] /Users/bytedance/.gradle/caches/transforms-3/9d073d7dd90c4d83cdee933ba5d6dd7d/transformed/jetified-play-services-auth-base-18.0.4/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:18.0.4] /Users/bytedance/.gradle/caches/transforms-3/9d073d7dd90c4d83cdee933ba5d6dd7d/transformed/jetified-play-services-auth-base-18.0.4/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-fido:19.0.1] /Users/bytedance/.gradle/caches/transforms-3/80ae9af5d5b462a24ec77b4c22b684a1/transformed/jetified-play-services-fido-19.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-fido:19.0.1] /Users/bytedance/.gradle/caches/transforms-3/80ae9af5d5b462a24ec77b4c22b684a1/transformed/jetified-play-services-fido-19.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:18.0.1] /Users/bytedance/.gradle/caches/transforms-3/d13b636cef8b9415d1cad567ec5a9065/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-base:18.0.1] /Users/bytedance/.gradle/caches/transforms-3/d13b636cef8b9415d1cad567ec5a9065/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] /Users/bytedance/.gradle/caches/transforms-3/708ebdaf30f77d6b88c571568e98283c/transformed/jetified-play-services-tasks-18.0.1/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] /Users/bytedance/.gradle/caches/transforms-3/708ebdaf30f77d6b88c571568e98283c/transformed/jetified-play-services-tasks-18.0.1/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/bytedance/.gradle/caches/transforms-3/75ea85cec0d7596770e308b0eab55d61/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/bytedance/.gradle/caches/transforms-3/75ea85cec0d7596770e308b0eab55d61/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:18:5-43
+MERGED from [androidx.fragment:fragment:1.5.5] /Users/bytedance/.gradle/caches/transforms-3/3632f9aea3ebb6da27315c3edf52e215/transformed/fragment-1.5.5/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.5.5] /Users/bytedance/.gradle/caches/transforms-3/3632f9aea3ebb6da27315c3edf52e215/transformed/fragment-1.5.5/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.6.0] /Users/bytedance/.gradle/caches/transforms-3/2211beb54a9b59b0499d9b1149ab07bb/transformed/jetified-activity-1.6.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.6.0] /Users/bytedance/.gradle/caches/transforms-3/2211beb54a9b59b0499d9b1149ab07bb/transformed/jetified-activity-1.6.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity-ktx:1.6.0] /Users/bytedance/.gradle/caches/transforms-3/062866e6457336b8ffcb16028d404b0b/transformed/jetified-activity-ktx-1.6.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity-ktx:1.6.0] /Users/bytedance/.gradle/caches/transforms-3/062866e6457336b8ffcb16028d404b0b/transformed/jetified-activity-ktx-1.6.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1] /Users/bytedance/.gradle/caches/transforms-3/99e49e6fb96570b0ff52c1d679e8dc04/transformed/jetified-lifecycle-viewmodel-ktx-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1] /Users/bytedance/.gradle/caches/transforms-3/99e49e6fb96570b0ff52c1d679e8dc04/transformed/jetified-lifecycle-viewmodel-ktx-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.5.1] /Users/bytedance/.gradle/caches/transforms-3/b9de23d048ccd33f98fb607d50cf7969/transformed/jetified-lifecycle-runtime-ktx-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.5.1] /Users/bytedance/.gradle/caches/transforms-3/b9de23d048ccd33f98fb607d50cf7969/transformed/jetified-lifecycle-runtime-ktx-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.gridlayout:gridlayout:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/729717e297be1bd6b8ff283f01347b3b/transformed/gridlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.gridlayout:gridlayout:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/729717e297be1bd6b8ff283f01347b3b/transformed/gridlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/fb4eee792b37b22d08b4b37f092a3733/transformed/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/fb4eee792b37b22d08b4b37f092a3733/transformed/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.2.0] /Users/bytedance/.gradle/caches/transforms-3/9e387c3e0e524ed5966c14389648be83/transformed/slidingpanelayout-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.2.0] /Users/bytedance/.gradle/caches/transforms-3/9e387c3e0e524ed5966c14389648be83/transformed/slidingpanelayout-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.window:window:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/8b77a247549c44b86eb3b18f870f535b/transformed/jetified-window-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.window:window:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/8b77a247549c44b86eb3b18f870f535b/transformed/jetified-window-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.palette:palette-ktx:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/f8183aaca54da90eef9d8a08c08a5865/transformed/jetified-palette-ktx-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.palette:palette-ktx:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/f8183aaca54da90eef9d8a08c08a5865/transformed/jetified-palette-ktx-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.palette:palette:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/9bdea667fbe23306719b9e643c17ac49/transformed/palette-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.palette:palette:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/9bdea667fbe23306719b9e643c17ac49/transformed/palette-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/bb41219d441365f43d663aa3bab79b85/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/bb41219d441365f43d663aa3bab79b85/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/a5d8ad4dc361def0b5002b64852015fb/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/a5d8ad4dc361def0b5002b64852015fb/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/75cc59822bd5dc8b0b48274dd092bc11/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/75cc59822bd5dc8b0b48274dd092bc11/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] /Users/bytedance/.gradle/caches/transforms-3/d4aba6426956753789de9fa15d976708/transformed/lifecycle-viewmodel-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] /Users/bytedance/.gradle/caches/transforms-3/d4aba6426956753789de9fa15d976708/transformed/lifecycle-viewmodel-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] /Users/bytedance/.gradle/caches/transforms-3/839964cac21ba8407371ba4d37d9f713/transformed/jetified-lifecycle-viewmodel-savedstate-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] /Users/bytedance/.gradle/caches/transforms-3/839964cac21ba8407371ba4d37d9f713/transformed/jetified-lifecycle-viewmodel-savedstate-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.5.1] /Users/bytedance/.gradle/caches/transforms-3/a01efc8db301aaaa66fe32116ca7df21/transformed/jetified-lifecycle-livedata-ktx-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.5.1] /Users/bytedance/.gradle/caches/transforms-3/a01efc8db301aaaa66fe32116ca7df21/transformed/jetified-lifecycle-livedata-ktx-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [com.umeng.umsdk:asms:1.4.1] /Users/bytedance/.gradle/caches/transforms-3/aed646872df7560d96122c0015984a15/transformed/jetified-asms-1.4.1/AndroidManifest.xml:7:5-9:41
+MERGED from [com.umeng.umsdk:asms:1.4.1] /Users/bytedance/.gradle/caches/transforms-3/aed646872df7560d96122c0015984a15/transformed/jetified-asms-1.4.1/AndroidManifest.xml:7:5-9:41
+MERGED from [com.tencent.bugly:crashreport:4.1.9] /Users/bytedance/.gradle/caches/transforms-3/ee64e71056ba1434f4afb58cde569d99/transformed/jetified-crashreport-4.1.9/AndroidManifest.xml:7:5-9:41
+MERGED from [com.tencent.bugly:crashreport:4.1.9] /Users/bytedance/.gradle/caches/transforms-3/ee64e71056ba1434f4afb58cde569d99/transformed/jetified-crashreport-4.1.9/AndroidManifest.xml:7:5-9:41
+MERGED from [com.tencent.vasdolly:helper:3.0.6] /Users/bytedance/.gradle/caches/transforms-3/4017495fe8e63b3b1e505c511cd977b3/transformed/jetified-helper-3.0.6/AndroidManifest.xml:5:5-7:41
+MERGED from [com.tencent.vasdolly:helper:3.0.6] /Users/bytedance/.gradle/caches/transforms-3/4017495fe8e63b3b1e505c511cd977b3/transformed/jetified-helper-3.0.6/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.soloader:soloader:0.10.3] /Users/bytedance/.gradle/caches/transforms-3/f30412b7fd5d16a0810ab6ac3cd69528/transformed/jetified-soloader-0.10.3/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.soloader:soloader:0.10.3] /Users/bytedance/.gradle/caches/transforms-3/f30412b7fd5d16a0810ab6ac3cd69528/transformed/jetified-soloader-0.10.3/AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.recyclerview:recyclerview:1.2.1] /Users/bytedance/.gradle/caches/transforms-3/2f6cff2373e271ffdca6dfe3d248ac97/transformed/recyclerview-1.2.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.2.1] /Users/bytedance/.gradle/caches/transforms-3/2f6cff2373e271ffdca6dfe3d248ac97/transformed/recyclerview-1.2.1/AndroidManifest.xml:20:5-22:41
+MERGED from [dev.chrisbanes.insetter:insetter:0.6.1] /Users/bytedance/.gradle/caches/transforms-3/e56c36d07f2aaf4e74798557edcd933d/transformed/jetified-insetter-0.6.1/AndroidManifest.xml:20:5-44
+MERGED from [dev.chrisbanes.insetter:insetter:0.6.1] /Users/bytedance/.gradle/caches/transforms-3/e56c36d07f2aaf4e74798557edcd933d/transformed/jetified-insetter-0.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] /Users/bytedance/.gradle/caches/transforms-3/eed7230c413d8246be4e70068c094a77/transformed/swiperefreshlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] /Users/bytedance/.gradle/caches/transforms-3/eed7230c413d8246be4e70068c094a77/transformed/swiperefreshlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.media:media:1.4.1] /Users/bytedance/.gradle/caches/transforms-3/cefbfc7639c3167dea85471f9834f93c/transformed/media-1.4.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.media:media:1.4.1] /Users/bytedance/.gradle/caches/transforms-3/cefbfc7639c3167dea85471f9834f93c/transformed/media-1.4.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/bytedance/.gradle/caches/transforms-3/09d6506d38e317166bad711756f63633/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/bytedance/.gradle/caches/transforms-3/09d6506d38e317166bad711756f63633/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/bytedance/.gradle/caches/transforms-3/59fdc631393980ef329061b2de1e38de/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/bytedance/.gradle/caches/transforms-3/59fdc631393980ef329061b2de1e38de/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/bytedance/.gradle/caches/transforms-3/be14da77909aa86f13fc2e24bd06c988/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/bytedance/.gradle/caches/transforms-3/be14da77909aa86f13fc2e24bd06c988/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/bytedance/.gradle/caches/transforms-3/559208a4f97baadb58a5e5862ba2c93b/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/bytedance/.gradle/caches/transforms-3/559208a4f97baadb58a5e5862ba2c93b/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.caij.lib:exoplayer:1.3.9] /Users/bytedance/.gradle/caches/transforms-3/a24f3352d89b343f234d992ab5cf9bf9/transformed/jetified-exoplayer-1.3.9/AndroidManifest.xml:7:5-9:41
+MERGED from [com.caij.lib:exoplayer:1.3.9] /Users/bytedance/.gradle/caches/transforms-3/a24f3352d89b343f234d992ab5cf9bf9/transformed/jetified-exoplayer-1.3.9/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.18.2] /Users/bytedance/.gradle/caches/transforms-3/845a9349445aba305f8402141618a3eb/transformed/jetified-exoplayer-core-2.18.2/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.18.2] /Users/bytedance/.gradle/caches/transforms-3/845a9349445aba305f8402141618a3eb/transformed/jetified-exoplayer-core-2.18.2/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/bytedance/.gradle/caches/transforms-3/d86545aff34ebc391b51b580376fb9dc/transformed/jetified-emoji2-views-helper-1.2.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/bytedance/.gradle/caches/transforms-3/d86545aff34ebc391b51b580376fb9dc/transformed/jetified-emoji2-views-helper-1.2.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/bytedance/.gradle/caches/transforms-3/42d4acb4322ab6a7a315952c435f3adb/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/bytedance/.gradle/caches/transforms-3/42d4acb4322ab6a7a315952c435f3adb/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/c658783949e89ec2da96e063fbcc8fce/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/c658783949e89ec2da96e063fbcc8fce/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/2edb4c3af5dafb9f6ffd20e723f8c8ff/transformed/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/2edb4c3af5dafb9f6ffd20e723f8c8ff/transformed/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.1.0] /Users/bytedance/.gradle/caches/transforms-3/73979f8dd0a9e125d01e33e9aa0fab48/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] /Users/bytedance/.gradle/caches/transforms-3/73979f8dd0a9e125d01e33e9aa0fab48/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core-ktx:1.9.0] /Users/bytedance/.gradle/caches/transforms-3/984a764d33a117b7f285eae71dd2ee4f/transformed/jetified-core-ktx-1.9.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.9.0] /Users/bytedance/.gradle/caches/transforms-3/984a764d33a117b7f285eae71dd2ee4f/transformed/jetified-core-ktx-1.9.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.transition:transition:1.4.1] /Users/bytedance/.gradle/caches/transforms-3/9186ad364d8f14587809ecffe0c9c82b/transformed/transition-1.4.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.4.1] /Users/bytedance/.gradle/caches/transforms-3/9186ad364d8f14587809ecffe0c9c82b/transformed/transition-1.4.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.9.0] /Users/bytedance/.gradle/caches/transforms-3/62cf0fca72429c0b2d34ee3065e27d4d/transformed/core-1.9.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.9.0] /Users/bytedance/.gradle/caches/transforms-3/62cf0fca72429c0b2d34ee3065e27d4d/transformed/core-1.9.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/bytedance/.gradle/caches/transforms-3/35312deb7d45ac4a7f3c02b0263cafa2/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/bytedance/.gradle/caches/transforms-3/35312deb7d45ac4a7f3c02b0263cafa2/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] /Users/bytedance/.gradle/caches/transforms-3/2b2d0e9f4eed502d47ff38260c119edc/transformed/lifecycle-runtime-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] /Users/bytedance/.gradle/caches/transforms-3/2b2d0e9f4eed502d47ff38260c119edc/transformed/lifecycle-runtime-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.0] /Users/bytedance/.gradle/caches/transforms-3/b9366b623ddfaf833f25500ba9fe7dbc/transformed/jetified-savedstate-ktx-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.0] /Users/bytedance/.gradle/caches/transforms-3/b9366b623ddfaf833f25500ba9fe7dbc/transformed/jetified-savedstate-ktx-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.2.0] /Users/bytedance/.gradle/caches/transforms-3/61eb7c39d2f1089849d56031f70cad16/transformed/jetified-savedstate-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.2.0] /Users/bytedance/.gradle/caches/transforms-3/61eb7c39d2f1089849d56031f70cad16/transformed/jetified-savedstate-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.5.1] /Users/bytedance/.gradle/caches/transforms-3/81708b7e56404a28440df1d6c7746987/transformed/lifecycle-livedata-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.5.1] /Users/bytedance/.gradle/caches/transforms-3/81708b7e56404a28440df1d6c7746987/transformed/lifecycle-livedata-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.5.1] /Users/bytedance/.gradle/caches/transforms-3/44ad8b8158a8d9105ff8cf76a9c7162d/transformed/jetified-lifecycle-livedata-core-ktx-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.5.1] /Users/bytedance/.gradle/caches/transforms-3/44ad8b8158a8d9105ff8cf76a9c7162d/transformed/jetified-lifecycle-livedata-core-ktx-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] /Users/bytedance/.gradle/caches/transforms-3/c46ec6e27c74d71c162b805a236175dd/transformed/lifecycle-livedata-core-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] /Users/bytedance/.gradle/caches/transforms-3/c46ec6e27c74d71c162b805a236175dd/transformed/lifecycle-livedata-core-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core-splashscreen:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/513afb1e0f1c1c2f9597bf61c4677ed6/transformed/jetified-core-splashscreen-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core-splashscreen:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/513afb1e0f1c1c2f9597bf61c4677ed6/transformed/jetified-core-splashscreen-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.caij.lib:player:1.3.9] /Users/bytedance/.gradle/caches/transforms-3/d15f36f71bb444873e022d23ce48d5e3/transformed/jetified-player-1.3.9/AndroidManifest.xml:7:5-9:41
+MERGED from [com.caij.lib:player:1.3.9] /Users/bytedance/.gradle/caches/transforms-3/d15f36f71bb444873e022d23ce48d5e3/transformed/jetified-player-1.3.9/AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.sqlite:sqlite-framework:2.2.0] /Users/bytedance/.gradle/caches/transforms-3/a5aae6eed941f0aa7570a0cbf41a98c4/transformed/sqlite-framework-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite-framework:2.2.0] /Users/bytedance/.gradle/caches/transforms-3/a5aae6eed941f0aa7570a0cbf41a98c4/transformed/sqlite-framework-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/3abfc4c5972ae945e8c7dc713859f93a/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/3abfc4c5972ae945e8c7dc713859f93a/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:gifdecoder:4.15.1] /Users/bytedance/.gradle/caches/transforms-3/e7f15036603caf2183a583ef79e529ff/transformed/jetified-gifdecoder-4.15.1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.15.1] /Users/bytedance/.gradle/caches/transforms-3/e7f15036603caf2183a583ef79e529ff/transformed/jetified-gifdecoder-4.15.1/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.3] /Users/bytedance/.gradle/caches/transforms-3/642a720b665f3e150d431c8b6893ff25/transformed/exifinterface-1.3.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.3] /Users/bytedance/.gradle/caches/transforms-3/642a720b665f3e150d431c8b6893ff25/transformed/exifinterface-1.3.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/bytedance/.gradle/caches/transforms-3/a50d6668e39363b85c2a230608beec35/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/bytedance/.gradle/caches/transforms-3/a50d6668e39363b85c2a230608beec35/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/78effae570a3b3e013f136d7ec9984de/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/78effae570a3b3e013f136d7ec9984de/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.documentfile:documentfile:1.0.1] /Users/bytedance/.gradle/caches/transforms-3/28da48ac3d012fe9cb857ecf5801cb44/transformed/documentfile-1.0.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.1] /Users/bytedance/.gradle/caches/transforms-3/28da48ac3d012fe9cb857ecf5801cb44/transformed/documentfile-1.0.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.exoplayer:exoplayer-datasource:2.18.2] /Users/bytedance/.gradle/caches/transforms-3/51ff286f45a1ad7954a55ff857b78239/transformed/jetified-exoplayer-datasource-2.18.2/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-datasource:2.18.2] /Users/bytedance/.gradle/caches/transforms-3/51ff286f45a1ad7954a55ff857b78239/transformed/jetified-exoplayer-datasource-2.18.2/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-extractor:2.18.2] /Users/bytedance/.gradle/caches/transforms-3/a30ea6d0065dbf997040f9ac89825a54/transformed/jetified-exoplayer-extractor-2.18.2/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-extractor:2.18.2] /Users/bytedance/.gradle/caches/transforms-3/a30ea6d0065dbf997040f9ac89825a54/transformed/jetified-exoplayer-extractor-2.18.2/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-decoder:2.18.2] /Users/bytedance/.gradle/caches/transforms-3/27605d8c40abc8808808982d2736c577/transformed/jetified-exoplayer-decoder-2.18.2/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-decoder:2.18.2] /Users/bytedance/.gradle/caches/transforms-3/27605d8c40abc8808808982d2736c577/transformed/jetified-exoplayer-decoder-2.18.2/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-database:2.18.2] /Users/bytedance/.gradle/caches/transforms-3/a2accc810164975b470ac0c5c2f9895d/transformed/jetified-exoplayer-database-2.18.2/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-database:2.18.2] /Users/bytedance/.gradle/caches/transforms-3/a2accc810164975b470ac0c5c2f9895d/transformed/jetified-exoplayer-database-2.18.2/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-common:2.18.2] /Users/bytedance/.gradle/caches/transforms-3/d30d6d9d69bbd2476c15cd9c078b7d63/transformed/jetified-exoplayer-common-2.18.2/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-common:2.18.2] /Users/bytedance/.gradle/caches/transforms-3/d30d6d9d69bbd2476c15cd9c078b7d63/transformed/jetified-exoplayer-common-2.18.2/AndroidManifest.xml:20:5-22:41
+MERGED from [io.github.caij:MMKVSharedPreferences:1.0.2] /Users/bytedance/.gradle/caches/transforms-3/29bcfc636241b96db0715f29b1c751e5/transformed/jetified-MMKVSharedPreferences-1.0.2/AndroidManifest.xml:5:5-7:41
+MERGED from [io.github.caij:MMKVSharedPreferences:1.0.2] /Users/bytedance/.gradle/caches/transforms-3/29bcfc636241b96db0715f29b1c751e5/transformed/jetified-MMKVSharedPreferences-1.0.2/AndroidManifest.xml:5:5-7:41
+MERGED from [com.tencent:mmkv-static:1.2.10] /Users/bytedance/.gradle/caches/transforms-3/32ecad0cbc95f04c41adbfa732e9c2b7/transformed/jetified-mmkv-static-1.2.10/AndroidManifest.xml:5:5-7:41
+MERGED from [com.tencent:mmkv-static:1.2.10] /Users/bytedance/.gradle/caches/transforms-3/32ecad0cbc95f04c41adbfa732e9c2b7/transformed/jetified-mmkv-static-1.2.10/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.sqlite:sqlite:2.2.0] /Users/bytedance/.gradle/caches/transforms-3/52846b002a75495f9dd3d7a8a9ef942b/transformed/sqlite-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite:2.2.0] /Users/bytedance/.gradle/caches/transforms-3/52846b002a75495f9dd3d7a8a9ef942b/transformed/sqlite-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/4c3e7fe9e5c11f191f0735b5ba124984/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/4c3e7fe9e5c11f191f0735b5ba124984/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/3eb2715da76297185d879e1a40bb87bb/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/3eb2715da76297185d879e1a40bb87bb/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.billingclient:billing:6.0.0] /Users/bytedance/.gradle/caches/transforms-3/f1ad32224ba619ceda352ca547b567fd/transformed/jetified-billing-6.0.0/AndroidManifest.xml:6:5-8:41
+MERGED from [com.android.billingclient:billing:6.0.0] /Users/bytedance/.gradle/caches/transforms-3/f1ad32224ba619ceda352ca547b567fd/transformed/jetified-billing-6.0.0/AndroidManifest.xml:6:5-8:41
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/bytedance/.gradle/caches/transforms-3/ae08fbfa277194a7f7362afc81108854/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/bytedance/.gradle/caches/transforms-3/ae08fbfa277194a7f7362afc81108854/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/bytedance/.gradle/caches/transforms-3/bf6a590a41fdc664fcaff307e06947ab/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/bytedance/.gradle/caches/transforms-3/bf6a590a41fdc664fcaff307e06947ab/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-api:3.0.0] /Users/bytedance/.gradle/caches/transforms-3/75f8f466a4f5f3c71f2bb1d3c5ab83e3/transformed/jetified-transport-api-3.0.0/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-api:3.0.0] /Users/bytedance/.gradle/caches/transforms-3/75f8f466a4f5f3c71f2bb1d3c5ab83e3/transformed/jetified-transport-api-3.0.0/AndroidManifest.xml:18:5-20:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/bytedance/.gradle/caches/transforms-3/17099d0eee1b28d298fe11da032479d3/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/bytedance/.gradle/caches/transforms-3/17099d0eee1b28d298fe11da032479d3/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/bytedance/.gradle/caches/transforms-3/daa9c8c6a98eb72e16797b86afbe7d67/transformed/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/bytedance/.gradle/caches/transforms-3/daa9c8c6a98eb72e16797b86afbe7d67/transformed/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] /Users/bytedance/.gradle/caches/transforms-3/e02fb699e6ff39a202d658139ac1adb1/transformed/jetified-firebase-encoders-json-18.0.0/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] /Users/bytedance/.gradle/caches/transforms-3/e02fb699e6ff39a202d658139ac1adb1/transformed/jetified-firebase-encoders-json-18.0.0/AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/9b6da4c33dd669fd470650582a897684/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/9b6da4c33dd669fd470650582a897684/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/9900da2a82098f78b55501c1f563ed76/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/9900da2a82098f78b55501c1f563ed76/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.github.bosphere.android-fadingedgelayout:fadingedgelayout:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/e05ea525e1b81aa01bc0b92987bb5564/transformed/jetified-fadingedgelayout-1.0.0/AndroidManifest.xml:6:5-43
+MERGED from [com.github.bosphere.android-fadingedgelayout:fadingedgelayout:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/e05ea525e1b81aa01bc0b92987bb5564/transformed/jetified-fadingedgelayout-1.0.0/AndroidManifest.xml:6:5-43
+MERGED from [com.github.jetradarmobile:android-snowfall:1.2.1] /Users/bytedance/.gradle/caches/transforms-3/5825264ad5334c947819eb0c58103cc5/transformed/jetified-android-snowfall-1.2.1/AndroidManifest.xml:5:5-44
+MERGED from [com.github.jetradarmobile:android-snowfall:1.2.1] /Users/bytedance/.gradle/caches/transforms-3/5825264ad5334c947819eb0c58103cc5/transformed/jetified-android-snowfall-1.2.1/AndroidManifest.xml:5:5-44
+MERGED from [me.tankery.lib:circularSeekBar:1.4.1] /Users/bytedance/.gradle/caches/transforms-3/162f8f5538ecc90e8426f1fd72f90548/transformed/jetified-circularSeekBar-1.4.1/AndroidManifest.xml:5:5-7:41
+MERGED from [me.tankery.lib:circularSeekBar:1.4.1] /Users/bytedance/.gradle/caches/transforms-3/162f8f5538ecc90e8426f1fd72f90548/transformed/jetified-circularSeekBar-1.4.1/AndroidManifest.xml:5:5-7:41
+MERGED from [io.github.caij:simpleadapter:1.0.1] /Users/bytedance/.gradle/caches/transforms-3/e1c0251218db1f42f8047e322a0596ce/transformed/jetified-simpleadapter-1.0.1/AndroidManifest.xml:5:5-7:41
+MERGED from [io.github.caij:simpleadapter:1.0.1] /Users/bytedance/.gradle/caches/transforms-3/e1c0251218db1f42f8047e322a0596ce/transformed/jetified-simpleadapter-1.0.1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.caij.lib.downs:core:2.0.5] /Users/bytedance/.gradle/caches/transforms-3/cdcc04dd527c12621eadf892fc0659b2/transformed/jetified-core-2.0.5/AndroidManifest.xml:7:5-9:41
+MERGED from [com.caij.lib.downs:core:2.0.5] /Users/bytedance/.gradle/caches/transforms-3/cdcc04dd527c12621eadf892fc0659b2/transformed/jetified-core-2.0.5/AndroidManifest.xml:7:5-9:41
+MERGED from [com.caij.lib.downs:asynctask:2.0.5] /Users/bytedance/.gradle/caches/transforms-3/a9da871ff6c71db0abc6c2adbe5c4c35/transformed/jetified-asynctask-2.0.5/AndroidManifest.xml:7:5-9:41
+MERGED from [com.caij.lib.downs:asynctask:2.0.5] /Users/bytedance/.gradle/caches/transforms-3/a9da871ff6c71db0abc6c2adbe5c4c35/transformed/jetified-asynctask-2.0.5/AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/bytedance/.gradle/caches/transforms-3/cc2e47cc0127094ffd87379fb6ac521b/transformed/jetified-annotation-experimental-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/bytedance/.gradle/caches/transforms-3/cc2e47cc0127094ffd87379fb6ac521b/transformed/jetified-annotation-experimental-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.ndk.thirdparty:openssl:1.1.1l-beta-1] /Users/bytedance/.gradle/caches/transforms-3/2684181f76f183fc59c244b5173c5305/transformed/jetified-openssl-1.1.1l-beta-1/AndroidManifest.xml:2:2-70
+MERGED from [com.android.ndk.thirdparty:openssl:1.1.1l-beta-1] /Users/bytedance/.gradle/caches/transforms-3/2684181f76f183fc59c244b5173c5305/transformed/jetified-openssl-1.1.1l-beta-1/AndroidManifest.xml:2:2-70
+MERGED from [com.facebook.fbjni:fbjni:0.3.0] /Users/bytedance/.gradle/caches/transforms-3/d791f71d8c3d30ccbba823af11d072bf/transformed/jetified-fbjni-0.3.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fbjni:fbjni:0.3.0] /Users/bytedance/.gradle/caches/transforms-3/d791f71d8c3d30ccbba823af11d072bf/transformed/jetified-fbjni-0.3.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.tencent.mm.opensdk:wechat-sdk-android:6.8.11] /Users/bytedance/.gradle/caches/transforms-3/d108bf8fc53358aeb5164b6cddbabd72/transformed/jetified-wechat-sdk-android-6.8.11/AndroidManifest.xml:5:5-7:41
+MERGED from [com.tencent.mm.opensdk:wechat-sdk-android:6.8.11] /Users/bytedance/.gradle/caches/transforms-3/d108bf8fc53358aeb5164b6cddbabd72/transformed/jetified-wechat-sdk-android-6.8.11/AndroidManifest.xml:5:5-7:41
+MERGED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:7:5-44
+MERGED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:7:5-44
+INJECTED from /Users/bytedance/StudioProjects/pure-music/app/src/debug/AndroidManifest.xml
+INJECTED from /Users/bytedance/StudioProjects/pure-music/app/src/debug/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/bytedance/StudioProjects/pure-music/app/src/debug/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/bytedance/StudioProjects/pure-music/app/src/debug/AndroidManifest.xml
+provider#debug.DebugContentProvider
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/debug/AndroidManifest.xml:7:9-9:56
+	android:authorities
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/debug/AndroidManifest.xml:8:13-78
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/debug/AndroidManifest.xml:9:13-54
+activity#com.caij.puremusic.activities.MainActivity
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:63:9-137:20
+	android:launchMode
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:66:13-43
+	android:exported
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:65:13-36
+	android:theme
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:67:13-65
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:64:13-52
+intent-filter#action:name:android.intent.action.MAIN+action:name:android.intent.action.MUSIC_PLAYER+category:name:android.intent.category.APP_MUSIC+category:name:android.intent.category.DEFAULT+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:68:13-75:29
+action#android.intent.action.MAIN
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:69:17-69
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:69:25-66
+action#android.intent.action.MUSIC_PLAYER
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:70:17-77
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:70:25-74
+category#android.intent.category.LAUNCHER
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:72:17-77
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:72:27-74
+category#android.intent.category.APP_MUSIC
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:73:17-78
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:73:27-75
+category#android.intent.category.DEFAULT
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:74:17-76
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:74:27-73
+intent-filter#action:name:android.media.action.MEDIA_PLAY_FROM_SEARCH+category:name:android.intent.category.DEFAULT
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:76:13-80:29
+action#android.media.action.MEDIA_PLAY_FROM_SEARCH
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:77:17-86
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:77:25-83
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.DEFAULT+data:mimeType:application/itunes+data:mimeType:application/ogg+data:mimeType:application/x-ogg+data:mimeType:audio/*+data:scheme:content
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:81:13-91:29
+action#android.intent.action.VIEW
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:82:17-69
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:82:25-66
+data
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:86:17-50
+	android:scheme
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:86:23-47
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.DEFAULT+data:mimeType:application/itunes+data:mimeType:application/ogg+data:mimeType:application/x-ogg+data:mimeType:audio/*+data:scheme:file
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:92:13-102:29
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:mimeType:application/itunes+data:mimeType:application/ogg+data:mimeType:application/x-ogg+data:mimeType:audio/*+data:scheme:http
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:103:13-114:29
+category#android.intent.category.BROWSABLE
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:107:17-78
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:107:27-75
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.DEFAULT+data:mimeType:vnd.android.cursor.dir/albums+data:mimeType:vnd.android.cursor.dir/artists+data:mimeType:vnd.android.cursor.dir/playlist
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:115:13-123:29
+	tools:ignore
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:115:28-58
+intent-filter#action:name:com.cyanogenmod.eleven.AUDIO_PLAYER+category:name:android.intent.category.DEFAULT
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:124:13-128:29
+action#com.cyanogenmod.eleven.AUDIO_PLAYER
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:125:17-78
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:125:25-75
+intent-filter#action:name:android.intent.action.PICK+category:name:android.intent.category.DEFAULT+category:name:android.intent.category.OPENABLE+data:mimeType:vnd.android.cursor.dir/audio
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:129:13-136:29
+action#android.intent.action.PICK
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:130:17-69
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:130:25-66
+category#android.intent.category.OPENABLE
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:133:17-77
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:133:27-74
+activity#com.caij.puremusic.activities.HolderActivity
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:138:9-63
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:138:19-60
+activity#com.caij.puremusic.activities.SettingActivity
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:139:9-64
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:139:19-61
+activity#com.caij.puremusic.activities.tageditor.AlbumTagEditorActivity
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:140:9-81
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:140:19-78
+activity#com.caij.puremusic.activities.tageditor.AlbumTagEditorActivityV2
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:141:9-83
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:141:19-80
+activity#com.caij.puremusic.activities.tageditor.SongTagEditorActivity
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:142:9-80
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:142:19-77
+activity#com.caij.puremusic.activities.tageditor.SongTagEditorActivityV2
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:143:9-82
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:143:19-79
+activity#com.caij.puremusic.activities.SupportDevelopmentActivity
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:144:9-75
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:144:19-72
+activity#com.caij.puremusic.activities.LicenseActivity
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:145:9-64
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:145:19-61
+activity#com.caij.puremusic.activities.bugreport.BugReportActivity
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:146:9-76
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:146:19-73
+activity#com.caij.puremusic.activities.ShareInstagramStory
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:147:9-68
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:147:19-65
+activity#com.caij.puremusic.activities.DriveModeActivity
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:148:9-66
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:148:19-63
+activity#com.caij.puremusic.activities.PermissionActivity
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:149:9-67
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:149:19-64
+activity#com.caij.puremusic.activities.WebActivity
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:150:9-60
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:150:19-57
+activity#com.caij.puremusic.activities.FolderManagerActivity
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:151:9-70
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:151:19-67
+activity#com.caij.puremusic.activities.FolderFilesActivity
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:152:9-68
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:152:19-65
+activity#com.caij.puremusic.drive.adrive.Auth20Activity
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:153:9-65
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:153:19-62
+activity#com.caij.puremusic.drive.dropbox.DropBoxAuthActivity
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:154:9-71
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:154:19-68
+activity#com.caij.puremusic.drive.dropbox.DropBoxAuthActivity2
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:155:9-168:20
+	android:exported
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:157:13-36
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:156:13-63
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:music.caij.xyz+data:scheme:puremusic
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:158:13-167:29
+activity#com.caij.puremusic.activities.LockScreenActivity
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:169:9-173:47
+	android:excludeFromRecents
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:171:13-46
+	android:launchMode
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:172:13-44
+	android:showOnLockScreen
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:173:13-44
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:170:13-58
+activity#com.caij.puremusic.fragments.backup.RestoreActivity
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:174:9-208:20
+	android:label
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:178:13-44
+	android:excludeFromRecents
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:176:13-47
+	android:exported
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:177:13-36
+	android:theme
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:179:13-59
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:175:13-61
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:*+data:mimeType:*/*+data:mimeType:application/octet-stream+data:mimeType:application/x-zip-compressed+data:mimeType:application/zip+data:pathPattern:.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.rmbak+data:pathPattern:.*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.rmbak+data:pathPattern:.*\\..*\\..*\\..*\\..*\\..*\\..*\\.rmbak+data:pathPattern:.*\\..*\\..*\\..*\\..*\\..*\\.rmbak+data:pathPattern:.*\\..*\\..*\\..*\\..*\\.rmbak+data:pathPattern:.*\\..*\\..*\\..*\\.rmbak+data:pathPattern:.*\\..*\\..*\\.rmbak+data:pathPattern:.*\\..*\\.rmbak+data:pathPattern:.*\\.rmbak+data:scheme:content+data:scheme:file
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:180:13-207:29
+activity#com.caij.puremusic.appshortcuts.AppShortcutLauncherActivity
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:209:9-212:75
+	android:launchMode
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:211:13-48
+	android:theme
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:212:13-72
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:210:13-69
+activity#com.caij.puremusic.activities.saf.SAFGuideActivity
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:213:9-215:50
+	android:theme
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:215:13-47
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:214:13-60
+receiver#com.caij.puremusic.appwidgets.AppWidgetBig
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:226:9-237:20
+	android:label
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:229:13-56
+	android:exported
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:228:13-37
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:227:13-52
+intent-filter#action:name:android.appwidget.action.APPWIDGET_UPDATE
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:230:13-232:29
+action#android.appwidget.action.APPWIDGET_UPDATE
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:231:17-84
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:231:25-81
+meta-data#android.appwidget.provider
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:234:13-236:63
+	android:resource
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:236:17-60
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:235:17-58
+receiver#com.caij.puremusic.appwidgets.AppWidgetClassic
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:238:9-249:20
+	android:label
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:241:13-60
+	android:exported
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:240:13-37
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:239:13-56
+receiver#com.caij.puremusic.appwidgets.AppWidgetSmall
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:250:9-261:20
+	android:label
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:253:13-58
+	android:exported
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:252:13-37
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:251:13-54
+receiver#com.caij.puremusic.appwidgets.AppWidgetText
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:262:9-273:20
+	android:label
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:265:13-57
+	android:exported
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:264:13-37
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:263:13-53
+receiver#com.caij.puremusic.appwidgets.AppWidgetCard
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:274:9-285:20
+	android:label
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:277:13-57
+	android:exported
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:276:13-37
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:275:13-53
+service#com.caij.puremusic.service.MusicService
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:311:9-320:19
+	android:enabled
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:313:13-35
+	android:label
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:316:13-45
+	android:exported
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:314:13-37
+	android:foregroundServiceType
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:315:13-58
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:312:13-49
+intent-filter#action:name:android.media.browse.MediaBrowserService
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:317:13-319:29
+action#android.media.browse.MediaBrowserService
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:318:17-83
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:318:25-80
+meta-data#android.max_aspect
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:322:9-324:35
+	android:value
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:324:13-32
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:323:13-46
+meta-data#com.lge.support.SPLIT_WINDOW
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:325:9-327:36
+	android:value
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:327:13-33
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:326:13-56
+activity#com.caij.puremusic.wxapi.WXPayEntryActivity
+ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:341:9-343:108
+	android:label
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:341:78-110
+	android:exported
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:341:111-134
+	android:configChanges
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:343:13-106
+	android:theme
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:342:13-75
+	android:name
+		ADDED from /Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:341:19-77
+activity#com.caij.vip.DonatedActivity
+ADDED from [:vip] /Users/bytedance/StudioProjects/pure-music/vip/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-65
+	android:name
+		ADDED from [:vip] /Users/bytedance/StudioProjects/pure-music/vip/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:19-62
+activity#com.caij.vip.DefaultFragmentActivity
+ADDED from [:vip] /Users/bytedance/StudioProjects/pure-music/vip/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:9-73
+	android:name
+		ADDED from [:vip] /Users/bytedance/StudioProjects/pure-music/vip/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:19-70
+meta-data#com.bumptech.glide.integration.okhttp3.OkHttpGlideModule
+ADDED from [com.github.bumptech.glide:okhttp3-integration:4.15.1] /Users/bytedance/.gradle/caches/transforms-3/2e3b13e41a159e45834f1372094f3d3c/transformed/jetified-okhttp3-integration-4.15.1/AndroidManifest.xml:10:9-12:43
+	android:value
+		ADDED from [com.github.bumptech.glide:okhttp3-integration:4.15.1] /Users/bytedance/.gradle/caches/transforms-3/2e3b13e41a159e45834f1372094f3d3c/transformed/jetified-okhttp3-integration-4.15.1/AndroidManifest.xml:12:13-40
+	android:name
+		ADDED from [com.github.bumptech.glide:okhttp3-integration:4.15.1] /Users/bytedance/.gradle/caches/transforms-3/2e3b13e41a159e45834f1372094f3d3c/transformed/jetified-okhttp3-integration-4.15.1/AndroidManifest.xml:11:13-84
+intent#action:name:android.media.action.IMAGE_CAPTURE
+ADDED from [com.github.dhaval2404:imagepicker:2.1] /Users/bytedance/.gradle/caches/transforms-3/ff97037da9e7fbf862cd71624b486304/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:12:9-14:18
+action#android.media.action.IMAGE_CAPTURE
+ADDED from [com.github.dhaval2404:imagepicker:2.1] /Users/bytedance/.gradle/caches/transforms-3/ff97037da9e7fbf862cd71624b486304/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:13:13-73
+	android:name
+		ADDED from [com.github.dhaval2404:imagepicker:2.1] /Users/bytedance/.gradle/caches/transforms-3/ff97037da9e7fbf862cd71624b486304/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:13:21-70
+intent#action:name:android.intent.action.OPEN_DOCUMENT_TREE
+ADDED from [com.github.dhaval2404:imagepicker:2.1] /Users/bytedance/.gradle/caches/transforms-3/ff97037da9e7fbf862cd71624b486304/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:16:9-18:18
+action#android.intent.action.OPEN_DOCUMENT_TREE
+ADDED from [com.github.dhaval2404:imagepicker:2.1] /Users/bytedance/.gradle/caches/transforms-3/ff97037da9e7fbf862cd71624b486304/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:17:13-79
+	android:name
+		ADDED from [com.github.dhaval2404:imagepicker:2.1] /Users/bytedance/.gradle/caches/transforms-3/ff97037da9e7fbf862cd71624b486304/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:17:21-76
+activity#com.github.dhaval2404.imagepicker.ImagePickerActivity
+ADDED from [com.github.dhaval2404:imagepicker:2.1] /Users/bytedance/.gradle/caches/transforms-3/ff97037da9e7fbf862cd71624b486304/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:22:9-25:68
+	android:screenOrientation
+		ADDED from [com.github.dhaval2404:imagepicker:2.1] /Users/bytedance/.gradle/caches/transforms-3/ff97037da9e7fbf862cd71624b486304/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:24:13-52
+	android:theme
+		ADDED from [com.github.dhaval2404:imagepicker:2.1] /Users/bytedance/.gradle/caches/transforms-3/ff97037da9e7fbf862cd71624b486304/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:25:13-65
+	android:name
+		ADDED from [com.github.dhaval2404:imagepicker:2.1] /Users/bytedance/.gradle/caches/transforms-3/ff97037da9e7fbf862cd71624b486304/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:23:13-81
+activity#com.yalantis.ucrop.UCropActivity
+ADDED from [com.github.dhaval2404:imagepicker:2.1] /Users/bytedance/.gradle/caches/transforms-3/ff97037da9e7fbf862cd71624b486304/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:26:9-29:72
+	android:screenOrientation
+		ADDED from [com.github.dhaval2404:imagepicker:2.1] /Users/bytedance/.gradle/caches/transforms-3/ff97037da9e7fbf862cd71624b486304/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:28:13-49
+	android:theme
+		ADDED from [com.github.dhaval2404:imagepicker:2.1] /Users/bytedance/.gradle/caches/transforms-3/ff97037da9e7fbf862cd71624b486304/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:29:13-69
+	android:name
+		ADDED from [com.github.dhaval2404:imagepicker:2.1] /Users/bytedance/.gradle/caches/transforms-3/ff97037da9e7fbf862cd71624b486304/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:27:13-60
+provider#com.github.dhaval2404.imagepicker.ImagePickerFileProvider
+ADDED from [com.github.dhaval2404:imagepicker:2.1] /Users/bytedance/.gradle/caches/transforms-3/ff97037da9e7fbf862cd71624b486304/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:31:9-39:20
+	android:grantUriPermissions
+		ADDED from [com.github.dhaval2404:imagepicker:2.1] /Users/bytedance/.gradle/caches/transforms-3/ff97037da9e7fbf862cd71624b486304/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:35:13-47
+	android:authorities
+		ADDED from [com.github.dhaval2404:imagepicker:2.1] /Users/bytedance/.gradle/caches/transforms-3/ff97037da9e7fbf862cd71624b486304/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:33:13-72
+	android:exported
+		ADDED from [com.github.dhaval2404:imagepicker:2.1] /Users/bytedance/.gradle/caches/transforms-3/ff97037da9e7fbf862cd71624b486304/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:34:13-37
+	android:name
+		ADDED from [com.github.dhaval2404:imagepicker:2.1] /Users/bytedance/.gradle/caches/transforms-3/ff97037da9e7fbf862cd71624b486304/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:32:13-85
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from [com.github.dhaval2404:imagepicker:2.1] /Users/bytedance/.gradle/caches/transforms-3/ff97037da9e7fbf862cd71624b486304/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:36:13-38:71
+	android:resource
+		ADDED from [com.github.dhaval2404:imagepicker:2.1] /Users/bytedance/.gradle/caches/transforms-3/ff97037da9e7fbf862cd71624b486304/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:38:17-68
+	android:name
+		ADDED from [com.github.dhaval2404:imagepicker:2.1] /Users/bytedance/.gradle/caches/transforms-3/ff97037da9e7fbf862cd71624b486304/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:37:17-67
+uses-permission#android.permission.READ_PRIVILEGED_PHONE_STATE
+ADDED from [com.github.allenymt.PrivacySentry:privacy-proxy:1.2.7] /Users/bytedance/.gradle/caches/transforms-3/a2f588ab3d03fe263427a762ee1c1e43/transformed/jetified-privacy-proxy-1.2.7/AndroidManifest.xml:10:5-86
+	android:name
+		ADDED from [com.github.allenymt.PrivacySentry:privacy-proxy:1.2.7] /Users/bytedance/.gradle/caches/transforms-3/a2f588ab3d03fe263427a762ee1c1e43/transformed/jetified-privacy-proxy-1.2.7/AndroidManifest.xml:10:22-83
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from [com.facebook.flipper:flipper:0.145.0] /Users/bytedance/.gradle/caches/transforms-3/40ce0fab91d84e5ffcc8e38ffd166016/transformed/jetified-flipper-0.145.0/AndroidManifest.xml:16:5-76
+MERGED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:30:5-76
+MERGED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:30:5-76
+	android:name
+		ADDED from [com.facebook.flipper:flipper:0.145.0] /Users/bytedance/.gradle/caches/transforms-3/40ce0fab91d84e5ffcc8e38ffd166016/transformed/jetified-flipper-0.145.0/AndroidManifest.xml:16:22-73
+provider#com.caij.lib.lifemanager.ProcessProvider
+ADDED from [com.caij.lib:lifemanager:1.1.3.0] /Users/bytedance/.gradle/caches/transforms-3/73d306b643338dfc432890c6b3e34ded/transformed/jetified-lifemanager-1.1.3.0/AndroidManifest.xml:12:9-14:62
+	android:authorities
+		ADDED from [com.caij.lib:lifemanager:1.1.3.0] /Users/bytedance/.gradle/caches/transforms-3/73d306b643338dfc432890c6b3e34ded/transformed/jetified-lifemanager-1.1.3.0/AndroidManifest.xml:14:13-59
+	android:name
+		ADDED from [com.caij.lib:lifemanager:1.1.3.0] /Users/bytedance/.gradle/caches/transforms-3/73d306b643338dfc432890c6b3e34ded/transformed/jetified-lifemanager-1.1.3.0/AndroidManifest.xml:13:13-68
+activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
+ADDED from [com.google.android.gms:play-services-auth:20.4.1] /Users/bytedance/.gradle/caches/transforms-3/d63127a709fc6a083197384e24c3e269/transformed/jetified-play-services-auth-20.4.1/AndroidManifest.xml:23:9-27:75
+	android:excludeFromRecents
+		ADDED from [com.google.android.gms:play-services-auth:20.4.1] /Users/bytedance/.gradle/caches/transforms-3/d63127a709fc6a083197384e24c3e269/transformed/jetified-play-services-auth-20.4.1/AndroidManifest.xml:25:13-46
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:20.4.1] /Users/bytedance/.gradle/caches/transforms-3/d63127a709fc6a083197384e24c3e269/transformed/jetified-play-services-auth-20.4.1/AndroidManifest.xml:26:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-auth:20.4.1] /Users/bytedance/.gradle/caches/transforms-3/d63127a709fc6a083197384e24c3e269/transformed/jetified-play-services-auth-20.4.1/AndroidManifest.xml:27:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:20.4.1] /Users/bytedance/.gradle/caches/transforms-3/d63127a709fc6a083197384e24c3e269/transformed/jetified-play-services-auth-20.4.1/AndroidManifest.xml:24:13-93
+service#com.google.android.gms.auth.api.signin.RevocationBoundService
+ADDED from [com.google.android.gms:play-services-auth:20.4.1] /Users/bytedance/.gradle/caches/transforms-3/d63127a709fc6a083197384e24c3e269/transformed/jetified-play-services-auth-20.4.1/AndroidManifest.xml:33:9-37:51
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:20.4.1] /Users/bytedance/.gradle/caches/transforms-3/d63127a709fc6a083197384e24c3e269/transformed/jetified-play-services-auth-20.4.1/AndroidManifest.xml:35:13-36
+	android:visibleToInstantApps
+		ADDED from [com.google.android.gms:play-services-auth:20.4.1] /Users/bytedance/.gradle/caches/transforms-3/d63127a709fc6a083197384e24c3e269/transformed/jetified-play-services-auth-20.4.1/AndroidManifest.xml:37:13-48
+	android:permission
+		ADDED from [com.google.android.gms:play-services-auth:20.4.1] /Users/bytedance/.gradle/caches/transforms-3/d63127a709fc6a083197384e24c3e269/transformed/jetified-play-services-auth-20.4.1/AndroidManifest.xml:36:13-107
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:20.4.1] /Users/bytedance/.gradle/caches/transforms-3/d63127a709fc6a083197384e24c3e269/transformed/jetified-play-services-auth-20.4.1/AndroidManifest.xml:34:13-89
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:18.0.1] /Users/bytedance/.gradle/caches/transforms-3/d13b636cef8b9415d1cad567ec5a9065/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:18.0.1] /Users/bytedance/.gradle/caches/transforms-3/d13b636cef8b9415d1cad567ec5a9065/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:22:19-43
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:18.0.1] /Users/bytedance/.gradle/caches/transforms-3/d13b636cef8b9415d1cad567ec5a9065/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:21:19-78
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:18.0.1] /Users/bytedance/.gradle/caches/transforms-3/d13b636cef8b9415d1cad567ec5a9065/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:19-85
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:18.1.0] /Users/bytedance/.gradle/caches/transforms-3/75ea85cec0d7596770e308b0eab55d61/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:18.1.0] /Users/bytedance/.gradle/caches/transforms-3/75ea85cec0d7596770e308b0eab55d61/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:23:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:18.1.0] /Users/bytedance/.gradle/caches/transforms-3/75ea85cec0d7596770e308b0eab55d61/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:22:13-58
+uses-library#androidx.window.extensions
+ADDED from [androidx.window:window:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/8b77a247549c44b86eb3b18f870f535b/transformed/jetified-window-1.0.0/AndroidManifest.xml:25:9-27:40
+	android:required
+		ADDED from [androidx.window:window:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/8b77a247549c44b86eb3b18f870f535b/transformed/jetified-window-1.0.0/AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.window:window:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/8b77a247549c44b86eb3b18f870f535b/transformed/jetified-window-1.0.0/AndroidManifest.xml:26:13-54
+uses-library#androidx.window.sidecar
+ADDED from [androidx.window:window:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/8b77a247549c44b86eb3b18f870f535b/transformed/jetified-window-1.0.0/AndroidManifest.xml:28:9-30:40
+	android:required
+		ADDED from [androidx.window:window:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/8b77a247549c44b86eb3b18f870f535b/transformed/jetified-window-1.0.0/AndroidManifest.xml:30:13-37
+	android:name
+		ADDED from [androidx.window:window:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/8b77a247549c44b86eb3b18f870f535b/transformed/jetified-window-1.0.0/AndroidManifest.xml:29:13-51
+intent#action:name:android.media.browse.MediaBrowserService
+ADDED from [androidx.media:media:1.4.1] /Users/bytedance/.gradle/caches/transforms-3/cefbfc7639c3167dea85471f9834f93c/transformed/media-1.4.1/AndroidManifest.xml:25:9-27:18
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/bytedance/.gradle/caches/transforms-3/42d4acb4322ab6a7a315952c435f3adb/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/bytedance/.gradle/caches/transforms-3/35312deb7d45ac4a7f3c02b0263cafa2/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/bytedance/.gradle/caches/transforms-3/35312deb7d45ac4a7f3c02b0263cafa2/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/bytedance/.gradle/caches/transforms-3/a50d6668e39363b85c2a230608beec35/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/bytedance/.gradle/caches/transforms-3/a50d6668e39363b85c2a230608beec35/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/bytedance/.gradle/caches/transforms-3/42d4acb4322ab6a7a315952c435f3adb/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/bytedance/.gradle/caches/transforms-3/42d4acb4322ab6a7a315952c435f3adb/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/bytedance/.gradle/caches/transforms-3/42d4acb4322ab6a7a315952c435f3adb/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/bytedance/.gradle/caches/transforms-3/42d4acb4322ab6a7a315952c435f3adb/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/bytedance/.gradle/caches/transforms-3/42d4acb4322ab6a7a315952c435f3adb/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/bytedance/.gradle/caches/transforms-3/42d4acb4322ab6a7a315952c435f3adb/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/bytedance/.gradle/caches/transforms-3/42d4acb4322ab6a7a315952c435f3adb/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] /Users/bytedance/.gradle/caches/transforms-3/62cf0fca72429c0b2d34ee3065e27d4d/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.9.0] /Users/bytedance/.gradle/caches/transforms-3/62cf0fca72429c0b2d34ee3065e27d4d/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.9.0] /Users/bytedance/.gradle/caches/transforms-3/62cf0fca72429c0b2d34ee3065e27d4d/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+permission#com.caij.puremusic.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] /Users/bytedance/.gradle/caches/transforms-3/62cf0fca72429c0b2d34ee3065e27d4d/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.9.0] /Users/bytedance/.gradle/caches/transforms-3/62cf0fca72429c0b2d34ee3065e27d4d/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.9.0] /Users/bytedance/.gradle/caches/transforms-3/62cf0fca72429c0b2d34ee3065e27d4d/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] /Users/bytedance/.gradle/caches/transforms-3/62cf0fca72429c0b2d34ee3065e27d4d/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.9.0] /Users/bytedance/.gradle/caches/transforms-3/62cf0fca72429c0b2d34ee3065e27d4d/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+uses-permission#com.caij.puremusic.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] /Users/bytedance/.gradle/caches/transforms-3/62cf0fca72429c0b2d34ee3065e27d4d/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.9.0] /Users/bytedance/.gradle/caches/transforms-3/62cf0fca72429c0b2d34ee3065e27d4d/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/bytedance/.gradle/caches/transforms-3/35312deb7d45ac4a7f3c02b0263cafa2/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/bytedance/.gradle/caches/transforms-3/35312deb7d45ac4a7f3c02b0263cafa2/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/bytedance/.gradle/caches/transforms-3/35312deb7d45ac4a7f3c02b0263cafa2/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
+intent#action:name:com.android.vending.billing.InAppBillingService.BIND
+ADDED from [com.android.billingclient:billing:6.0.0] /Users/bytedance/.gradle/caches/transforms-3/f1ad32224ba619ceda352ca547b567fd/transformed/jetified-billing-6.0.0/AndroidManifest.xml:13:9-15:18
+action#com.android.vending.billing.InAppBillingService.BIND
+ADDED from [com.android.billingclient:billing:6.0.0] /Users/bytedance/.gradle/caches/transforms-3/f1ad32224ba619ceda352ca547b567fd/transformed/jetified-billing-6.0.0/AndroidManifest.xml:14:13-91
+	android:name
+		ADDED from [com.android.billingclient:billing:6.0.0] /Users/bytedance/.gradle/caches/transforms-3/f1ad32224ba619ceda352ca547b567fd/transformed/jetified-billing-6.0.0/AndroidManifest.xml:14:21-88
+meta-data#com.google.android.play.billingclient.version
+ADDED from [com.android.billingclient:billing:6.0.0] /Users/bytedance/.gradle/caches/transforms-3/f1ad32224ba619ceda352ca547b567fd/transformed/jetified-billing-6.0.0/AndroidManifest.xml:19:9-21:37
+	android:value
+		ADDED from [com.android.billingclient:billing:6.0.0] /Users/bytedance/.gradle/caches/transforms-3/f1ad32224ba619ceda352ca547b567fd/transformed/jetified-billing-6.0.0/AndroidManifest.xml:21:13-34
+	android:name
+		ADDED from [com.android.billingclient:billing:6.0.0] /Users/bytedance/.gradle/caches/transforms-3/f1ad32224ba619ceda352ca547b567fd/transformed/jetified-billing-6.0.0/AndroidManifest.xml:20:13-73
+activity#com.android.billingclient.api.ProxyBillingActivity
+ADDED from [com.android.billingclient:billing:6.0.0] /Users/bytedance/.gradle/caches/transforms-3/f1ad32224ba619ceda352ca547b567fd/transformed/jetified-billing-6.0.0/AndroidManifest.xml:23:9-27:75
+	android:exported
+		ADDED from [com.android.billingclient:billing:6.0.0] /Users/bytedance/.gradle/caches/transforms-3/f1ad32224ba619ceda352ca547b567fd/transformed/jetified-billing-6.0.0/AndroidManifest.xml:26:13-37
+	android:configChanges
+		ADDED from [com.android.billingclient:billing:6.0.0] /Users/bytedance/.gradle/caches/transforms-3/f1ad32224ba619ceda352ca547b567fd/transformed/jetified-billing-6.0.0/AndroidManifest.xml:25:13-96
+	android:theme
+		ADDED from [com.android.billingclient:billing:6.0.0] /Users/bytedance/.gradle/caches/transforms-3/f1ad32224ba619ceda352ca547b567fd/transformed/jetified-billing-6.0.0/AndroidManifest.xml:27:13-72
+	android:name
+		ADDED from [com.android.billingclient:billing:6.0.0] /Users/bytedance/.gradle/caches/transforms-3/f1ad32224ba619ceda352ca547b567fd/transformed/jetified-billing-6.0.0/AndroidManifest.xml:24:13-78
+service#com.google.android.datatransport.runtime.backends.TransportBackendDiscovery
+ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/bytedance/.gradle/caches/transforms-3/ae08fbfa277194a7f7362afc81108854/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:28:9-34:19
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/bytedance/.gradle/caches/transforms-3/bf6a590a41fdc664fcaff307e06947ab/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:36:9-38:40
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/bytedance/.gradle/caches/transforms-3/bf6a590a41fdc664fcaff307e06947ab/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:36:9-38:40
+	android:exported
+		ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/bytedance/.gradle/caches/transforms-3/ae08fbfa277194a7f7362afc81108854/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:30:13-37
+	android:name
+		ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/bytedance/.gradle/caches/transforms-3/ae08fbfa277194a7f7362afc81108854/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:29:13-103
+meta-data#backend:com.google.android.datatransport.cct.CctBackendFactory
+ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/bytedance/.gradle/caches/transforms-3/ae08fbfa277194a7f7362afc81108854/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:31:13-33:39
+	android:value
+		ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/bytedance/.gradle/caches/transforms-3/ae08fbfa277194a7f7362afc81108854/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:33:17-36
+	android:name
+		ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/bytedance/.gradle/caches/transforms-3/ae08fbfa277194a7f7362afc81108854/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:32:17-94
+service#com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService
+ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/bytedance/.gradle/caches/transforms-3/bf6a590a41fdc664fcaff307e06947ab/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:26:9-30:19
+	android:exported
+		ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/bytedance/.gradle/caches/transforms-3/bf6a590a41fdc664fcaff307e06947ab/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:28:13-37
+	android:permission
+		ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/bytedance/.gradle/caches/transforms-3/bf6a590a41fdc664fcaff307e06947ab/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:29:13-69
+	android:name
+		ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/bytedance/.gradle/caches/transforms-3/bf6a590a41fdc664fcaff307e06947ab/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:27:13-117
+receiver#com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver
+ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/bytedance/.gradle/caches/transforms-3/bf6a590a41fdc664fcaff307e06947ab/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:32:9-34:40
+	android:exported
+		ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/bytedance/.gradle/caches/transforms-3/bf6a590a41fdc664fcaff307e06947ab/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:34:13-37
+	android:name
+		ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/bytedance/.gradle/caches/transforms-3/bf6a590a41fdc664fcaff307e06947ab/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:33:13-132
+intent#action:name:*+data:scheme:tbopen
+ADDED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:10:9-14:18
+action#*
+ADDED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:11:13-40
+	android:name
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:11:21-37
+package#com.eg.android.AlipayGphoneRC
+ADDED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:17:9-65
+	android:name
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:17:18-62
+package#hk.alipay.wallet
+ADDED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:18:9-52
+	android:name
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:18:18-49
+supports-screens
+ADDED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:21:5-26:39
+	android:largeScreens
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:23:9-36
+	android:smallScreens
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:26:9-36
+	android:normalScreens
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:24:9-37
+	android:resizeable
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:25:9-34
+	android:anyDensity
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:22:9-34
+uses-library#org.apache.http.legacy
+ADDED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:33:9-35:40
+	android:required
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:35:13-37
+	android:name
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:34:13-50
+activity#com.alipay.sdk.app.H5PayActivity
+ADDED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:37:9-42:20
+	android:exported
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:40:13-37
+	android:configChanges
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:39:13-167
+	android:theme
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:41:13-60
+	android:name
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:38:13-60
+activity#com.alipay.sdk.app.H5AuthActivity
+ADDED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:43:9-48:20
+	android:exported
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:46:13-37
+	android:configChanges
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:45:13-167
+	android:theme
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:47:13-60
+	android:name
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:44:13-61
+activity#com.alipay.sdk.app.PayResultActivity
+ADDED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:49:9-55:20
+	android:launchMode
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:53:13-48
+	android:exported
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:52:13-36
+	android:configChanges
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:51:13-167
+	android:theme
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:54:13-72
+	android:name
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:50:13-64
+activity#com.alipay.sdk.app.AlipayResultActivity
+ADDED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:56:9-62:20
+	android:launchMode
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:60:13-44
+	android:exported
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:59:13-36
+	android:configChanges
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:58:13-167
+	android:theme
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:61:13-72
+	android:name
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:57:13-67
+activity#com.alipay.sdk.app.H5OpenAuthActivity
+ADDED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:63:9-69:20
+	android:screenOrientation
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:67:13-47
+	android:windowSoftInputMode
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:68:13-67
+	android:exported
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:66:13-37
+	android:configChanges
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:65:13-167
+	android:name
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:64:13-65
+activity#com.alipay.sdk.app.APayEntranceActivity
+ADDED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:70:9-75:20
+	android:exported
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:73:13-37
+	android:configChanges
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:72:13-167
+	android:theme
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:74:13-72
+	android:name
+		ADDED from [com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:71:13-67

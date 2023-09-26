@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:gravity="center"
+    tools:ignore="MissingPrefix">
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/action_sleep_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_sleep_timer"
+        android:background="?attr/roundSelector"
+        android:tint="?attr/colorControlNormal"
+        android:padding="16dp"/>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/action_toggle_lyrics"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/sld_lyrics"
+        android:background="?attr/roundSelector"
+        android:tint="?attr/colorControlNormal"
+        android:padding="16dp"/>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/action_toggle_favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_favorite"
+        android:background="?attr/roundSelector"
+        android:tint="?attr/colorControlNormal"
+        android:padding="16dp"/>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/now_playing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_queue_music"
+        android:background="?attr/roundSelector"
+        android:tint="?attr/colorControlNormal"
+        android:padding="16dp"/>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/action_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_more_vert"
+        android:background="?attr/roundSelector"
+        android:tint="?attr/colorControlNormal"
+        android:padding="16dp"/>
+
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="error_auth">Incorrect username or password.</string>
+    <string name="error_not_found">Resource path for the link not found.</string>
+    <string name="error_server">Server error.</string>
+    <string name="sync_load_info">Initiating the loading of source data.</string>
+    <string name="sync_album_count">Number of albums being loaded:</string>
+    <string name="sync_song_count">Number of songs being loaded:</string>
+    <string name="sync_playlist_count">Number of playlist being loaded:</string>
+</resources>

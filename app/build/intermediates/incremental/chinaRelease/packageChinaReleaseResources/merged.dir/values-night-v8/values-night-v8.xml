@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bottomSheetColor">#202020</color>
+    <color name="elevationOverlay">@color/elevationOverlayDark</color>
+    <color name="widget_md3_bg_color">@color/darkerColorSurface</color>
+    <color name="window_color">@android:color/black</color>
+    <style name="Theme.RetroMusic.Base.Adaptive" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="toolbarPopupTheme">@style/ThemeOverlay.AppCompat.Dark</item>
+        <item name="materialAlertDialogTheme">@style/MaterialAlertDialogTheme</item>
+        <item name="materialButtonStyle">@style/MaterialButtonTheme</item>
+        <item name="roundSelector">@drawable/round_selector</item>
+        <item name="rectSelector">@drawable/rect_selector</item>
+        <item name="android:actionOverflowButtonStyle">@style/Widget.ActionButton.Overflow</item>
+        <item name="colorPrimary">@color/darkColorPrimary</item>
+        <item name="colorSurface">@color/darkColorSurface</item>
+        <item name="materialCardViewStyle">@style/Widget.Material3.CardView.Elevated</item>
+        <item name="popupMenuBackground">@drawable/popup_background</item>
+        <item name="windowActionModeOverlay">true</item>
+    </style>
+</resources>

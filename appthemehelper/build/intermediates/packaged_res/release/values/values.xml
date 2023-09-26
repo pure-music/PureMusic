@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ate_button_disabled_dark">#1F000000</color>
+    <color name="ate_button_disabled_light">#1F000000</color>
+    <color name="ate_button_text_disabled_dark">#4DFFFFFF</color>
+    <color name="ate_button_text_disabled_light">#43000000</color>
+    <color name="ate_control_disabled_dark">#4DFFFFFF</color>
+    <color name="ate_control_disabled_light">#43000000</color>
+    <color name="ate_control_normal_dark">#B3FFFFFF</color>
+    <color name="ate_control_normal_light">#8A000000</color>
+    <color name="ate_primary_text_dark">#FFFFFFFF</color>
+    <color name="ate_primary_text_light">#DE000000</color>
+    <color name="ate_secondary_text_dark">#B3FFFFFF</color>
+    <color name="ate_secondary_text_light">#8A000000</color>
+    <color name="ate_switch_thumb_disabled_dark">#FF424242</color>
+    <color name="ate_switch_thumb_disabled_light">#FFBDBDBD</color>
+    <color name="ate_switch_thumb_normal_dark">#FFBDBDBD</color>
+    <color name="ate_switch_thumb_normal_light">#FFFAFAFA</color>
+    <color name="ate_switch_track_disabled_dark">#1AFFFFFF</color>
+    <color name="ate_switch_track_disabled_light">#1F000000</color>
+    <color name="ate_switch_track_normal_dark">#4DFFFFFF</color>
+    <color name="ate_switch_track_normal_light">#43000000</color>
+    <color name="ate_text_disabled_dark">#4DFFFFFF</color>
+    <color name="ate_text_disabled_light">#61000000</color>
+    <color name="m3_accent_color2">#00668B</color>
+    <color name="m3_accent_color2_night">#427fed</color>
+    <color name="md_black_1000">#000000</color>
+    <color name="md_black_800">#222222</color>
+    <color name="md_blue_500">#2196F3</color>
+    <color name="md_blue_A400">#2979FF</color>
+    <color name="md_cyan_400">#26c6da</color>
+    <color name="md_deep_orange_A400">#FF3D00</color>
+    <color name="md_deep_purple_300">#9575CD</color>
+    <color name="md_deep_purple_400">#7E57C2</color>
+    <color name="md_deep_purple_500">#673AB7</color>
+    <color name="md_deep_purple_600">#5E35B1</color>
+    <color name="md_deep_purple_700">#512DA8</color>
+    <color name="md_deep_purple_800">#4527A0</color>
+    <color name="md_deep_purple_A200">#7C4DFF</color>
+    <color name="md_deep_purple_A400">#651FFF</color>
+    <color name="md_green_500">#4CAF50</color>
+    <color name="md_green_A700">#00C853</color>
+    <color name="md_grey_200">#EEEEEE</color>
+    <color name="md_grey_400">#BDBDBD</color>
+    <color name="md_grey_500">#9E9E9E</color>
+    <color name="md_grey_600">#757575</color>
+    <color name="md_grey_700">#616161</color>
+    <color name="md_grey_800">#424242</color>
+    <color name="md_light_green_A400">#76FF03</color>
+    <color name="md_red_400">#EF5350</color>
+    <color name="md_red_500">#F44336</color>
+    <color name="md_red_A400">#FF1744</color>
+    <color name="md_teal_A400">#1DE9B6</color>
+    <color name="md_white_1000">#FFFFFF</color>
+    <color name="md_yellow_A400">#FFD600</color>
+    <dimen name="ate_circleview_border">1dp</dimen>
+    <string name="app_name">appthemehelper</string>
+    <declare-styleable name="ATEColorPreference">
+        <attr format="string" name="ateKey_pref_color"/>
+    </declare-styleable>
+    <declare-styleable name="ATEDialogPreference">
+        <attr format="string" name="ateKey_pref_dialog"/>
+    </declare-styleable>
+    <declare-styleable name="ATEEditTextPreference">
+        <attr format="string" name="ateKey_pref_editText"/>
+    </declare-styleable>
+    <declare-styleable name="ATEListPreference">
+        <attr format="string" name="ateKey_pref_list"/>
+    </declare-styleable>
+    <declare-styleable name="ATEMultiSelectPreference">
+        <attr format="string" name="ateKey_pref_multiSelect"/>
+    </declare-styleable>
+    <declare-styleable name="ATEPreference">
+        <attr format="string" name="ateKey_pref"/>
+    </declare-styleable>
+    <declare-styleable name="ATEPreferenceCategory">
+        <attr format="string" name="ateKey_prefCategory_textColor"/>
+    </declare-styleable>
+    <declare-styleable name="ATESeekBarPreference">
+        <attr format="string" name="ateKey_pref_unit"/>
+    </declare-styleable>
+    <declare-styleable name="ATESwitchPreference">
+        <attr format="string" name="ateKey_pref_switch"/>
+    </declare-styleable>
+</resources>

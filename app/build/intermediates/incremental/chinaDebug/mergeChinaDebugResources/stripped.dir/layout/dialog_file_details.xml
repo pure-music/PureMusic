@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:ignore="NewApi,RtlSymmetry">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/filePath"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="16dp"
+        android:textAppearance="@style/TextViewNormal"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="16sp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/fileName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="16dp"
+        android:textAppearance="@style/TextViewNormal"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="16sp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/fileSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="16dp"
+        android:textAppearance="@style/TextViewNormal"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="16sp" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/dateModified"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="16dp"
+        android:textAppearance="@style/TextViewNormal"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="16sp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/fileFormat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="16dp"
+        android:textAppearance="@style/TextViewNormal"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="16sp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/trackLength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="16dp"
+        android:textAppearance="@style/TextViewNormal"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="16sp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/bitrate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="16dp"
+        android:textAppearance="@style/TextViewNormal"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="16sp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/samplingRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="16dp"
+        android:textAppearance="@style/TextViewNormal"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="16sp" />
+
+</LinearLayout>

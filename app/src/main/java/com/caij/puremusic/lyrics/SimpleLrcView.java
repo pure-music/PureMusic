@@ -1,0 +1,531 @@
+/*
+ * Copyright (C) 2017 wangchenyan
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+ * except in compliance with the License. You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under the
+ * License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied. See the License for the specific language governing
+ * permissions and limitations under the License.
+ */
+
+package com.caij.puremusic.lyrics;
+
+import android.animation.ValueAnimator;
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.res.TypedArray;
+import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.graphics.drawable.Drawable;
+import android.os.AsyncTask;
+import android.os.Looper;
+import android.text.Layout;
+import android.text.StaticLayout;
+import android.text.TextPaint;
+import android.text.TextUtils;
+import android.text.format.DateUtils;
+import android.util.AttributeSet;
+import android.view.GestureDetector;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.animation.LinearInterpolator;
+import android.widget.Scroller;
+
+import androidx.core.content.ContextCompat;
+
+import com.caij.puremusic.BuildConfig;
+import com.caij.puremusic.R;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+import code.name.monkey.appthemehelper.ThemeStore;
+
+/**
+ * 歌词 Created by wcy on 2015/11/9.
+ */
+@SuppressLint("StaticFieldLeak")
+public class SimpleLrcView extends View {
+    private static final long ADJUST_DURATION = 100;
+    private static final long TIMELINE_KEEP_TIME = 4 * DateUtils.SECOND_IN_MILLIS;
+
+    private final List<LrcEntry> mLrcEntryList = new ArrayList<>();
+    private final TextPaint mLrcPaint = new TextPaint();
+    private final TextPaint mTimePaint = new TextPaint();
+    private Paint.FontMetrics mTimeFontMetrics;
+    private Drawable mPlayDrawable;
+    private float mDividerHeight;
+    private long mAnimationDuration;
+    private int mNormalTextColor;
+    private float mNormalTextSize;
+    private int mCurrentTextColor;
+    private float mCurrentTextSize;
+    private int mDrawableWidth;
+    private int mTimeTextWidth;
+    private String mDefaultLabel;
+    private float mLrcPadding;
+    private ValueAnimator mAnimator;
+    private Scroller mScroller;
+    private float mOffset;
+    private int mCurrentLine;
+    private Object mFlag;
+    private boolean isShowTimeline;
+    private boolean isTouching;
+    private boolean isFling;
+    private int mTextGravity; // 歌词显示位置，靠左/居中/靠右
+    private final Runnable hideTimelineRunnable =
+            new Runnable() {
+                @Override
+                public void run() {
+                    if (hasLrc() && isShowTimeline) {
+                        isShowTimeline = false;
+                        smoothScrollTo(mCurrentLine);
+                    }
+                }
+            };
+
+    private int maxShowLine = 1;
+    private int maxHeight = 0;
+    private int singleLineHeight = 0;
+
+    public SimpleLrcView(Context context) {
+        this(context, null);
+    }
+
+    public SimpleLrcView(Context context, AttributeSet attrs) {
+        this(context, attrs, 0);
+    }
+
+    public SimpleLrcView(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+        init(attrs);
+    }
+
+    private void init(AttributeSet attrs) {
+        TypedArray ta = getContext().obtainStyledAttributes(attrs, R.styleable.LrcView);
+        mCurrentTextSize =
+                ta.getDimension(
+                        R.styleable.LrcView_lrcTextSize, getResources().getDimension(R.dimen.lrc_text_size));
+        mNormalTextSize =
+                ta.getDimension(
+                        R.styleable.LrcView_lrcNormalTextSize,
+                        getResources().getDimension(R.dimen.lrc_text_size));
+        if (mNormalTextSize == 0) {
+            mNormalTextSize = mCurrentTextSize;
+        }
+
+        mDividerHeight =
+                ta.getDimension(
+                        R.styleable.LrcView_lrcDividerHeight,
+                        getResources().getDimension(R.dimen.lrc_divider_height));
+        int defDuration = getResources().getInteger(R.integer.lrc_animation_duration);
+        mAnimationDuration = ta.getInt(R.styleable.LrcView_lrcAnimationDuration, defDuration);
+        mAnimationDuration = (mAnimationDuration < 0) ? defDuration : mAnimationDuration;
+        mNormalTextColor =
+                ta.getColor(
+                        R.styleable.LrcView_lrcNormalTextColor,
+                        getResources().getColor(R.color.lrc_normal_text_color));
+        mCurrentTextColor =
+                ta.getColor(
+                        R.styleable.LrcView_lrcCurrentTextColor,
+                        getResources().getColor(R.color.lrc_current_text_color));
+        mDefaultLabel = ta.getString(R.styleable.LrcView_lrcLabel);
+        mDefaultLabel =
+                TextUtils.isEmpty(mDefaultLabel) ? getContext().getString(R.string.empty) : mDefaultLabel;
+        mLrcPadding = ta.getDimension(R.styleable.LrcView_lrcPadding, 0);
+        float timelineHeight =
+                ta.getDimension(
+                        R.styleable.LrcView_lrcTimelineHeight,
+                        getResources().getDimension(R.dimen.lrc_timeline_height));
+        mPlayDrawable = ta.getDrawable(R.styleable.LrcView_lrcPlayDrawable);
+        mPlayDrawable =
+                (mPlayDrawable == null)
+                        ? ContextCompat.getDrawable(getContext(), R.drawable.ic_play_arrow_accent)
+                        : mPlayDrawable;
+        mPlayDrawable.setTint(ThemeStore.Companion.accentColor(getContext()));
+        float timeTextSize =
+                ta.getDimension(
+                        R.styleable.LrcView_lrcTimeTextSize,
+                        getResources().getDimension(R.dimen.lrc_time_text_size));
+        mTextGravity = ta.getInteger(R.styleable.LrcView_lrcTextGravity, LrcEntry.GRAVITY_CENTER);
+
+        ta.recycle();
+
+        mDrawableWidth = (int) getResources().getDimension(R.dimen.lrc_drawable_width);
+        mTimeTextWidth = (int) getResources().getDimension(R.dimen.lrc_time_width);
+
+        mLrcPaint.setAntiAlias(true);
+        mLrcPaint.setTextSize(mCurrentTextSize);
+        mLrcPaint.setTextAlign(Paint.Align.LEFT);
+        mTimePaint.setAntiAlias(true);
+        mTimePaint.setTextSize(timeTextSize);
+        mTimePaint.setTextAlign(Paint.Align.CENTER);
+        //noinspection SuspiciousNameCombination
+        mTimePaint.setStrokeWidth(timelineHeight);
+        mTimePaint.setStrokeCap(Paint.Cap.ROUND);
+        mTimeFontMetrics = mTimePaint.getFontMetrics();
+
+        mScroller = new Scroller(getContext());
+    }
+
+    public void setCurrentColor(int currentColor) {
+        mCurrentTextColor = currentColor;
+        postInvalidate();
+    }
+
+
+    public void setNormalTextColor(int color) {
+        mNormalTextColor = color;
+        postInvalidate();
+    }
+
+    public void setLabel(String label) {
+        runOnUi(
+                () -> {
+                    mDefaultLabel = label;
+                    invalidate();
+                });
+    }
+
+    public void loadLrc(List<LrcEntry> lrcEntries) {
+        onLrcLoaded(lrcEntries);
+    }
+
+    public boolean hasLrc() {
+        return !mLrcEntryList.isEmpty();
+    }
+
+    private void updateTime(long time) {
+        runOnUi(
+                () -> {
+                    if (!hasLrc()) {
+                        return;
+                    }
+
+                    int line = findShowLine(mLrcEntryList, time);
+                    if (line != mCurrentLine) {
+                        mCurrentLine = line;
+                        if (!isShowTimeline) {
+                            smoothScrollTo(line);
+                        } else {
+                            invalidate();
+                        }
+                    }
+                });
+    }
+
+    public void updateLine(int line) {
+        runOnUi(() -> {
+                    if (!hasLrc()) {
+                        return;
+                    }
+                    if (line != mCurrentLine) {
+                        mCurrentLine = line;
+                        if (!isShowTimeline) {
+                            smoothScrollTo(line);
+                        } else {
+                            invalidate();
+                        }
+                    }
+                });
+    }
+
+    @Deprecated
+    public void onDrag(long time) {
+        updateTime(time);
+    }
+
+    @Override
+    protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
+        super.onLayout(changed, left, top, right, bottom);
+        if (changed) {
+            initPlayDrawable();
+            initEntryList();
+            if (hasLrc()) {
+                smoothScrollTo(mCurrentLine, 0L);
+            }
+        }
+    }
+
+    @Override
+    protected void onDraw(Canvas canvas) {
+        super.onDraw(canvas);
+
+
+        int centerY = getHeight() / 2;
+
+        if (!hasLrc()) {
+            mLrcPaint.setColor(mCurrentTextColor);
+            @SuppressLint("DrawAllocation")
+            StaticLayout staticLayout =
+                    new StaticLayout(
+                            mDefaultLabel,
+                            mLrcPaint,
+                            (int) getLrcWidth(),
+                            Layout.Alignment.ALIGN_CENTER,
+                            1f,
+                            0f,
+                            false);
+            drawText(canvas, staticLayout, centerY);
+            return;
+        }
+
+        canvas.translate(0, mOffset);
+
+        int dp = 0;
+        int da = 0;
+        if (maxShowLine % 2 == 0) {
+            dp = (maxShowLine - 1) / 2;
+            da = maxShowLine - 1 - dp;
+        } else {
+            dp = (maxShowLine - 1) / 2;
+            da = dp;
+        }
+
+        da = da + 1; //多一行动画
+
+        float y = 0;
+        for (int i = 0; i < mLrcEntryList.size(); i++) {
+            if (i > 0) {
+                y +=
+                        ((mLrcEntryList.get(i - 1).getHeight() + mLrcEntryList.get(i).getHeight()) >> 1)
+                                + mDividerHeight;
+            }
+            if (BuildConfig.DEBUG) {
+                // mLrcPaint.setTypeface(ResourcesCompat.getFont(getContext(), R.font.sans));
+            }
+            if (i == mCurrentLine) {
+                mLrcPaint.setTextSize(mCurrentTextSize);
+                mLrcPaint.setColor(mCurrentTextColor);
+            } else {
+                mLrcPaint.setTextSize(mNormalTextSize);
+                mLrcPaint.setColor(mNormalTextColor);
+            }
+            if (i >= (mCurrentLine - dp) && i <= (mCurrentLine + da)) {
+                drawText(canvas, mLrcEntryList.get(i).getStaticLayout(), y);
+            }
+        }
+    }
+
+    private void drawText(Canvas canvas, StaticLayout staticLayout, float y) {
+        canvas.save();
+        canvas.translate(mLrcPadding, y - (staticLayout.getHeight() >> 1));
+        staticLayout.draw(canvas);
+        canvas.restore();
+    }
+
+    public void setShowLine(int line) {
+        maxShowLine = line;
+    }
+
+    public void setMaxHeight2(int maxHeight) {
+        this.maxHeight = maxHeight;
+    }
+
+    @Override
+    public void computeScroll() {
+        if (mScroller.computeScrollOffset()) {
+            mOffset = mScroller.getCurrY();
+            invalidate();
+        }
+
+        if (isFling && mScroller.isFinished()) {
+            isFling = false;
+            if (hasLrc() && !isTouching) {
+                adjustCenter();
+                postDelayed(hideTimelineRunnable, TIMELINE_KEEP_TIME);
+            }
+        }
+    }
+
+    @Override
+    protected void onDetachedFromWindow() {
+        removeCallbacks(hideTimelineRunnable);
+        super.onDetachedFromWindow();
+    }
+
+    private void onLrcLoaded(List<LrcEntry> entryList) {
+        mLrcEntryList.clear();
+
+        if (entryList != null && !entryList.isEmpty()) {
+            for (LrcEntry entry : entryList) {
+                mLrcEntryList.add(new LrcEntry(entry.getTime(), entry.getText(), entry.getSecondText()));
+            }
+        }
+
+        initEntryList();
+
+        invalidate();
+    }
+
+    private void initPlayDrawable() {
+        int l = (mTimeTextWidth - mDrawableWidth) / 2;
+        int t = getHeight() / 2 - mDrawableWidth / 2;
+        int r = l + mDrawableWidth;
+        int b = t + mDrawableWidth;
+        mPlayDrawable.setBounds(l, t, r, b);
+    }
+
+    private void initEntryList() {
+        if (!hasLrc() || getWidth() == 0) {
+            StaticLayout staticLayout =
+                    new StaticLayout(
+                            mDefaultLabel,
+                            mLrcPaint,
+                            (int) getLrcWidth(),
+                            Layout.Alignment.ALIGN_CENTER,
+                            1f,
+                            0f,
+                            false);
+            getLayoutParams().height = staticLayout.getHeight();
+            requestLayout();
+            singleLineHeight = staticLayout.getHeight();
+            return;
+        }
+
+
+        for (LrcEntry lrcEntry : mLrcEntryList) {
+            lrcEntry.init(mLrcPaint, (int) getLrcWidth(), mTextGravity);
+            if (lrcEntry.getStaticLayout().getLineCount() == 1 && singleLineHeight == 0) {
+                singleLineHeight = lrcEntry.getHeight();
+            }
+        }
+
+        mOffset = getHeight() / 2F;
+
+        if (singleLineHeight == 0) {
+            LrcEntry lrcEntry = mLrcEntryList.get(0);
+            singleLineHeight = (int) (lrcEntry.getHeight() * 1f / lrcEntry.getStaticLayout().getLineCount());
+        }
+
+        if (maxHeight > 0) {
+            int maxShowLine = maxHeight / singleLineHeight;
+            if (maxShowLine < this.maxShowLine) {
+                this.maxShowLine = maxShowLine;
+            }
+        }
+
+        getLayoutParams().height = (int) (
+                singleLineHeight * maxShowLine + (maxShowLine - 1) * mDividerHeight);
+        requestLayout();
+    }
+
+    public void reset() {
+        endAnimation();
+        mScroller.forceFinished(true);
+        isShowTimeline = false;
+        isTouching = false;
+        isFling = false;
+        removeCallbacks(hideTimelineRunnable);
+        mLrcEntryList.clear();
+        mOffset = 0;
+        mCurrentLine = 0;
+        //invalidate();
+    }
+
+    private void adjustCenter() {
+        smoothScrollTo(getCenterLine(), ADJUST_DURATION);
+    }
+
+    private void smoothScrollTo(int line) {
+        smoothScrollTo(line, mAnimationDuration);
+    }
+
+    private void smoothScrollTo(int line, long duration) {
+        float offset = getOffset(line);
+        endAnimation();
+
+        mAnimator = ValueAnimator.ofFloat(mOffset, offset);
+        mAnimator.setDuration(duration);
+        mAnimator.setInterpolator(new LinearInterpolator());
+        mAnimator.addUpdateListener(
+                animation -> {
+                    mOffset = (float) animation.getAnimatedValue();
+                    invalidate();
+                });
+        mAnimator.start();
+    }
+
+    private void endAnimation() {
+        if (mAnimator != null && mAnimator.isRunning()) {
+            mAnimator.end();
+        }
+    }
+
+    public static int findShowLine(List<LrcEntry> mLrcEntryList, long time) {
+        int left = 0;
+        int right = mLrcEntryList.size();
+        while (left <= right) {
+            int middle = (left + right) / 2;
+            long middleTime = mLrcEntryList.get(middle).getTime();
+
+            if (time < middleTime) {
+                right = middle - 1;
+            } else {
+                if (middle + 1 >= mLrcEntryList.size() || time < mLrcEntryList.get(middle + 1).getTime()) {
+                    return middle;
+                }
+
+                left = middle + 1;
+            }
+        }
+
+        return 0;
+    }
+
+    private int getCenterLine() {
+        int centerLine = 0;
+        float minDistance = Float.MAX_VALUE;
+        for (int i = 0; i < mLrcEntryList.size(); i++) {
+            if (Math.abs(mOffset - getOffset(i)) < minDistance) {
+                minDistance = Math.abs(mOffset - getOffset(i));
+                centerLine = i;
+            }
+        }
+        return centerLine;
+    }
+
+    private float getOffset(int line) {
+        if (mLrcEntryList.get(line).getOffset() == Float.MIN_VALUE) {
+            float offset = getHeight() / 2F;
+            for (int i = 1; i <= line; i++) {
+                offset -=
+                        ((mLrcEntryList.get(i - 1).getHeight() + mLrcEntryList.get(i).getHeight()) >> 1)
+                                + mDividerHeight;
+            }
+            mLrcEntryList.get(line).setOffset(offset);
+        }
+
+        return mLrcEntryList.get(line).getOffset();
+    }
+
+    private float getLrcWidth() {
+        return getWidth() - mLrcPadding * 2;
+    }
+
+    private void runOnUi(Runnable r) {
+        if (Looper.myLooper() == Looper.getMainLooper()) {
+            r.run();
+        } else {
+            post(r);
+        }
+    }
+
+    private Object getFlag() {
+        return mFlag;
+    }
+
+    private void setFlag(Object flag) {
+        this.mFlag = flag;
+    }
+
+    public interface OnPlayClickListener {
+        boolean onPlayClick(long time);
+    }
+}

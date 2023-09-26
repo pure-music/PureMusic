@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.caij.puremusic.preferences.NowPlayingScreenPreference
+        android:key="now_playing_screen_id"
+        android:layout="@layout/list_item_view"
+        android:title="@string/pref_title_now_playing_screen_appearance"
+        app:icon="@drawable/ic_play_circle_filled" />
+
+    <code.name.monkey.appthemehelper.common.prefs.supportv7.ATESwitchPreference
+        android:defaultValue="false"
+        android:key="extra_song_info"
+        android:layout="@layout/list_item_view_switch"
+        android:summary="@string/pref_summary_extra_song_info"
+        android:title="@string/pref_title_extra_song_info" />
+
+    <code.name.monkey.appthemehelper.common.prefs.supportv7.ATESwitchPreference
+        android:defaultValue="false"
+        android:key="snowfall"
+        android:layout="@layout/list_item_view_switch_no_title"
+        android:title="@string/pref_snow_fall_title" />
+
+    <code.name.monkey.appthemehelper.common.prefs.supportv7.ATEListPreference
+        android:defaultValue="0"
+        android:entries="@array/pref_lyrics_type_entries"
+        android:entryValues="@array/pref_lyrics_type_values"
+        android:key="lyrics_type"
+        android:layout="@layout/list_item_view"
+        android:title="@string/pref_title_lyrics_type" />
+
+    <code.name.monkey.appthemehelper.common.prefs.supportv7.ATESwitchPreference
+        android:defaultValue="false"
+        android:key="screen_on_lyrics"
+        android:layout="@layout/list_item_view_switch"
+        android:summary="@string/pref_keep_screen_on_summary"
+        android:title="@string/pref_title_lyrics_screen_on" />
+
+    <code.name.monkey.appthemehelper.common.prefs.supportv7.ATESwitchPreference
+        android:defaultValue="false"
+        android:key="circle_play_button"
+        android:layout="@layout/list_item_view_switch_no_title"
+        android:title="@string/pref_title_circle_button" />
+
+    <code.name.monkey.appthemehelper.common.prefs.supportv7.ATESwitchPreference
+        android:defaultValue="true"
+        android:key="swipe_anywhere_now_playing"
+        android:layout="@layout/list_item_view_switch"
+        android:summary="@string/pref_summary_swipe_anywhere_now_playing"
+        android:title="@string/pref_title_swipe_anywhere_now_playing" />
+
+    <code.name.monkey.appthemehelper.common.prefs.supportv7.ATESwitchPreference
+        android:defaultValue="false"
+        android:key="status_bar_lyric"
+        android:layout="@layout/list_item_view_switch"
+        android:summary="仅支持魅族手机和默插件"
+        android:title="状态栏歌词" />
+
+    <code.name.monkey.appthemehelper.common.prefs.supportv7.ATEPreferenceCategory
+        android:layout="@layout/preference_category_title"
+        android:title="@string/pref_header_album">
+
+        <com.caij.puremusic.preferences.AlbumCoverStylePreference
+            android:key="album_cover_style_id"
+            android:layout="@layout/list_item_view"
+            android:title="@string/pref_title_album_cover_style"
+            app:icon="@drawable/ic_image" />
+
+        <code.name.monkey.appthemehelper.common.prefs.supportv7.ATEListPreference
+            android:defaultValue="0"
+            android:entries="@array/pref_album_cover_transform_entries"
+            android:entryValues="@array/pref_album_cover_transform_values"
+            android:key="album_cover_transform"
+            android:layout="@layout/list_item_view"
+            android:title="@string/pref_title_album_cover_transform" />
+
+        <code.name.monkey.appthemehelper.common.prefs.supportv7.ATESwitchPreference
+            android:layout="@layout/list_item_view_switch"
+            app:defaultValue="false"
+            app:icon="@drawable/ic_view_carousel"
+            app:key="carousel_effect"
+            app:summary="@string/pref_summary_carousel_effect"
+            app:title="@string/pref_title_toggle_carousel_effect" />
+    </code.name.monkey.appthemehelper.common.prefs.supportv7.ATEPreferenceCategory>
+
+    <code.name.monkey.appthemehelper.common.prefs.supportv7.ATEPreferenceCategory
+        android:layout="@layout/preference_category_title"
+        android:title="@string/pref_header_controls">
+
+        <code.name.monkey.appthemehelper.common.prefs.supportv7.ATESwitchPreference
+            android:layout="@layout/list_item_view_switch"
+            app:defaultValue="false"
+            app:key="swipe_to_dismiss"
+            app:summary="@string/pref_summary_swipe_to_dismiss"
+            app:title="@string/pref_title_swipe_to_dismiss" />
+
+        <code.name.monkey.appthemehelper.common.prefs.supportv7.ATESwitchPreference
+            android:layout="@layout/list_item_view_switch"
+            app:defaultValue="false"
+            app:icon="@drawable/ic_play_arrow"
+            app:key="toggle_add_controls"
+            app:summary="@string/pref_summary_extra_controls"
+            app:title="@string/pref_title_extra_controls" />
+
+        <code.name.monkey.appthemehelper.common.prefs.supportv7.ATESwitchPreference
+            android:layout="@layout/list_item_view_switch"
+            app:defaultValue="false"
+            app:icon="@drawable/ic_volume_up"
+            app:key="toggle_volume"
+            app:summary="@string/pref_summary_toggle_volume"
+            app:title="@string/pref_title_toggle_volume" />
+
+        <code.name.monkey.appthemehelper.common.prefs.supportv7.ATESwitchPreference
+            android:layout="@layout/list_item_view_switch"
+            app:defaultValue="false"
+            app:icon="@drawable/ic_expand_less"
+            app:key="expand_now_playing_panel"
+            app:summary="@string/pref_summary_expand_now_playing_panel"
+            app:title="@string/pref_title_expand_now_playing_panel" />
+
+        <code.name.monkey.appthemehelper.common.prefs.supportv7.ATESeekBarPreference
+            android:defaultValue="12"
+            android:key="new_blur_amount"
+            android:layout="@layout/list_item_view_seekbar"
+            android:max="25"
+            android:summary="@string/pref_blur_amount_summary"
+            android:title="@string/pref_blur_amount_title"
+            app:ateKey_pref_unit="px"
+            app:icon="@drawable/ic_blur_on"
+            app:showSeekBarValue="true" />
+    </code.name.monkey.appthemehelper.common.prefs.supportv7.ATEPreferenceCategory>
+</androidx.preference.PreferenceScreen>

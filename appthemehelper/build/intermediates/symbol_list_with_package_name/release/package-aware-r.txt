@@ -1,0 +1,80 @@
+code.name.monkey.appthemehelper
+attr ateKey_pref
+attr ateKey_prefCategory_textColor
+attr ateKey_pref_color
+attr ateKey_pref_dialog
+attr ateKey_pref_editText
+attr ateKey_pref_list
+attr ateKey_pref_multiSelect
+attr ateKey_pref_switch
+attr ateKey_pref_unit
+color ate_button_disabled_dark
+color ate_button_disabled_light
+color ate_button_text_disabled_dark
+color ate_button_text_disabled_light
+color ate_control_disabled_dark
+color ate_control_disabled_light
+color ate_control_normal_dark
+color ate_control_normal_light
+color ate_primary_text_dark
+color ate_primary_text_light
+color ate_secondary_text_dark
+color ate_secondary_text_light
+color ate_switch_thumb_disabled_dark
+color ate_switch_thumb_disabled_light
+color ate_switch_thumb_normal_dark
+color ate_switch_thumb_normal_light
+color ate_switch_track_disabled_dark
+color ate_switch_track_disabled_light
+color ate_switch_track_normal_dark
+color ate_switch_track_normal_light
+color ate_text_disabled_dark
+color ate_text_disabled_light
+color m3_accent_color
+color m3_accent_color2
+color m3_accent_color2_night
+color m3_selection_color
+color md_black_1000
+color md_black_800
+color md_blue_500
+color md_blue_A400
+color md_cyan_400
+color md_deep_orange_A400
+color md_deep_purple_300
+color md_deep_purple_400
+color md_deep_purple_500
+color md_deep_purple_600
+color md_deep_purple_700
+color md_deep_purple_800
+color md_deep_purple_A200
+color md_deep_purple_A400
+color md_green_500
+color md_green_A700
+color md_grey_200
+color md_grey_400
+color md_grey_500
+color md_grey_600
+color md_grey_700
+color md_grey_800
+color md_light_green_A400
+color md_red_400
+color md_red_500
+color md_red_A400
+color md_teal_A400
+color md_white_1000
+color md_yellow_A400
+dimen ate_circleview_border
+drawable ate_check
+id circle
+layout ate_preference_color
+layout ate_preference_switch_support
+string app_name
+styleable ATEColorPreference ateKey_pref_color
+styleable ATEDialogPreference ateKey_pref_dialog
+styleable ATEEditTextPreference ateKey_pref_editText
+styleable ATEListPreference ateKey_pref_list
+styleable ATEMultiSelectPreference ateKey_pref_multiSelect
+styleable ATEPreference ateKey_pref
+styleable ATEPreferenceCategory ateKey_prefCategory_textColor
+styleable ATESeekBarPreference ateKey_pref_unit
+styleable ATESwitchPreference ateKey_pref_switch

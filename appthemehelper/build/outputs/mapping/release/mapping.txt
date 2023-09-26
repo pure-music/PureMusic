@@ -1,0 +1,151 @@
+# compiler: R8
+# compiler_version: 3.2.74
+# common_typos_disable
+# {"id":"com.android.tools.r8.mapping","version":"2.0"}
+# pg_map_id: 9fef5f5
+# pg_map_hash: SHA-256 9fef5f513cd45cd7ef2778c31f865c87725caf35ed323701280682e329e177dd
+code.name.monkey.appthemehelper.ATH -> code.name.monkey.appthemehelper.a:
+    code.name.monkey.appthemehelper.ATH INSTANCE -> a
+    1:1:void code.name.monkey.appthemehelper.util.TintHelper.setTintAuto(android.view.View,int,boolean):0:0 -> a
+    1:1:void setTint(android.view.View,int):0 -> a
+code.name.monkey.appthemehelper.ThemeStore -> code.name.monkey.appthemehelper.b:
+    code.name.monkey.appthemehelper.ThemeStore$Companion Companion -> a
+    code.name.monkey.appthemehelper.ThemeStore$ThemeValue themeValue -> b
+    1:1:void code.name.monkey.appthemehelper.ThemeStore$Companion.<init>(kotlin.jvm.internal.DefaultConstructorMarker):0:0 -> <clinit>
+    1:1:void <clinit>():0 -> <clinit>
+    2:2:void <clinit>():0:0 -> <clinit>
+code.name.monkey.appthemehelper.ThemeStore$Companion -> code.name.monkey.appthemehelper.b$b:
+    int accentColor(android.content.Context) -> a
+    1:1:boolean code.name.monkey.appthemehelper.ThemeStore$Companion$themeValue$1.isMD3Enabled(android.content.Context):0:0 -> b
+    1:1:int accentColor(android.content.Context,code.name.monkey.appthemehelper.ThemeStore$ThemeValue):0 -> b
+    2:2:int accentColor(android.content.Context,code.name.monkey.appthemehelper.ThemeStore$ThemeValue):0:0 -> b
+    3:3:boolean code.name.monkey.appthemehelper.ThemeStore$Companion$themeValue$1.isWallpaperAccentEnabled(android.content.Context):0:0 -> b
+    3:3:int accentColor(android.content.Context,code.name.monkey.appthemehelper.ThemeStore$ThemeValue):0 -> b
+    4:4:boolean code.name.monkey.appthemehelper.ThemeStore$Companion$themeValue$1.isBlack(android.content.Context):0:0 -> b
+    4:4:int accentColor(android.content.Context,code.name.monkey.appthemehelper.ThemeStore$ThemeValue):0 -> b
+    5:5:int accentColor(android.content.Context,code.name.monkey.appthemehelper.ThemeStore$ThemeValue):0:0 -> b
+    6:6:int code.name.monkey.appthemehelper.util.ATHUtil.resolveColor(android.content.Context,int,int):0:0 -> b
+    6:6:int accentColor(android.content.Context,code.name.monkey.appthemehelper.ThemeStore$ThemeValue):0 -> b
+    7:7:int accentColor(android.content.Context,code.name.monkey.appthemehelper.ThemeStore$ThemeValue):0:0 -> b
+    8:8:int code.name.monkey.appthemehelper.util.ColorUtil.desaturateColor(int,float):0:0 -> b
+    8:8:int accentColor(android.content.Context,code.name.monkey.appthemehelper.ThemeStore$ThemeValue):0 -> b
+    1:1:boolean code.name.monkey.appthemehelper.ThemeStore$Companion$themeValue$1.isMD3Enabled(android.content.Context):0:0 -> c
+    1:1:boolean isMD3Enabled(android.content.Context):0 -> c
+    android.content.SharedPreferences prefs(android.content.Context) -> d
+code.name.monkey.appthemehelper.ThemeStore$Companion$themeValue$1 -> code.name.monkey.appthemehelper.b$a:
+code.name.monkey.appthemehelper.common.prefs.ATEColorPreference -> code.name.monkey.appthemehelper.common.prefs.ATEColorPreference:
+    1:1:void invalidateColor():0:0 -> onBindViewHolder
+    1:1:void onBindViewHolder(androidx.preference.PreferenceViewHolder):0 -> onBindViewHolder
+code.name.monkey.appthemehelper.common.prefs.BorderCircleView -> code.name.monkey.appthemehelper.common.prefs.BorderCircleView:
+    android.graphics.PorterDuffColorFilter whiteFilter -> g
+    android.graphics.PorterDuffColorFilter blackFilter -> f
+    android.graphics.Paint paintCheck -> e
+    android.graphics.Paint paintBorder -> c
+    android.graphics.Paint paint -> b
+    int borderWidth -> d
+    android.graphics.drawable.Drawable mCheck -> a
+code.name.monkey.appthemehelper.common.prefs.supportv7.ATEColorPreference -> code.name.monkey.appthemehelper.common.prefs.supportv7.ATEColorPreference:
+    1:1:void invalidateColor():0:0 -> onBindViewHolder
+    1:1:void onBindViewHolder(androidx.preference.PreferenceViewHolder):0 -> onBindViewHolder
+code.name.monkey.appthemehelper.common.prefs.supportv7.ATESeekBarPreference -> code.name.monkey.appthemehelper.common.prefs.supportv7.ATESeekBarPreference:
+    java.lang.String unit -> a
+    int $r8$clinit -> b
+    1:1:void code.name.monkey.appthemehelper.util.TintHelper.setTintAuto(android.view.View,int,boolean):0:0 -> onBindViewHolder
+    1:1:void onBindViewHolder(androidx.preference.PreferenceViewHolder):0 -> onBindViewHolder
+    2:2:void onBindViewHolder(androidx.preference.PreferenceViewHolder):0:0 -> onBindViewHolder
+    3:3:void appendUnit(android.widget.TextView,android.text.Editable):0:0 -> onBindViewHolder
+    3:3:void onBindViewHolder(androidx.preference.PreferenceViewHolder):0 -> onBindViewHolder
+    4:4:void onBindViewHolder(androidx.preference.PreferenceViewHolder):0:0 -> onBindViewHolder
+code.name.monkey.appthemehelper.common.prefs.supportv7.ATESeekBarPreference$onBindViewHolder$lambda$3$$inlined$doAfterTextChanged$1 -> code.name.monkey.appthemehelper.common.prefs.supportv7.ATESeekBarPreference$a:
+    android.widget.TextView $this_apply$inlined -> b
+    code.name.monkey.appthemehelper.common.prefs.supportv7.ATESeekBarPreference this$0 -> a
+    1:1:void code.name.monkey.appthemehelper.common.prefs.supportv7.ATESeekBarPreference.access$appendUnit(code.name.monkey.appthemehelper.common.prefs.supportv7.ATESeekBarPreference,android.widget.TextView,android.text.Editable):0:0 -> afterTextChanged
+    1:1:void afterTextChanged(android.text.Editable):0 -> afterTextChanged
+    2:2:void code.name.monkey.appthemehelper.common.prefs.supportv7.ATESeekBarPreference.appendUnit(android.widget.TextView,android.text.Editable):0:0 -> afterTextChanged
+    2:2:void code.name.monkey.appthemehelper.common.prefs.supportv7.ATESeekBarPreference.access$appendUnit(code.name.monkey.appthemehelper.common.prefs.supportv7.ATESeekBarPreference,android.widget.TextView,android.text.Editable):0 -> afterTextChanged
+    2:2:void afterTextChanged(android.text.Editable):0 -> afterTextChanged
+code.name.monkey.appthemehelper.util.ATHUtil -> a.a:
+    code.name.monkey.appthemehelper.util.ATHUtil INSTANCE -> a
+    1:1:int code.name.monkey.appthemehelper.util.ATHUtil.resolveColor$default(code.name.monkey.appthemehelper.util.ATHUtil,android.content.Context,int,int,int,java.lang.Object):0:0 -> a
+    1:1:boolean isWindowBackgroundDark(android.content.Context):0 -> a
+    2:2:boolean code.name.monkey.appthemehelper.util.ColorUtil.isColorLight(int):0:0 -> a
+    2:2:boolean isWindowBackgroundDark(android.content.Context):0 -> a
+    int resolveColor(android.content.Context,int,int) -> a
+    int resolveColor$default(code.name.monkey.appthemehelper.util.ATHUtil,android.content.Context,int,int,int,java.lang.Object) -> b
+code.name.monkey.appthemehelper.util.ColorUtil -> a.b:
+    code.name.monkey.appthemehelper.util.ColorUtil INSTANCE -> a
+    boolean isColorLight(int) -> a
+    int shiftColor(int,float) -> a
+code.name.monkey.appthemehelper.util.TintHelper -> a.c:
+    1:1:int code.name.monkey.appthemehelper.util.ColorUtil.blendColors(int,int,float):0:0 -> a
+    1:1:android.content.res.ColorStateList createSwitchDrawableTintList(android.content.Context,int,boolean,boolean,boolean):0 -> a
+    2:2:int code.name.monkey.appthemehelper.util.ColorUtil.shiftColor(int,float):0:0 -> a
+    2:2:android.content.res.ColorStateList createSwitchDrawableTintList(android.content.Context,int,boolean,boolean,boolean):0 -> a
+    3:3:android.content.res.ColorStateList createSwitchDrawableTintList(android.content.Context,int,boolean,boolean,boolean):0:0 -> a
+    android.graphics.drawable.Drawable createTintedDrawable(android.graphics.drawable.Drawable,int) -> a
+    int getDefaultRippleColor(android.content.Context,boolean) -> a
+    android.content.res.ColorStateList getDisabledColorStateList(int,int) -> a
+    4:4:void code.name.monkey.appthemehelper.util.TintHelper.setTint(com.google.android.material.floatingactionbutton.FloatingActionButton,int,boolean):0:0 -> a
+    4:4:void setTintAuto(android.view.View,int,boolean,boolean):0 -> a
+    5:5:void setTintAuto(android.view.View,int,boolean,boolean):0:0 -> a
+    6:6:void code.name.monkey.appthemehelper.util.TintHelper.setTint(android.widget.RadioButton,int,boolean):0:0 -> a
+    6:6:void setTintAuto(android.view.View,int,boolean,boolean):0 -> a
+    7:7:void setTintAuto(android.view.View,int,boolean,boolean):0:0 -> a
+    8:8:void code.name.monkey.appthemehelper.util.TintHelper.setTint(android.widget.SeekBar,int,boolean):0:0 -> a
+    8:8:void setTintAuto(android.view.View,int,boolean,boolean):0 -> a
+    9:9:void setTintAuto(android.view.View,int,boolean,boolean):0:0 -> a
+    10:10:void code.name.monkey.appthemehelper.util.TintHelper.setTint(android.widget.ProgressBar,int,boolean):0:0 -> a
+    10:10:void code.name.monkey.appthemehelper.util.TintHelper.setTint(android.widget.ProgressBar,int):0 -> a
+    10:10:void setTintAuto(android.view.View,int,boolean,boolean):0 -> a
+    11:11:void setTintAuto(android.view.View,int,boolean,boolean):0:0 -> a
+    12:12:void code.name.monkey.appthemehelper.util.TintHelper.setTint(android.widget.EditText,int,boolean):0:0 -> a
+    12:12:void setTintAuto(android.view.View,int,boolean,boolean):0 -> a
+    13:13:void code.name.monkey.appthemehelper.util.TintHelper.setCursorTint(android.widget.EditText,int):0:0 -> a
+    13:13:void code.name.monkey.appthemehelper.util.TintHelper.setTint(android.widget.EditText,int,boolean):0 -> a
+    13:13:void setTintAuto(android.view.View,int,boolean,boolean):0 -> a
+    14:14:void setTintAuto(android.view.View,int,boolean,boolean):0:0 -> a
+    15:15:void code.name.monkey.appthemehelper.util.TintHelper.setTint(android.widget.CheckBox,int,boolean):0:0 -> a
+    15:15:void setTintAuto(android.view.View,int,boolean,boolean):0 -> a
+    16:16:void setTintAuto(android.view.View,int,boolean,boolean):0:0 -> a
+    17:17:void code.name.monkey.appthemehelper.util.TintHelper.setTint(android.widget.ImageView,int):0:0 -> a
+    17:17:void setTintAuto(android.view.View,int,boolean,boolean):0 -> a
+    18:18:void setTintAuto(android.view.View,int,boolean,boolean):0:0 -> a
+    19:19:void code.name.monkey.appthemehelper.util.TintHelper.setTint(com.google.android.material.materialswitch.MaterialSwitch,int,boolean):0:0 -> a
+    19:19:void setTintAuto(android.view.View,int,boolean,boolean):0 -> a
+    20:20:void setTintAuto(android.view.View,int,boolean,boolean):0:0 -> a
+    21:21:void code.name.monkey.appthemehelper.util.TintHelper.setTint(androidx.appcompat.widget.SwitchCompat,int,boolean):0:0 -> a
+    21:21:void setTintAuto(android.view.View,int,boolean,boolean):0 -> a
+    22:22:android.graphics.drawable.Drawable code.name.monkey.appthemehelper.util.TintHelper.modifySwitchDrawable(android.content.Context,android.graphics.drawable.Drawable,int,boolean,boolean,boolean):0:0 -> a
+    22:22:void code.name.monkey.appthemehelper.util.TintHelper.setTint(androidx.appcompat.widget.SwitchCompat,int,boolean):0 -> a
+    22:22:void setTintAuto(android.view.View,int,boolean,boolean):0 -> a
+    23:23:android.graphics.drawable.Drawable code.name.monkey.appthemehelper.util.TintHelper.createTintedDrawable(android.graphics.drawable.Drawable,android.content.res.ColorStateList):0:0 -> a
+    23:23:android.graphics.drawable.Drawable code.name.monkey.appthemehelper.util.TintHelper.modifySwitchDrawable(android.content.Context,android.graphics.drawable.Drawable,int,boolean,boolean,boolean):0 -> a
+    23:23:void code.name.monkey.appthemehelper.util.TintHelper.setTint(androidx.appcompat.widget.SwitchCompat,int,boolean):0 -> a
+    23:23:void setTintAuto(android.view.View,int,boolean,boolean):0 -> a
+    24:24:void code.name.monkey.appthemehelper.util.TintHelper.setTint(androidx.appcompat.widget.SwitchCompat,int,boolean):0:0 -> a
+    24:24:void setTintAuto(android.view.View,int,boolean,boolean):0 -> a
+    25:25:android.graphics.drawable.Drawable code.name.monkey.appthemehelper.util.TintHelper.modifySwitchDrawable(android.content.Context,android.graphics.drawable.Drawable,int,boolean,boolean,boolean):0:0 -> a
+    25:25:void code.name.monkey.appthemehelper.util.TintHelper.setTint(androidx.appcompat.widget.SwitchCompat,int,boolean):0 -> a
+    25:25:void setTintAuto(android.view.View,int,boolean,boolean):0 -> a
+    26:26:android.graphics.drawable.Drawable code.name.monkey.appthemehelper.util.TintHelper.createTintedDrawable(android.graphics.drawable.Drawable,android.content.res.ColorStateList):0:0 -> a
+    26:26:android.graphics.drawable.Drawable code.name.monkey.appthemehelper.util.TintHelper.modifySwitchDrawable(android.content.Context,android.graphics.drawable.Drawable,int,boolean,boolean,boolean):0 -> a
+    26:26:void code.name.monkey.appthemehelper.util.TintHelper.setTint(androidx.appcompat.widget.SwitchCompat,int,boolean):0 -> a
+    26:26:void setTintAuto(android.view.View,int,boolean,boolean):0 -> a
+    27:27:void code.name.monkey.appthemehelper.util.TintHelper.setTint(androidx.appcompat.widget.SwitchCompat,int,boolean):0:0 -> a
+    27:27:void setTintAuto(android.view.View,int,boolean,boolean):0 -> a
+    28:28:void setTintAuto(android.view.View,int,boolean,boolean):0:0 -> a
+    29:29:int code.name.monkey.appthemehelper.util.ColorUtil.adjustAlpha(int,float):0:0 -> a
+    29:29:void setTintAuto(android.view.View,int,boolean,boolean):0 -> a
+    30:30:void setTintAuto(android.view.View,int,boolean,boolean):0:0 -> a
+    31:31:void code.name.monkey.appthemehelper.util.ViewUtil.setBackgroundCompat(android.view.View,android.graphics.drawable.Drawable):0:0 -> a
+    31:31:void setTintAuto(android.view.View,int,boolean,boolean):0 -> a
+    32:32:void code.name.monkey.appthemehelper.util.TintHelper.setTintSelector(android.view.View,int,boolean,boolean):0:0 -> a
+    32:32:void setTintAuto(android.view.View,int,boolean,boolean):0 -> a
+    33:33:android.graphics.drawable.Drawable code.name.monkey.appthemehelper.util.TintHelper.createTintedDrawable(android.graphics.drawable.Drawable,android.content.res.ColorStateList):0:0 -> a
+    33:33:void code.name.monkey.appthemehelper.util.TintHelper.setTintSelector(android.view.View,int,boolean,boolean):0 -> a
+    33:33:void setTintAuto(android.view.View,int,boolean,boolean):0 -> a
+    34:34:void code.name.monkey.appthemehelper.util.ViewUtil.setBackgroundCompat(android.view.View,android.graphics.drawable.Drawable):0:0 -> a
+    34:34:void code.name.monkey.appthemehelper.util.TintHelper.setTintSelector(android.view.View,int,boolean,boolean):0 -> a
+    34:34:void setTintAuto(android.view.View,int,boolean,boolean):0 -> a
+    35:35:void code.name.monkey.appthemehelper.util.TintHelper.setTintSelector(android.view.View,int,boolean,boolean):0:0 -> a
+    35:35:void setTintAuto(android.view.View,int,boolean,boolean):0 -> a

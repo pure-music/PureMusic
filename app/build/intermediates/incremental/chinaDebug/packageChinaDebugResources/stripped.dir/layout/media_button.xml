@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:layoutDirection="ltr"
+    android:paddingStart="4dp"
+    android:paddingEnd="4dp"
+    android:clipToPadding="false">
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/repeatButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/roundSelector"
+        android:padding="16dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/previousButton"
+        app:layout_constraintEnd_toStartOf="@+id/previousButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/previousButton"
+        app:srcCompat="@drawable/ic_repeat"
+        tools:ignore="MissingPrefix"
+        tools:tint="@color/md_black_1000" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/previousButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/roundSelector"
+        android:padding="16dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/playPauseButton"
+        app:layout_constraintEnd_toStartOf="@+id/playPauseButton"
+        app:layout_constraintStart_toEndOf="@+id/repeatButton"
+        app:layout_constraintTop_toTopOf="@+id/playPauseButton"
+        app:srcCompat="@drawable/ic_skip_previous"
+        tools:ignore="MissingPrefix"
+        tools:tint="@color/md_black_1000" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/playPauseButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="?attr/roundSelector"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/nextButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/previousButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_pause_white_64dp"
+        tools:tint="@color/md_black_1000" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/nextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/roundSelector"
+        android:padding="16dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/playPauseButton"
+        app:layout_constraintEnd_toStartOf="@+id/shuffleButton"
+        app:layout_constraintStart_toEndOf="@+id/playPauseButton"
+        app:layout_constraintTop_toTopOf="@+id/playPauseButton"
+        app:srcCompat="@drawable/ic_skip_next"
+        tools:ignore="MissingPrefix"
+        tools:tint="@color/md_black_1000" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/shuffleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/roundSelector"
+        android:padding="16dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/nextButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/nextButton"
+        app:layout_constraintTop_toTopOf="@+id/nextButton"
+        app:srcCompat="@drawable/ic_shuffle"
+        tools:ignore="MissingPrefix"
+        tools:tint="@color/md_black_1000" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

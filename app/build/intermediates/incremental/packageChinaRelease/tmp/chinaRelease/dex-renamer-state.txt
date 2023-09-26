@@ -1,0 +1,10 @@
+#Sat Aug 26 14:19:24 CST 2023
+base.2=/Users/bytedance/StudioProjects/pure-music/app/build/intermediates/dex/chinaRelease/minifyChinaReleaseWithR8/classes2.dex
+path.2=classes2.dex
+base.1=/Users/bytedance/StudioProjects/pure-music/app/build/intermediates/desugar_lib_dex/chinaRelease/classes1000.dex
+path.1=classes1000.dex
+base.0=/Users/bytedance/StudioProjects/pure-music/app/build/intermediates/dex/chinaRelease/minifyChinaReleaseWithR8/classes.dex
+renamed.2=classes3.dex
+renamed.1=classes2.dex
+renamed.0=classes.dex
+path.0=classes.dex

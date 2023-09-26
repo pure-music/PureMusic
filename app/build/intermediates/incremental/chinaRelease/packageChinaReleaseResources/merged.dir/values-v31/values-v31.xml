@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="md3_available">true</bool>
+    <bool name="md3_enabled">false</bool>
+    <bool name="wallpaper_accent_visible">false</bool>
+    <color name="widget_circle_button_color">@android:color/system_accent1_900</color>
+    <color name="widget_md3_button_bg_color">@android:color/system_accent1_50</color>
+    <integer name="overScrollMode">0</integer>
+    <style name="Theme.AppWidget" parent="@android:style/Theme.DeviceDefault.DayNight">
+        <item name="colorSurface">@android:color/system_accent1_50</item>
+    </style>
+    <style name="Theme.RetroMusic.MD3" parent="@style/Theme.Material3.DynamicColors.DayNight">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="roundSelector">@drawable/round_selector</item>
+        <item name="rectSelector">@drawable/rect_selector</item>
+        <item name="materialCardViewStyle">@style/Widget.Material3.CardView.Elevated</item>
+        <item name="materialButtonStyle">@style/MaterialButtonTheme</item>
+        <item name="popupMenuBackground">@drawable/popup_background</item>
+        <item name="android:windowBackground">?attr/colorSurface</item>
+        <item name="windowActionModeOverlay">true</item>
+    </style>
+    <style name="Theme.RetroMusic.MD3.Black" parent="@style/Theme.RetroMusic.MD3"/>
+</resources>

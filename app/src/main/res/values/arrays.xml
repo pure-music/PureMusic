@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="pref_album_cover_transform_entries">
+        <item>@string/normal</item>
+        <item>@string/cascading</item>
+        <item>@string/depth</item>
+        <item>@string/vertical_flip</item>
+        <item>@string/horizontal_flip</item>
+        <item>@string/hinge</item>
+        <item>@string/stack</item>
+        <item>@string/simple</item>
+    </array>
+
+    <string-array name="pref_album_cover_transform_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+
+    <string-array name="pref_lyrics_type_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+    <array name="pref_lyrics_type_entries">
+        <item>@string/replace_cover</item>
+        <item>@string/over_cover</item>
+    </array>
+
+    <string-array name="pref_tab_text_mode_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <array name="pref_auto_download_images_titles">
+        <item>@string/always</item>
+<!--        <item>@string/only_on_wifi</item>-->
+        <item>@string/never</item>
+    </array>
+
+    <array name="pref_tab_text_mode_titles">
+        <item>@string/auto</item>
+        <item>@string/labeled</item>
+        <item>@string/selected</item>
+        <item>@string/unlabeled</item>
+    </array>
+
+    <array name="pref_appbar_mode_titles">
+        <item>@string/expanded</item>
+        <item>@string/compact</item>
+    </array>
+
+    <string-array name="pref_appbar_mode_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array name="pref_general_theme_list_titles">
+        <item>@string/light_theme_name</item>
+        <item>@string/dark_theme_name</item>
+        <item>@string/follow_system</item>
+    </string-array>
+
+    <string-array name="pref_general_theme_list_values">
+        <item>light</item>
+        <item>dark</item>
+        <item>auto</item>
+    </string-array>
+
+    <string-array name="pref_home_grid_style_list_titles">
+        <item>@string/circular</item>
+        <item>@string/card_color_style</item>
+        <item>@string/card_style</item>
+        <item>@string/tiny_card_style</item>
+        <item>@string/card_square</item>
+    </string-array>
+
+    <string-array name="pref_home_grid_style_list_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <array name="pref_home_grid_style_layout">
+        <item>@layout/item_artist</item>
+        <item>@layout/item_artist_square</item>
+        <item>@layout/item_album_card</item>
+        <item>@layout/item_artist_card</item>
+        <item>@layout/item_image</item>
+    </array>
+
+    <array name="pref_auto_download_images_values">
+        <item>always</item>
+<!--        <item>only_wifi</item>-->
+        <item>never</item>
+    </array>
+
+    <string-array name="pref_playlists_last_added_interval_titles">
+        <item>@string/today</item>
+        <item>@string/this_week</item>
+        <item>@string/this_month</item>
+        <item>@string/past_three_months</item>
+        <item>@string/this_year</item>
+    </string-array>
+
+    <string-array name="pref_playlists_last_added_interval_values">
+        <item>today</item>
+        <item>this_week</item>
+        <item>this_month</item>
+        <item>past_three_months</item>
+        <item>this_year</item>
+    </string-array>
+
+
+    <string-array name="pref_language_names">
+        <item>System default</item>
+        <item>Arabic</item>
+        <item>Basque</item>
+        <item>Burmese</item>
+        <item>Simplified Chinese</item>
+        <item>Traditional Chinese(Hong Kong)</item>
+        <item>Traditional Chinese(Taiwan)</item>
+        <item>Croatian</item>
+        <item>Czech</item>
+        <item>Danish</item>
+        <item>Dutch</item>
+        <item>English</item>
+        <item>Filipino</item>
+        <item>French</item>
+        <item>German</item>
+        <item>Greek</item>
+        <item>Hindi</item>
+        <item>Hungarian</item>
+        <item>Indonesian</item>
+        <item>Italian</item>
+        <item>Japanese</item>
+        <item>Kannada</item>
+        <item>Korean</item>
+        <item>Kurmanji Kurdish</item>
+        <item>Latvian</item>
+        <item>Malayalam</item>
+        <item>Persian</item>
+        <item>Polish</item>
+        <item>Portuguese(Brazil)</item>
+        <item>Portuguese(Portugal)</item>
+        <item>Romanian</item>
+        <item>Russian</item>
+        <item>Serbian</item>
+        <item>Spanish</item>
+        <item>Spanish(Latin America)</item>
+        <item>Swedish</item>
+        <item>Tamil</item>
+        <item>Telugu</item>
+        <item>Thai</item>
+        <item>Turkish</item>
+        <item>Ukrainian</item>
+        <item>Vietnamese</item>
+    </string-array>
+    <string-array name="pref_language_codes">
+        <item>auto</item>
+        <item>ar-SA</item>
+        <item>eu-ES</item>
+        <item>my-MM</item>
+        <item>zh-CN</item>
+        <item>zh-HK</item>
+        <item>zh-TW</item>
+        <item>hr</item>
+        <item>cs-cz</item>
+        <item>da-DK</item>
+        <item>nl-NL</item>
+        <item>en</item>
+        <item>fil-PH</item>
+        <item>fr</item>
+        <item>de</item>
+        <item>el</item>
+        <item>hi</item>
+        <item>hu</item>
+        <item>in</item>
+        <item>it</item>
+        <item>ja</item>
+        <item>kn</item>
+        <item>ko</item>
+        <item>kmr-TR</item>
+        <item>lv-LV</item>
+        <item>ml</item>
+        <item>fa</item>
+        <item>pl</item>
+        <item>pt-BR</item>
+        <item>pt-PT</item>
+        <item>ro</item>
+        <item>ru</item>
+        <item>sr</item>
+        <item>es</item>
+        <item>es-419</item>
+        <item>sv</item>
+        <item>ta</item>
+        <item>te</item>
+        <item>th-TH</item>
+        <item>tr</item>
+        <item>uk</item>
+        <item>vi</item>
+    </string-array>
+    <string-array name="image_settings_options">
+        <item>@string/choose_image</item>
+        <item>@string/remove_image</item>
+    </string-array>
+</resources>

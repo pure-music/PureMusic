@@ -1,0 +1,62 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.caij.puremusic.app-mergeChinaDebugResources-78:/values-large-v4/values-large-v4.xml",
+            "map": [
+                {
+                    "source": "/Users/bytedance/.gradle/caches/transforms-3/59367575a634f4e923bbd00a0a4d3ad9/transformed/appcompat-1.6.0/res/values-large-v4/values-large-v4.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,114,185,256,326,396,464,532,636",
+                        "endColumns": "58,70,70,69,69,67,67,103,115",
+                        "endOffsets": "109,180,251,321,391,459,527,631,747"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,10,11",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,114,185,256,326,396,464,588,692",
+                        "endColumns": "58,70,70,69,69,67,67,103,115",
+                        "endOffsets": "109,180,251,321,391,459,527,687,803"
+                    }
+                },
+                {
+                    "source": "/Users/bytedance/.gradle/caches/transforms-3/e2c854e37a7fa6cbb1d699216974fde7/transformed/jetified-color-3.3.0/res/values-large-v4/values-large-v4.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "55",
+                        "endOffsets": "106"
+                    },
+                    "to": {
+                        "startLines": "9",
+                        "startColumns": "4",
+                        "startOffsets": "532",
+                        "endColumns": "55",
+                        "endOffsets": "583"
+                    }
+                },
+                {
+                    "source": "/Users/bytedance/.gradle/caches/transforms-3/c9291eca4cbb4de075ef56502c9cb188/transformed/material-1.8.0/res/values-large-v4/values-large-v4.xml",
+                    "from": {
+                        "startLines": "2,3,4,10",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,177,311,752",
+                        "endLines": "2,3,9,15",
+                        "endColumns": "121,133,10,10",
+                        "endOffsets": "172,306,747,1190"
+                    },
+                    "to": {
+                        "startLines": "12,13,14,20",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "808,930,1064,1505",
+                        "endLines": "12,13,19,25",
+                        "endColumns": "121,133,10,10",
+                        "endOffsets": "925,1059,1500,1943"
+                    }
+                }
+            ]
+        }
+    ]
+}

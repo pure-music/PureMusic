@@ -1,0 +1,373 @@
+-keep class androidx.core.app.CoreComponentFactory { <init>(); }
+-keep class androidx.core.content.FileProvider { <init>(); }
+-keep class androidx.startup.InitializationProvider { <init>(); }
+-keep class com.alipay.sdk.app.APayEntranceActivity { <init>(); }
+-keep class com.alipay.sdk.app.AlipayResultActivity { <init>(); }
+-keep class com.alipay.sdk.app.H5AuthActivity { <init>(); }
+-keep class com.alipay.sdk.app.H5OpenAuthActivity { <init>(); }
+-keep class com.alipay.sdk.app.H5PayActivity { <init>(); }
+-keep class com.alipay.sdk.app.PayResultActivity { <init>(); }
+-keep class com.android.billingclient.api.ProxyBillingActivity { <init>(); }
+-keep class com.caij.lib.lifemanager.ProcessProvider { <init>(); }
+-keep class com.caij.puremusic.App { <init>(); }
+-keep class com.caij.puremusic.activities.DriveModeActivity { <init>(); }
+-keep class com.caij.puremusic.activities.FolderFilesActivity { <init>(); }
+-keep class com.caij.puremusic.activities.FolderManagerActivity { <init>(); }
+-keep class com.caij.puremusic.activities.HolderActivity { <init>(); }
+-keep class com.caij.puremusic.activities.LicenseActivity { <init>(); }
+-keep class com.caij.puremusic.activities.LockScreenActivity { <init>(); }
+-keep class com.caij.puremusic.activities.MainActivity { <init>(); }
+-keep class com.caij.puremusic.activities.PermissionActivity { <init>(); }
+-keep class com.caij.puremusic.activities.SettingActivity { <init>(); }
+-keep class com.caij.puremusic.activities.ShareInstagramStory { <init>(); }
+-keep class com.caij.puremusic.activities.SupportDevelopmentActivity { <init>(); }
+-keep class com.caij.puremusic.activities.WebActivity { <init>(); }
+-keep class com.caij.puremusic.activities.bugreport.BugReportActivity { <init>(); }
+-keep class com.caij.puremusic.activities.saf.SAFGuideActivity { <init>(); }
+-keep class com.caij.puremusic.activities.tageditor.AlbumTagEditorActivity { <init>(); }
+-keep class com.caij.puremusic.activities.tageditor.AlbumTagEditorActivityV2 { <init>(); }
+-keep class com.caij.puremusic.activities.tageditor.SongTagEditorActivity { <init>(); }
+-keep class com.caij.puremusic.activities.tageditor.SongTagEditorActivityV2 { <init>(); }
+-keep class com.caij.puremusic.appshortcuts.AppShortcutLauncherActivity { <init>(); }
+-keep class com.caij.puremusic.appwidgets.AppWidgetBig { <init>(); }
+-keep class com.caij.puremusic.appwidgets.AppWidgetCard { <init>(); }
+-keep class com.caij.puremusic.appwidgets.AppWidgetClassic { <init>(); }
+-keep class com.caij.puremusic.appwidgets.AppWidgetSmall { <init>(); }
+-keep class com.caij.puremusic.appwidgets.AppWidgetText { <init>(); }
+-keep class com.caij.puremusic.drive.adrive.Auth20Activity { <init>(); }
+-keep class com.caij.puremusic.drive.dropbox.DropBoxAuthActivity { <init>(); }
+-keep class com.caij.puremusic.drive.dropbox.DropBoxAuthActivity2 { <init>(); }
+-keep class com.caij.puremusic.fragments.backup.RestoreActivity { <init>(); }
+-keep class com.caij.puremusic.service.MusicService { <init>(); }
+-keep class com.caij.puremusic.wxapi.WXPayEntryActivity { <init>(); }
+-keep class com.caij.vip.DefaultFragmentActivity { <init>(); }
+-keep class com.caij.vip.DonatedActivity { <init>(); }
+-keep class com.github.dhaval2404.imagepicker.ImagePickerActivity { <init>(); }
+-keep class com.github.dhaval2404.imagepicker.ImagePickerFileProvider { <init>(); }
+-keep class com.google.android.datatransport.runtime.backends.TransportBackendDiscovery { <init>(); }
+-keep class com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver { <init>(); }
+-keep class com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService { <init>(); }
+-keep class com.google.android.gms.auth.api.signin.RevocationBoundService { <init>(); }
+-keep class com.google.android.gms.auth.api.signin.internal.SignInHubActivity { <init>(); }
+-keep class com.google.android.gms.common.api.GoogleApiActivity { <init>(); }
+-keep class com.yalantis.ucrop.UCropActivity { <init>(); }
+-keep class android.widget.Space { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.app.AlertController$RecycleListView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.view.menu.ActionMenuItemView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.view.menu.ExpandedMenuView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.view.menu.ListMenuItemView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.ActionBarContainer { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.ActionBarContextView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.ActionBarOverlayLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.ActionMenuView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.ActivityChooserView$InnerLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.AlertDialogLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.AppCompatCheckBox { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.AppCompatImageButton { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.AppCompatImageView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.AppCompatRadioButton { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.AppCompatSeekBar { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.AppCompatTextView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.ButtonBarLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.ContentFrameLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.DialogTitle { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.FitWindowsFrameLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.FitWindowsLinearLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.SearchView$SearchAutoComplete { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.SwitchCompat { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.Toolbar { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.ViewStubCompat { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.constraintlayout.helper.widget.Flow { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.constraintlayout.widget.Barrier { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.constraintlayout.widget.ConstraintLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.constraintlayout.widget.Guideline { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.coordinatorlayout.widget.CoordinatorLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.core.widget.NestedScrollView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.fragment.app.FragmentContainerView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.gridlayout.widget.GridLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.legacy.widget.Space { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.mediarouter.app.MediaRouteActionProvider { <init>(android.content.Context); }
+
+-keep class androidx.mediarouter.app.MediaRouteExpandCollapseButton { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.mediarouter.app.MediaRouteVolumeSlider { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.mediarouter.app.OverlayListView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.navigation.fragment.NavHostFragment { <init>(); }
+
+-keep class androidx.preference.PreferenceScreen { <init>(...); }
+
+-keep class androidx.preference.UnPressableLinearLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.preference.internal.PreferenceImageView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.recyclerview.widget.RecyclerView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.swiperefreshlayout.widget.SwipeRefreshLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.viewpager.widget.ViewPager { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class code.name.monkey.appthemehelper.common.prefs.BorderCircleView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class code.name.monkey.appthemehelper.common.prefs.supportv7.ATEColorPreference { <init>(...); }
+
+-keep class code.name.monkey.appthemehelper.common.prefs.supportv7.ATEListPreference { <init>(...); }
+
+-keep class code.name.monkey.appthemehelper.common.prefs.supportv7.ATEPreference { <init>(...); }
+
+-keep class code.name.monkey.appthemehelper.common.prefs.supportv7.ATEPreferenceCategory { <init>(...); }
+
+-keep class code.name.monkey.appthemehelper.common.prefs.supportv7.ATESeekBarPreference { <init>(...); }
+
+-keep class code.name.monkey.appthemehelper.common.prefs.supportv7.ATESwitchPreference { <init>(...); }
+
+-keep class code.name.monkey.appthemehelper.common.views.ATEAccentTextView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class code.name.monkey.appthemehelper.common.views.ATESwitch { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.afollestad.materialdialogs.color.view.ColorCircleView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.afollestad.materialdialogs.color.view.ObservableEditText { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.afollestad.materialdialogs.color.view.ObservableSeekBar { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.afollestad.materialdialogs.color.view.PreviewFrameView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.afollestad.materialdialogs.color.view.SeekBarGroupLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.afollestad.materialdialogs.color.view.WrapContentViewPager { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.afollestad.materialdialogs.internal.button.DialogActionButton { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.afollestad.materialdialogs.internal.button.DialogActionButtonLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.afollestad.materialdialogs.internal.list.DialogRecyclerView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.afollestad.materialdialogs.internal.main.DialogLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.afollestad.materialdialogs.internal.main.DialogScrollView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.afollestad.materialdialogs.internal.main.DialogTitleLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.afollestad.materialdialogs.internal.message.DialogContentLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.afollestad.materialdialogs.internal.rtl.RtlTextView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.afollestad.viewpagerdots.DotsIndicator { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.bosphere.fadingedgelayout.FadingEdgeLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.caij.puremusic.fragments.other.MiniPlayerFragment { <init>(); }
+
+-keep class com.caij.puremusic.fragments.player.CoverLyricsFragment { <init>(); }
+
+-keep class com.caij.puremusic.fragments.player.PlayerAlbumCoverFragment { <init>(); }
+
+-keep class com.caij.puremusic.fragments.player.adaptive.AdaptivePlaybackControlsFragment { <init>(); }
+
+-keep class com.caij.puremusic.fragments.player.blur.BlurPlaybackControlsFragment { <init>(); }
+
+-keep class com.caij.puremusic.fragments.player.card.CardPlaybackControlsFragment { <init>(); }
+
+-keep class com.caij.puremusic.fragments.player.cardblur.CardBlurPlaybackControlsFragment { <init>(); }
+
+-keep class com.caij.puremusic.fragments.player.color.ColorPlaybackControlsFragment { <init>(); }
+
+-keep class com.caij.puremusic.fragments.player.fit.FitPlaybackControlsFragment { <init>(); }
+
+-keep class com.caij.puremusic.fragments.player.flat.FlatPlaybackControlsFragment { <init>(); }
+
+-keep class com.caij.puremusic.fragments.player.full.FullPlaybackControlsFragment { <init>(); }
+
+-keep class com.caij.puremusic.fragments.player.lockscreen.LockScreenControlsFragment { <init>(); }
+
+-keep class com.caij.puremusic.fragments.player.material.MaterialControlsFragment { <init>(); }
+
+-keep class com.caij.puremusic.fragments.player.md3.MD3PlaybackControlsFragment { <init>(); }
+
+-keep class com.caij.puremusic.fragments.player.normal.PlayerPlaybackControlsFragment { <init>(); }
+
+-keep class com.caij.puremusic.fragments.player.peek.PeekPlayerControlFragment { <init>(); }
+
+-keep class com.caij.puremusic.fragments.player.plain.PlainPlaybackControlsFragment { <init>(); }
+
+-keep class com.caij.puremusic.fragments.player.simple.SimplePlaybackControlsFragment { <init>(); }
+
+-keep class com.caij.puremusic.fragments.player.tiny.TinyPlaybackControlsFragment { <init>(); }
+
+-keep class com.caij.puremusic.lyrics.CoverLrcView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.caij.puremusic.lyrics.LrcView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.caij.puremusic.lyrics.SimpleLrcView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.caij.puremusic.preferences.AlbumCoverStylePreference { <init>(...); }
+
+-keep class com.caij.puremusic.preferences.BlacklistPreference { <init>(...); }
+
+-keep class com.caij.puremusic.preferences.DurationPreference { <init>(...); }
+
+-keep class com.caij.puremusic.preferences.LibraryPreference { <init>(...); }
+
+-keep class com.caij.puremusic.preferences.NowPlayingScreenPreference { <init>(...); }
+
+-keep class com.caij.puremusic.views.AccentIcon { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.caij.puremusic.views.BaselineGridTextView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.caij.puremusic.views.BreadCrumbLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.caij.puremusic.views.ColorIconsImageView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.caij.puremusic.views.HeightFitSquareLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.caij.puremusic.views.ListItemView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.caij.puremusic.views.LollipopFixedWebView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.caij.puremusic.views.NumberRollView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.caij.puremusic.views.PermissionItem { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.caij.puremusic.views.RetroShapeableImageView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.caij.puremusic.views.SettingListItemView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.caij.puremusic.views.StatusBarView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.caij.puremusic.views.TintedBottomNavigationView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.caij.puremusic.views.TintedNavigationRailView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.caij.puremusic.views.TopAppBarLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.caij.puremusic.views.VerticalTextView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.caij.puremusic.views.WidthFitSquareCardView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.caij.puremusic.views.WidthFitSquareLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.caij.puremusic.views.insets.InsetsConstraintLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.caij.puremusic.views.insets.InsetsRecyclerView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.appbar.AppBarLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.appbar.CollapsingToolbarLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.appbar.MaterialToolbar { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.button.MaterialButton { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.button.MaterialButtonToggleGroup { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.card.MaterialCardView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.checkbox.MaterialCheckBox { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.chip.Chip { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.chip.ChipGroup { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.datepicker.MaterialCalendarGridView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.floatingactionbutton.FloatingActionButton { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.imageview.ShapeableImageView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.internal.BaselineLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.internal.CheckableImageButton { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.internal.ClippableRoundedCornerLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.internal.NavigationMenuItemView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.internal.NavigationMenuView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.internal.TouchObserverFrameLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.progressindicator.CircularProgressIndicator { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.progressindicator.LinearProgressIndicator { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.radiobutton.MaterialRadioButton { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.slider.Slider { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.snackbar.Snackbar$SnackbarLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.snackbar.SnackbarContentLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.textfield.TextInputEditText { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.textfield.TextInputLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.textview.MaterialTextView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.timepicker.ChipTextInputComboView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.timepicker.ClockFaceView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.timepicker.ClockHandView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.timepicker.TimePickerView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.heinrichreimersoftware.materialintro.view.FadeableViewPager { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.heinrichreimersoftware.materialintro.view.InkPageIndicator { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.heinrichreimersoftware.materialintro.view.parallax.ParallaxLinearLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.jetradarmobile.snowfall.SnowfallView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.yalantis.ucrop.view.GestureCropImageView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.yalantis.ucrop.view.OverlayView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.yalantis.ucrop.view.UCropView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.yalantis.ucrop.view.widget.AspectRatioTextView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.yalantis.ucrop.view.widget.HorizontalProgressWheelView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class me.tankery.lib.circularseekbar.CircularSeekBar { <init>(android.content.Context, android.util.AttributeSet); }
+

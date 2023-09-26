@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.caij.puremusic.app-mergeChinaReleaseResources-77:/values-v29/values-v29.xml",
+            "map": [
+                {
+                    "source": "/Users/bytedance/.gradle/caches/transforms-3/990f1a93844fee6abb819d3fc0e31b11/transformed/jetified-core-splashscreen-1.0.0/res/values-v29/values-v29.xml",
+                    "from": {
+                        "startLines": "2,7",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,374",
+                        "endLines": "6,8",
+                        "endColumns": "12,12",
+                        "endOffsets": "369,464"
+                    }
+                }
+            ]
+        }
+    ]
+}

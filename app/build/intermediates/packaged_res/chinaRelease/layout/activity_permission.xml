@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <com.caij.puremusic.views.BaselineGridTextView
+        android:id="@+id/appNameText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="32dp"
+        android:text="@string/app_name"
+        android:textAppearance="@style/TextViewHeadline5"
+        android:textColor="?android:attr/textColorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lineHeightHint="32sp" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="?attr/dividerHorizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appNameText" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@+id/finish"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="@integer/permission_orientation">
+
+            <com.caij.puremusic.views.PermissionItem
+                android:id="@+id/storage_permission"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="@integer/permission_layout_weight"
+                app:permissionButtonTitle="@string/grant_access"
+                app:permissionIcon="@drawable/ic_sd_storage"
+                app:permissionTitle="@string/permission_title"
+                app:permissionTitleNumber="1"
+                app:permissionTitleSubTitle="@string/permission_summary" />
+
+            <com.caij.puremusic.views.PermissionItem
+                android:id="@+id/bluetooth_permission"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="@integer/permission_layout_weight"
+                android:visibility="gone"
+                app:permissionButtonTitle="@string/grant_access"
+                app:permissionIcon="@drawable/ic_bluetooth_connect"
+                app:permissionTitle="@string/bluetooth_title"
+                app:permissionTitleNumber="2"
+                app:permissionTitleSubTitle="@string/bluetooth_summary"
+                tools:visibility="visible" />
+
+            <com.caij.puremusic.views.PermissionItem
+                android:id="@+id/audio_permission"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="@integer/permission_layout_weight"
+                android:visibility="gone"
+                app:permissionButtonTitle="@string/grant_access"
+                app:permissionIcon="@drawable/ic_phonelink_ring"
+                app:permissionTitle="@string/ringtone_title"
+                app:permissionTitleNumber="3"
+                app:permissionTitleSubTitle="@string/ringtone_summary"
+                tools:visibility="visible" />
+        </LinearLayout>
+    </ScrollView>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/finish"
+        style="@style/Widget.Material3.Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:paddingVertical="12dp"
+        android:text="@string/lets_go"
+        android:textAppearance="@style/TextViewButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

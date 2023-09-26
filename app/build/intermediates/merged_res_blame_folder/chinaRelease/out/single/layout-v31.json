@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout-v31/layout_notification_collapsed.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout-v31/layout_notification_collapsed.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout-v31/layout_notification_expanded.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout-v31/layout_notification_expanded.xml"
+    }
+]

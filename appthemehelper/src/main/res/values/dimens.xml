@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="ate_circleview_border">1dp</dimen>
+
+</resources>

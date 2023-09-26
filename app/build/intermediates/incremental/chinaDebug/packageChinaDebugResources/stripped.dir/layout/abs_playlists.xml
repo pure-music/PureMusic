@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="12dp">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/history"
+        style="@style/HomeActionButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/history"
+        app:icon="@drawable/ic_history"
+        app:layout_constraintEnd_toStartOf="@+id/lastAdded"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/lastAdded"
+        style="@style/HomeActionButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/folders"
+        app:icon="@drawable/asld_folder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/history"
+        app:layout_constraintTop_toTopOf="@+id/history" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/topPlayed"
+        style="@style/HomeActionButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/my_top_tracks"
+        app:icon="@drawable/ic_trending_up"
+        app:layout_constraintEnd_toStartOf="@+id/actionShuffle"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/history"
+        app:layout_constraintTop_toBottomOf="@+id/history" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/actionShuffle"
+        style="@style/HomeActionButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/shuffle"
+        app:icon="@drawable/ic_shuffle"
+        app:layout_constraintEnd_toEndOf="@+id/lastAdded"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/topPlayed"
+        app:layout_constraintTop_toBottomOf="@+id/lastAdded" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
