@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.caij.puremusic.app-mergeChinaDebugResources-78:/values-nb-rNO/values-nb-rNO.xml",
+            "map": [
+                {
+                    "source": "/Users/bytedance/.gradle/caches/transforms-3/ff97037da9e7fbf862cd71624b486304/transformed/jetified-imagepicker-2.1/res/values-nb-rNO/values-nb-rNO.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,104,182,275,359,455,533,601,774,822,883,933,980,1045,1103,1161,1208",
+                        "endLines": "2,3,4,5,6,7,8,10,11,12,13,14,15,16,17,18,19",
+                        "endColumns": "48,77,92,83,95,77,67,127,47,60,49,46,64,57,57,46,46",
+                        "endOffsets": "99,177,270,354,450,528,596,769,817,878,928,975,1040,1098,1156,1203,1250"
+                    }
+                }
+            ]
+        }
+    ]
+}

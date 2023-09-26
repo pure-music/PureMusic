@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.caij.puremusic.app-mergeChinaReleaseResources-77:/values-no/values-no.xml",
+            "map": [
+                {
+                    "source": "/Users/bytedance/.gradle/caches/transforms-3/a21765a29b8c90a6f504c4fe4750d994/transformed/jetified-material-intro-2.0.0/res/values-no/values-no.xml",
+                    "from": {
+                        "startLines": "2,6,7,8,9,10",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "55,220,284,346,423,489",
+                        "endLines": "5,6,7,8,9,10",
+                        "endColumns": "14,63,61,76,65,58",
+                        "endOffsets": "215,279,341,418,484,543"
+                    }
+                }
+            ]
+        }
+    ]
+}

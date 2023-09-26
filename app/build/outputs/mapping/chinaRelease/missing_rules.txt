@@ -1,0 +1,7 @@
+# Please add these rules to your existing keep rules in order to suppress warnings.
+# This is generated automatically by the Android Gradle plugin.
+-dontwarn com.google.android.exoplayer2.source.hls.HlsMediaSource$Factory
+-dontwarn com.google.android.exoplayer2.source.hls.HlsMediaSource
+-dontwarn org.apache.tika.mime.MediaType
+-dontwarn org.apache.tika.parser.AbstractParser
+-dontwarn org.slf4j.impl.StaticLoggerBinder

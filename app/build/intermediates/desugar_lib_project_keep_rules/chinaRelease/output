@@ -1,0 +1,164 @@
+-keep class java.util.Spliterator
+-keep class java.util.function.BiConsumer
+-keep class java.util.function.BiFunction
+-keep class java.util.function.Consumer
+-keep class java.util.function.Function
+-keep class java.util.function.IntFunction
+-keep class java.util.function.Predicate
+-keep class java.util.function.ToDoubleFunction
+-keep class java.util.function.ToIntFunction
+-keep class java.util.function.ToLongFunction
+-keep class java.util.function.UnaryOperator
+-keep class java.util.stream.IntStream
+-keep class java.util.stream.Stream
+-keep class j$.util.Comparator { *; }
+-keep class j$.util.Iterator { *; }
+-keep class j$.util.List { *; }
+-keep class j$.util.Map$Entry { *; }
+-keep class j$.util.Map { *; }
+-keep class j$.lang.Iterable$-CC {
+    void $default$forEach(java.lang.Iterable, j$.util.function.Consumer);
+}
+-keep class j$.time.Clock {
+    j$.time.Instant instant();
+    j$.time.Clock systemUTC();
+}
+-keep class j$.time.Instant {
+    j$.time.Instant EPOCH;
+    j$.time.Instant MAX;
+    j$.time.Instant MIN;
+    int compareTo(j$.time.Instant);
+    int hashCode();
+    boolean isAfter(j$.time.Instant);
+    j$.time.Instant ofEpochSecond(long, long);
+    long toEpochMilli();
+    java.lang.String toString();
+}
+-keep class j$.time.OffsetDateTime {
+    j$.time.OffsetDateTime parse(java.lang.CharSequence);
+    j$.time.Instant toInstant();
+}
+-keep class j$.time.format.DateTimeParseException
+-keep class j$.util.Collection$-CC {
+    j$.util.stream.Stream $default$parallelStream(java.util.Collection);
+    boolean $default$removeIf(java.util.Collection, j$.util.function.Predicate);
+    j$.util.stream.Stream $default$stream(java.util.Collection);
+    java.lang.Object[] $default$toArray(java.util.Collection, j$.util.function.IntFunction);
+}
+-keep class j$.util.Comparator$-CC {
+    java.util.Comparator $default$thenComparing(java.util.Comparator, java.util.Comparator);
+    java.util.Comparator $default$thenComparing(java.util.Comparator, j$.util.function.Function);
+    java.util.Comparator $default$thenComparing(java.util.Comparator, j$.util.function.Function, java.util.Comparator);
+    java.util.Comparator $default$thenComparingDouble(java.util.Comparator, j$.util.function.ToDoubleFunction);
+    java.util.Comparator $default$thenComparingInt(java.util.Comparator, j$.util.function.ToIntFunction);
+    java.util.Comparator $default$thenComparingLong(java.util.Comparator, j$.util.function.ToLongFunction);
+}
+-keep class j$.util.DesugarArrays {
+    j$.util.stream.Stream stream(java.lang.Object[]);
+}
+-keep class j$.util.DesugarCollections {
+    java.util.Map synchronizedMap(java.util.Map);
+}
+-keep class j$.util.DesugarTimeZone {
+    java.util.TimeZone getTimeZone(java.lang.String);
+}
+-keep class j$.util.Iterator$-CC {
+    void $default$forEachRemaining(java.util.Iterator, j$.util.function.Consumer);
+}
+-keep class j$.util.List$-CC {
+    j$.util.Spliterator $default$spliterator(java.util.List);
+}
+-keep class j$.util.Map$-CC {
+    java.lang.Object $default$compute(java.util.Map, java.lang.Object, j$.util.function.BiFunction);
+    java.lang.Object $default$computeIfAbsent(java.util.Map, java.lang.Object, j$.util.function.Function);
+    java.lang.Object $default$computeIfPresent(java.util.Map, java.lang.Object, j$.util.function.BiFunction);
+    void $default$forEach(java.util.Map, j$.util.function.BiConsumer);
+    java.lang.Object $default$getOrDefault(java.util.Map, java.lang.Object, java.lang.Object);
+    java.lang.Object $default$merge(java.util.Map, java.lang.Object, java.lang.Object, j$.util.function.BiFunction);
+    java.lang.Object $default$putIfAbsent(java.util.Map, java.lang.Object, java.lang.Object);
+    boolean $default$remove(java.util.Map, java.lang.Object, java.lang.Object);
+    java.lang.Object $default$replace(java.util.Map, java.lang.Object, java.lang.Object);
+    boolean $default$replace(java.util.Map, java.lang.Object, java.lang.Object, java.lang.Object);
+    void $default$replaceAll(java.util.Map, j$.util.function.BiFunction);
+}
+-keep class j$.util.Map$-EL {
+    java.lang.Object computeIfAbsent(java.util.Map, java.lang.Object, j$.util.function.Function);
+}
+-keep class j$.util.Optional {
+    java.lang.Object get();
+    j$.util.Optional ofNullable(java.lang.Object);
+}
+-keep class j$.util.Spliterator$Wrapper {
+    java.util.Spliterator convert(j$.util.Spliterator);
+}
+-keep class j$.util.Spliterator
+-keep class j$.util.concurrent.ConcurrentHashMap { *; }
+-keep class j$.util.concurrent.ThreadLocalRandom {
+    j$.util.concurrent.ThreadLocalRandom current();
+}
+-keep class j$.util.function.BiConsumer$VivifiedWrapper {
+    j$.util.function.BiConsumer convert(java.util.function.BiConsumer);
+}
+-keep class j$.util.function.BiConsumer
+-keep class j$.util.function.BiFunction$VivifiedWrapper {
+    j$.util.function.BiFunction convert(java.util.function.BiFunction);
+}
+-keep class j$.util.function.BiFunction
+-keep class j$.util.function.Consumer$-CC {
+    j$.util.function.Consumer $default$andThen(j$.util.function.Consumer, j$.util.function.Consumer);
+}
+-keep class j$.util.function.Consumer$VivifiedWrapper {
+    j$.util.function.Consumer convert(java.util.function.Consumer);
+}
+-keep class j$.util.function.Consumer { *; }
+-keep class j$.util.function.Function$-CC {
+    j$.util.function.Function $default$andThen(j$.util.function.Function, j$.util.function.Function);
+    j$.util.function.Function $default$compose(j$.util.function.Function, j$.util.function.Function);
+}
+-keep class j$.util.function.Function$VivifiedWrapper {
+    j$.util.function.Function convert(java.util.function.Function);
+}
+-keep class j$.util.function.Function { *; }
+-keep class j$.util.function.IntFunction$VivifiedWrapper {
+    j$.util.function.IntFunction convert(java.util.function.IntFunction);
+}
+-keep class j$.util.function.IntFunction
+-keep class j$.util.function.Predicate$-CC {
+    j$.util.function.Predicate $default$and(j$.util.function.Predicate, j$.util.function.Predicate);
+    j$.util.function.Predicate $default$negate(j$.util.function.Predicate);
+    j$.util.function.Predicate $default$or(j$.util.function.Predicate, j$.util.function.Predicate);
+}
+-keep class j$.util.function.Predicate$VivifiedWrapper {
+    j$.util.function.Predicate convert(java.util.function.Predicate);
+}
+-keep class j$.util.function.Predicate { *; }
+-keep class j$.util.function.ToDoubleFunction$VivifiedWrapper {
+    j$.util.function.ToDoubleFunction convert(java.util.function.ToDoubleFunction);
+}
+-keep class j$.util.function.ToDoubleFunction
+-keep class j$.util.function.ToIntFunction$VivifiedWrapper {
+    j$.util.function.ToIntFunction convert(java.util.function.ToIntFunction);
+}
+-keep class j$.util.function.ToIntFunction
+-keep class j$.util.function.ToLongFunction$VivifiedWrapper {
+    j$.util.function.ToLongFunction convert(java.util.function.ToLongFunction);
+}
+-keep class j$.util.function.ToLongFunction
+-keep class j$.util.function.UnaryOperator$VivifiedWrapper {
+    j$.util.function.UnaryOperator convert(java.util.function.UnaryOperator);
+}
+-keep class j$.util.function.UnaryOperator
+-keep class j$.util.stream.IntStream$VivifiedWrapper {
+    j$.util.stream.IntStream convert(java.util.stream.IntStream);
+}
+-keep class j$.util.stream.IntStream$Wrapper {
+    java.util.stream.IntStream convert(j$.util.stream.IntStream);
+}
+-keep class j$.util.stream.IntStream
+-keep class j$.util.stream.Stream$Wrapper {
+    java.util.stream.Stream convert(j$.util.stream.Stream);
+}
+-keep class j$.util.stream.Stream {
+    j$.util.stream.Stream filter(j$.util.function.Predicate);
+    j$.util.Optional findFirst();
+}

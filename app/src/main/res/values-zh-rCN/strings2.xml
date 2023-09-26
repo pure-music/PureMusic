@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="error_auth">用户名密码不对</string>
+    <string name="error_not_found">链接资源路径找不到。</string>
+    <string name="error_server">服务器出错。</string>
+    <string name="sync_load_info">开始加载源数据</string>
+    <string name="sync_song_count">加载歌曲数量:</string>
+    <string name="sync_album_count">加载专辑数量:</string>
+    <string name="sync_playlist_count">加载歌单数量:</string>
+</resources>

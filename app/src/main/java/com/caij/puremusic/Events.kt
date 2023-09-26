@@ -1,0 +1,14 @@
+package com.caij.puremusic
+
+const val EVENT_PLAY_LIST_SONGS_UPDATE = "EVENT_PLAY_LIST_SONGS_UPDATE"
+
+const val EVENT_PLAY_LIST_UPDATE = "EVENT_PLAY_LIST_UPDATE" //歌单列表发生变化
+const val EVENT_SONGS_UPDATE = "EVENT_SONGS_UPDATE" //歌曲列表发生变化
+const val EVENT_ARTISTS_UPDATE = "EVENT_ARTISTS_UPDATE" //歌手列表发生变化
+const val EVENT_ALBUMS_UPDATE = "EVENT_ALBUMS_UPDATE" //歌曲列表发生变化
+const val EVENT_HOME_UPDATE = "EVENT_HOME_UPDATE" //歌曲列表发生变化
+const val EVENT_LYRICS_UPDATE = "EVENT_LYRICS_UPDATE" //歌词发生变化
+const val EVENT_SONG_UPDATE = "EVENT_SONG_UPDATE" //歌曲发生变化
+const val EVENT_ALBUM_UPDATE = "EVENT_ALBUM_UPDATE" //专辑发生变化
+const val EVENT_SONG_PAUSE = "EVENT_SONG_PAUSE" //专辑发生变化
+

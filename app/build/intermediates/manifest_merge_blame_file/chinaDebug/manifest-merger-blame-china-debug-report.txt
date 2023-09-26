@@ -1,0 +1,991 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.caij.puremusic"
+4    android:versionCode="1020501"
+5    android:versionName="1.2.5.1-DEBUG" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="32" />
+10
+11    <uses-permission android:name="com.android.vending.BILLING" />
+11-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:5:5-67
+11-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:5:22-64
+12    <uses-permission
+12-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:6:5-8:38
+13        android:name="android.permission.BLUETOOTH"
+13-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:7:9-52
+14        android:maxSdkVersion="30" />
+14-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:8:9-35
+15    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+15-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:9:5-75
+15-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:9:22-72
+16    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+16-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:10:5-79
+16-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:10:22-76
+17    <uses-permission android:name="android.permission.VIBRATE" />
+17-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:11:5-66
+17-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:11:22-63
+18    <uses-permission android:name="android.permission.WAKE_LOCK" />
+18-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:12:5-68
+18-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:12:22-65
+19    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+19-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:13:5-80
+19-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:13:22-77
+20    <uses-permission
+20-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:14:5-16:38
+21        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+21-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:15:9-65
+22        android:maxSdkVersion="29" />
+22-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:16:9-35
+23    <uses-permission android:name="android.permission.INTERNET" />
+23-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:17:5-67
+23-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:17:22-64
+24    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+24-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:18:5-79
+24-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:18:22-76
+25    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+25-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:19:5-75
+25-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:19:22-72
+26    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+26-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:20:5-77
+26-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:20:22-74
+27    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+27-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:21:5-23:47
+27-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:22:9-57
+28    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+28-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:24:5-81
+28-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:24:22-78
+29    <uses-permission
+29-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:25:5-28:31
+30        android:name="android.permission.BLUETOOTH_CONNECT"
+30-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:26:9-60
+31        android:usesPermissionFlags="neverForLocation" />
+31-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:27:9-55
+32    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+32-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:29:5-78
+32-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:29:22-75
+33
+34    <queries>
+34-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:31:5-38:15
+35        <package android:name="com.tencent.minihd.qq" />
+35-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:32:9-57
+35-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:32:18-54
+36        <package android:name="com.tencent.tim" />
+36-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:33:9-51
+36-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:33:18-48
+37        <package android:name="com.tencent.qqlite" />
+37-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:34:9-54
+37-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:34:18-51
+38        <package android:name="com.tencent.mobileqq" />
+38-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:35:9-56
+38-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:35:18-53
+39        <package android:name="com.tencent.mm" />
+39-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:36:9-50
+39-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:36:18-47
+40        <package android:name="com.eg.android.AlipayGphone" />
+40-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:37:9-63
+40-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:37:18-60
+41        <!-- Query Camera Packages -->
+42        <intent>
+42-->[com.github.dhaval2404:imagepicker:2.1] /Users/bytedance/.gradle/caches/transforms-3/ff97037da9e7fbf862cd71624b486304/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:12:9-14:18
+43            <action android:name="android.media.action.IMAGE_CAPTURE" />
+43-->[com.github.dhaval2404:imagepicker:2.1] /Users/bytedance/.gradle/caches/transforms-3/ff97037da9e7fbf862cd71624b486304/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:13:13-73
+43-->[com.github.dhaval2404:imagepicker:2.1] /Users/bytedance/.gradle/caches/transforms-3/ff97037da9e7fbf862cd71624b486304/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:13:21-70
+44        </intent> <!-- Query Open Document -->
+45        <intent>
+45-->[com.github.dhaval2404:imagepicker:2.1] /Users/bytedance/.gradle/caches/transforms-3/ff97037da9e7fbf862cd71624b486304/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:16:9-18:18
+46            <action android:name="android.intent.action.OPEN_DOCUMENT_TREE" />
+46-->[com.github.dhaval2404:imagepicker:2.1] /Users/bytedance/.gradle/caches/transforms-3/ff97037da9e7fbf862cd71624b486304/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:17:13-79
+46-->[com.github.dhaval2404:imagepicker:2.1] /Users/bytedance/.gradle/caches/transforms-3/ff97037da9e7fbf862cd71624b486304/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:17:21-76
+47        </intent>
+48        <intent>
+48-->[androidx.media:media:1.4.1] /Users/bytedance/.gradle/caches/transforms-3/cefbfc7639c3167dea85471f9834f93c/transformed/media-1.4.1/AndroidManifest.xml:25:9-27:18
+49            <action android:name="android.media.browse.MediaBrowserService" />
+49-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:318:17-83
+49-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:318:25-80
+50        </intent>
+51        <intent>
+51-->[com.android.billingclient:billing:6.0.0] /Users/bytedance/.gradle/caches/transforms-3/f1ad32224ba619ceda352ca547b567fd/transformed/jetified-billing-6.0.0/AndroidManifest.xml:13:9-15:18
+52            <action android:name="com.android.vending.billing.InAppBillingService.BIND" />
+52-->[com.android.billingclient:billing:6.0.0] /Users/bytedance/.gradle/caches/transforms-3/f1ad32224ba619ceda352ca547b567fd/transformed/jetified-billing-6.0.0/AndroidManifest.xml:14:13-91
+52-->[com.android.billingclient:billing:6.0.0] /Users/bytedance/.gradle/caches/transforms-3/f1ad32224ba619ceda352ca547b567fd/transformed/jetified-billing-6.0.0/AndroidManifest.xml:14:21-88
+53        </intent>
+54        <intent> <!-- H5 支持手淘登录 -->
+54-->[com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:10:9-14:18
+55            <action android:name="*" />
+55-->[com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:11:13-40
+55-->[com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:11:21-37
+56
+57            <data android:scheme="tbopen" />
+57-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:86:17-50
+57-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:86:23-47
+58        </intent> <!-- 支付宝 app -->
+59        <package android:name="com.eg.android.AlipayGphoneRC" /> <!-- 沙箱支付宝 app -->
+59-->[com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:17:9-65
+59-->[com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:17:18-62
+60        <package android:name="hk.alipay.wallet" />
+60-->[com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:18:9-52
+60-->[com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:18:18-49
+61    </queries>
+62    <!--
+63    This is not that important, it's just here so that we can query equalizer package
+64    and check if it's present on A11+ because of Package visibility restrictions.
+65    -->
+66    <queries>
+66-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:31:5-38:15
+67        <package android:name="com.android.musicfx" />
+68    </queries>
+69    <!--
+70    This is not that important, it's just here so that we can query equalizer package
+71    and check if it's present on A11+ because of Package visibility restrictions.
+72    -->
+73    <queries>
+73-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:31:5-38:15
+74        <package android:name="com.android.musicfx" />
+75    </queries>
+76
+77    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
+77-->[com.github.allenymt.PrivacySentry:privacy-proxy:1.2.7] /Users/bytedance/.gradle/caches/transforms-3/a2f588ab3d03fe263427a762ee1c1e43/transformed/jetified-privacy-proxy-1.2.7/AndroidManifest.xml:10:5-86
+77-->[com.github.allenymt.PrivacySentry:privacy-proxy:1.2.7] /Users/bytedance/.gradle/caches/transforms-3/a2f588ab3d03fe263427a762ee1c1e43/transformed/jetified-privacy-proxy-1.2.7/AndroidManifest.xml:10:22-83
+78    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+78-->[com.facebook.flipper:flipper:0.145.0] /Users/bytedance/.gradle/caches/transforms-3/40ce0fab91d84e5ffcc8e38ffd166016/transformed/jetified-flipper-0.145.0/AndroidManifest.xml:16:5-76
+78-->[com.facebook.flipper:flipper:0.145.0] /Users/bytedance/.gradle/caches/transforms-3/40ce0fab91d84e5ffcc8e38ffd166016/transformed/jetified-flipper-0.145.0/AndroidManifest.xml:16:22-73
+79
+80    <permission
+80-->[androidx.core:core:1.9.0] /Users/bytedance/.gradle/caches/transforms-3/62cf0fca72429c0b2d34ee3065e27d4d/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+81        android:name="com.caij.puremusic.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+81-->[androidx.core:core:1.9.0] /Users/bytedance/.gradle/caches/transforms-3/62cf0fca72429c0b2d34ee3065e27d4d/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+82        android:protectionLevel="signature" />
+82-->[androidx.core:core:1.9.0] /Users/bytedance/.gradle/caches/transforms-3/62cf0fca72429c0b2d34ee3065e27d4d/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+83
+84    <uses-permission android:name="com.caij.puremusic.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+84-->[androidx.core:core:1.9.0] /Users/bytedance/.gradle/caches/transforms-3/62cf0fca72429c0b2d34ee3065e27d4d/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+84-->[androidx.core:core:1.9.0] /Users/bytedance/.gradle/caches/transforms-3/62cf0fca72429c0b2d34ee3065e27d4d/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+85
+86    <supports-screens
+86-->[com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:21:5-26:39
+87        android:anyDensity="true"
+87-->[com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:22:9-34
+88        android:largeScreens="true"
+88-->[com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:23:9-36
+89        android:normalScreens="true"
+89-->[com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:24:9-37
+90        android:resizeable="true"
+90-->[com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:25:9-34
+91        android:smallScreens="true" />
+91-->[com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:26:9-36
+92
+93    <application
+94        android:name="com.caij.puremusic.App"
+94-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:48:9-28
+95        android:allowBackup="@bool/allowBackup"
+95-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:49:9-48
+96        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+96-->[androidx.core:core:1.9.0] /Users/bytedance/.gradle/caches/transforms-3/62cf0fca72429c0b2d34ee3065e27d4d/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
+97        android:configChanges="locale|layoutDirection"
+97-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:50:9-55
+98        android:debuggable="true"
+99        android:icon="@mipmap/ic_launcher2"
+99-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:51:9-44
+100        android:label="@string/app_name"
+100-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:52:9-36
+101        android:largeHeap="true"
+101-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:60:9-33
+102        android:requestLegacyExternalStorage="true"
+102-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:53:9-52
+103        android:restoreAnyVersion="true"
+103-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:54:9-41
+104        android:roundIcon="@mipmap/ic_launcher2_round"
+104-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:55:9-55
+105        android:supportsRtl="true"
+105-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:56:9-35
+106        android:theme="@style/Theme.RetroMusic.FollowSystem"
+106-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:57:9-61
+107        android:usesCleartextTraffic="true" >
+107-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:58:9-44
+108        <provider
+108-->/Users/bytedance/StudioProjects/pure-music/app/src/debug/AndroidManifest.xml:7:9-9:56
+109            android:name="debug.DebugContentProvider"
+109-->/Users/bytedance/StudioProjects/pure-music/app/src/debug/AndroidManifest.xml:9:13-54
+110            android:authorities="com.caij.puremusic.debug.DebugContentProvider" />
+110-->/Users/bytedance/StudioProjects/pure-music/app/src/debug/AndroidManifest.xml:8:13-78
+111
+112        <activity
+112-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:63:9-137:20
+113            android:name="com.caij.puremusic.activities.MainActivity"
+113-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:64:13-52
+114            android:exported="true"
+114-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:65:13-36
+115            android:launchMode="singleTop"
+115-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:66:13-43
+116            android:theme="@style/Theme.RetroMusic.SplashScreen" >
+116-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:67:13-65
+117            <intent-filter>
+117-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:68:13-75:29
+118                <action android:name="android.intent.action.MAIN" />
+118-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:69:17-69
+118-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:69:25-66
+119                <action android:name="android.intent.action.MUSIC_PLAYER" />
+119-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:70:17-77
+119-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:70:25-74
+120
+121                <category android:name="android.intent.category.LAUNCHER" />
+121-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:72:17-77
+121-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:72:27-74
+122                <category android:name="android.intent.category.APP_MUSIC" />
+122-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:73:17-78
+122-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:73:27-75
+123                <category android:name="android.intent.category.DEFAULT" />
+123-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:74:17-76
+123-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:74:27-73
+124            </intent-filter>
+125            <intent-filter>
+125-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:76:13-80:29
+126                <action android:name="android.media.action.MEDIA_PLAY_FROM_SEARCH" />
+126-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:77:17-86
+126-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:77:25-83
+127
+128                <category android:name="android.intent.category.DEFAULT" />
+128-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:74:17-76
+128-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:74:27-73
+129            </intent-filter>
+130            <intent-filter>
+130-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:81:13-91:29
+131                <action android:name="android.intent.action.VIEW" />
+131-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:82:17-69
+131-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:82:25-66
+132
+133                <category android:name="android.intent.category.DEFAULT" />
+133-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:74:17-76
+133-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:74:27-73
+134
+135                <data android:scheme="content" />
+135-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:86:17-50
+135-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:86:23-47
+136                <data android:mimeType="audio/*" />
+136-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:86:17-50
+137                <data android:mimeType="application/ogg" />
+137-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:86:17-50
+138                <data android:mimeType="application/x-ogg" />
+138-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:86:17-50
+139                <data android:mimeType="application/itunes" />
+139-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:86:17-50
+140            </intent-filter>
+141            <intent-filter>
+141-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:92:13-102:29
+142                <action android:name="android.intent.action.VIEW" />
+142-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:82:17-69
+142-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:82:25-66
+143
+144                <category android:name="android.intent.category.DEFAULT" />
+144-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:74:17-76
+144-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:74:27-73
+145
+146                <data android:scheme="file" />
+146-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:86:17-50
+146-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:86:23-47
+147                <data android:mimeType="audio/*" />
+147-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:86:17-50
+148                <data android:mimeType="application/ogg" />
+148-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:86:17-50
+149                <data android:mimeType="application/x-ogg" />
+149-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:86:17-50
+150                <data android:mimeType="application/itunes" />
+150-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:86:17-50
+151            </intent-filter>
+152            <intent-filter>
+152-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:103:13-114:29
+153                <action android:name="android.intent.action.VIEW" />
+153-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:82:17-69
+153-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:82:25-66
+154
+155                <category android:name="android.intent.category.DEFAULT" />
+155-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:74:17-76
+155-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:74:27-73
+156                <category android:name="android.intent.category.BROWSABLE" />
+156-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:107:17-78
+156-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:107:27-75
+157
+158                <data android:scheme="http" />
+158-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:86:17-50
+158-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:86:23-47
+159                <data android:mimeType="audio/*" />
+159-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:86:17-50
+160                <data android:mimeType="application/ogg" />
+160-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:86:17-50
+161                <data android:mimeType="application/x-ogg" />
+161-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:86:17-50
+162                <data android:mimeType="application/itunes" />
+162-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:86:17-50
+163            </intent-filter>
+164            <intent-filter>
+164-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:115:13-123:29
+165                <action android:name="android.intent.action.VIEW" />
+165-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:82:17-69
+165-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:82:25-66
+166
+167                <category android:name="android.intent.category.DEFAULT" />
+167-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:74:17-76
+167-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:74:27-73
+168
+169                <data android:mimeType="vnd.android.cursor.dir/playlist" />
+169-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:86:17-50
+170                <data android:mimeType="vnd.android.cursor.dir/albums" />
+170-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:86:17-50
+171                <data android:mimeType="vnd.android.cursor.dir/artists" />
+171-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:86:17-50
+172            </intent-filter>
+173            <intent-filter>
+173-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:124:13-128:29
+174                <action android:name="com.cyanogenmod.eleven.AUDIO_PLAYER" />
+174-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:125:17-78
+174-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:125:25-75
+175
+176                <category android:name="android.intent.category.DEFAULT" />
+176-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:74:17-76
+176-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:74:27-73
+177            </intent-filter>
+178            <intent-filter>
+178-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:129:13-136:29
+179                <action android:name="android.intent.action.PICK" />
+179-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:130:17-69
+179-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:130:25-66
+180
+181                <category android:name="android.intent.category.DEFAULT" />
+181-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:74:17-76
+181-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:74:27-73
+182                <category android:name="android.intent.category.OPENABLE" />
+182-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:133:17-77
+182-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:133:27-74
+183
+184                <data android:mimeType="vnd.android.cursor.dir/audio" />
+184-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:86:17-50
+185            </intent-filter>
+186        </activity>
+187        <activity android:name="com.caij.puremusic.activities.HolderActivity" />
+187-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:138:9-63
+187-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:138:19-60
+188        <activity android:name="com.caij.puremusic.activities.SettingActivity" />
+188-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:139:9-64
+188-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:139:19-61
+189        <activity android:name="com.caij.puremusic.activities.tageditor.AlbumTagEditorActivity" />
+189-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:140:9-81
+189-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:140:19-78
+190        <activity android:name="com.caij.puremusic.activities.tageditor.AlbumTagEditorActivityV2" />
+190-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:141:9-83
+190-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:141:19-80
+191        <activity android:name="com.caij.puremusic.activities.tageditor.SongTagEditorActivity" />
+191-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:142:9-80
+191-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:142:19-77
+192        <activity android:name="com.caij.puremusic.activities.tageditor.SongTagEditorActivityV2" />
+192-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:143:9-82
+192-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:143:19-79
+193        <activity android:name="com.caij.puremusic.activities.SupportDevelopmentActivity" />
+193-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:144:9-75
+193-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:144:19-72
+194        <activity android:name="com.caij.puremusic.activities.LicenseActivity" />
+194-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:145:9-64
+194-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:145:19-61
+195        <activity android:name="com.caij.puremusic.activities.bugreport.BugReportActivity" />
+195-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:146:9-76
+195-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:146:19-73
+196        <activity android:name="com.caij.puremusic.activities.ShareInstagramStory" />
+196-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:147:9-68
+196-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:147:19-65
+197        <activity android:name="com.caij.puremusic.activities.DriveModeActivity" />
+197-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:148:9-66
+197-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:148:19-63
+198        <activity android:name="com.caij.puremusic.activities.PermissionActivity" />
+198-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:149:9-67
+198-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:149:19-64
+199        <activity android:name="com.caij.puremusic.activities.WebActivity" />
+199-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:150:9-60
+199-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:150:19-57
+200        <activity android:name="com.caij.puremusic.activities.FolderManagerActivity" />
+200-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:151:9-70
+200-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:151:19-67
+201        <activity android:name="com.caij.puremusic.activities.FolderFilesActivity" />
+201-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:152:9-68
+201-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:152:19-65
+202        <activity android:name="com.caij.puremusic.drive.adrive.Auth20Activity" />
+202-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:153:9-65
+202-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:153:19-62
+203        <activity android:name="com.caij.puremusic.drive.dropbox.DropBoxAuthActivity" />
+203-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:154:9-71
+203-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:154:19-68
+204        <activity
+204-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:155:9-168:20
+205            android:name="com.caij.puremusic.drive.dropbox.DropBoxAuthActivity2"
+205-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:156:13-63
+206            android:exported="true" >
+206-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:157:13-36
+207            <intent-filter>
+207-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:158:13-167:29
+208                <action android:name="android.intent.action.VIEW" />
+208-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:82:17-69
+208-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:82:25-66
+209
+210                <category android:name="android.intent.category.DEFAULT" />
+210-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:74:17-76
+210-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:74:27-73
+211                <category android:name="android.intent.category.BROWSABLE" />
+211-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:107:17-78
+211-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:107:27-75
+212
+213                <data
+213-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:86:17-50
+214                    android:host="music.caij.xyz"
+215                    android:scheme="puremusic" />
+215-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:86:23-47
+216            </intent-filter>
+217        </activity>
+218        <activity
+218-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:169:9-173:47
+219            android:name="com.caij.puremusic.activities.LockScreenActivity"
+219-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:170:13-58
+220            android:excludeFromRecents="true"
+220-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:171:13-46
+221            android:launchMode="singleTask"
+221-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:172:13-44
+222            android:showOnLockScreen="true" />
+222-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:173:13-44
+223        <activity
+223-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:174:9-208:20
+224            android:name="com.caij.puremusic.fragments.backup.RestoreActivity"
+224-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:175:13-61
+225            android:excludeFromRecents="false"
+225-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:176:13-47
+226            android:exported="true"
+226-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:177:13-36
+227            android:label="@string/restore"
+227-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:178:13-44
+228            android:theme="@style/Theme.RetroMusic.Dialog" >
+228-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:179:13-59
+229            <intent-filter>
+229-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:180:13-207:29
+230                <action android:name="android.intent.action.VIEW" />
+230-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:82:17-69
+230-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:82:25-66
+231
+232                <category android:name="android.intent.category.DEFAULT" />
+232-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:74:17-76
+232-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:74:27-73
+233                <category android:name="android.intent.category.BROWSABLE" />
+233-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:107:17-78
+233-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:107:27-75
+234
+235                <data android:mimeType="application/octet-stream" />
+235-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:86:17-50
+236                <data android:mimeType="application/x-zip-compressed" />
+236-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:86:17-50
+237                <data android:mimeType="application/zip" />
+237-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:86:17-50
+238                <data android:scheme="file" />
+238-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:86:17-50
+238-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:86:23-47
+239                <data android:scheme="content" />
+239-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:86:17-50
+239-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:86:23-47
+240                <data android:mimeType="*/*" />
+240-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:86:17-50
+241                <!--
+242                    Work around Android's ugly primitive PatternMatcher
+243                    implementation that can't cope with finding a . early in
+244                    the path unless it's explicitly matched.
+245                -->
+246                <data android:host="*" />
+246-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:86:17-50
+247                <data android:pathPattern=".*\\.rmbak" />
+247-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:86:17-50
+248                <data android:pathPattern=".*\\..*\\.rmbak" />
+248-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:86:17-50
+249                <data android:pathPattern=".*\\..*\\..*\\.rmbak" />
+249-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:86:17-50
+250                <data android:pathPattern=".*\\..*\\..*\\..*\\.rmbak" />
+250-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:86:17-50
+251                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\.rmbak" />
+251-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:86:17-50
+252                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\.rmbak" />
+252-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:86:17-50
+253                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\..*\\.rmbak" />
+253-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:86:17-50
+254                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.rmbak" />
+254-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:86:17-50
+255                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.rmbak" />
+255-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:86:17-50
+256            </intent-filter>
+257        </activity>
+258        <activity
+258-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:209:9-212:75
+259            android:name="com.caij.puremusic.appshortcuts.AppShortcutLauncherActivity"
+259-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:210:13-69
+260            android:launchMode="singleInstance"
+260-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:211:13-48
+261            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+261-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:212:13-72
+262        <activity
+262-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:213:9-215:50
+263            android:name="com.caij.puremusic.activities.saf.SAFGuideActivity"
+263-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:214:13-60
+264            android:theme="@style/Theme.Intro" />
+264-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:215:13-47
+265
+266        <provider
+267            android:name="androidx.core.content.FileProvider"
+268            android:authorities="com.caij.puremusic"
+269            android:exported="false"
+270            android:grantUriPermissions="true" >
+271            <meta-data
+271-->[com.github.dhaval2404:imagepicker:2.1] /Users/bytedance/.gradle/caches/transforms-3/ff97037da9e7fbf862cd71624b486304/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:36:13-38:71
+272                android:name="android.support.FILE_PROVIDER_PATHS"
+272-->[com.github.dhaval2404:imagepicker:2.1] /Users/bytedance/.gradle/caches/transforms-3/ff97037da9e7fbf862cd71624b486304/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:37:17-67
+273                android:resource="@xml/provider_paths" />
+273-->[com.github.dhaval2404:imagepicker:2.1] /Users/bytedance/.gradle/caches/transforms-3/ff97037da9e7fbf862cd71624b486304/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:38:17-68
+274        </provider>
+275
+276        <receiver
+276-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:226:9-237:20
+277            android:name="com.caij.puremusic.appwidgets.AppWidgetBig"
+277-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:227:13-52
+278            android:exported="false"
+278-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:228:13-37
+279            android:label="@string/app_widget_big_name" >
+279-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:229:13-56
+280            <intent-filter>
+280-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:230:13-232:29
+281                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+281-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:231:17-84
+281-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:231:25-81
+282            </intent-filter>
+283
+284            <meta-data
+284-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:234:13-236:63
+285                android:name="android.appwidget.provider"
+285-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:235:17-58
+286                android:resource="@xml/app_widget_big_info" />
+286-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:236:17-60
+287        </receiver>
+288        <receiver
+288-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:238:9-249:20
+289            android:name="com.caij.puremusic.appwidgets.AppWidgetClassic"
+289-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:239:13-56
+290            android:exported="false"
+290-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:240:13-37
+291            android:label="@string/app_widget_classic_name" >
+291-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:241:13-60
+292            <intent-filter>
+292-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:230:13-232:29
+293                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+293-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:231:17-84
+293-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:231:25-81
+294            </intent-filter>
+295
+296            <meta-data
+296-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:234:13-236:63
+297                android:name="android.appwidget.provider"
+297-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:235:17-58
+298                android:resource="@xml/app_widget_classic_info" />
+298-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:236:17-60
+299        </receiver>
+300        <receiver
+300-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:250:9-261:20
+301            android:name="com.caij.puremusic.appwidgets.AppWidgetSmall"
+301-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:251:13-54
+302            android:exported="false"
+302-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:252:13-37
+303            android:label="@string/app_widget_small_name" >
+303-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:253:13-58
+304            <intent-filter>
+304-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:230:13-232:29
+305                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+305-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:231:17-84
+305-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:231:25-81
+306            </intent-filter>
+307
+308            <meta-data
+308-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:234:13-236:63
+309                android:name="android.appwidget.provider"
+309-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:235:17-58
+310                android:resource="@xml/app_widget_small_info" />
+310-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:236:17-60
+311        </receiver>
+312        <receiver
+312-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:262:9-273:20
+313            android:name="com.caij.puremusic.appwidgets.AppWidgetText"
+313-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:263:13-53
+314            android:exported="false"
+314-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:264:13-37
+315            android:label="@string/app_widget_text_name" >
+315-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:265:13-57
+316            <intent-filter>
+316-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:230:13-232:29
+317                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+317-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:231:17-84
+317-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:231:25-81
+318            </intent-filter>
+319
+320            <meta-data
+320-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:234:13-236:63
+321                android:name="android.appwidget.provider"
+321-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:235:17-58
+322                android:resource="@xml/app_widget_text" />
+322-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:236:17-60
+323        </receiver>
+324        <receiver
+324-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:274:9-285:20
+325            android:name="com.caij.puremusic.appwidgets.AppWidgetCard"
+325-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:275:13-53
+326            android:exported="false"
+326-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:276:13-37
+327            android:label="@string/app_widget_card_name" >
+327-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:277:13-57
+328            <intent-filter>
+328-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:230:13-232:29
+329                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+329-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:231:17-84
+329-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:231:25-81
+330            </intent-filter>
+331
+332            <meta-data
+332-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:234:13-236:63
+333                android:name="android.appwidget.provider"
+333-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:235:17-58
+334                android:resource="@xml/app_widget_card_info" />
+334-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:236:17-60
+335        </receiver> <!-- <receiver -->
+336        <!-- android:name=".appwidgets.AppWidgetMD3" -->
+337        <!-- android:exported="false" -->
+338        <!-- android:label="@string/app_widget_md3_name" > -->
+339        <!-- <intent-filter> -->
+340        <!-- <action android:name="android.appwidget.action.APPWIDGET_UPDATE" /> -->
+341        <!-- </intent-filter> -->
+342        <!-- <meta-data -->
+343        <!-- android:name="android.appwidget.provider" -->
+344        <!-- android:resource="@xml/app_widget_md3_info" /> -->
+345        <!-- </receiver> -->
+346        <!-- <receiver -->
+347        <!-- android:name=".appwidgets.AppWidgetCircle" -->
+348        <!-- android:exported="false" -->
+349        <!-- android:label="@string/app_widget_circle_name" > -->
+350        <!-- <intent-filter> -->
+351        <!-- <action android:name="android.appwidget.action.APPWIDGET_UPDATE" /> -->
+352        <!-- </intent-filter> -->
+353        <!-- <meta-data -->
+354        <!-- android:name="android.appwidget.provider" -->
+355        <!-- android:resource="@xml/app_widget_circle_info" /> -->
+356        <!-- </receiver> -->
+357        <service
+357-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:311:9-320:19
+358            android:name="com.caij.puremusic.service.MusicService"
+358-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:312:13-49
+359            android:enabled="true"
+359-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:313:13-35
+360            android:exported="false"
+360-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:314:13-37
+361            android:foregroundServiceType="mediaPlayback"
+361-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:315:13-58
+362            android:label="@string/app_name" >
+362-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:316:13-45
+363            <intent-filter>
+363-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:317:13-319:29
+364                <action android:name="android.media.browse.MediaBrowserService" />
+364-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:318:17-83
+364-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:318:25-80
+365            </intent-filter>
+366        </service>
+367
+368        <meta-data
+368-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:322:9-324:35
+369            android:name="android.max_aspect"
+369-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:323:13-46
+370            android:value="2.1" />
+370-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:324:13-32
+371        <meta-data
+371-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:325:9-327:36
+372            android:name="com.lge.support.SPLIT_WINDOW"
+372-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:326:13-56
+373            android:value="true" /> <!-- Android Auto -->
+373-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:327:13-33
+374        <!-- <meta-data -->
+375        <!-- android:name="com.google.android.gms.car.application" -->
+376        <!-- android:resource="@xml/automotive_app_desc" /> -->
+377        <!-- <meta-data -->
+378        <!-- android:name="com.google.android.gms.car.application.theme" -->
+379        <!-- android:resource="@style/CarTheme" /> -->
+380        <!-- <meta-data -->
+381        <!-- android:name="com.google.android.gms.car.notification.SmallIcon" -->
+382        <!-- android:resource="@drawable/ic_notification" /> -->
+383        <activity
+383-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:341:9-343:108
+384            android:name="com.caij.puremusic.wxapi.WXPayEntryActivity"
+384-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:341:19-77
+385            android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|screenLayout"
+385-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:343:13-106
+386            android:exported="true"
+386-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:341:111-134
+387            android:label="@string/app_name"
+387-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:341:78-110
+388            android:theme="@style/Theme.RetroMusic.WeiXinResponseActivity" />
+388-->/Users/bytedance/StudioProjects/pure-music/app/src/main/AndroidManifest.xml:342:13-75
+389        <activity android:name="com.caij.vip.DonatedActivity" />
+389-->[:vip] /Users/bytedance/StudioProjects/pure-music/vip/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-65
+389-->[:vip] /Users/bytedance/StudioProjects/pure-music/vip/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:19-62
+390        <activity android:name="com.caij.vip.DefaultFragmentActivity" />
+390-->[:vip] /Users/bytedance/StudioProjects/pure-music/vip/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:9-73
+390-->[:vip] /Users/bytedance/StudioProjects/pure-music/vip/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:19-70
+391
+392        <meta-data
+392-->[com.github.bumptech.glide:okhttp3-integration:4.15.1] /Users/bytedance/.gradle/caches/transforms-3/2e3b13e41a159e45834f1372094f3d3c/transformed/jetified-okhttp3-integration-4.15.1/AndroidManifest.xml:10:9-12:43
+393            android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule"
+393-->[com.github.bumptech.glide:okhttp3-integration:4.15.1] /Users/bytedance/.gradle/caches/transforms-3/2e3b13e41a159e45834f1372094f3d3c/transformed/jetified-okhttp3-integration-4.15.1/AndroidManifest.xml:11:13-84
+394            android:value="GlideModule" />
+394-->[com.github.bumptech.glide:okhttp3-integration:4.15.1] /Users/bytedance/.gradle/caches/transforms-3/2e3b13e41a159e45834f1372094f3d3c/transformed/jetified-okhttp3-integration-4.15.1/AndroidManifest.xml:12:13-40
+395
+396        <activity
+396-->[com.github.dhaval2404:imagepicker:2.1] /Users/bytedance/.gradle/caches/transforms-3/ff97037da9e7fbf862cd71624b486304/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:22:9-25:68
+397            android:name="com.github.dhaval2404.imagepicker.ImagePickerActivity"
+397-->[com.github.dhaval2404:imagepicker:2.1] /Users/bytedance/.gradle/caches/transforms-3/ff97037da9e7fbf862cd71624b486304/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:23:13-81
+398            android:screenOrientation="unspecified"
+398-->[com.github.dhaval2404:imagepicker:2.1] /Users/bytedance/.gradle/caches/transforms-3/ff97037da9e7fbf862cd71624b486304/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:24:13-52
+399            android:theme="@style/Theme.Transparent.ImagePicker" />
+399-->[com.github.dhaval2404:imagepicker:2.1] /Users/bytedance/.gradle/caches/transforms-3/ff97037da9e7fbf862cd71624b486304/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:25:13-65
+400        <activity
+400-->[com.github.dhaval2404:imagepicker:2.1] /Users/bytedance/.gradle/caches/transforms-3/ff97037da9e7fbf862cd71624b486304/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:26:9-29:72
+401            android:name="com.yalantis.ucrop.UCropActivity"
+401-->[com.github.dhaval2404:imagepicker:2.1] /Users/bytedance/.gradle/caches/transforms-3/ff97037da9e7fbf862cd71624b486304/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:27:13-60
+402            android:screenOrientation="portrait"
+402-->[com.github.dhaval2404:imagepicker:2.1] /Users/bytedance/.gradle/caches/transforms-3/ff97037da9e7fbf862cd71624b486304/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:28:13-49
+403            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+403-->[com.github.dhaval2404:imagepicker:2.1] /Users/bytedance/.gradle/caches/transforms-3/ff97037da9e7fbf862cd71624b486304/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:29:13-69
+404
+405        <provider
+405-->[com.github.dhaval2404:imagepicker:2.1] /Users/bytedance/.gradle/caches/transforms-3/ff97037da9e7fbf862cd71624b486304/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:31:9-39:20
+406            android:name="com.github.dhaval2404.imagepicker.ImagePickerFileProvider"
+406-->[com.github.dhaval2404:imagepicker:2.1] /Users/bytedance/.gradle/caches/transforms-3/ff97037da9e7fbf862cd71624b486304/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:32:13-85
+407            android:authorities="com.caij.puremusic.imagepicker.provider"
+407-->[com.github.dhaval2404:imagepicker:2.1] /Users/bytedance/.gradle/caches/transforms-3/ff97037da9e7fbf862cd71624b486304/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:33:13-72
+408            android:exported="false"
+408-->[com.github.dhaval2404:imagepicker:2.1] /Users/bytedance/.gradle/caches/transforms-3/ff97037da9e7fbf862cd71624b486304/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:34:13-37
+409            android:grantUriPermissions="true" >
+409-->[com.github.dhaval2404:imagepicker:2.1] /Users/bytedance/.gradle/caches/transforms-3/ff97037da9e7fbf862cd71624b486304/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:35:13-47
+410            <meta-data
+410-->[com.github.dhaval2404:imagepicker:2.1] /Users/bytedance/.gradle/caches/transforms-3/ff97037da9e7fbf862cd71624b486304/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:36:13-38:71
+411                android:name="android.support.FILE_PROVIDER_PATHS"
+411-->[com.github.dhaval2404:imagepicker:2.1] /Users/bytedance/.gradle/caches/transforms-3/ff97037da9e7fbf862cd71624b486304/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:37:17-67
+412                android:resource="@xml/image_picker_provider_paths" />
+412-->[com.github.dhaval2404:imagepicker:2.1] /Users/bytedance/.gradle/caches/transforms-3/ff97037da9e7fbf862cd71624b486304/transformed/jetified-imagepicker-2.1/AndroidManifest.xml:38:17-68
+413        </provider>
+414        <provider
+414-->[com.caij.lib:lifemanager:1.1.3.0] /Users/bytedance/.gradle/caches/transforms-3/73d306b643338dfc432890c6b3e34ded/transformed/jetified-lifemanager-1.1.3.0/AndroidManifest.xml:12:9-14:62
+415            android:name="com.caij.lib.lifemanager.ProcessProvider"
+415-->[com.caij.lib:lifemanager:1.1.3.0] /Users/bytedance/.gradle/caches/transforms-3/73d306b643338dfc432890c6b3e34ded/transformed/jetified-lifemanager-1.1.3.0/AndroidManifest.xml:13:13-68
+416            android:authorities="com.caij.puremusic.applife" />
+416-->[com.caij.lib:lifemanager:1.1.3.0] /Users/bytedance/.gradle/caches/transforms-3/73d306b643338dfc432890c6b3e34ded/transformed/jetified-lifemanager-1.1.3.0/AndroidManifest.xml:14:13-59
+417
+418        <activity
+418-->[com.google.android.gms:play-services-auth:20.4.1] /Users/bytedance/.gradle/caches/transforms-3/d63127a709fc6a083197384e24c3e269/transformed/jetified-play-services-auth-20.4.1/AndroidManifest.xml:23:9-27:75
+419            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+419-->[com.google.android.gms:play-services-auth:20.4.1] /Users/bytedance/.gradle/caches/transforms-3/d63127a709fc6a083197384e24c3e269/transformed/jetified-play-services-auth-20.4.1/AndroidManifest.xml:24:13-93
+420            android:excludeFromRecents="true"
+420-->[com.google.android.gms:play-services-auth:20.4.1] /Users/bytedance/.gradle/caches/transforms-3/d63127a709fc6a083197384e24c3e269/transformed/jetified-play-services-auth-20.4.1/AndroidManifest.xml:25:13-46
+421            android:exported="false"
+421-->[com.google.android.gms:play-services-auth:20.4.1] /Users/bytedance/.gradle/caches/transforms-3/d63127a709fc6a083197384e24c3e269/transformed/jetified-play-services-auth-20.4.1/AndroidManifest.xml:26:13-37
+422            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+422-->[com.google.android.gms:play-services-auth:20.4.1] /Users/bytedance/.gradle/caches/transforms-3/d63127a709fc6a083197384e24c3e269/transformed/jetified-play-services-auth-20.4.1/AndroidManifest.xml:27:13-72
+423        <!--
+424            Service handling Google Sign-In user revocation. For apps that do not integrate with
+425            Google Sign-In, this service will never be started.
+426        -->
+427        <service
+427-->[com.google.android.gms:play-services-auth:20.4.1] /Users/bytedance/.gradle/caches/transforms-3/d63127a709fc6a083197384e24c3e269/transformed/jetified-play-services-auth-20.4.1/AndroidManifest.xml:33:9-37:51
+428            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+428-->[com.google.android.gms:play-services-auth:20.4.1] /Users/bytedance/.gradle/caches/transforms-3/d63127a709fc6a083197384e24c3e269/transformed/jetified-play-services-auth-20.4.1/AndroidManifest.xml:34:13-89
+429            android:exported="true"
+429-->[com.google.android.gms:play-services-auth:20.4.1] /Users/bytedance/.gradle/caches/transforms-3/d63127a709fc6a083197384e24c3e269/transformed/jetified-play-services-auth-20.4.1/AndroidManifest.xml:35:13-36
+430            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+430-->[com.google.android.gms:play-services-auth:20.4.1] /Users/bytedance/.gradle/caches/transforms-3/d63127a709fc6a083197384e24c3e269/transformed/jetified-play-services-auth-20.4.1/AndroidManifest.xml:36:13-107
+431            android:visibleToInstantApps="true" />
+431-->[com.google.android.gms:play-services-auth:20.4.1] /Users/bytedance/.gradle/caches/transforms-3/d63127a709fc6a083197384e24c3e269/transformed/jetified-play-services-auth-20.4.1/AndroidManifest.xml:37:13-48
+432
+433        <activity
+433-->[com.google.android.gms:play-services-base:18.0.1] /Users/bytedance/.gradle/caches/transforms-3/d13b636cef8b9415d1cad567ec5a9065/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
+434            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+434-->[com.google.android.gms:play-services-base:18.0.1] /Users/bytedance/.gradle/caches/transforms-3/d13b636cef8b9415d1cad567ec5a9065/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:19-85
+435            android:exported="false"
+435-->[com.google.android.gms:play-services-base:18.0.1] /Users/bytedance/.gradle/caches/transforms-3/d13b636cef8b9415d1cad567ec5a9065/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:22:19-43
+436            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+436-->[com.google.android.gms:play-services-base:18.0.1] /Users/bytedance/.gradle/caches/transforms-3/d13b636cef8b9415d1cad567ec5a9065/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:21:19-78
+437
+438        <meta-data
+438-->[com.google.android.gms:play-services-basement:18.1.0] /Users/bytedance/.gradle/caches/transforms-3/75ea85cec0d7596770e308b0eab55d61/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
+439            android:name="com.google.android.gms.version"
+439-->[com.google.android.gms:play-services-basement:18.1.0] /Users/bytedance/.gradle/caches/transforms-3/75ea85cec0d7596770e308b0eab55d61/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:22:13-58
+440            android:value="@integer/google_play_services_version" />
+440-->[com.google.android.gms:play-services-basement:18.1.0] /Users/bytedance/.gradle/caches/transforms-3/75ea85cec0d7596770e308b0eab55d61/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:23:13-66
+441
+442        <uses-library
+442-->[androidx.window:window:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/8b77a247549c44b86eb3b18f870f535b/transformed/jetified-window-1.0.0/AndroidManifest.xml:25:9-27:40
+443            android:name="androidx.window.extensions"
+443-->[androidx.window:window:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/8b77a247549c44b86eb3b18f870f535b/transformed/jetified-window-1.0.0/AndroidManifest.xml:26:13-54
+444            android:required="false" />
+444-->[androidx.window:window:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/8b77a247549c44b86eb3b18f870f535b/transformed/jetified-window-1.0.0/AndroidManifest.xml:27:13-37
+445        <uses-library
+445-->[androidx.window:window:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/8b77a247549c44b86eb3b18f870f535b/transformed/jetified-window-1.0.0/AndroidManifest.xml:28:9-30:40
+446            android:name="androidx.window.sidecar"
+446-->[androidx.window:window:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/8b77a247549c44b86eb3b18f870f535b/transformed/jetified-window-1.0.0/AndroidManifest.xml:29:13-51
+447            android:required="false" />
+447-->[androidx.window:window:1.0.0] /Users/bytedance/.gradle/caches/transforms-3/8b77a247549c44b86eb3b18f870f535b/transformed/jetified-window-1.0.0/AndroidManifest.xml:30:13-37
+448
+449        <provider
+449-->[androidx.emoji2:emoji2:1.2.0] /Users/bytedance/.gradle/caches/transforms-3/42d4acb4322ab6a7a315952c435f3adb/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+450            android:name="androidx.startup.InitializationProvider"
+450-->[androidx.emoji2:emoji2:1.2.0] /Users/bytedance/.gradle/caches/transforms-3/42d4acb4322ab6a7a315952c435f3adb/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
+451            android:authorities="com.caij.puremusic.androidx-startup"
+451-->[androidx.emoji2:emoji2:1.2.0] /Users/bytedance/.gradle/caches/transforms-3/42d4acb4322ab6a7a315952c435f3adb/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
+452            android:exported="false" >
+452-->[androidx.emoji2:emoji2:1.2.0] /Users/bytedance/.gradle/caches/transforms-3/42d4acb4322ab6a7a315952c435f3adb/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
+453            <meta-data
+453-->[androidx.emoji2:emoji2:1.2.0] /Users/bytedance/.gradle/caches/transforms-3/42d4acb4322ab6a7a315952c435f3adb/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+454                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+454-->[androidx.emoji2:emoji2:1.2.0] /Users/bytedance/.gradle/caches/transforms-3/42d4acb4322ab6a7a315952c435f3adb/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
+455                android:value="androidx.startup" />
+455-->[androidx.emoji2:emoji2:1.2.0] /Users/bytedance/.gradle/caches/transforms-3/42d4acb4322ab6a7a315952c435f3adb/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
+456            <meta-data
+456-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/bytedance/.gradle/caches/transforms-3/35312deb7d45ac4a7f3c02b0263cafa2/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+457                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+457-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/bytedance/.gradle/caches/transforms-3/35312deb7d45ac4a7f3c02b0263cafa2/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
+458                android:value="androidx.startup" />
+458-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/bytedance/.gradle/caches/transforms-3/35312deb7d45ac4a7f3c02b0263cafa2/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+459        </provider>
+460
+461        <meta-data
+461-->[com.android.billingclient:billing:6.0.0] /Users/bytedance/.gradle/caches/transforms-3/f1ad32224ba619ceda352ca547b567fd/transformed/jetified-billing-6.0.0/AndroidManifest.xml:19:9-21:37
+462            android:name="com.google.android.play.billingclient.version"
+462-->[com.android.billingclient:billing:6.0.0] /Users/bytedance/.gradle/caches/transforms-3/f1ad32224ba619ceda352ca547b567fd/transformed/jetified-billing-6.0.0/AndroidManifest.xml:20:13-73
+463            android:value="6.0.0" />
+463-->[com.android.billingclient:billing:6.0.0] /Users/bytedance/.gradle/caches/transforms-3/f1ad32224ba619ceda352ca547b567fd/transformed/jetified-billing-6.0.0/AndroidManifest.xml:21:13-34
+464
+465        <activity
+465-->[com.android.billingclient:billing:6.0.0] /Users/bytedance/.gradle/caches/transforms-3/f1ad32224ba619ceda352ca547b567fd/transformed/jetified-billing-6.0.0/AndroidManifest.xml:23:9-27:75
+466            android:name="com.android.billingclient.api.ProxyBillingActivity"
+466-->[com.android.billingclient:billing:6.0.0] /Users/bytedance/.gradle/caches/transforms-3/f1ad32224ba619ceda352ca547b567fd/transformed/jetified-billing-6.0.0/AndroidManifest.xml:24:13-78
+467            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+467-->[com.android.billingclient:billing:6.0.0] /Users/bytedance/.gradle/caches/transforms-3/f1ad32224ba619ceda352ca547b567fd/transformed/jetified-billing-6.0.0/AndroidManifest.xml:25:13-96
+468            android:exported="false"
+468-->[com.android.billingclient:billing:6.0.0] /Users/bytedance/.gradle/caches/transforms-3/f1ad32224ba619ceda352ca547b567fd/transformed/jetified-billing-6.0.0/AndroidManifest.xml:26:13-37
+469            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+469-->[com.android.billingclient:billing:6.0.0] /Users/bytedance/.gradle/caches/transforms-3/f1ad32224ba619ceda352ca547b567fd/transformed/jetified-billing-6.0.0/AndroidManifest.xml:27:13-72
+470
+471        <service
+471-->[com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/bytedance/.gradle/caches/transforms-3/ae08fbfa277194a7f7362afc81108854/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:28:9-34:19
+472            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+472-->[com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/bytedance/.gradle/caches/transforms-3/ae08fbfa277194a7f7362afc81108854/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:29:13-103
+473            android:exported="false" >
+473-->[com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/bytedance/.gradle/caches/transforms-3/ae08fbfa277194a7f7362afc81108854/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:30:13-37
+474            <meta-data
+474-->[com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/bytedance/.gradle/caches/transforms-3/ae08fbfa277194a7f7362afc81108854/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:31:13-33:39
+475                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+475-->[com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/bytedance/.gradle/caches/transforms-3/ae08fbfa277194a7f7362afc81108854/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:32:17-94
+476                android:value="cct" />
+476-->[com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/bytedance/.gradle/caches/transforms-3/ae08fbfa277194a7f7362afc81108854/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:33:17-36
+477        </service>
+478        <service
+478-->[com.google.android.datatransport:transport-runtime:3.1.8] /Users/bytedance/.gradle/caches/transforms-3/bf6a590a41fdc664fcaff307e06947ab/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:26:9-30:19
+479            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+479-->[com.google.android.datatransport:transport-runtime:3.1.8] /Users/bytedance/.gradle/caches/transforms-3/bf6a590a41fdc664fcaff307e06947ab/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:27:13-117
+480            android:exported="false"
+480-->[com.google.android.datatransport:transport-runtime:3.1.8] /Users/bytedance/.gradle/caches/transforms-3/bf6a590a41fdc664fcaff307e06947ab/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:28:13-37
+481            android:permission="android.permission.BIND_JOB_SERVICE" >
+481-->[com.google.android.datatransport:transport-runtime:3.1.8] /Users/bytedance/.gradle/caches/transforms-3/bf6a590a41fdc664fcaff307e06947ab/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:29:13-69
+482        </service>
+483
+484        <receiver
+484-->[com.google.android.datatransport:transport-runtime:3.1.8] /Users/bytedance/.gradle/caches/transforms-3/bf6a590a41fdc664fcaff307e06947ab/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:32:9-34:40
+485            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+485-->[com.google.android.datatransport:transport-runtime:3.1.8] /Users/bytedance/.gradle/caches/transforms-3/bf6a590a41fdc664fcaff307e06947ab/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:33:13-132
+486            android:exported="false" />
+486-->[com.google.android.datatransport:transport-runtime:3.1.8] /Users/bytedance/.gradle/caches/transforms-3/bf6a590a41fdc664fcaff307e06947ab/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:34:13-37
+487
+488        <uses-library
+488-->[com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:33:9-35:40
+489            android:name="org.apache.http.legacy"
+489-->[com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:34:13-50
+490            android:required="false" />
+490-->[com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:35:13-37
+491
+492        <activity
+492-->[com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:37:9-42:20
+493            android:name="com.alipay.sdk.app.H5PayActivity"
+493-->[com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:38:13-60
+494            android:configChanges="orientation|keyboardHidden|navigation|screenSize|locale|keyboard|screenLayout|density|fontScale|layoutDirection|smallestScreenSize"
+494-->[com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:39:13-167
+495            android:exported="false"
+495-->[com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:40:13-37
+496            android:theme="@android:style/Theme.NoTitleBar" >
+496-->[com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:41:13-60
+497        </activity>
+498        <activity
+498-->[com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:43:9-48:20
+499            android:name="com.alipay.sdk.app.H5AuthActivity"
+499-->[com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:44:13-61
+500            android:configChanges="orientation|keyboardHidden|navigation|screenSize|locale|keyboard|screenLayout|density|fontScale|layoutDirection|smallestScreenSize"
+500-->[com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:45:13-167
+501            android:exported="false"
+501-->[com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:46:13-37
+502            android:theme="@android:style/Theme.NoTitleBar" >
+502-->[com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:47:13-60
+503        </activity>
+504        <activity
+504-->[com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:49:9-55:20
+505            android:name="com.alipay.sdk.app.PayResultActivity"
+505-->[com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:50:13-64
+506            android:configChanges="orientation|keyboardHidden|navigation|screenSize|locale|keyboard|screenLayout|density|fontScale|layoutDirection|smallestScreenSize"
+506-->[com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:51:13-167
+507            android:exported="true"
+507-->[com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:52:13-36
+508            android:launchMode="singleInstance"
+508-->[com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:53:13-48
+509            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+509-->[com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:54:13-72
+510        </activity>
+511        <activity
+511-->[com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:56:9-62:20
+512            android:name="com.alipay.sdk.app.AlipayResultActivity"
+512-->[com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:57:13-67
+513            android:configChanges="orientation|keyboardHidden|navigation|screenSize|locale|keyboard|screenLayout|density|fontScale|layoutDirection|smallestScreenSize"
+513-->[com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:58:13-167
+514            android:exported="true"
+514-->[com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:59:13-36
+515            android:launchMode="singleTask"
+515-->[com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:60:13-44
+516            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+516-->[com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:61:13-72
+517        </activity>
+518        <activity
+518-->[com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:63:9-69:20
+519            android:name="com.alipay.sdk.app.H5OpenAuthActivity"
+519-->[com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:64:13-65
+520            android:configChanges="orientation|keyboardHidden|navigation|screenSize|locale|keyboard|screenLayout|density|fontScale|layoutDirection|smallestScreenSize"
+520-->[com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:65:13-167
+521            android:exported="false"
+521-->[com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:66:13-37
+522            android:screenOrientation="behind"
+522-->[com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:67:13-47
+523            android:windowSoftInputMode="adjustResize|stateHidden" >
+523-->[com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:68:13-67
+524        </activity>
+525        <activity
+525-->[com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:70:9-75:20
+526            android:name="com.alipay.sdk.app.APayEntranceActivity"
+526-->[com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:71:13-67
+527            android:configChanges="orientation|keyboardHidden|navigation|screenSize|locale|keyboard|screenLayout|density|fontScale|layoutDirection|smallestScreenSize"
+527-->[com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:72:13-167
+528            android:exported="false"
+528-->[com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:73:13-37
+529            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+529-->[com.alipay.sdk:alipaysdk-android:15.8.10] /Users/bytedance/.gradle/caches/transforms-3/fcb5e924ac11c6bd0f82897ae4f2870d/transformed/jetified-alipaysdk-android-15.8.10/AndroidManifest.xml:74:13-72
+530        </activity>
+531    </application>
+532
+533</manifest>

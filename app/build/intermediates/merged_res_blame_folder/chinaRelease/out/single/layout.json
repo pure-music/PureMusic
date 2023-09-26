@@ -1,0 +1,674 @@
+[
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_backup.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_backup.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_adaptive_player_playback_controls.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_adaptive_player_playback_controls.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/item_grid.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/item_grid.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/image.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/image.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/app_widget_text.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/app_widget_text.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/item_contributor_header.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/item_contributor_header.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/section_recycler_view.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/section_recycler_view.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/item_list_quick_actions.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/item_list_quick_actions.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/simple_appbar_layout.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/simple_appbar_layout.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/list_setting_item_view.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/list_setting_item_view.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_main_recycler.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_main_recycler.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_peek_player.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_peek_player.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/app_widget_circle.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/app_widget_circle.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_peek_album_cover.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_peek_album_cover.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/list_item_view_no_title.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/list_item_view_no_title.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/dialog_playlist.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/dialog_playlist.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/loading.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/loading.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_folder.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_folder.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/include_player_menu.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/include_player_menu.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/list_item_view_no_card.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/list_item_view_no_card.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_fit.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_fit.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/activity_restore.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/activity_restore.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_folder_setting.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_folder_setting.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_plain_controls_fragment.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_plain_controls_fragment.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/activity_folder_manager.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/activity_folder_manager.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/layout_notification_collapsed.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/layout_notification_collapsed.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_lock_screen_playback_controls.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_lock_screen_playback_controls.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_simple_controls_fragment.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_simple_controls_fragment.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/item_suggestions.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/item_suggestions.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/activity_one_drive_auth.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/activity_one_drive_auth.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_album_flat_cover.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_album_flat_cover.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/bread_crumb.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/bread_crumb.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/preference_dialog_audio_fade.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/preference_dialog_audio_fade.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/item_music_source_folder.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/item_music_source_folder.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/item_album_footer.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/item_album_footer.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_player_playback_controls.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_player_playback_controls.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_lyrics.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_lyrics.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/activity_pro_version.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/activity_pro_version.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_material.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_material.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_settings.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_settings.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/collapsing_appbar_layout.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/collapsing_appbar_layout.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/activity_license.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/activity_license.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_classic_controls.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_classic_controls.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_material_playback_controls.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_material_playback_controls.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_album_carousel_cover.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_album_carousel_cover.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/item_donation_option.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/item_donation_option.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/item_album_card.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/item_album_card.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/item_list_backup.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/item_list_backup.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/item_contributor.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/item_contributor.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/item_artist_card.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/item_artist_card.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/item_image_gradient.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/item_image_gradient.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_flat_player.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_flat_player.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/status_bar.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/status_bar.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/activity_song_tag_editor.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/activity_song_tag_editor.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/preference_dialog_library_categories_listitem.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/preference_dialog_library_categories_listitem.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/app_widget_card.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/app_widget_card.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/item_grid_circle.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/item_grid_circle.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_classic_player.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_classic_player.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_gradient_player.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_gradient_player.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/card_other.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/card_other.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/item_storage.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/item_storage.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/item_image.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/item_image.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_album_full_card_cover.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_album_full_card_cover.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_home.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/activity_bug_report.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/activity_bug_report.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_artist_details.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_artist_details.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/item_artist_square.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/item_artist_square.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/home_content.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/home_content.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/item_permission.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/item_permission.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/abs_playlists.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/abs_playlists.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/item_simple_text.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/item_simple_text.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/item_song.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/item_song.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_fit_playback_controls.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_fit_playback_controls.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_gradient_controls.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_gradient_controls.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/activity_lock_screen.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/activity_lock_screen.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_card_player_playback_controls.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_card_player_playback_controls.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/activity_share_instagram.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/activity_share_instagram.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/app_widget_md3.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/app_widget_md3.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_circle_player.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_circle_player.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_full.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_full.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_playlist_detail.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_playlist_detail.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_about_content.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_about_content.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_music_manager.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_music_manager.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_folder_files.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_folder_files.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_tiny_controls_fragment.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_tiny_controls_fragment.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/dialog_edit_music_service.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/dialog_edit_music_service.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/user_image_layout.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/user_image_layout.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/preference_dialog_now_playing_screen.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/preference_dialog_now_playing_screen.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_color_player.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_color_player.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/card_credit.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/card_credit.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_whats_new.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_whats_new.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_home_player.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_home_player.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_card_blur_player.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_card_blur_player.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/list_item_view_switch.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/list_item_view_switch.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/preference_dialog_library_categories.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/preference_dialog_library_categories.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/dialog_edit_webdav.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/dialog_edit_webdav.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/activity_donation.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/activity_donation.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_volume.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_volume.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_tiny_player.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_tiny_player.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/item_grid_genre.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/item_grid_genre.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_peek_control_player.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_peek_control_player.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_main_settings.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_main_settings.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/media_button.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/media_button.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/sliding_music_panel_layout.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/sliding_music_panel_layout.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_mini_player.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_mini_player.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_card_player.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_card_player.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_color_player_playback_controls.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_color_player_playback_controls.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_md3_player_playback_controls.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_md3_player_playback_controls.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_album_full_cover.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_album_full_cover.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/item_genre.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/item_genre.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/list_item_view_switch_no_title.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/list_item_view_switch_no_title.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/app_widget_small.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/app_widget_small.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/dialog_edit_subsonic_service.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/dialog_edit_subsonic_service.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_plain_player.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_plain_player.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_player_album_cover.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_player_album_cover.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/activity_holder.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/activity_holder.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/banner_image_layout.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/banner_image_layout.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_simple_player.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_simple_player.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/item_favourite_card.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/item_favourite_card.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_album_card_cover.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_album_card_cover.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_library.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_library.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_adaptive_player.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_adaptive_player.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/list_item_view_seekbar.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/list_item_view_seekbar.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/item_card.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/item_card.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/shadow_statusbar_toolbar.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/shadow_statusbar_toolbar.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_user_info.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_user_info.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_album_cover.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_album_cover.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_simple_slide_large_image.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_simple_slide_large_image.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/dialog_edit_path.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/dialog_edit_path.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/card_retro_info.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/card_retro_info.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_album_details.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_album_details.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/preference_category_title.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/preference_category_title.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/item_list_big.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/item_list_big.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/activity_album_tag_editor.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/activity_album_tag_editor.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/item_artist.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/item_artist.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_playing_queue.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_playing_queue.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_full_player_controls.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_full_player_controls.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/app_widget_classic.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/app_widget_classic.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/activity_drive_mode.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/activity_drive_mode.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/list_item_view.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/list_item_view.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/sub_header.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/sub_header.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/dialog_playback_speed.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/dialog_playback_speed.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/dialog_sleep_timer.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/dialog_sleep_timer.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_artist_content.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_artist_content.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/number_roll_view.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/number_roll_view.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_flat_player_playback_controls.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_flat_player_playback_controls.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_md3_player.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_md3_player.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_card_blur_player_playback_controls.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_card_blur_player_playback_controls.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/list_item_color_view.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/list_item_color_view.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_player.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_player.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/bug_report_card_device_info.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/bug_report_card_device_info.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_search.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_search.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/layout_notification_expanded.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/layout_notification_expanded.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_blur.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_blur.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/preference_now_playing_screen_item.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/preference_now_playing_screen_item.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/app_widget_big.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/app_widget_big.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_web.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_web.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/dialog_file_details.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/dialog_file_details.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_cover_lyrics.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_cover_lyrics.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_about.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_about.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/item_list.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/item_list.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/card_social.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/card_social.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/item_queue.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/item_queue.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/item_card_color.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/item_card_color.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_album_circle_cover.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_album_circle_cover.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/activity_permission.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/activity_permission.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_album_content.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_album_content.xml"
+    },
+    {
+        "merged": "com.caij.puremusic.app-mergeChinaReleaseResources-78:/layout/fragment_blur_player_playback_controls.xml",
+        "source": "com.caij.puremusic.app-main-82:/layout/fragment_blur_player_playback_controls.xml"
+    }
+]

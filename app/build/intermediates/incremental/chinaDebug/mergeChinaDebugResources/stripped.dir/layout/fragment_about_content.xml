@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/mini_player_height">
+
+    <include
+        android:id="@+id/card_credit"
+        layout="@layout/card_credit" />
+
+    <include
+        android:id="@+id/card_retro_info"
+        layout="@layout/card_retro_info" />
+
+    <include
+        android:id="@+id/card_social"
+        layout="@layout/card_social" />
+
+    <include
+        android:id="@+id/card_other"
+        layout="@layout/card_other" />
+
+</LinearLayout>

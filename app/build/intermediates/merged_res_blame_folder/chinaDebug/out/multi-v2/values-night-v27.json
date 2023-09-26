@@ -1,0 +1,28 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.caij.puremusic.app-mergeChinaDebugResources-78:/values-night-v27/values-night-v27.xml",
+            "map": [
+                {
+                    "source": "/Users/bytedance/StudioProjects/pure-music/app/src/main/res/values-night-v27/styles.xml",
+                    "from": {
+                        "startLines": "16",
+                        "startColumns": "4",
+                        "startOffsets": "663",
+                        "endLines": "28",
+                        "endColumns": "12",
+                        "endOffsets": "1605"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "14",
+                        "endColumns": "12",
+                        "endOffsets": "997"
+                    }
+                }
+            ]
+        }
+    ]
+}

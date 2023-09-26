@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorSurface" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/playerAlbumCoverFragment"
+        android:name="com.caij.puremusic.fragments.player.PlayerAlbumCoverFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout="@layout/fragment_album_full_cover" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/cover_lyrics"
+        android:name="com.caij.puremusic.fragments.player.CoverLyricsFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:elevation="20dp" />
+
+    <include layout="@layout/shadow_statusbar_toolbar" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/shadow_statusbar_toolbar" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.caij.puremusic.views.StatusBarView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/status_bar_padding" />
+
+            <FrameLayout
+                android:id="@+id/playerToolbar"
+                android:layout_width="match_parent"
+                android:background="@android:color/transparent"
+                android:layout_height="?attr/actionBarSize">
+
+                <include
+                    android:id="@+id/include_play_menu"
+                    layout="@layout/include_player_menu" />
+
+            </FrameLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="8dp">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/playbackControlsFragment"
+            android:name="com.caij.puremusic.fragments.player.card.CardPlaybackControlsFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout="@layout/fragment_card_player_playback_controls" />
+    </com.google.android.material.card.MaterialCardView>
+</FrameLayout>

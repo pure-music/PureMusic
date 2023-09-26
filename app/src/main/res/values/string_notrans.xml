@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="fix_app_scrolling_view_behavior">com.google.android.material.appbar.AppBarFixBehavior</string>
+</resources>
