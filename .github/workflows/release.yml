@@ -101,5 +101,4 @@ jobs:
         with:
           tag_name: ${{github.ref_name}}
           name: ${{github.ref_name}}
-          body_path: ${{ github.workspace }}/CHANGELOG.txt
           files: ./artifacts/**/*
