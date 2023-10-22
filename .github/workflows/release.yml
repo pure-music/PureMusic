@@ -41,29 +41,29 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
-#      - name: Build apk on ubuntu
-#        if: matrix.target == 'apk'
-#        run: |
-#          ./gradlew app:assembleChinaRelease
+      - name: Build apk on ubuntu
+        if: matrix.target == 'apk'
+        run: |
+          ./gradlew app:assembleChinaRelease
 
-#      - uses: actions/upload-artifact@v3
-#        if: matrix.target == 'apk'
-#        with:
-#          name: artifacts-${{ matrix.target }}
-#          path: |
-#            ${{github.workspace}}/app/build/outputs/apk/china/release/app-china-release.apk
-#
-#      - name: Build aab on ubuntu
-#        if: matrix.target == 'aab'
-#        run: |
-#          ./gradlew app:bundleGoogleRelease
-#
-#      - uses: actions/upload-artifact@v3
-#        if: matrix.target == 'aab'
-#        with:
-#          name: artifacts-${{ matrix.target }}
-#          path: |
-#            ${{github.workspace}}/app/build/outputs/bundle/googleRelease/app-google-release.aab
+      - uses: actions/upload-artifact@v3
+        if: matrix.target == 'apk'
+        with:
+          name: artifacts-${{ matrix.target }}
+          path: |
+            ${{github.workspace}}/app/build/outputs/apk/china/release/app-china-release.apk
+
+      - name: Build aab on ubuntu
+        if: matrix.target == 'aab'
+        run: |
+          ./gradlew app:bundleGoogleRelease
+
+      - uses: actions/upload-artifact@v3
+        if: matrix.target == 'aab'
+        with:
+          name: artifacts-${{ matrix.target }}
+          path: |
+            ${{github.workspace}}/app/build/outputs/bundle/googleRelease/app-google-release.aab
 
       - name: Build dmg on mac
         if: matrix.os == 'macos-latest'
@@ -81,8 +81,29 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
+#      - name: Query version number
+#        run: echo "version=${GITHUB_REF:11}" >> $GITHUB_ENV
+      - name: set up JDK 8
+        uses: actions/setup-java@v3
+        with:
+          java-version: '8'
+          distribution: 'temurin'
+          cache: gradle
+
+      - uses: actions/checkout@v3
+        with:
+          repository: Caij/pure-music
+          ref: ${{github.ref_name}}
+          token: ${{secrets.GLOBAL_GITHUB_TOKEN}}
+
       - name: Query version number
-        run: echo "version=${GITHUB_REF:11}" >> $GITHUB_ENV
+        run: |
+          . ${{github.workspace}}/version.properties
+          echo $versionName
+          lastVersionName=$versionName
+          echo $lastVersionName
+          echo "version=$lastVersionName" >> $GITHUB_ENV
+          cat ${{github.workspace}}/app/version.properties
 
       - name: Download x86_64 dmg artifacts
         uses: actions/download-artifact@v3
@@ -90,9 +111,24 @@ jobs:
           name: artifacts-x86_dmg
           path: artifacts/x86_dmg
 
+      - name: Download apk artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: artifacts-apk
+          path: artifacts/apk
+
+      - name: Download aab artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: artifacts-aab
+          path: artifacts/aab
+
       - name: Rename artifacts
         run: |
-          mv "artifacts/x86_dmg/PureMusic-${{ env.version }}.dmg" "artifacts/PureMusic_${{ env.version }}_inter.dmg"
+          mv "artifacts/x86_dmg/PureMusic-${{ env.version }}.dmg" "artifacts/PureMusic_${{ env.version }}_macos_inter.dmg"
+          mv "artifacts/apk/app-china-release.apk" "artifacts/PureMusic_${{ env.version }}_android.apk"
+          mv "artifacts/aab/app-google-release.aab" "artifacts/PureMusic_${{ env.version }}_android.aab"
+          java -jar ${{github.workspace}}/app/VasDolly.jar put -c "github" "artifacts/PureMusic_${{ env.version }}_android.apk" "artifacts/"
 
       - name: Create Release
         uses: softprops/action-gh-release@v1
