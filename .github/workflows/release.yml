@@ -99,4 +99,5 @@ jobs:
         with:
           tag_name: ${{github.ref_name}}
           name: ${{github.ref_name}}
+          token: ${{ github.token }}
           files: ./artifacts/**/*
