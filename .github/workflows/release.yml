@@ -4,11 +4,6 @@ on:
   push:
     tags: [ "v*" ]
 
-permissions:
-  contents: write
-  pages: write
-  id-token: write
-
 jobs:
   build:
     name: release build
