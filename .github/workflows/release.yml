@@ -20,7 +20,7 @@ jobs:
             target: aab
           - os: macos-latest
             arch: x86_64
-            target: x86_64_dmg
+            target: x86_dmg
 
     runs-on: ${{ matrix.os }}
 
@@ -87,12 +87,12 @@ jobs:
       - name: Download x86_64 dmg artifacts
         uses: actions/download-artifact@v3
         with:
-          name: artifacts-x86_64_dmg
-          path: artifacts/x86_64_dmg
+          name: artifacts-x86_dmg
+          path: artifacts/x86_dmg
 
       - name: Rename artifacts
         run: |
-          mv "artifacts/x86_64_dmg/PureMusic-${{ env.version }}.dmg" "artifacts/PureMusic_${{ env.version }}_inter.dmg"
+          mv "artifacts/x86_dmg/PureMusic-${{ env.version }}.dmg" "artifacts/PureMusic_${{ env.version }}_inter.dmg"
 
       - name: Create Release
         uses: softprops/action-gh-release@master
