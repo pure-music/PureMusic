@@ -29,6 +29,7 @@ jobs:
         with:
           repository: Caij/pure-music
           ref: ${{github.ref_name}}
+          token: ${{env.GLOBAL_GITHUB_TOKEN}}
 
       - name: set up JDK 18
         uses: actions/setup-java@v3
