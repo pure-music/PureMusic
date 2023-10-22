@@ -31,6 +31,15 @@ jobs:
           ref: ${{github.ref_name}}
           token: ${{secrets.GLOBAL_GITHUB_TOKEN}}
 
+      - name: Version setup
+        run: |
+          . ${{github.workspace}}/version.properties
+          echo $versionName
+          lastVersionName=$versionName
+          echo $lastVersionName
+          echo "lastVersionName=$lastVersionName" >> $GITHUB_ENV
+          cat ${{github.workspace}}/version.properties
+
       - name: set up JDK 18
         uses: actions/setup-java@v3
         with:
@@ -81,26 +90,11 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: Version setup
-        run: |
-          . ${{github.workspace}}/version.properties
-          echo $versionName
-          lastVersionName=$versionName
-          echo $lastVersionName
-          echo "lastVersionName=$lastVersionName" >> $GITHUB_ENV
-          cat ${{github.workspace}}/version.properties
-
       - name: Download apk artifacts
         uses: actions/download-artifact@v3
         with:
           name: artifacts-apk
           path: artifacts/apk
-
-      - name: Download aab artifacts
-        uses: actions/download-artifact@v3
-        with:
-          name: artifacts-aab
-          path: artifacts/aab
 
       - name: Download aab artifacts
         uses: actions/download-artifact@v3
