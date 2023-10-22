@@ -95,7 +95,7 @@ jobs:
           mv "artifacts/x86_dmg/PureMusic-${{ env.version }}.dmg" "artifacts/PureMusic_${{ env.version }}_inter.dmg"
 
       - name: Create Release
-        uses: softprops/action-gh-release@v3
+        uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{github.ref_name}}
           name: ${{github.ref_name}}
