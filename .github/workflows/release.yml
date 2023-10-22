@@ -50,29 +50,29 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
-      - name: Build apk on ubuntu
-        if: matrix.target == 'apk'
-        run: |
-          ./gradlew app:assembleChinaRelease
+#      - name: Build apk on ubuntu
+#        if: matrix.target == 'apk'
+#        run: |
+#          ./gradlew app:assembleChinaRelease
 
-      - uses: actions/upload-artifact@v3
-        if: matrix.target == 'apk'
-        with:
-          name: artifacts-${{ matrix.target }}
-          path: |
-            ${{github.workspace}}/app/build/outputs/apk/china/release/app-china-release.apk
-
-      - name: Build aab on ubuntu
-        if: matrix.target == 'aab'
-        run: |
-          ./gradlew app:bundleGoogleRelease
-
-      - uses: actions/upload-artifact@v3
-        if: matrix.target == 'aab'
-        with:
-          name: artifacts-${{ matrix.target }}
-          path: |
-            ${{github.workspace}}/app/build/outputs/bundle/googleRelease/app-google-release.aab
+#      - uses: actions/upload-artifact@v3
+#        if: matrix.target == 'apk'
+#        with:
+#          name: artifacts-${{ matrix.target }}
+#          path: |
+#            ${{github.workspace}}/app/build/outputs/apk/china/release/app-china-release.apk
+#
+#      - name: Build aab on ubuntu
+#        if: matrix.target == 'aab'
+#        run: |
+#          ./gradlew app:bundleGoogleRelease
+#
+#      - uses: actions/upload-artifact@v3
+#        if: matrix.target == 'aab'
+#        with:
+#          name: artifacts-${{ matrix.target }}
+#          path: |
+#            ${{github.workspace}}/app/build/outputs/bundle/googleRelease/app-google-release.aab
 
       - name: Build dmg on mac
         if: matrix.os == 'macos-latest'
@@ -90,17 +90,17 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: Download apk artifacts
-        uses: actions/download-artifact@v3
-        with:
-          name: artifacts-apk
-          path: artifacts/apk
-
-      - name: Download aab artifacts
-        uses: actions/download-artifact@v3
-        with:
-          name: artifacts-aab
-          path: artifacts/aab
+#      - name: Download apk artifacts
+#        uses: actions/download-artifact@v3
+#        with:
+#          name: artifacts-apk
+#          path: artifacts/apk
+#
+#      - name: Download aab artifacts
+#        uses: actions/download-artifact@v3
+#        with:
+#          name: artifacts-aab
+#          path: artifacts/aab
 
       - name: Download x86_64 dmg artifacts
         uses: actions/download-artifact@v3
@@ -110,8 +110,8 @@ jobs:
 
       - name: Rename artifacts
         run: |
-          mv "artifacts/apk/release/app-china-release.apk" "artifacts/PureMusic_${{ env.lastVersionName }}.apk"
-          mv "artifacts/aab/googleRelease/app-google-release.aab" "artifacts/PureMusic_${{ env.lastVersionName }}.aab"
+#          mv "artifacts/apk/release/app-china-release.apk" "artifacts/PureMusic_${{ env.lastVersionName }}.apk"
+#          mv "artifacts/aab/googleRelease/app-google-release.aab" "artifacts/PureMusic_${{ env.lastVersionName }}.aab"
           mv "artifacts/x86_64_dmg/dmg/PureMusic-${{ env.lastVersionName }}.dmg" "artifacts/PureMusic_${{ env.lastVersionName }}_x86_64.dmg"
 
       - name: Create Release
