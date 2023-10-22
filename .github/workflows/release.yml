@@ -1,0 +1,130 @@
+name: Release CI
+
+on:
+  push:
+    tags: [ "v*" ]
+
+jobs:
+  build:
+    name: release build
+    if: ${{ startsWith(github.ref, 'refs/tags/') }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-latest
+            target: apk
+            arch: x86_64
+          - os: ubuntu-latest
+            arch: x86_64
+            target: aab
+          - os: macos-latest
+            arch: x86_64
+            target: x86_64_dmg
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          repository: Caij/pure-music
+          ref: ${{github.ref_name}}
+
+      - name: set up JDK 18
+        uses: actions/setup-java@v3
+        with:
+          java-version: '18'
+          distribution: 'temurin'
+          cache: gradle
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+
+      - name: Build apk on ubuntu
+        if: matrix.target == 'apk'
+        run: |
+          ./gradlew app:assembleChinaRelease
+
+      - uses: actions/upload-artifact@v3
+        if: matrix.target == 'apk'
+        with:
+          name: artifacts-${{ matrix.target }}
+          path: |
+            ${{github.workspace}}/app/build/outputs/apk/china/release/app-china-release.apk
+
+      - name: Build aab on ubuntu
+        if: matrix.target == 'aab'
+        run: |
+          ./gradlew app:bundleGoogleRelease
+
+      - uses: actions/upload-artifact@v3
+        if: matrix.target == 'aab'
+        with:
+          name: artifacts-${{ matrix.target }}
+          path: |
+            ${{github.workspace}}/app/build/outputs/bundle/googleRelease/app-google-release.aab
+
+      - name: Build dmg on mac
+        if: matrix.os == 'macos-latest'
+        run: |
+          ./gradlew desktopApp:packageReleaseDmg
+
+      - uses: actions/upload-artifact@v3
+        if: matrix.os == 'macos-latest'
+        with:
+          name: artifacts-${{ matrix.target }}
+          path: |
+            ${{github.workspace}}/desktopApp/build/compose/binaries/main-release/dmg/*.dmg
+          
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Version setup
+        run: |
+          . ${{github.workspace}}/version.properties
+          echo $versionName
+          lastVersionName=$versionName
+          echo $lastVersionName
+          echo "lastVersionName=$lastVersionName" >> $GITHUB_ENV
+          cat ${{github.workspace}}/version.properties
+
+      - name: Download apk artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: artifacts-apk
+          path: artifacts/apk
+
+      - name: Download aab artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: artifacts-aab
+          path: artifacts/aab
+
+      - name: Download aab artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: artifacts-aab
+          path: artifacts/aab
+
+      - name: Download x86_64 dmg artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: artifacts-x86_64_dmg
+          path: artifacts/x86_64_dmg
+
+      - name: Rename artifacts
+        run: |
+          mv "artifacts/apk/release/app-china-release.apk" "artifacts/PureMusic_${{ env.lastVersionName }}.apk"
+          mv "artifacts/aab/googleRelease/app-google-release.aab" "artifacts/PureMusic_${{ env.lastVersionName }}.aab"
+          mv "artifacts/x86_64_dmg/dmg/PureMusic-${{ env.lastVersionName }}.dmg" "artifacts/PureMusic_${{ env.lastVersionName }}_x86_64.dmg"
+
+      - name: Create Release
+        uses: softprops/action-gh-release@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{github.ref_name}}
+          name: ${{github.ref_name}}
+          body_path: ${{ github.workspace }}/CHANGELOG.txt
+          files: ./artifacts/**/*
