@@ -90,18 +90,6 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-#      - name: Download apk artifacts
-#        uses: actions/download-artifact@v3
-#        with:
-#          name: artifacts-apk
-#          path: artifacts/apk
-#
-#      - name: Download aab artifacts
-#        uses: actions/download-artifact@v3
-#        with:
-#          name: artifacts-aab
-#          path: artifacts/aab
-
       - name: Download x86_64 dmg artifacts
         uses: actions/download-artifact@v3
         with:
@@ -110,8 +98,6 @@ jobs:
 
       - name: Rename artifacts
         run: |
-#          mv "artifacts/apk/release/app-china-release.apk" "artifacts/PureMusic_${{ env.lastVersionName }}.apk"
-#          mv "artifacts/aab/googleRelease/app-google-release.aab" "artifacts/PureMusic_${{ env.lastVersionName }}.aab"
           mv "artifacts/x86_64_dmg/dmg/PureMusic-${{ env.lastVersionName }}.dmg" "artifacts/PureMusic_${{ env.lastVersionName }}_x86_64.dmg"
 
       - name: Create Release
