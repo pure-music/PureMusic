@@ -83,7 +83,7 @@ jobs:
         run: |
           java -jar ${{github.workspace}}/app/buglyqq-upload-symbol.jar -appid 1a1daf5790 -appkey ${{secrets.BUGLY_APP_KEY}} -bundleid com.caij.puremusic -version ${{ env.version }} -platform Android -inputMapping ${{github.workspace}}/app/build/outputs/mapping/chinaRelease/mapping.txt
 
-      - name: Build channel apl
+      - name: Build channel apk
         if: matrix.target == 'apk'
         run: |
           java -jar ${{github.workspace}}/app/VasDolly.jar put -c "github,xiaomi,huawei,kuan,neice" ${{github.workspace}}/app/build/outputs/apk/china/release/app-china-release.apk ${{github.workspace}}/app/build/outputs/apk/china/release/
