@@ -130,10 +130,11 @@ jobs:
       - name: Rename artifacts
         run: |
           mv "artifacts/x86_dmg/PureMusic-${{ env.version }}.dmg" "artifacts/PureMusic_${{ env.version }}_macos_inter.dmg"
-          mv "artifacts/apk/release/app-china-release.apk" "artifacts/PureMusic_${{ env.version }}_android.apk"
+          ls artifacts/apk
+          mv "artifacts/apk/app-china-release.apk" "artifacts/PureMusic_${{ env.version }}_android.apk"
           mv "artifacts/aab/app-google-release.aab" "artifacts/PureMusic_${{ env.version }}_android.aab"
-          java -jar ${{github.workspace}}/app/VasDolly.jar put -c "github" "artifacts/PureMusic_${{ env.version }}_android.apk" "artifacts/"
-          java -jar ${{github.workspace}}/app/buglyqq-upload-symbol.jar -appid 1a1daf5790 -appkey ${{secrets.BUGLY_APP_KEY}} -bundleid com.caij.puremusic -version ${{ env.version }} -platform Android -inputMapping artifacts/apk/chinaRelease/mapping.txt
+          java -jar ${{github.workspace}}/app/VasDolly.jar put -c "github" "artifacts/PureMusic_${{ env.version }}_android.apk" "${{github.workspace}}/artifacts/"
+          java -jar ${{github.workspace}}/app/buglyqq-upload-symbol.jar -appid 1a1daf5790 -appkey ${{secrets.BUGLY_APP_KEY}} -bundleid com.caij.puremusic -version ${{ env.version }} -platform Android -inputMapping ${{github.workspace}}/artifacts/apk/mapping.txt
 
       - name: Create Release
         uses: softprops/action-gh-release@v1
