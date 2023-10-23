@@ -48,14 +48,6 @@ jobs:
         run: |
           ./gradlew app:assembleChinaRelease
 
-      - uses: actions/upload-artifact@v3
-        if: matrix.target == 'apk'
-        with:
-          name: artifacts-${{ matrix.target }}
-          path: |
-            ${{github.workspace}}/app/build/outputs/apk/china/release/app-china-release.apk
-            ${{github.workspace}}/app/build/outputs/mapping/chinaRelease/mapping.txt
-
       - name: Build aab on ubuntu
         if: matrix.target == 'aab'
         run: |
@@ -79,15 +71,41 @@ jobs:
           name: artifacts-${{ matrix.target }}
           path: |
             ${{github.workspace}}/desktopApp/build/compose/binaries/main-release/dmg/*.dmg
-          
+
+      - name: set up JDK 8
+        uses: actions/setup-java@v3
+        with:
+          java-version: '8'
+          distribution: 'temurin'
+
+      - name: Upload mapping
+        if: matrix.target == 'apk'
+        run: |
+          java -jar ${{github.workspace}}/app/buglyqq-upload-symbol.jar -appid 1a1daf5790 -appkey ${{secrets.BUGLY_APP_KEY}} -bundleid com.caij.puremusic -version ${{ env.version }} -platform Android -inputMapping ${{github.workspace}}/app/build/outputs/mapping/chinaRelease/mapping.txt
+
+      - name: Build channel apl
+        if: matrix.target == 'apk'
+        run: |
+          java -jar ${{github.workspace}}/app/VasDolly.jar put -c "github,xiaomi,huawei,kuan,neice" ${{github.workspace}}/app/build/outputs/apk/china/release/app-china-release.apk ${{github.workspace}}/app/build/outputs/apk/china/release/
+
+      - uses: actions/upload-artifact@v3
+        if: matrix.target == 'apk'
+        with:
+          name: artifacts-${{ matrix.target }}
+          path: |
+            ${{github.workspace}}/app/build/outputs/apk/china/release/github-app-china-release.apk 
+
+      - uses: actions/upload-artifact@v3
+        if: matrix.target == 'apk'
+        with:
+          name: artifacts-channel-apk
+          path: |
+            ${{github.workspace}}/app/build/outputs/apk/china/release/*.apk
+
   release:
     needs: build
     runs-on: ubuntu-latest
     steps:
-#      - name: Query version number
-#        run: echo "version=${GITHUB_REF:11}" >> $GITHUB_ENV
-
-
       - uses: actions/checkout@v3
         with:
           repository: Caij/pure-music
@@ -131,10 +149,8 @@ jobs:
         run: |
           mv "artifacts/x86_dmg/PureMusic-${{ env.version }}.dmg" "artifacts/PureMusic_${{ env.version }}_macos_inter.dmg"
           ls -a artifacts/apk
-          mv "artifacts/apk/apk/china/release/app-china-release.apk" "artifacts/PureMusic_${{ env.version }}_android.apk"
+          mv "artifacts/apk/github-app-china-release.apk" "artifacts/PureMusic_${{ env.version }}_android.apk"
           mv "artifacts/aab/app-google-release.aab" "artifacts/PureMusic_${{ env.version }}_android.aab"
-          java -jar ${{github.workspace}}/app/VasDolly.jar put -c "github" "artifacts/PureMusic_${{ env.version }}_android.apk" "${{github.workspace}}/artifacts/"
-          java -jar ${{github.workspace}}/app/buglyqq-upload-symbol.jar -appid 1a1daf5790 -appkey ${{secrets.BUGLY_APP_KEY}} -bundleid com.caij.puremusic -version ${{ env.version }} -platform Android -inputMapping ${{github.workspace}}/artifacts/apk/mapping/chinaRelease/mapping.txt
 
       - name: Create Release
         uses: softprops/action-gh-release@v1
