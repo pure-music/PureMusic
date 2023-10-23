@@ -15,12 +15,14 @@ jobs:
           - os: ubuntu-latest
             target: apk
             arch: x86_64
+
           - os: ubuntu-latest
-            arch: x86_64
             target: aab
-          - os: macos-latest
             arch: x86_64
+
+          - os: macos-latest
             target: x86_dmg
+            arch: x86_64
 
     runs-on: ${{ matrix.os }}
 
@@ -84,18 +86,19 @@ jobs:
     steps:
 #      - name: Query version number
 #        run: echo "version=${GITHUB_REF:11}" >> $GITHUB_ENV
-      - name: set up JDK 8
-        uses: actions/setup-java@v3
-        with:
-          java-version: '8'
-          distribution: 'temurin'
-          cache: gradle
+
 
       - uses: actions/checkout@v3
         with:
           repository: Caij/pure-music
           ref: ${{github.ref_name}}
           token: ${{secrets.GLOBAL_GITHUB_TOKEN}}
+
+      - name: set up JDK 8
+        uses: actions/setup-java@v3
+        with:
+          java-version: '8'
+          distribution: 'temurin'
 
       - name: Query version number
         run: |
