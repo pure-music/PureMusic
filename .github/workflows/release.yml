@@ -107,7 +107,7 @@ jobs:
           lastVersionName=$versionName
           echo $lastVersionName
           echo "version=$lastVersionName" >> $GITHUB_ENV
-          cat ${{github.workspace}}/app/version.properties
+          cat ${{github.workspace}}/version.properties
 
       - name: Download x86_64 dmg artifacts
         uses: actions/download-artifact@v3
