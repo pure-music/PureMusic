@@ -159,3 +159,17 @@ jobs:
           name: ${{github.ref_name}}
           body_path: ${{ github.workspace }}/CHANGELOG.txt
           files: ./artifacts/**/*
+
+      - name: Read CHANGELOG
+        id: read_file
+        uses: andstor/file-reader-action@v1
+        with:
+          path: ${{ github.workspace }}/CHANGELOG.txt
+
+      - name: send tg message
+        uses: appleboy/telegram-action@master
+        with:
+          to: -1001816793644
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          message: "${{steps.read_file.outputs.contents}}"
+          document: ${{github.workspace}}/artifacts/PureMusic_${{ env.version }}_android.apk
