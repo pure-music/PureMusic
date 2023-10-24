@@ -167,9 +167,13 @@ jobs:
           path: ${{ github.workspace }}/CHANGELOG.txt
 
       - name: send tg message
-        uses: appleboy/telegram-action@master
-        with:
-          to: -1001816793644
-          token: ${{ secrets.TELEGRAM_TOKEN }}
-          message: "${{steps.read_file.outputs.contents}}"
-          document: ${{github.workspace}}/artifacts/PureMusic_${{ env.version }}_android.apk
+        run: |
+          curl -F "chat_id=-1001816793644" -F "caption=${{steps.read_file.outputs.contents}}" -F document=@${{github.workspace}}/artifacts/PureMusic_${{ env.version }}_android.apk -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendDocument"
+
+#      - name: send tg message
+#        uses: appleboy/telegram-action@master
+#        with:
+#          to: -1001816793644
+#          token: ${{ secrets.TELEGRAM_TOKEN }}
+#          message: "${{steps.read_file.outputs.contents}}"
+#          document: ${{github.workspace}}/artifacts/PureMusic_${{ env.version }}_android.apk
