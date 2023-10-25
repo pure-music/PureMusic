@@ -178,7 +178,7 @@ jobs:
 
       - name: send tg message
         run: |
-          curl -F "chat_id=-1001816793644" -F "caption=${{steps.create_remote_release.outputs.url}}%0A${{steps.read_file.outputs.contents}}" -F document=@${{github.workspace}}/artifacts/PureMusic_${{ env.version }}_android.apk -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendDocument"
+          curl -F "chat_id=-1001816793644" -F "caption=${{steps.create_remote_release.outputs.url}}\r${{steps.read_file.outputs.contents}}" -F document=@${{github.workspace}}/artifacts/PureMusic_${{ env.version }}_android.apk -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendDocument"
 
 #      - name: send tg message
 #        uses: appleboy/telegram-action@master
