@@ -200,7 +200,7 @@ jobs:
         run: |
           mv "artifacts/x86_dmg/PureMusic-${{ env.version }}.dmg" "artifacts/PureMusic_${{ env.version }}_macos_inter.dmg"
           mv "artifacts/msi/PureMusic-${{ env.version }}.msi" "artifacts/PureMusic_${{ env.version }}_windows.msi"
-          mv "artifacts/deb/PureMusic-${{ env.version }}.deb" "artifacts/PureMusic_${{ env.version }}_linux.deb"
+          mv "artifacts/deb/com.caij.puremusic.linux_${{ env.version }}_amd64.deb" "artifacts/PureMusic_${{ env.version }}_linux.deb"
           ls -a artifacts/apk
           mv "artifacts/apk/github-app-china-release.apk" "artifacts/PureMusic_${{ env.version }}_android.apk"
           mv "artifacts/aab/app-google-release.aab" "artifacts/PureMusic_${{ env.version }}_android.aab"
