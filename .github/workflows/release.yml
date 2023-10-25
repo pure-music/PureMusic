@@ -102,9 +102,10 @@ jobs:
         with:
           name: artifacts-${{ matrix.target }}
           path: |
-            ${{github.workspace}}\desktopApp\build\compose\binaries\main-release\deb\*.deb
+            ${{github.workspace}}/desktopApp/build/compose/binaries/main-release/deb/*.deb
 
       - name: set up JDK 8
+        if: matrix.target == 'apk'
         uses: actions/setup-java@v3
         with:
           java-version: '8'
