@@ -40,6 +40,15 @@ jobs:
           distribution: 'temurin'
           cache: gradle
 
+      - name: Query version number
+        run: |
+          . ${{github.workspace}}/version.properties
+          echo $versionName
+          lastVersionName=$versionName
+          echo $lastVersionName
+          echo "version=$lastVersionName" >> $GITHUB_ENV
+          cat ${{github.workspace}}/version.properties
+
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
@@ -153,6 +162,7 @@ jobs:
           mv "artifacts/aab/app-google-release.aab" "artifacts/PureMusic_${{ env.version }}_android.aab"
 
       - name: Create Release
+        id: create_remote_release
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{github.ref_name}}
@@ -168,7 +178,7 @@ jobs:
 
       - name: send tg message
         run: |
-          curl -F "chat_id=-1001816793644" -F "caption=${{steps.read_file.outputs.contents}}" -F document=@${{github.workspace}}/artifacts/PureMusic_${{ env.version }}_android.apk -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendDocument"
+          curl -F "chat_id=-1001816793644" -F "caption=${{steps.read_file.outputs.contents}}\n${{steps.create_remote_release.outputs.url}}" -F document=@${{github.workspace}}/artifacts/PureMusic_${{ env.version }}_android.apk -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendDocument"
 
 #      - name: send tg message
 #        uses: appleboy/telegram-action@master
