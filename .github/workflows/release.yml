@@ -44,15 +44,6 @@ jobs:
           distribution: 'temurin'
           cache: gradle
 
-      - name: Query version number
-        run: |
-          . ${{github.workspace}}/version.properties
-          echo $versionName
-          lastVersionName=$versionName
-          echo $lastVersionName
-          echo "version=$lastVersionName" >> $GITHUB_ENV
-          cat ${{github.workspace}}/version.properties
-
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
@@ -84,7 +75,6 @@ jobs:
           name: artifacts-${{ matrix.target }}
           path: |
             ${{github.workspace}}/desktopApp/build/compose/binaries/main-release/dmg/*.dmg
-            
 
       - name: Build msi on window
         if: matrix.target == 'msi'
@@ -92,11 +82,11 @@ jobs:
           ./gradlew desktopApp:packageReleaseMsi
 
       - uses: actions/upload-artifact@v3
-        if: matrix.os == 'macos-latest'
+        if: matrix.target == 'msi'
         with:
           name: artifacts-${{ matrix.target }}
           path: |
-            ${{github.workspace}}/desktopApp/build/compose/binaries/main-release/msi/*.msi
+            ${{github.workspace}}\desktopApp\build\compose\binaries\main-release\msi\*.msi
 
       - name: set up JDK 8
         uses: actions/setup-java@v3
@@ -107,6 +97,12 @@ jobs:
       - name: Upload mapping
         if: matrix.target == 'apk'
         run: |
+          . ${{github.workspace}}/version.properties
+          echo $versionName
+          lastVersionName=$versionName
+          echo $lastVersionName
+          echo "version=$lastVersionName" >> $GITHUB_ENV
+          cat ${{github.workspace}}/version.properties
           java -jar ${{github.workspace}}/app/buglyqq-upload-symbol.jar -appid 1a1daf5790 -appkey ${{secrets.BUGLY_APP_KEY}} -bundleid com.caij.puremusic -version ${{ env.version }} -platform Android -inputMapping ${{github.workspace}}/app/build/outputs/mapping/chinaRelease/mapping.txt
 
       - name: Build channel apk
