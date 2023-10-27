@@ -208,12 +208,14 @@ jobs:
       - name: Create Release
         id: create_remote_release
         uses: softprops/action-gh-release@v1
+        env:
+          PRERELEASE: ${{ contains(github.ref_name, 'beta') }}
         with:
           tag_name: ${{github.ref_name}}
           name: ${{github.ref_name}}
           body_path: ${{ github.workspace }}/CHANGELOG.txt
           files: ./artifacts/**/*
-          prerelease: contains(${{ github.ref_name }}, 'beta')
+          prerelease: ${{env.PRERELEASE}}
 
       - name: Read CHANGELOG
         id: read_file
