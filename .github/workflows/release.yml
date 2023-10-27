@@ -209,7 +209,7 @@ jobs:
         id: create_remote_release
         uses: softprops/action-gh-release@v1
         env:
-          PRERELEASE: ${{ contains(github.ref_name, 'beta') }}
+          PRERELEASE: ${{ contains(github.ref_name, 'beta') ||  contains(github.ref_name, 'rc')}}
         with:
           tag_name: ${{github.ref_name}}
           name: ${{github.ref_name}}
