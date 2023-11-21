@@ -115,12 +115,9 @@ jobs:
         if: matrix.target == 'apk'
         run: |
           . ${{github.workspace}}/version.properties
-          echo $versionName
-          lastVersionName=$versionName
-          echo $lastVersionName
-          echo "version=$lastVersionName" >> $GITHUB_ENV
+          echo $showVersionName
           cat ${{github.workspace}}/version.properties
-          java -jar ${{github.workspace}}/app/buglyqq-upload-symbol.jar -appid 1a1daf5790 -appkey ${{secrets.BUGLY_APP_KEY}} -bundleid com.caij.puremusic -version ${{ env.version }} -platform Android -inputMapping ${{github.workspace}}/app/build/outputs/mapping/chinaRelease/mapping.txt
+          java -jar ${{github.workspace}}/app/buglyqq-upload-symbol.jar -appid 1a1daf5790 -appkey ${{secrets.BUGLY_APP_KEY}} -bundleid com.caij.puremusic -version $showVersionName -platform Android -inputMapping ${{github.workspace}}/app/build/outputs/mapping/chinaRelease/mapping.txt
 
       - name: Build channel apk
         if: matrix.target == 'apk'
