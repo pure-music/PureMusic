@@ -121,24 +121,12 @@ jobs:
           gzip -c ${{github.workspace}}/app/build/outputs/mapping/chinaRelease/mapping.txt > ${{github.workspace}}/app/build/outputs/mapping/chinaRelease/mapping.txt.gz
           curl -F "chat_id=-1002062702442" -F "caption=$showVersionName" -F document=@${{github.workspace}}/app/build/outputs/mapping/chinaRelease/mapping.txt.gz -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendDocument"
 
-      - name: Build channel apk
-        if: matrix.target == 'apk'
-        run: |
-          java -jar ${{github.workspace}}/app/VasDolly.jar put -c "github,xiaomi,huawei,kuan,neice" ${{github.workspace}}/app/build/outputs/apk/china/release/app-china-release.apk ${{github.workspace}}/app/build/outputs/apk/china/release/
-
       - uses: actions/upload-artifact@v3
         if: matrix.target == 'apk'
         with:
           name: artifacts-${{ matrix.target }}
           path: |
             ${{github.workspace}}/app/build/outputs/apk/china/release/github-app-china-release.apk 
-
-      - uses: actions/upload-artifact@v3
-        if: matrix.target == 'apk'
-        with:
-          name: artifacts-channel-apk
-          path: |
-            ${{github.workspace}}/app/build/outputs/apk/china/release/*.apk
 
   release:
     needs: build
@@ -201,8 +189,14 @@ jobs:
           mv "artifacts/msi/PureMusic-${{ env.version }}.msi" "artifacts/PureMusic_${{ github.ref_name }}_windows.msi"
           mv "artifacts/deb/com.caij.puremusic.linux_${{ env.version }}_amd64.deb" "artifacts/PureMusic_${{ github.ref_name }}_linux.deb"
           ls -a artifacts/apk
-          mv "artifacts/apk/github-app-china-release.apk" "artifacts/PureMusic_${{ github.ref_name }}_android.apk"
           mv "artifacts/aab/app-google-release.aab" "artifacts/PureMusic_${{ github.ref_name }}_android.aab"
+
+      - name: Build channel apk
+        if: matrix.target == 'apk'
+        run: |
+          mv "artifacts/apk/github-app-china-release.apk" "${{github.workspace}}/app/channel/PureMusic_${{ github.ref_name }}_android.apk"
+          java -jar ${{github.workspace}}/app/VasDolly.jar put -c "github,telegram,xiaomi,huawei,kuan,neice" ${{github.workspace}}/app/channel/PureMusic_${{ github.ref_name }}_android.apk ${{github.workspace}}/app/channel
+          mv "${{github.workspace}}/app/channel/github-PureMusic_${{ github.ref_name }}_android.apk" "artifacts/PureMusic_${{ github.ref_name }}_android_github.apk"
 
       - name: Create Release
         id: create_remote_release
@@ -224,8 +218,13 @@ jobs:
 
       - name: send tg message
         run: |
-          curl -F "chat_id=-1001816793644" -F "caption=${{steps.read_file.outputs.contents}}${{steps.create_remote_release.outputs.url}}" -F document=@${{github.workspace}}/artifacts/PureMusic_${{ github.ref_name }}_android.apk -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendDocument"
+          curl -F "chat_id=-1001816793644" -F "caption=${{steps.read_file.outputs.contents}}${{steps.create_remote_release.outputs.url}}" -F document=@${{github.workspace}}/app/channel/telegram-PureMusic_${{ github.ref_name }}_android.apk -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendDocument"
 
+      - uses: actions/upload-artifact@v3
+        with:
+          name: artifacts-channel-apk
+          path: |
+            ${{github.workspace}}/app/channel/*.apk
 #      - name: send tg message
 #        uses: appleboy/telegram-action@master
 #        with:
