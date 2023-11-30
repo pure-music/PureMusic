@@ -192,11 +192,10 @@ jobs:
           mv "artifacts/aab/app-google-release.aab" "artifacts/PureMusic_${{ github.ref_name }}_android.aab"
 
       - name: Build channel apk
-        if: matrix.target == 'apk'
         run: |
           mv "artifacts/apk/app-china-release.apk" "${{github.workspace}}/app/channel/PureMusic_${{ github.ref_name }}.apk"
           java -jar ${{github.workspace}}/app/VasDolly.jar put -c "github,telegram,xiaomi,huawei,kuan,neice" ${{github.workspace}}/app/channel/PureMusic_${{ github.ref_name }}.apk ${{github.workspace}}/app/channel
-          mv "${{github.workspace}}/app/channel/github-PureMusic_${{ github.ref_name }}.apk" "artifacts/PureMusic_${{ github.ref_name }}_android_github.apk"
+          mv "${{github.workspace}}/app/channel/github-PureMusic_${{ github.ref_name }}.apk" "artifacts/apk/PureMusic_${{ github.ref_name }}_android_github.apk"
 
       - name: Create Release
         id: create_remote_release
