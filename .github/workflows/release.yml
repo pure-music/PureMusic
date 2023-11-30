@@ -194,9 +194,9 @@ jobs:
       - name: Build channel apk
         if: matrix.target == 'apk'
         run: |
-          mv "artifacts/apk/github-app-china-release.apk" "${{github.workspace}}/app/channel/PureMusic_${{ github.ref_name }}_android.apk"
-          java -jar ${{github.workspace}}/app/VasDolly.jar put -c "github,telegram,xiaomi,huawei,kuan,neice" ${{github.workspace}}/app/channel/PureMusic_${{ github.ref_name }}_android.apk ${{github.workspace}}/app/channel
-          mv "${{github.workspace}}/app/channel/github-PureMusic_${{ github.ref_name }}_android.apk" "artifacts/PureMusic_${{ github.ref_name }}_android_github.apk"
+          mv "artifacts/apk/github-app-china-release.apk" "${{github.workspace}}/app/channel/PureMusic_${{ github.ref_name }}.apk"
+          java -jar ${{github.workspace}}/app/VasDolly.jar put -c "github,telegram,xiaomi,huawei,kuan,neice" ${{github.workspace}}/app/channel/PureMusic_${{ github.ref_name }}.apk ${{github.workspace}}/app/channel
+          mv "${{github.workspace}}/app/channel/github-PureMusic_${{ github.ref_name }}.apk" "artifacts/PureMusic_${{ github.ref_name }}_android_github.apk"
 
       - name: Create Release
         id: create_remote_release
@@ -218,7 +218,7 @@ jobs:
 
       - name: send tg message
         run: |
-          curl -F "chat_id=-1001816793644" -F "caption=${{steps.read_file.outputs.contents}}${{steps.create_remote_release.outputs.url}}" -F document=@${{github.workspace}}/app/channel/telegram-PureMusic_${{ github.ref_name }}_android.apk -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendDocument"
+          curl -F "chat_id=-1001816793644" -F "caption=${{steps.read_file.outputs.contents}}${{steps.create_remote_release.outputs.url}}" -F document=@${{github.workspace}}/app/channel/telegram-PureMusic_${{ github.ref_name }}.apk -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendDocument"
 
       - uses: actions/upload-artifact@v3
         with:
