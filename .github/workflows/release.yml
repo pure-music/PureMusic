@@ -197,6 +197,7 @@ jobs:
 
       - name: Build channel apk
         run: |
+          mkdir -p "${{github.workspace}}/app/channel"
           mv "artifacts/apk/app-china-release.apk" "${{github.workspace}}/app/channel/PureMusic_${{ github.ref_name }}.apk"
           java -jar ${{github.workspace}}/app/VasDolly.jar put -c "github,telegram,xiaomi,huawei,kuan,neice" ${{github.workspace}}/app/channel/PureMusic_${{ github.ref_name }}.apk ${{github.workspace}}/app/channel
           mv "${{github.workspace}}/app/channel/github-PureMusic_${{ github.ref_name }}.apk" "artifacts/apk/PureMusic_${{ github.ref_name }}_android_github.apk"
