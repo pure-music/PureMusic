@@ -126,7 +126,7 @@ jobs:
         with:
           name: artifacts-${{ matrix.target }}
           path: |
-            ${{github.workspace}}/app/build/outputs/apk/china/release/github-app-china-release.apk 
+            ${{github.workspace}}/app/build/outputs/apk/china/release/app-china-release.apk 
 
   release:
     needs: build
@@ -194,7 +194,7 @@ jobs:
       - name: Build channel apk
         if: matrix.target == 'apk'
         run: |
-          mv "artifacts/apk/github-app-china-release.apk" "${{github.workspace}}/app/channel/PureMusic_${{ github.ref_name }}.apk"
+          mv "artifacts/apk/app-china-release.apk" "${{github.workspace}}/app/channel/PureMusic_${{ github.ref_name }}.apk"
           java -jar ${{github.workspace}}/app/VasDolly.jar put -c "github,telegram,xiaomi,huawei,kuan,neice" ${{github.workspace}}/app/channel/PureMusic_${{ github.ref_name }}.apk ${{github.workspace}}/app/channel
           mv "${{github.workspace}}/app/channel/github-PureMusic_${{ github.ref_name }}.apk" "artifacts/PureMusic_${{ github.ref_name }}_android_github.apk"
 
