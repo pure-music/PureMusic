@@ -169,11 +169,11 @@ jobs:
           name: artifacts-apk
           path: artifacts/apk
 
-      - name: Download aab artifacts
-        uses: actions/download-artifact@v3
-        with:
-          name: artifacts-aab
-          path: artifacts/aab
+#      - name: Download aab artifacts
+#        uses: actions/download-artifact@v3
+#        with:
+#          name: artifacts-aab
+#          path: artifacts/aab
 
       - name: Download msi artifacts
         uses: actions/download-artifact@v3
@@ -193,7 +193,7 @@ jobs:
           mv "artifacts/msi/PureMusic-${{ env.version }}.msi" "artifacts/PureMusic_${{ github.ref_name }}_windows.msi"
           mv "artifacts/deb/com.caij.puremusic.linux_${{ env.version }}_amd64.deb" "artifacts/PureMusic_${{ github.ref_name }}_linux.deb"
           ls -a artifacts/apk
-          mv "artifacts/aab/app-google-release.aab" "artifacts/PureMusic_${{ github.ref_name }}_android.aab"
+#          mv "artifacts/aab/app-google-release.aab" "artifacts/PureMusic_${{ github.ref_name }}_android.aab"
 
       - name: Build channel apk
         run: |
