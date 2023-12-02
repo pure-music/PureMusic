@@ -229,6 +229,15 @@ jobs:
           name: artifacts-channel-apk
           path: |
             ${{github.workspace}}/app/channel/*.apk
+
+      - name: upload lanzou
+        run: |
+          curl --location --request PUT '${{ secrets.ALIST_HOST }}/api/fs/form' \
+          --header 'Authorization: ${{ secrets.ALIST_TOKEN }}' \
+          --header 'File-Path: /puremusic/lanzou-PureMusic_${{ github.ref_name }}.apk' \
+          --header 'As-Task: true' \
+          --header 'User-Agent: Apifox/1.0.0 (https://apifox.com)' \
+          --form 'file=@"{{github.workspace}}/app/channel/lanzou-PureMusic_${{ github.ref_name }}.apk"'
 #      - name: send tg message
 #        uses: appleboy/telegram-action@master
 #        with:
