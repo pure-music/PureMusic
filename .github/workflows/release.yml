@@ -231,6 +231,7 @@ jobs:
             ${{github.workspace}}/app/channel/*.apk
 
       - name: upload lanzou
+        if: ${{ !contains(github.ref_name, 'beta') && !contains(github.ref_name, 'rc')}}
         run: |
           curl --location --request PUT '${{ secrets.ALIST_HOST }}/api/fs/form' \
           --header 'Authorization: ${{ secrets.ALIST_TOKEN }}' \
