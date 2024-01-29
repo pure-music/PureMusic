@@ -24,7 +24,7 @@ jobs:
             target: x86_dmg
             arch: x86_64
 
-          - os: macos-latest-large
+          - os: macos-latest-arm64
             target: arm64_dmg
             arch: arm64
 
