@@ -24,7 +24,7 @@ jobs:
             target: x86_dmg
             arch: x86_64
 
-          - os: macos-13-xlarge
+          - os: macos-latest-large
             target: arm64_dmg
             arch: arm64
 
@@ -78,7 +78,7 @@ jobs:
           ./gradlew desktopApp:packageReleaseDmg
 
       - name: Build dmg on mac arm64
-        if: matrix.os == 'macos-13-xlarge'
+        if: matrix.os == 'macos-latest-large'
         run: |
           ./gradlew desktopApp:packageReleaseDmg
 
@@ -91,7 +91,7 @@ jobs:
             ${{github.workspace}}/desktopApp/build/compose/binaries/main-release/dmg/*.dmg
 
       - uses: actions/upload-artifact@v3
-        if: matrix.os == 'macos-13-xlarge'
+        if: matrix.os == 'macos-latest-large'
         with:
           name: artifacts-${{ matrix.target }}
           if-no-files-found: error
