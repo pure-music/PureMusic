@@ -24,12 +24,8 @@ jobs:
             target: x86_dmg
             arch: x86_64
 
-          - os: macos-latest-arm64
-            target: arm64_dmg
-            arch: arm64
-
           - os: windows-latest
-            target: msi
+            target: exe
             arch: x86_64
 
           - os: ubuntu-latest
@@ -72,13 +68,8 @@ jobs:
           path: |
             ${{github.workspace}}/app/build/outputs/bundle/googleRelease/app-google-release.aab
 
-      - name: Build dmg on mac x86_64
+      - name: Build dmg on mac
         if: matrix.os == 'macos-latest'
-        run: |
-          ./gradlew desktopApp:packageReleaseDmg
-
-      - name: Build dmg on mac arm64
-        if: matrix.os == 'macos-latest-large'
         run: |
           ./gradlew desktopApp:packageReleaseDmg
 
@@ -90,31 +81,24 @@ jobs:
           path: |
             ${{github.workspace}}/desktopApp/build/compose/binaries/main-release/dmg/*.dmg
 
-      - uses: actions/upload-artifact@v3
-        if: matrix.os == 'macos-latest-large'
-        with:
-          name: artifacts-${{ matrix.target }}
-          if-no-files-found: error
-          path: |
-            ${{github.workspace}}/desktopApp/build/compose/binaries/main-release/dmg/*.dmg
-
-      - name: Build msi on window
-        if: matrix.target == 'msi'
+      - name: Build exe on window
+        if: matrix.target == 'ext'
         run: |
-          ./gradlew desktopApp:packageReleaseMsi
+          ./gradlew desktopApp:packageReleaseExe
 
       - uses: actions/upload-artifact@v3
-        if: matrix.target == 'msi'
+        if: matrix.target == 'exe'
         with:
           name: artifacts-${{ matrix.target }}
           if-no-files-found: error
           path: |
-            ${{github.workspace}}\desktopApp\build\compose\binaries\main-release\msi\*.msi
+            ${{github.workspace}}\desktopApp\build\compose\binaries\main-release\exe\*.exe
 
       - name: Build deb on ubuntu
         if: matrix.target == 'deb'
         run: |
           ./gradlew desktopApp:packageReleaseDeb
+          ls -a ${{github.workspace}}/desktopApp/build/compose/binaries/main-release/deb
 
       - uses: actions/upload-artifact@v3
         if: matrix.target == 'deb'
@@ -180,29 +164,23 @@ jobs:
           name: artifacts-x86_dmg
           path: artifacts/x86_dmg
 
-      - name: Download arm64 dmg artifacts
-        uses: actions/download-artifact@v3
-        with:
-          name: artifacts-arm64_dmg
-          path: artifacts/arm64_dmg
-
       - name: Download apk artifacts
         uses: actions/download-artifact@v3
         with:
           name: artifacts-apk
           path: artifacts/apk
 
-#      - name: Download aab artifacts
-#        uses: actions/download-artifact@v3
-#        with:
-#          name: artifacts-aab
-#          path: artifacts/aab
+      #      - name: Download aab artifacts
+      #        uses: actions/download-artifact@v3
+      #        with:
+      #          name: artifacts-aab
+      #          path: artifacts/aab
 
-      - name: Download msi artifacts
+      - name: Download exe artifacts
         uses: actions/download-artifact@v3
         with:
-          name: artifacts-msi
-          path: artifacts/msi
+          name: artifacts-exe
+          path: artifacts/exe
 
       - name: Download deb artifacts
         uses: actions/download-artifact@v3
@@ -213,11 +191,10 @@ jobs:
       - name: Rename artifacts
         run: |
           mv "artifacts/x86_dmg/PureMusic-${{ env.version }}.dmg" "artifacts/PureMusic_${{ github.ref_name }}_macos_x86_64.dmg"
-          mv "artifacts/arm64_dmg/PureMusic-${{ env.version }}.dmg" "artifacts/PureMusic_${{ github.ref_name }}_macos_arm64.dmg"
-          mv "artifacts/msi/PureMusic-${{ env.version }}.msi" "artifacts/PureMusic_${{ github.ref_name }}_windows.msi"
+          mv "artifacts/exe/PureMusic-${{ env.version }}.exe" "artifacts/PureMusic_${{ github.ref_name }}_windows_x86_64.exe"
           mv "artifacts/deb/com.caij.puremusic.linux_${{ env.version }}_amd64.deb" "artifacts/PureMusic_${{ github.ref_name }}_linux.deb"
           ls -a artifacts/apk
-#          mv "artifacts/aab/app-google-release.aab" "artifacts/PureMusic_${{ github.ref_name }}_android.aab"
+      #          mv "artifacts/aab/app-google-release.aab" "artifacts/PureMusic_${{ github.ref_name }}_android.aab"
 
       - name: Build channel apk
         run: |
@@ -262,7 +239,7 @@ jobs:
           --header 'File-Path: /puremusic/lanzou-PureMusic_${{ github.ref_name }}.apk' \
           --header 'As-Task: true' \
           --header 'User-Agent: Apifox/1.0.0 (https://apifox.com)' \
-          --form 'file=@"{{github.workspace}}/app/channel/lanzou-PureMusic_${{ github.ref_name }}.apk"'
+          --form 'file=@"${{github.workspace}}/app/channel/lanzou-PureMusic_${{ github.ref_name }}.apk"'
 #      - name: send tg message
 #        uses: appleboy/telegram-action@master
 #        with:
