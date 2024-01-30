@@ -101,12 +101,12 @@ jobs:
             ${{github.workspace}}/desktopApp/build/compose/binaries/main-release/dmg/*.dmg
 
       - name: Build exe on window
-        if: matrix.target == 'exe'
+        if: matrix.target == 'x86_64_exe'
         run: |
           ./gradlew desktopApp:packageReleaseExe
 
       - uses: actions/upload-artifact@v3
-        if: matrix.target == 'exe'
+        if: matrix.target == 'x86_64_exe'
         with:
           name: artifacts-${{ matrix.target }}
           if-no-files-found: error
@@ -114,14 +114,14 @@ jobs:
             ${{github.workspace}}\desktopApp\build\compose\binaries\main-release\exe\*.exe
 
       - name: Build deb on ubuntu
-        if: matrix.target == 'deb'
+        if: matrix.target == 'x86_64_deb'
         run: |
           ./gradlew desktopApp:packageReleaseDeb
           ls -a ${{github.workspace}}/desktopApp/build/compose/binaries/main-release/deb
           uname -m
 
       - uses: actions/upload-artifact@v3
-        if: matrix.target == 'deb'
+        if: matrix.target == 'x86_64_deb'
         with:
           name: artifacts-${{ matrix.target }}
           if-no-files-found: error
