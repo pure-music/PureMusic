@@ -24,6 +24,10 @@ jobs:
             target: x86_dmg
             arch: x86_64
 
+          - os: macos-14
+            target: arm64_dmg
+            arch: arm64
+
           - os: windows-latest
             target: exe
             arch: x86_64
@@ -76,6 +80,20 @@ jobs:
 
       - uses: actions/upload-artifact@v3
         if: matrix.os == 'macos-latest'
+        with:
+          name: artifacts-${{ matrix.target }}
+          if-no-files-found: error
+          path: |
+            ${{github.workspace}}/desktopApp/build/compose/binaries/main-release/dmg/*.dmg
+
+      - name: Build dmg on mac
+        if: matrix.os == 'macos-14'
+        run: |
+          ./gradlew desktopApp:packageReleaseDmg
+          uname -m
+
+      - uses: actions/upload-artifact@v3
+        if: matrix.os == 'macos-14'
         with:
           name: artifacts-${{ matrix.target }}
           if-no-files-found: error
