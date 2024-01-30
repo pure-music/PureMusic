@@ -21,7 +21,7 @@ jobs:
             arch: x86_64
 
           - os: macos-latest
-            target: x86_dmg
+            target: x86_64_dmg
             arch: x86_64
 
           - os: macos-14
@@ -29,11 +29,11 @@ jobs:
             arch: arm64
 
           - os: windows-latest
-            target: exe
+            target: x86_64_exe
             arch: x86_64
 
           - os: ubuntu-latest
-            target: deb
+            target: x86_64_deb
             arch: x86_64
 
     runs-on: ${{ matrix.os }}
@@ -72,7 +72,7 @@ jobs:
           path: |
             ${{github.workspace}}/app/build/outputs/bundle/googleRelease/app-google-release.aab
 
-      - name: Build dmg on mac
+      - name: Build x86_64 dmg on mac
         if: matrix.os == 'macos-latest'
         run: |
           ./gradlew desktopApp:packageReleaseDmg
@@ -86,7 +86,7 @@ jobs:
           path: |
             ${{github.workspace}}/desktopApp/build/compose/binaries/main-release/dmg/*.dmg
 
-      - name: Build dmg on mac
+      - name: Build arm64 dmg on mac
         if: matrix.os == 'macos-14'
         run: |
           ./gradlew desktopApp:packageReleaseDmg
@@ -181,8 +181,14 @@ jobs:
       - name: Download x86_64 dmg artifacts
         uses: actions/download-artifact@v3
         with:
-          name: artifacts-x86_dmg
-          path: artifacts/x86_dmg
+          name: artifacts-x86_64_dmg
+          path: artifacts/x86_64_dmg
+
+      - name: Download amr64 dmg artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: artifacts-arm64_dmg
+          path: artifacts/arm64_dmg
 
       - name: Download apk artifacts
         uses: actions/download-artifact@v3
@@ -199,20 +205,21 @@ jobs:
       - name: Download exe artifacts
         uses: actions/download-artifact@v3
         with:
-          name: artifacts-exe
-          path: artifacts/exe
+          name: artifacts-x86_64_exe
+          path: artifacts/x86_64_exe
 
       - name: Download deb artifacts
         uses: actions/download-artifact@v3
         with:
-          name: artifacts-deb
-          path: artifacts/deb
+          name: artifacts-x86_64_deb
+          path: artifacts/x86_64_deb
 
       - name: Rename artifacts
         run: |
-          mv "artifacts/x86_dmg/PureMusic-${{ env.version }}.dmg" "artifacts/PureMusic_${{ github.ref_name }}_macos_x86_64.dmg"
-          mv "artifacts/exe/PureMusic-${{ env.version }}.exe" "artifacts/PureMusic_${{ github.ref_name }}_windows_x86_64.exe"
-          mv "artifacts/deb/com.caij.puremusic.linux_${{ env.version }}_amd64.deb" "artifacts/PureMusic_${{ github.ref_name }}_linux_x86_64.deb"
+          mv "artifacts/x86_64_dmg/PureMusic-${{ env.version }}.dmg" "artifacts/PureMusic_${{ github.ref_name }}_macos_x86_64.dmg"
+          mv "artifacts/arm64_dmg/PureMusic-${{ env.version }}.dmg" "artifacts/PureMusic_${{ github.ref_name }}_macos_arm64.dmg"
+          mv "artifacts/x86_64_exe/PureMusic-${{ env.version }}.exe" "artifacts/PureMusic_${{ github.ref_name }}_windows_x86_64.exe"
+          mv "artifacts/x86_64_deb/com.caij.puremusic.linux_${{ env.version }}_amd64.deb" "artifacts/PureMusic_${{ github.ref_name }}_linux_x86_64.deb"
           ls -a artifacts/apk
       #          mv "artifacts/aab/app-google-release.aab" "artifacts/PureMusic_${{ github.ref_name }}_android.aab"
 
