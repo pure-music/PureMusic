@@ -83,7 +83,7 @@ jobs:
             ${{github.workspace}}/desktopApp/build/compose/binaries/main-release/dmg/*.dmg
 
       - name: Build exe on window
-        if: matrix.target == 'ext'
+        if: matrix.target == 'exe'
         run: |
           ./gradlew desktopApp:packageReleaseExe
 
