@@ -73,13 +73,13 @@ jobs:
             ${{github.workspace}}/app/build/outputs/bundle/googleRelease/app-google-release.aab
 
       - name: Build x86_64 dmg on mac
-        if: matrix.os == 'macos-latest'
+        if: matrix.target == 'x86_64_dmg'
         run: |
           ./gradlew desktopApp:packageReleaseDmg
           uname -m
 
       - uses: actions/upload-artifact@v3
-        if: matrix.os == 'macos-latest'
+        if: matrix.target == 'x86_64_dmg'
         with:
           name: artifacts-${{ matrix.target }}
           if-no-files-found: error
@@ -87,13 +87,13 @@ jobs:
             ${{github.workspace}}/desktopApp/build/compose/binaries/main-release/dmg/*.dmg
 
       - name: Build arm64 dmg on mac
-        if: matrix.os == 'macos-14'
+        if: matrix.target == 'arm64_dmg'
         run: |
           ./gradlew desktopApp:packageReleaseDmg
           uname -m
 
       - uses: actions/upload-artifact@v3
-        if: matrix.os == 'macos-14'
+        if: matrix.target == 'arm64_dmg'
         with:
           name: artifacts-${{ matrix.target }}
           if-no-files-found: error
