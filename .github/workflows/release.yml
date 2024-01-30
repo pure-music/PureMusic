@@ -216,8 +216,8 @@ jobs:
 
       - name: Rename artifacts
         run: |
-          mv "artifacts/x86_64_dmg/PureMusic-${{ env.version }}.dmg" "artifacts/PureMusic_${{ github.ref_name }}_macos_x86_64.dmg"
-          mv "artifacts/arm64_dmg/PureMusic-${{ env.version }}.dmg" "artifacts/PureMusic_${{ github.ref_name }}_macos_arm64.dmg"
+          mv "artifacts/x86_64_dmg/PureMusic-${{ env.version }}.dmg" "artifacts/PureMusic_${{ github.ref_name }}_mac_x86_64.dmg"
+          mv "artifacts/arm64_dmg/PureMusic-${{ env.version }}.dmg" "artifacts/PureMusic_${{ github.ref_name }}_mac_arm64.dmg"
           mv "artifacts/x86_64_exe/PureMusic-${{ env.version }}.exe" "artifacts/PureMusic_${{ github.ref_name }}_windows_x86_64.exe"
           mv "artifacts/x86_64_deb/com.caij.puremusic.linux_${{ env.version }}_amd64.deb" "artifacts/PureMusic_${{ github.ref_name }}_linux_x86_64.deb"
           ls -a artifacts/apk
