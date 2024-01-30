@@ -262,7 +262,7 @@ jobs:
           --header 'File-Path: /puremusic/lanzou-PureMusic_${{ github.ref_name }}.apk' \
           --header 'As-Task: true' \
           --header 'User-Agent: Apifox/1.0.0 (https://apifox.com)' \
-          --form 'file=@"${{github.workspace}}/app/channel/lanzou-PureMusic_${{ github.ref_name }}.apk"'
+          --form 'file=@"{{github.workspace}}/app/channel/lanzou-PureMusic_${{ github.ref_name }}.apk"'
 #      - name: send tg message
 #        uses: appleboy/telegram-action@master
 #        with:
