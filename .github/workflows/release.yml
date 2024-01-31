@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    name: release build
+    name: build
     if: ${{ startsWith(github.ref, 'refs/tags/') }}
     strategy:
       fail-fast: false
