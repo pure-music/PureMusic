@@ -15,26 +15,38 @@ jobs:
           - os: ubuntu-latest
             target: apk
             arch: x86_64
+            module: app
+            task: assembleChinaRelease
 
           - os: ubuntu-latest
             target: aab
             arch: x86_64
+            module: app
+            task: bundleGoogleRelease
 
           - os: macos-latest
-            target: x86_64_dmg
+            target: dmg
             arch: x86_64
+            module: desktopApp
+            task: packageReleaseDmg
 
           - os: macos-14
-            target: arm64_dmg
+            target: dmg
             arch: arm64
+            module: desktopApp
+            task: packageReleaseDmg
 
           - os: windows-latest
-            target: x86_64_exe
+            target: exe
             arch: x86_64
+            module: desktopApp
+            task: packageReleaseExe
 
           - os: ubuntu-latest
-            target: x86_64_deb
+            target: deb
             arch: x86_64
+            module: desktopApp
+            task: packageReleaseDeb
 
     runs-on: ${{ matrix.os }}
 
@@ -55,78 +67,20 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
-      - name: Build apk on ubuntu
-        if: matrix.target == 'apk'
+      - name: Build
         run: |
-          ./gradlew app:assembleChinaRelease
-
-      - name: Build aab on ubuntu
-        if: matrix.target == 'aab'
-        run: |
-          ./gradlew app:bundleGoogleRelease
+          ./gradlew ${{ matrix.module }}:${{ matrix.task }}
 
       - uses: actions/upload-artifact@v3
-        if: matrix.target == 'aab'
         with:
-          name: artifacts-${{ matrix.target }}
-          path: |
-            ${{github.workspace}}/app/build/outputs/bundle/googleRelease/app-google-release.aab
-
-      - name: Build x86_64 dmg on mac
-        if: matrix.target == 'x86_64_dmg'
-        run: |
-          ./gradlew desktopApp:packageReleaseDmg
-          uname -m
-
-      - uses: actions/upload-artifact@v3
-        if: matrix.target == 'x86_64_dmg'
-        with:
-          name: artifacts-${{ matrix.target }}
-          if-no-files-found: error
-          path: |
-            ${{github.workspace}}/desktopApp/build/compose/binaries/main-release/dmg/*.dmg
-
-      - name: Build arm64 dmg on mac
-        if: matrix.target == 'arm64_dmg'
-        run: |
-          ./gradlew desktopApp:packageReleaseDmg
-          uname -m
-
-      - uses: actions/upload-artifact@v3
-        if: matrix.target == 'arm64_dmg'
-        with:
-          name: artifacts-${{ matrix.target }}
-          if-no-files-found: error
-          path: |
-            ${{github.workspace}}/desktopApp/build/compose/binaries/main-release/dmg/*.dmg
-
-      - name: Build exe on window
-        if: matrix.target == 'x86_64_exe'
-        run: |
-          ./gradlew desktopApp:packageReleaseExe
-
-      - uses: actions/upload-artifact@v3
-        if: matrix.target == 'x86_64_exe'
-        with:
-          name: artifacts-${{ matrix.target }}
-          if-no-files-found: error
-          path: |
-            ${{github.workspace}}\desktopApp\build\compose\binaries\main-release\exe\*.exe
-
-      - name: Build deb on ubuntu
-        if: matrix.target == 'x86_64_deb'
-        run: |
-          ./gradlew desktopApp:packageReleaseDeb
-          ls -a ${{github.workspace}}/desktopApp/build/compose/binaries/main-release/deb
-          uname -m
-
-      - uses: actions/upload-artifact@v3
-        if: matrix.target == 'x86_64_deb'
-        with:
-          name: artifacts-${{ matrix.target }}
+          name: artifacts-${{ matrix.arch }}
           if-no-files-found: error
           path: |
             ${{github.workspace}}/desktopApp/build/compose/binaries/main-release/deb/*.deb
+            ${{github.workspace}}/desktopApp/build/compose/binaries/main-release/exe/*.exe
+            ${{github.workspace}}/desktopApp/build/compose/binaries/main-release/dmg/*.dmg
+            ${{github.workspace}}/app/build/outputs/bundle/googleRelease/app-google-release.aab
+            ${{github.workspace}}/app/build/outputs/apk/china/release/app-china-release.apk 
 
       - name: set up JDK 8
         if: matrix.target == 'apk'
@@ -144,18 +98,12 @@ jobs:
           java -jar ${{github.workspace}}/app/buglyqq-upload-symbol.jar -appid 1a1daf5790 -appkey ${{secrets.BUGLY_APP_KEY}} -bundleid com.caij.puremusic -version $showVersionName -platform Android -inputMapping ${{github.workspace}}/app/build/outputs/mapping/chinaRelease/mapping.txt
           gzip -c ${{github.workspace}}/app/build/outputs/mapping/chinaRelease/mapping.txt > ${{github.workspace}}/app/build/outputs/mapping/chinaRelease/mapping.txt.gz
           curl -F "chat_id=-1002062702442" -F "caption=$showVersionName" -F document=@${{github.workspace}}/app/build/outputs/mapping/chinaRelease/mapping.txt.gz -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendDocument"
-
-      - uses: actions/upload-artifact@v3
-        if: matrix.target == 'apk'
-        with:
-          name: artifacts-${{ matrix.target }}
-          if-no-files-found: error
-          path: |
-            ${{github.workspace}}/app/build/outputs/apk/china/release/app-china-release.apk 
+            
 
   release:
     needs: build
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v3
         with:
@@ -178,55 +126,32 @@ jobs:
           echo "version=$lastVersionName" >> $GITHUB_ENV
           cat ${{github.workspace}}/version.properties
 
-      - name: Download x86_64 dmg artifacts
+      - name: Download artifacts
         uses: actions/download-artifact@v3
         with:
-          name: artifacts-x86_64_dmg
-          path: artifacts/x86_64_dmg
+          name: artifacts-x86_64
+          path: artifacts/x86_64
 
-      - name: Download amr64 dmg artifacts
+      - name: Download artifacts
         uses: actions/download-artifact@v3
         with:
-          name: artifacts-arm64_dmg
-          path: artifacts/arm64_dmg
-
-      - name: Download apk artifacts
-        uses: actions/download-artifact@v3
-        with:
-          name: artifacts-apk
-          path: artifacts/apk
-
-      #      - name: Download aab artifacts
-      #        uses: actions/download-artifact@v3
-      #        with:
-      #          name: artifacts-aab
-      #          path: artifacts/aab
-
-      - name: Download exe artifacts
-        uses: actions/download-artifact@v3
-        with:
-          name: artifacts-x86_64_exe
-          path: artifacts/x86_64_exe
-
-      - name: Download deb artifacts
-        uses: actions/download-artifact@v3
-        with:
-          name: artifacts-x86_64_deb
-          path: artifacts/x86_64_deb
+          name: artifacts-arm64
+          path: artifacts/arm64
 
       - name: Rename artifacts
         run: |
-          mv "artifacts/x86_64_dmg/PureMusic-${{ env.version }}.dmg" "artifacts/PureMusic_${{ github.ref_name }}_mac_x86_64.dmg"
-          mv "artifacts/arm64_dmg/PureMusic-${{ env.version }}.dmg" "artifacts/PureMusic_${{ github.ref_name }}_mac_arm64.dmg"
-          mv "artifacts/x86_64_exe/PureMusic-${{ env.version }}.exe" "artifacts/PureMusic_${{ github.ref_name }}_windows_x86_64.exe"
-          mv "artifacts/x86_64_deb/com.caij.puremusic.linux_${{ env.version }}_amd64.deb" "artifacts/PureMusic_${{ github.ref_name }}_linux_x86_64.deb"
+          mv "artifacts/x86_64/desktopApp/build/compose/binaries/main-release/dmg/PureMusic-${{ env.version }}.dmg" "artifacts/PureMusic_${{ github.ref_name }}_mac_x86_64.dmg"
+          mv "artifacts/x86_64/desktopApp/build/compose/binaries/main-release/exe/PureMusic-${{ env.version }}.exe" "artifacts/PureMusic_${{ github.ref_name }}_windows_x86_64.exe"
+          mv "artifacts/x86_64/desktopApp/build/compose/binaries/main-release/deb/com.caij.puremusic.linux_${{ env.version }}_amd64.deb" "artifacts/PureMusic_${{ github.ref_name }}_linux_x86_64.deb"
+          
+          mv "artifacts/arm64/PureMusic-${{ env.version }}.dmg" "artifacts/PureMusic_${{ github.ref_name }}_mac_arm64.dmg"
           ls -a artifacts/apk
       #          mv "artifacts/aab/app-google-release.aab" "artifacts/PureMusic_${{ github.ref_name }}_android.aab"
 
       - name: Build channel apk
         run: |
           mkdir -p "${{github.workspace}}/app/channel"
-          mv "artifacts/apk/app-china-release.apk" "${{github.workspace}}/app/channel/PureMusic_${{ github.ref_name }}.apk"
+          mv "artifacts/x86_64/app/build/outputs/apk/china/release/app-china-release.apk" "${{github.workspace}}/app/channel/PureMusic_${{ github.ref_name }}.apk"
           java -jar ${{github.workspace}}/app/VasDolly.jar put -c "github,telegram,xiaomi,huawei,kuan,qq,lanzou" ${{github.workspace}}/app/channel/PureMusic_${{ github.ref_name }}.apk ${{github.workspace}}/app/channel
           mv "${{github.workspace}}/app/channel/github-PureMusic_${{ github.ref_name }}.apk" "artifacts/apk/PureMusic_${{ github.ref_name }}_android.apk"
 
@@ -248,9 +173,9 @@ jobs:
         with:
           path: ${{ github.workspace }}/CHANGELOG.txt
 
-      - name: send tg message
-        run: |
-          curl -F "chat_id=-1001816793644" -F "caption=${{steps.read_file.outputs.contents}}${{steps.create_remote_release.outputs.url}}" -F document=@${{github.workspace}}/app/channel/telegram-PureMusic_${{ github.ref_name }}.apk -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendDocument"
+#      - name: send tg message
+#        run: |
+#          curl -F "chat_id=-1001816793644" -F "caption=${{steps.read_file.outputs.contents}}${{steps.create_remote_release.outputs.url}}" -F document=@${{github.workspace}}/app/channel/telegram-PureMusic_${{ github.ref_name }}.apk -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendDocument"
 
       - uses: actions/upload-artifact@v3
         with:
@@ -258,15 +183,15 @@ jobs:
           path: |
             ${{github.workspace}}/app/channel/*.apk
 
-      - name: upload lanzou
-        if: ${{ !contains(github.ref_name, 'beta') && !contains(github.ref_name, 'rc')}}
-        run: |
-          curl --location --request PUT '${{ secrets.ALIST_HOST }}/api/fs/form' \
-          --header 'Authorization: ${{ secrets.ALIST_TOKEN }}' \
-          --header 'File-Path: /puremusic/lanzou-PureMusic_${{ github.ref_name }}.apk' \
-          --header 'As-Task: true' \
-          --header 'User-Agent: Apifox/1.0.0 (https://apifox.com)' \
-          --form 'file=@"${{github.workspace}}/app/channel/lanzou-PureMusic_${{ github.ref_name }}.apk"'
+#      - name: upload lanzou
+#        if: ${{ !contains(github.ref_name, 'beta') && !contains(github.ref_name, 'rc')}}
+#        run: |
+#          curl --location --request PUT '${{ secrets.ALIST_HOST }}/api/fs/form' \
+#          --header 'Authorization: ${{ secrets.ALIST_TOKEN }}' \
+#          --header 'File-Path: /puremusic/lanzou-PureMusic_${{ github.ref_name }}.apk' \
+#          --header 'As-Task: true' \
+#          --header 'User-Agent: Apifox/1.0.0 (https://apifox.com)' \
+#          --form 'file=@"${{github.workspace}}/app/channel/lanzou-PureMusic_${{ github.ref_name }}.apk"'
 #      - name: send tg message
 #        uses: appleboy/telegram-action@master
 #        with:
