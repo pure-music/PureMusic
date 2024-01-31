@@ -173,8 +173,8 @@ jobs:
           path: ${{ github.workspace }}/CHANGELOG.txt
 
 #      - name: send tg message
-#        run: |
-#          curl -F "chat_id=-1001816793644" -F "caption=${{steps.read_file.outputs.contents}}${{steps.create_remote_release.outputs.url}}" -F document=@${{github.workspace}}/app/channel/telegram-PureMusic_${{ github.ref_name }}.apk -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendDocument"
+        run: |
+          curl -F "chat_id=-1001816793644" -F "caption=${{steps.read_file.outputs.contents}}${{steps.create_remote_release.outputs.url}}" -F document=@${{github.workspace}}/app/channel/telegram-PureMusic_${{ github.ref_name }}.apk -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendDocument"
 
       - uses: actions/upload-artifact@v3
         with:
@@ -182,15 +182,15 @@ jobs:
           path: |
             ${{github.workspace}}/app/channel/*.apk
 
-#      - name: upload lanzou
-#        if: ${{ !contains(github.ref_name, 'beta') && !contains(github.ref_name, 'rc')}}
-#        run: |
-#          curl --location --request PUT '${{ secrets.ALIST_HOST }}/api/fs/form' \
-#          --header 'Authorization: ${{ secrets.ALIST_TOKEN }}' \
-#          --header 'File-Path: /puremusic/lanzou-PureMusic_${{ github.ref_name }}.apk' \
-#          --header 'As-Task: true' \
-#          --header 'User-Agent: Apifox/1.0.0 (https://apifox.com)' \
-#          --form 'file=@"${{github.workspace}}/app/channel/lanzou-PureMusic_${{ github.ref_name }}.apk"'
+      - name: upload lanzou
+        if: ${{ !contains(github.ref_name, 'beta') && !contains(github.ref_name, 'rc')}}
+        run: |
+          curl --location --request PUT '${{ secrets.ALIST_HOST }}/api/fs/form' \
+          --header 'Authorization: ${{ secrets.ALIST_TOKEN }}' \
+          --header 'File-Path: /puremusic/lanzou-PureMusic_${{ github.ref_name }}.apk' \
+          --header 'As-Task: true' \
+          --header 'User-Agent: Apifox/1.0.0 (https://apifox.com)' \
+          --form 'file=@"${{github.workspace}}/app/channel/lanzou-PureMusic_${{ github.ref_name }}.apk"'
 #      - name: send tg message
 #        uses: appleboy/telegram-action@master
 #        with:
