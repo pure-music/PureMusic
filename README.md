@@ -8,7 +8,7 @@ Pure Music
 下载：[https://github.com/pure-music/PureMusic/releases](https://github.com/pure-music/PureMusic/releases)
 
 # Thanks   
-该项目早期复制于RetroMusicPlayer，已开源大部分代码。
+该项目早期复制于RetroMusicPlayer，已开源大部分代码。  
 最新版已经基于跨平台重新开发，暂未开源。  
 
 
