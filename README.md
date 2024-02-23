@@ -12,6 +12,6 @@ Pure Music [官网](https://music.caij.xyz/)
 
 # Thanks   
 该项目早期复制于RetroMusicPlayer，已开源代码。  
-最新版已经基于跨平台重新开发，不再开源。  
+最新版已经基于跨平台重写开发，不再开源。  
 
 
