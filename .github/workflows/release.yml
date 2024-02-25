@@ -172,9 +172,9 @@ jobs:
         with:
           path: ${{ github.workspace }}/CHANGELOG.txt
 
-      # - name: send tg message
-      #   run: |
-      #     curl -F "chat_id=-1001816793644" -F "caption=${{steps.read_file.outputs.contents}}${{steps.create_remote_release.outputs.url}}" -F document=@${{github.workspace}}/app/channel/telegram-PureMusic_${{ github.ref_name }}.apk -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendDocument"
+      - name: send tg message
+        run: |
+          curl -F "chat_id=-1001816793644" -F "caption=${{steps.read_file.outputs.contents}}${{steps.create_remote_release.outputs.url}}" -F document=@${{github.workspace}}/app/channel/telegram-PureMusic_${{ github.ref_name }}.apk -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendDocument"
 
       - uses: actions/upload-artifact@v3
         with:
