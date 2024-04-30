@@ -76,6 +76,7 @@ jobs:
 
       - name: Build
         run: |
+          ./gradlew clean
           ./gradlew ${{ matrix.module }}:${{ matrix.task }} ${{ matrix.params }}
 
       - uses: actions/upload-artifact@v3
