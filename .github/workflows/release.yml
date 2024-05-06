@@ -27,11 +27,11 @@ jobs:
 
           - os: ubuntu-latest
             target: aab
-            arch: x86_64
+            arch: all
             module: app
             task: bundleGoogleRelease
 
-          - os: macos-latest
+          - os: macos-13
             target: dmg
             arch: x86_64
             module: desktopApp
