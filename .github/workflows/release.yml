@@ -50,7 +50,7 @@ jobs:
             arch: x86_64
             module: desktopApp
             task: packageReleaseExe
-            params: -PdeviceType=3
+            params: -PdeviceType=4
 
           - os: ubuntu-latest
             target: deb
