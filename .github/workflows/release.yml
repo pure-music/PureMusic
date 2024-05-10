@@ -57,6 +57,7 @@ jobs:
             arch: x86_64
             module: desktopApp
             task: packageReleaseDeb
+            params: -PdeviceType=3
 
     runs-on: ${{ matrix.os }}
 
