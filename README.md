@@ -3,7 +3,9 @@
 Pure Music [官网](https://music.caij.xyz/)  
 下载：[https://github.com/pure-music/PureMusic/releases](https://github.com/pure-music/PureMusic/releases)
 
-如果你觉得对你有帮助**关注一下开发者** [Caij](https://github.com/Caij) 非常感谢
+如果你觉得对你有帮助**关注一下开发者** [Caij](https://github.com/Caij) 非常感谢  
+
+目前pc版仅兴趣维护，不做强力支持，iOS版预计2025年会来
 
 # 棉花音乐
 随时随地听音乐
