@@ -85,7 +85,7 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: artifacts-${{ matrix.arch }}-${{ github.ref_name }}
+          name: artifacts_${{ matrix.arch }}_${{ matrix.target }}_${{ github.ref_name }}
           if-no-files-found: error
           path: |
             ${{github.workspace}}/desktopApp/build/compose/binaries/main-release/deb/*.deb
@@ -138,39 +138,63 @@ jobs:
           echo "version=$lastVersionName" >> $GITHUB_ENV
           cat ${{github.workspace}}/version.properties
 
-      - name: Download x86_64 artifacts
+      - name: Download x86_64 dmg artifacts
         uses: actions/download-artifact@v4
         with:
-          name: artifacts-x86_64-${{ github.ref_name }}
-          path: artifacts/x86_64_${{ github.ref_name }}
+          name: artifacts_x86_64_dmg_${{ github.ref_name }}
+          path: artifacts/x86_64_dmg_${{ github.ref_name }}
 
-      - name: Download arm64 artifacts
+      - name: Download x86_64 exe artifacts
         uses: actions/download-artifact@v4
         with:
-          name: artifacts-arm64-${{ github.ref_name }}
-          path: artifacts/arm64_${{ github.ref_name }}
+          name: artifacts_x86_64_exe_${{ github.ref_name }}
+          path: artifacts/x86_64_exe_${{ github.ref_name }}
 
-      - name: Download all artifacts
+      - name: Download x86_64 deb artifacts
         uses: actions/download-artifact@v4
         with:
-          name: artifacts-all-${{ github.ref_name }}
-          path: artifacts/all_${{ github.ref_name }}
+          name: artifacts_x86_64_deb_${{ github.ref_name }}
+          path: artifacts/x86_64_deb_${{ github.ref_name }}
+
+      - name: Download arm64 apk artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: artifacts_arm64_apk_${{ github.ref_name }}
+          path: artifacts/arm64_apk_${{ github.ref_name }}
+
+      - name: Download arm64 dmg artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: artifacts_arm64_dmg_${{ github.ref_name }}
+          path: artifacts/arm64_dmg_${{ github.ref_name }}
+
+      - name: Download all apk artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: artifacts_all_apk_${{ github.ref_name }}
+          path: artifacts/all_apk_${{ github.ref_name }}
+
+      - name: Download all aab artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: artifacts_all_aab_${{ github.ref_name }}
+          path: artifacts/all_aab_${{ github.ref_name }}
 
       - name: Rename artifacts
         run: |
-          mv "artifacts/x86_64_${{ github.ref_name }}/desktopApp/build/compose/binaries/main-release/dmg/PureMusic-${{ env.version }}.dmg" "artifacts/PureMusic_${{ github.ref_name }}_mac_x86_64.dmg"
-          mv "artifacts/x86_64_${{ github.ref_name }}/desktopApp/build/compose/binaries/main-release/exe/PureMusic-${{ env.version }}.exe" "artifacts/PureMusic_${{ github.ref_name }}_windows_x86_64.exe"
-          mv "artifacts/x86_64_${{ github.ref_name }}/desktopApp/build/compose/binaries/main-release/deb/com.caij.puremusic.linux_${{ env.version }}_amd64.deb" "artifacts/PureMusic_${{ github.ref_name }}_linux_x86_64.deb"
+          mv "artifacts/x86_64_dmg_${{ github.ref_name }}/desktopApp/build/compose/binaries/main-release/dmg/PureMusic-${{ env.version }}.dmg" "artifacts/PureMusic_${{ github.ref_name }}_mac_x86_64.dmg"
+          mv "artifacts/x86_64_exe_${{ github.ref_name }}/desktopApp/build/compose/binaries/main-release/exe/PureMusic-${{ env.version }}.exe" "artifacts/PureMusic_${{ github.ref_name }}_windows_x86_64.exe"
+          mv "artifacts/x86_64_deb_${{ github.ref_name }}/desktopApp/build/compose/binaries/main-release/deb/com.caij.puremusic.linux_${{ env.version }}_amd64.deb" "artifacts/PureMusic_${{ github.ref_name }}_linux_x86_64.deb"
           
-          mv "artifacts/arm64_${{ github.ref_name }}/desktopApp/build/compose/binaries/main-release/dmg/PureMusic-${{ env.version }}.dmg" "artifacts/PureMusic_${{ github.ref_name }}_mac_arm64.dmg"
+          mv "artifacts/arm64_dmg_${{ github.ref_name }}/desktopApp/build/compose/binaries/main-release/dmg/PureMusic-${{ env.version }}.dmg" "artifacts/PureMusic_${{ github.ref_name }}_mac_arm64.dmg"
       #          mv "artifacts/aab/app-google-release.aab" "artifacts/PureMusic_${{ github.ref_name }}_android.aab"
 
       - name: Build channel apk
         run: |
           mkdir -p "${{github.workspace}}/app/channel"
            mkdir -p "${{github.workspace}}/app/channelarm64"
-          mv "artifacts/all/app/build/outputs/apk/china/release/app-china-release.apk" "${{github.workspace}}/app/channel/PureMusic_${{ github.ref_name }}.apk"
-          mv "artifacts/arm64/app/build/outputs/apk/china/release/app-china-release.apk" "${{github.workspace}}/app/channelarm64/PureMusic_${{ github.ref_name }}_arm64.apk"
+          mv "artifacts/all_apk_${{ github.ref_name }}/app/build/outputs/apk/china/release/app-china-release.apk" "${{github.workspace}}/app/channel/PureMusic_${{ github.ref_name }}.apk"
+          mv "artifacts/arm64_apk_${{ github.ref_name }}/app/build/outputs/apk/china/release/app-china-release.apk" "${{github.workspace}}/app/channelarm64/PureMusic_${{ github.ref_name }}_arm64.apk"
           java -jar ${{github.workspace}}/app/VasDolly.jar put -c "github,telegram,xiaomi,huawei,kuan,qq,lanzou" ${{github.workspace}}/app/channel/PureMusic_${{ github.ref_name }}.apk ${{github.workspace}}/app/channel
           java -jar ${{github.workspace}}/app/VasDolly.jar put -c "github,telegram,xiaomi,huawei,kuan,qq,lanzou" ${{github.workspace}}/app/channelarm64/PureMusic_${{ github.ref_name }}_arm64.apk ${{github.workspace}}/app/channelarm64
           mv "${{github.workspace}}/app/channel/github-PureMusic_${{ github.ref_name }}.apk" "artifacts/PureMusic_${{ github.ref_name }}_android.apk"
@@ -201,7 +225,7 @@ jobs:
 
       - uses: actions/upload-artifact@v3
         with:
-          name: artifacts-channel-apk
+          name: artifacts-channel-apk-${{ github.ref_name }}
           path: |
             ${{github.workspace}}/app/channel/*.apk
 
