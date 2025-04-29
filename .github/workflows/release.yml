@@ -237,7 +237,8 @@ jobs:
 
       - name: send tg message
         run: |
-          curl -F "chat_id=-1001816793644" -F "caption=${{steps.read_file.outputs.contents}}${{steps.create_remote_release.outputs.url}}" -F document=@${{github.workspace}}/app/channelarm64/telegram-PureMusic_${{ github.ref_name }}_arm64.apk -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendDocument"
+          mv "${{github.workspace}}/app/channelarm64_exclude_mpv/telegram-PureMusic_${{ github.ref_name }}_arm64.apk" "${{github.workspace}}/app/channelarm64_exclude_mpv/telegram-PureMusic_${{ github.ref_name }}_mediax_arm64.apk"
+          curl -F "chat_id=-1001816793644" -F "caption=${{steps.read_file.outputs.contents}}${{steps.create_remote_release.outputs.url}}" -F document=@${{github.workspace}}/app/channelarm64_exclude_mpv/telegram-PureMusic_${{ github.ref_name }}_mediax_arm64.apk -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendDocument"
 
 #      - uses: actions/upload-artifact@v4
 #        with:
