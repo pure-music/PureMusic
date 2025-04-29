@@ -26,6 +26,13 @@ jobs:
             params: -PabiArm64=1
 
           - os: ubuntu-latest
+            target: apk
+            arch: arm64_exclude_mpv
+            module: app
+            task: assembleChinaRelease
+            params: -PabiArm64=1 -PexcludeMpv=1
+
+          - os: ubuntu-latest
             target: aab
             arch: all
             module: app
@@ -95,14 +102,14 @@ jobs:
             ${{github.workspace}}/app/build/outputs/apk/china/release/app-china-release.apk 
 
       - name: set up JDK 8
-        if: matrix.target == 'apk'
+        if: matrix.target == 'apk' && matrix.arch == 'all'
         uses: actions/setup-java@v3
         with:
           java-version: '8'
           distribution: 'temurin'
 
       - name: Upload mapping
-        if: matrix.target == 'apk'
+        if: matrix.target == 'apk' && matrix.arch == 'all'
         run: |
           . ${{github.workspace}}/version.properties
           echo $showVersionName
@@ -156,17 +163,23 @@ jobs:
           name: artifacts_x86_64_deb_${{ github.ref_name }}
           path: artifacts/x86_64_deb_${{ github.ref_name }}
 
+      - name: Download arm64 dmg artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: artifacts_arm64_dmg_${{ github.ref_name }}
+          path: artifacts/arm64_dmg_${{ github.ref_name }}
+
       - name: Download arm64 apk artifacts
         uses: actions/download-artifact@v4
         with:
           name: artifacts_arm64_apk_${{ github.ref_name }}
           path: artifacts/arm64_apk_${{ github.ref_name }}
 
-      - name: Download arm64 dmg artifacts
+      - name: Download arm64 exclude mpv apk artifacts
         uses: actions/download-artifact@v4
         with:
-          name: artifacts_arm64_dmg_${{ github.ref_name }}
-          path: artifacts/arm64_dmg_${{ github.ref_name }}
+          name: artifacts_arm64_exclude_mpv_apk_${{ github.ref_name }}
+          path: artifacts/arm64_exclude_mpv_apk_${{ github.ref_name }}
 
       - name: Download all apk artifacts
         uses: actions/download-artifact@v4
@@ -192,13 +205,16 @@ jobs:
       - name: Build channel apk
         run: |
           mkdir -p "${{github.workspace}}/app/channel"
-           mkdir -p "${{github.workspace}}/app/channelarm64"
+          mkdir -p "${{github.workspace}}/app/channelarm64"
           mv "artifacts/all_apk_${{ github.ref_name }}/app/build/outputs/apk/china/release/app-china-release.apk" "${{github.workspace}}/app/channel/PureMusic_${{ github.ref_name }}.apk"
           mv "artifacts/arm64_apk_${{ github.ref_name }}/app/build/outputs/apk/china/release/app-china-release.apk" "${{github.workspace}}/app/channelarm64/PureMusic_${{ github.ref_name }}_arm64.apk"
+          mv "artifacts/arm64_exclude_mpv_apk_${{ github.ref_name }}/app/build/outputs/apk/china/release/app-china-release.apk" "${{github.workspace}}/app/channelarm64_exclude_mpv/PureMusic_${{ github.ref_name }}_arm64.apk"
           java -jar ${{github.workspace}}/app/VasDolly.jar put -c "github,telegram,xiaomi,huawei,kuan,qq,lanzou" ${{github.workspace}}/app/channel/PureMusic_${{ github.ref_name }}.apk ${{github.workspace}}/app/channel
           java -jar ${{github.workspace}}/app/VasDolly.jar put -c "github,telegram,xiaomi,huawei,kuan,qq,lanzou" ${{github.workspace}}/app/channelarm64/PureMusic_${{ github.ref_name }}_arm64.apk ${{github.workspace}}/app/channelarm64
-          mv "${{github.workspace}}/app/channel/github-PureMusic_${{ github.ref_name }}.apk" "artifacts/PureMusic_${{ github.ref_name }}_android.apk"
-          mv "${{github.workspace}}/app/channelarm64/github-PureMusic_${{ github.ref_name }}_arm64.apk" "artifacts/PureMusic_${{ github.ref_name }}_android_arm64.apk"
+          java -jar ${{github.workspace}}/app/VasDolly.jar put -c "github,telegram,xiaomi,huawei,kuan,qq,lanzou" ${{github.workspace}}/app/channelarm64_exclude_mpv/PureMusic_${{ github.ref_name }}_arm64.apk ${{github.workspace}}/app/channelarm64_exclude_mpv
+          mv "${{github.workspace}}/app/channel/github-PureMusic_${{ github.ref_name }}.apk" "artifacts/PureMusic_${{ github.ref_name }}_mpv_android.apk"
+          mv "${{github.workspace}}/app/channelarm64/github-PureMusic_${{ github.ref_name }}_arm64.apk" "artifacts/PureMusic_${{ github.ref_name }}_android_mpv_arm64.apk"
+          mv "${{github.workspace}}/app/channelarm64_exclude_mpv/github-PureMusic_${{ github.ref_name }}_arm64.apk" "artifacts/PureMusic_${{ github.ref_name }}_android_mediax_arm64.apk"
           curl -F "chat_id=-1002062702442" -F "caption=${{ github.ref_name }}" -F document=@${{github.workspace}}/app/channelarm64/qq-PureMusic_${{ github.ref_name }}_arm64.apk -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendDocument"
 
       - name: Create Release
@@ -223,11 +239,11 @@ jobs:
         run: |
           curl -F "chat_id=-1001816793644" -F "caption=${{steps.read_file.outputs.contents}}${{steps.create_remote_release.outputs.url}}" -F document=@${{github.workspace}}/app/channelarm64/telegram-PureMusic_${{ github.ref_name }}_arm64.apk -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendDocument"
 
-      - uses: actions/upload-artifact@v4
-        with:
-          name: artifacts-channel-apk-${{ github.ref_name }}
-          path: |
-            ${{github.workspace}}/app/channel/*.apk
+#      - uses: actions/upload-artifact@v4
+#        with:
+#          name: artifacts-channel-apk-${{ github.ref_name }}
+#          path: |
+#            ${{github.workspace}}/app/channel/*.apk
 
       - name: upload lanzou
         if: ${{ !contains(github.ref_name, 'beta') && !contains(github.ref_name, 'rc')}}
