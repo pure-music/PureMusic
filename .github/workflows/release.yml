@@ -206,6 +206,7 @@ jobs:
         run: |
           mkdir -p "${{github.workspace}}/app/channel"
           mkdir -p "${{github.workspace}}/app/channelarm64"
+           mkdir -p "${{github.workspace}}/app/channelarm64_exclude_mpv"
           mv "artifacts/all_apk_${{ github.ref_name }}/app/build/outputs/apk/china/release/app-china-release.apk" "${{github.workspace}}/app/channel/PureMusic_${{ github.ref_name }}.apk"
           mv "artifacts/arm64_apk_${{ github.ref_name }}/app/build/outputs/apk/china/release/app-china-release.apk" "${{github.workspace}}/app/channelarm64/PureMusic_${{ github.ref_name }}_arm64.apk"
           mv "artifacts/arm64_exclude_mpv_apk_${{ github.ref_name }}/app/build/outputs/apk/china/release/app-china-release.apk" "${{github.workspace}}/app/channelarm64_exclude_mpv/PureMusic_${{ github.ref_name }}_arm64.apk"
