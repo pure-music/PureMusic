@@ -20,13 +20,6 @@ jobs:
 
           - os: ubuntu-latest
             target: apk
-            arch: arm64
-            module: app
-            task: assembleChinaRelease
-            params: -PabiArm64=1
-
-          - os: ubuntu-latest
-            target: apk
             arch: arm64_exclude_mpv
             module: app
             task: assembleChinaRelease
@@ -108,7 +101,7 @@ jobs:
           java-version: '8'
           distribution: 'temurin'
 
-      - name: Upload mapping
+      - name: Upload mapping 1
         if: matrix.target == 'apk' && matrix.arch == 'all'
         run: |
           . ${{github.workspace}}/version.properties
@@ -117,7 +110,19 @@ jobs:
           java -jar ${{github.workspace}}/app/buglyqq-upload-symbol.jar -appid 1a1daf5790 -appkey ${{secrets.BUGLY_APP_KEY}} -bundleid com.caij.puremusic -version $showVersionName -platform Android -inputMapping ${{github.workspace}}/app/build/outputs/mapping/chinaRelease/mapping.txt
           gzip -c ${{github.workspace}}/app/build/outputs/mapping/chinaRelease/mapping.txt > ${{github.workspace}}/app/build/outputs/mapping/chinaRelease/mapping.txt.gz
           curl -F "chat_id=-1002062702442" -F "caption=$showVersionName" -F document=@${{github.workspace}}/app/build/outputs/mapping/chinaRelease/mapping.txt.gz -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendDocument"
-            
+
+      - name: Upload mapping 2
+        if: matrix.target == 'apk' && matrix.arch == 'arm64_exclude_mpv'
+        run: |
+          . ${{github.workspace}}/version.properties
+          echo $showVersionName
+          suffix="-mediax"
+          versionNameChanged=$versionName$suffix
+          cat ${{github.workspace}}/version.properties
+          java -jar ${{github.workspace}}/app/buglyqq-upload-symbol.jar -appid 1a1daf5790 -appkey ${{secrets.BUGLY_APP_KEY}} -bundleid com.caij.puremusic -version $versionNameChanged -platform Android -inputMapping ${{github.workspace}}/app/build/outputs/mapping/chinaRelease/mapping.txt
+          gzip -c ${{github.workspace}}/app/build/outputs/mapping/chinaRelease/mapping.txt > ${{github.workspace}}/app/build/outputs/mapping/chinaRelease/mapping.txt.gz
+          curl -F "chat_id=-1002062702442" -F "caption=$versionNameChanged" -F document=@${{github.workspace}}/app/build/outputs/mapping/chinaRelease/mapping.txt.gz -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendDocument"
+  
 
   release:
     needs: build
@@ -169,12 +174,6 @@ jobs:
           name: artifacts_arm64_dmg_${{ github.ref_name }}
           path: artifacts/arm64_dmg_${{ github.ref_name }}
 
-      - name: Download arm64 apk artifacts
-        uses: actions/download-artifact@v4
-        with:
-          name: artifacts_arm64_apk_${{ github.ref_name }}
-          path: artifacts/arm64_apk_${{ github.ref_name }}
-
       - name: Download arm64 exclude mpv apk artifacts
         uses: actions/download-artifact@v4
         with:
@@ -205,15 +204,11 @@ jobs:
           mkdir -p "${{github.workspace}}/app/channelarm64"
            mkdir -p "${{github.workspace}}/app/channelarm64_exclude_mpv"
           mv "artifacts/all_apk_${{ github.ref_name }}/app/build/outputs/apk/china/release/app-china-release.apk" "${{github.workspace}}/app/channel/PureMusic_${{ github.ref_name }}.apk"
-          mv "artifacts/arm64_apk_${{ github.ref_name }}/app/build/outputs/apk/china/release/app-china-release.apk" "${{github.workspace}}/app/channelarm64/PureMusic_${{ github.ref_name }}_arm64.apk"
           mv "artifacts/arm64_exclude_mpv_apk_${{ github.ref_name }}/app/build/outputs/apk/china/release/app-china-release.apk" "${{github.workspace}}/app/channelarm64_exclude_mpv/PureMusic_${{ github.ref_name }}_arm64.apk"
-          java -jar ${{github.workspace}}/app/VasDolly.jar put -c "github,telegram,xiaomi,huawei,kuan,qq,lanzou" ${{github.workspace}}/app/channel/PureMusic_${{ github.ref_name }}.apk ${{github.workspace}}/app/channel
-          java -jar ${{github.workspace}}/app/VasDolly.jar put -c "github,telegram,xiaomi,huawei,kuan,qq,lanzou" ${{github.workspace}}/app/channelarm64/PureMusic_${{ github.ref_name }}_arm64.apk ${{github.workspace}}/app/channelarm64
-          java -jar ${{github.workspace}}/app/VasDolly.jar put -c "github,telegram,xiaomi,huawei,kuan,qq,lanzou" ${{github.workspace}}/app/channelarm64_exclude_mpv/PureMusic_${{ github.ref_name }}_arm64.apk ${{github.workspace}}/app/channelarm64_exclude_mpv
+          java -jar ${{github.workspace}}/app/VasDolly.jar put -c "github,telegram,xiaomi,huawei,kuan,qq,lanzou,openlist" ${{github.workspace}}/app/channel/PureMusic_${{ github.ref_name }}.apk ${{github.workspace}}/app/channel
+          java -jar ${{github.workspace}}/app/VasDolly.jar put -c "github,telegram,xiaomi,huawei,kuan,qq,lanzou,openlist" ${{github.workspace}}/app/channelarm64_exclude_mpv/PureMusic_${{ github.ref_name }}_arm64.apk ${{github.workspace}}/app/channelarm64_exclude_mpv
           mv "${{github.workspace}}/app/channel/github-PureMusic_${{ github.ref_name }}.apk" "artifacts/PureMusic_${{ github.ref_name }}_android_mpv.apk"
-          mv "${{github.workspace}}/app/channelarm64/github-PureMusic_${{ github.ref_name }}_arm64.apk" "artifacts/PureMusic_${{ github.ref_name }}_android_mpv_arm64.apk"
           mv "${{github.workspace}}/app/channelarm64_exclude_mpv/github-PureMusic_${{ github.ref_name }}_arm64.apk" "artifacts/PureMusic_${{ github.ref_name }}_android_mediax_arm64.apk"
-          curl -F "chat_id=-1002062702442" -F "caption=${{ github.ref_name }}" -F document=@${{github.workspace}}/app/channelarm64/qq-PureMusic_${{ github.ref_name }}_arm64.apk -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendDocument"
 
       - name: Create Release
         id: create_remote_release
@@ -244,15 +239,24 @@ jobs:
 #          path: |
 #            ${{github.workspace}}/app/channel/*.apk
 
-      - name: upload lanzou
-        if: ${{ !contains(github.ref_name, 'beta') && !contains(github.ref_name, 'rc')}}
+      - name: upload lanzou apk mediax arm64
         run: |
           curl --location --request PUT '${{ secrets.ALIST_HOST }}/api/fs/form' \
           --header 'Authorization: ${{ secrets.ALIST_TOKEN }}' \
-          --header 'File-Path: /lanzou/puremusic/lanzou-PureMusic_${{ github.ref_name }}.apk' \
+          --header 'File-Path: /m/l/music/apk/v${{ github.ref_name }}/PureMusic_${{ github.ref_name }}_mediax_arm64.apk' \
           --header 'As-Task: true' \
           --header 'User-Agent: Apifox/1.0.0 (https://apifox.com)' \
-          --form 'file=@"${{github.workspace}}/app/channelarm64_exclude_mpv/lanzou-PureMusic_${{ github.ref_name }}_arm64.apk"'
+          --form 'file=@"${{github.workspace}}/app/channelarm64_exclude_mpv/openlist-PureMusic_${{ github.ref_name }}_arm64.apk"'
+
+      - name: upload lanzou apk all
+        run: |
+          curl --location --request PUT '${{ secrets.ALIST_HOST }}/api/fs/form' \
+          --header 'Authorization: ${{ secrets.ALIST_TOKEN }}' \
+          --header 'File-Path: /m/l/music/apk/v${{ github.ref_name }}/PureMusic_${{ github.ref_name }}_mpv.apk' \
+          --header 'As-Task: true' \
+          --header 'User-Agent: Apifox/1.0.0 (https://apifox.com)' \
+          --form 'file=@"${{github.workspace}}/app/channel/openlist-PureMusic_${{ github.ref_name }}.apk"'
+
 #      - name: send tg message
 #        uses: appleboy/telegram-action@master
 #        with:
