@@ -115,10 +115,10 @@ jobs:
         if: matrix.target == 'apk' && matrix.arch == 'arm64_exclude_mpv'
         run: |
           . ${{github.workspace}}/version.properties
-          echo $showVersionName
           suffix="-mediax"
-          versionNameChanged=$versionName$suffix
+          versionNameChanged=$$showVersionName$suffix
           cat ${{github.workspace}}/version.properties
+          echo $versionNameChanged
           java -jar ${{github.workspace}}/app/buglyqq-upload-symbol.jar -appid 1a1daf5790 -appkey ${{secrets.BUGLY_APP_KEY}} -bundleid com.caij.puremusic -version $versionNameChanged -platform Android -inputMapping ${{github.workspace}}/app/build/outputs/mapping/chinaRelease/mapping.txt
           gzip -c ${{github.workspace}}/app/build/outputs/mapping/chinaRelease/mapping.txt > ${{github.workspace}}/app/build/outputs/mapping/chinaRelease/mapping.txt.gz
           curl -F "chat_id=-1002062702442" -F "caption=$versionNameChanged" -F document=@${{github.workspace}}/app/build/outputs/mapping/chinaRelease/mapping.txt.gz -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendDocument"
