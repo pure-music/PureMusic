@@ -116,7 +116,7 @@ jobs:
         run: |
           . ${{github.workspace}}/version.properties
           suffix="-mediax"
-          versionNameChanged=$$showVersionName$suffix
+          versionNameChanged=$showVersionName$suffix
           cat ${{github.workspace}}/version.properties
           echo $versionNameChanged
           java -jar ${{github.workspace}}/app/buglyqq-upload-symbol.jar -appid 1a1daf5790 -appkey ${{secrets.BUGLY_APP_KEY}} -bundleid com.caij.puremusic -version $versionNameChanged -platform Android -inputMapping ${{github.workspace}}/app/build/outputs/mapping/chinaRelease/mapping.txt
