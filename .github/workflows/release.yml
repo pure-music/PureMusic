@@ -250,7 +250,7 @@ jobs:
         run: |
           curl --location --request PUT '${{ secrets.ALIST_HOST }}/api/fs/form' \
           --header 'Authorization: ${{ secrets.ALIST_TOKEN }}' \
-          --header 'File-Path: /m/l/music/apk/v${{ github.ref_name }}/PureMusic_${{ github.ref_name }}_mediax_arm64.apk' \
+          --header 'File-Path: /m/l/music/apk/${{ github.ref_name }}/PureMusic_${{ github.ref_name }}_mediax_arm64.apk' \
           --header 'As-Task: true' \
           --header 'User-Agent: Apifox/1.0.0 (https://apifox.com)' \
           --form 'file=@"${{github.workspace}}/app/channelarm64_exclude_mpv/openlist-PureMusic_${{ github.ref_name }}_arm64.apk"'
@@ -259,7 +259,7 @@ jobs:
         run: |
           curl --location --request PUT '${{ secrets.ALIST_HOST }}/api/fs/form' \
           --header 'Authorization: ${{ secrets.ALIST_TOKEN }}' \
-          --header 'File-Path: /m/l/music/apk/v${{ github.ref_name }}/PureMusic_${{ github.ref_name }}_mpv.apk' \
+          --header 'File-Path: /m/l/music/apk/${{ github.ref_name }}/PureMusic_${{ github.ref_name }}_mpv.apk' \
           --header 'As-Task: true' \
           --header 'User-Agent: Apifox/1.0.0 (https://apifox.com)' \
           --form 'file=@"${{github.workspace}}/app/channel/openlist-PureMusic_${{ github.ref_name }}.apk"'
