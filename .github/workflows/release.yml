@@ -278,6 +278,7 @@ jobs:
 #          message: "${{steps.read_file.outputs.contents}}"
 #          document: ${{github.workspace}}/artifacts/PureMusic_${{ env.version }}_android.apk
       - name: release app server
+        if: ${{ !contains(github.ref_name, 'beta') }}
         run: |
           . ${{github.workspace}}/version.properties
           releaseVersionCode=$versionCode
