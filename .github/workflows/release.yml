@@ -230,15 +230,21 @@ jobs:
           prerelease: ${{env.PRERELEASE}}
 
       - name: Read CHANGELOG
-        id: read_file
+        id: read_changelog_file
         uses: andstor/file-reader-action@v1
         with:
           path: ${{ github.workspace }}/CHANGELOG.txt
 
+      - name: Read CHANGELOG
+        id: read_footer_file
+        uses: andstor/file-reader-action@v1
+        with:
+          path: ${{ github.workspace }}/Footer.txt
+
       - name: send tg message
         run: |
           mv "${{github.workspace}}/app/channelarm64_exclude_mpv/telegram-PureMusic_${{ github.ref_name }}_arm64.apk" "${{github.workspace}}/app/channelarm64_exclude_mpv/telegram-PureMusic_${{ github.ref_name }}_mediax_arm64.apk"
-          curl -F "chat_id=-1001816793644" -F "caption=${{steps.read_file.outputs.contents}}${{steps.create_remote_release.outputs.url}}" -F document=@${{github.workspace}}/app/channelarm64_exclude_mpv/telegram-PureMusic_${{ github.ref_name }}_mediax_arm64.apk -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendDocument"
+          curl -F "chat_id=-1001816793644" -F "caption=${{steps.read_changelog_file.outputs.contents}}${{steps.read_footer_file.outputs.contents}}${{steps.create_remote_release.outputs.url}}" -F document=@${{github.workspace}}/app/channelarm64_exclude_mpv/telegram-PureMusic_${{ github.ref_name }}_mediax_arm64.apk -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendDocument"
 
 #      - uses: actions/upload-artifact@v4
 #        with:
@@ -271,3 +277,18 @@ jobs:
 #          token: ${{ secrets.TELEGRAM_TOKEN }}
 #          message: "${{steps.read_file.outputs.contents}}"
 #          document: ${{github.workspace}}/artifacts/PureMusic_${{ env.version }}_android.apk
+      - name: release app server
+        run: |
+          . ${{github.workspace}}/version.properties
+          releaseVersionCode=$versionCode
+          cat ${{github.workspace}}/version.properties
+          echo $releaseVersionCode
+          curl -X POST '${{ secrets.ReleaseApiUrl }}' \
+            -H "Content-Type: application/x-www-form-urlencoded" \
+            -d "versionCode=$releaseVersionCode" \
+            -d "versionName=$showVersionName" \
+            -d "alterVersion=$sAlterVersion" \
+            -d "forceVersion=$sForceVersion" \
+            -d "releaseToken=${{ secrets.releaseToken }}" \
+            -d "webUrl=${{ secrets.ALIST_HOST }}/m/l/music/apk/${{ github.ref_name }}" \
+            -d "updateLog=${{steps.read_changelog_file.outputs.contents}}"
