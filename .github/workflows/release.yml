@@ -284,12 +284,20 @@ jobs:
           releaseVersionCode=$versionCode
           cat ${{github.workspace}}/version.properties
           echo $releaseVersionCode
+          if echo "$showVersionName" | grep -qi "beta"; then
+            releaseTypeInt=1
+          elif echo "$showVersionName" | grep -qi "rc"; then
+            releaseTypeInt=2
+          else
+            releaseTypeInt=0
+          fi
           curl -X POST '${{ secrets.ReleaseApiUrl }}' \
             -H "Content-Type: application/x-www-form-urlencoded" \
             -d "versionCode=$releaseVersionCode" \
             -d "versionName=$showVersionName" \
             -d "alterVersion=$sAlterVersion" \
             -d "forceVersion=$sForceVersion" \
+            -d "releaseType=$releaseTypeInt" \
             -d "releaseToken=${{ secrets.releaseToken }}" \
             -d "webUrl=${{ secrets.ALIST_HOST }}/m/l/music/apk/${{ github.ref_name }}" \
             -d "updateLog=${{steps.read_changelog_file.outputs.contents}}"
