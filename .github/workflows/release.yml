@@ -12,33 +12,33 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - os: ubuntu-latest
+          - os: macos-15
             target: apk
             arch: all
             module: app
             task: assembleChinaRelease
 
-          - os: ubuntu-latest
+          - os: macos-15
             target: apk
             arch: arm64_exclude_mpv
             module: app
             task: assembleChinaRelease
             params: -PabiArm64=1 -PexcludeMpv=1
 
-          - os: ubuntu-latest
+          - os: macos-15
             target: aab
             arch: all
             module: app
             task: bundleGoogleRelease
 
-          - os: macos-13
+          - os: macos-14-large
             target: dmg
             arch: x86_64
             module: desktopApp
             task: packageReleaseDmg
             params: -PdeviceType=2
 
-          - os: macos-14
+          - os: macos-15
             target: dmg
             arch: arm64
             module: desktopApp
