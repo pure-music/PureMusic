@@ -31,7 +31,7 @@ jobs:
             module: app
             task: bundleGoogleRelease
 
-          - os: macos-14-large
+          - os: macos-15-large
             target: dmg
             arch: x86_64
             module: desktopApp
