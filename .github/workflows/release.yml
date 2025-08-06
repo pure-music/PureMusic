@@ -12,27 +12,27 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - os: macos-14
+          - os: ubuntu-latest
             target: apk
             arch: all
             module: app
             task: assembleChinaRelease
 
-          - os: macos-14
+          - os: ubuntu-latest
             target: apk
             arch: arm64_exclude_mpv
             module: app
             task: assembleChinaRelease
             params: -PabiFilters=arm64-v8a -PexcludeMpv=1
 
-          - os: macos-14
+          - os: ubuntu-latest
             target: apk
             arch: armv7a_exclude_mpv
             module: app
             task: assembleChinaRelease
             params: -PabiFilters=armeabi-v7a -PexcludeMpv=1
 
-          - os: macos-14
+          - os: ubuntu-latest
             target: aab
             arch: all
             module: app
