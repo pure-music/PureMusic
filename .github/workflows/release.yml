@@ -268,8 +268,8 @@ jobs:
         with:
           name: artifacts-channel-apk-${{ github.ref_name }}
           path: |
-            ${{github.workspace}}/app/channelarmv7a_exclude_mpv/CottonMusic_${{ github.ref_name }}_armv7a.apk ${{github.workspace}}/app/channelarmv7a_exclude_mpv/*.apk
-            ${{github.workspace}}/app/channelarm64_exclude_mpv/CottonMusic_${{ github.ref_name }}_arm64.apk ${{github.workspace}}/app/channelarm64_exclude_mpv/*.apk
+            ${{github.workspace}}/app/channelarmv7a_exclude_mpv/*.apk
+            ${{github.workspace}}/app/channelarm64_exclude_mpv/*.apk
 
       - name: upload lanzou apk mediax arm64
         run: |
