@@ -12,20 +12,27 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - os: ubuntu-latest
+          - os: macos-14
             target: apk
             arch: all
             module: app
             task: assembleChinaRelease
 
-          - os: ubuntu-latest
+          - os: macos-14
             target: apk
             arch: arm64_exclude_mpv
             module: app
             task: assembleChinaRelease
-            params: -PabiArm64=1 -PexcludeMpv=1
+            params: -PabiFilters=arm64-v8a -PexcludeMpv=1
 
-          - os: ubuntu-latest
+          - os: macos-14
+            target: apk
+            arch: armv7a_exclude_mpv
+            module: app
+            task: assembleChinaRelease
+            params: -PabiFilters=armeabi-v7a -PexcludeMpv=1
+
+          - os: macos-14
             target: aab
             arch: all
             module: app
@@ -187,6 +194,12 @@ jobs:
           name: artifacts_arm64_exclude_mpv_apk_${{ github.ref_name }}
           path: artifacts/arm64_exclude_mpv_apk_${{ github.ref_name }}
 
+      - name: Download arm v7a exclude mpv apk artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: artifacts_armv7a_exclude_mpv_apk_${{ github.ref_name }}
+          path: artifacts/armv7a_exclude_mpv_apk_${{ github.ref_name }}
+
       - name: Download all apk artifacts
         uses: actions/download-artifact@v4
         with:
@@ -199,7 +212,7 @@ jobs:
           name: artifacts_all_aab_${{ github.ref_name }}
           path: artifacts/all_aab_${{ github.ref_name }}
 
-      - name: Rename artifacts
+      - name: Rename pc artifacts
         run: |
           mv "artifacts/x86_64_dmg_${{ github.ref_name }}/desktopApp/build/compose/binaries/main-release/dmg/Cotton Music-${{ env.version }}.dmg" "artifacts/CottonMusic_${{ github.ref_name }}_mac_x86_64.dmg"
 
@@ -209,13 +222,17 @@ jobs:
         run: |
           mkdir -p "${{github.workspace}}/app/channel"
           mkdir -p "${{github.workspace}}/app/channelarm64"
-           mkdir -p "${{github.workspace}}/app/channelarm64_exclude_mpv"
+          mkdir -p "${{github.workspace}}/app/channelarm64_exclude_mpv"
+          mkdir -p "${{github.workspace}}/app/channelarmv7a_exclude_mpv"
           mv "artifacts/all_apk_${{ github.ref_name }}/app/build/outputs/apk/china/release/app-china-release.apk" "${{github.workspace}}/app/channel/CottonMusic_${{ github.ref_name }}.apk"
           mv "artifacts/arm64_exclude_mpv_apk_${{ github.ref_name }}/app/build/outputs/apk/china/release/app-china-release.apk" "${{github.workspace}}/app/channelarm64_exclude_mpv/CottonMusic_${{ github.ref_name }}_arm64.apk"
+          mv "artifacts/armv7a_exclude_mpv_apk_${{ github.ref_name }}/app/build/outputs/apk/china/release/app-china-release.apk" "${{github.workspace}}/app/channelarmv7a_exclude_mpv/CottonMusic_${{ github.ref_name }}_armv7a.apk"
           java -jar ${{github.workspace}}/app/VasDolly.jar put -c "github,telegram,xiaomi,huawei,kuan,qq,lanzou,openlist" ${{github.workspace}}/app/channel/CottonMusic_${{ github.ref_name }}.apk ${{github.workspace}}/app/channel
           java -jar ${{github.workspace}}/app/VasDolly.jar put -c "github,telegram,xiaomi,huawei,kuan,qq,lanzou,openlist" ${{github.workspace}}/app/channelarm64_exclude_mpv/CottonMusic_${{ github.ref_name }}_arm64.apk ${{github.workspace}}/app/channelarm64_exclude_mpv
+          java -jar ${{github.workspace}}/app/VasDolly.jar put -c "github,telegram,xiaomi,huawei,kuan,qq,lanzou,openlist" ${{github.workspace}}/app/channelarmv7a_exclude_mpv/CottonMusic_${{ github.ref_name }}_armv7a.apk ${{github.workspace}}/app/channelarmv7a_exclude_mpv
           mv "${{github.workspace}}/app/channel/github-CottonMusic_${{ github.ref_name }}.apk" "artifacts/CottonMusic_${{ github.ref_name }}_android_mpv.apk"
           mv "${{github.workspace}}/app/channelarm64_exclude_mpv/github-CottonMusic_${{ github.ref_name }}_arm64.apk" "artifacts/CottonMusic_${{ github.ref_name }}_android_mediax_arm64.apk"
+          mv "${{github.workspace}}/app/channelarmv7a_exclude_mpv/github-CottonMusic_${{ github.ref_name }}_armv7a.apk" "artifacts/CottonMusic_${{ github.ref_name }}_android_mediax_armv7a.apk"
 
       - name: Create Release
         id: create_remote_release
@@ -246,11 +263,13 @@ jobs:
           mv "${{github.workspace}}/app/channelarm64_exclude_mpv/telegram-CottonMusic_${{ github.ref_name }}_arm64.apk" "${{github.workspace}}/app/channelarm64_exclude_mpv/telegram-CottonMusic_${{ github.ref_name }}_mediax_arm64.apk"
           curl -F "chat_id=-1001816793644" -F "caption=${{steps.read_changelog_file.outputs.contents}}${{steps.read_footer_file.outputs.contents}}${{steps.create_remote_release.outputs.url}}" -F document=@${{github.workspace}}/app/channelarm64_exclude_mpv/telegram-CottonMusic_${{ github.ref_name }}_mediax_arm64.apk -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendDocument"
 
-#      - uses: actions/upload-artifact@v4
-#        with:
-#          name: artifacts-channel-apk-${{ github.ref_name }}
-#          path: |
-#            ${{github.workspace}}/app/channel/*.apk
+      - uses: actions/upload-artifact@v4
+        if: ${{ !contains(github.ref_name, 'beta') && !contains(github.ref_name, 'rc') }}
+        with:
+          name: artifacts-channel-apk-${{ github.ref_name }}
+          path: |
+            ${{github.workspace}}/app/channelarmv7a_exclude_mpv/CottonMusic_${{ github.ref_name }}_armv7a.apk ${{github.workspace}}/app/channelarmv7a_exclude_mpv/*.apk
+            ${{github.workspace}}/app/channelarm64_exclude_mpv/CottonMusic_${{ github.ref_name }}_arm64.apk ${{github.workspace}}/app/channelarm64_exclude_mpv/*.apk
 
       - name: upload lanzou apk mediax arm64
         run: |
@@ -278,7 +297,7 @@ jobs:
 #          message: "${{steps.read_file.outputs.contents}}"
 #          document: ${{github.workspace}}/artifacts/PureMusic_${{ env.version }}_android.apk
       - name: release app server
-        if: ${{ !contains(github.ref_name, 'beta') }}
+        if: ${{ !contains(github.ref_name, 'beta') && !contains(github.ref_name, 'rc') }}
         run: |
           . ${{github.workspace}}/version.properties
           releaseVersionCode=$versionCode
