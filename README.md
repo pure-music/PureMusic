@@ -1,4 +1,4 @@
-# PureMusic
+# Cotton Music 棉花音乐
 
 Pure Music [官网](https://music.caij.xyz/)  
 下载：[https://github.com/pure-music/PureMusic/releases](https://github.com/pure-music/PureMusic/releases)
