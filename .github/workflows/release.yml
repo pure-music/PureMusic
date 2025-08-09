@@ -189,12 +189,12 @@ jobs:
         run: |
           mkdir -p "${{github.workspace}}/app/arm64/channel"
           mv "artifacts/all_arm64_apk_${{ github.ref_name }}/app/build/outputs/apk/china/release/app-china-release.apk" "${{github.workspace}}/app/arm64/channel/CottonMusic_${{ github.ref_name }}.apk"
-          java -jar ${{github.workspace}}/app/VasDolly.jar put -c "github,telegram,xiaomi,huawei,kuan,qq,lanzou,openlist,oppo,vivo" "${{github.workspace}}/app/arm64/channel/CottonMusic_${{ github.ref_name }}.apk" ${{github.workspace}}/app/arm64/channel
+          java -jar ${{github.workspace}}/app/VasDolly.jar put -c "github,telegram,lanzou,openlist" "${{github.workspace}}/app/arm64/channel/CottonMusic_${{ github.ref_name }}.apk" ${{github.workspace}}/app/arm64/channel
           mv "${{github.workspace}}/app/arm64/channel/github-CottonMusic_${{ github.ref_name }}.apk" "artifacts/CottonMusic_${{ github.ref_name }}_arm64_android.apk"
           
           mkdir -p "${{github.workspace}}/app/armv7a/channel"
           mv "artifacts/all_armv7a_apk_${{ github.ref_name }}/app/build/outputs/apk/china/release/app-china-release.apk" "${{github.workspace}}/app/armv7a/channel/CottonMusic_${{ github.ref_name }}.apk"
-          java -jar ${{github.workspace}}/app/VasDolly.jar put -c "github,telegram,xiaomi,huawei,kuan,qq,lanzou,openlist,oppo,vivo" "${{github.workspace}}/app/armv7a/channel/CottonMusic_${{ github.ref_name }}.apk" ${{github.workspace}}/app/armv7a/channel
+          java -jar ${{github.workspace}}/app/VasDolly.jar put -c "github,telegram,lanzou,openlist" "${{github.workspace}}/app/armv7a/channel/CottonMusic_${{ github.ref_name }}.apk" ${{github.workspace}}/app/armv7a/channel
           mv "${{github.workspace}}/app/armv7a/channel/github-CottonMusic_${{ github.ref_name }}.apk" "artifacts/CottonMusic_${{ github.ref_name }}_armv7a_android.apk"
 
       - name: Create Release
@@ -225,14 +225,6 @@ jobs:
         run: |
           mv "${{github.workspace}}/app/arm64/channel/telegram-CottonMusic_${{ github.ref_name }}.apk" "${{github.workspace}}/app/arm64/channel/telegram-CottonMusic_${{ github.ref_name }}_arm64.apk"
           curl -F "chat_id=-1001816793644" -F "caption=${{steps.read_changelog_file.outputs.contents}}${{steps.read_footer_file.outputs.contents}}${{steps.create_remote_release.outputs.url}}" -F document=@${{github.workspace}}/app/arm64/channel/telegram-CottonMusic_${{ github.ref_name }}_arm64.apk -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendDocument"
-
-      - uses: actions/upload-artifact@v4
-        if: ${{ !contains(github.ref_name, 'beta') && !contains(github.ref_name, 'rc') }}
-        with:
-          name: artifacts-channel-apk-${{ github.ref_name }}
-          path: |
-            ${{github.workspace}}/app/arm64/channel/*.apk
-            ${{github.workspace}}/app/armv7a/channel/*.apk
 
       - name: upload lanzou apk mediax arm64
         run: |
