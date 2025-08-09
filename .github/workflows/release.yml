@@ -197,6 +197,14 @@ jobs:
           java -jar ${{github.workspace}}/app/VasDolly.jar put -c "github,telegram,lanzou,openlist" "${{github.workspace}}/app/armv7a/channel/CottonMusic_${{ github.ref_name }}.apk" ${{github.workspace}}/app/armv7a/channel
           mv "${{github.workspace}}/app/armv7a/channel/github-CottonMusic_${{ github.ref_name }}.apk" "artifacts/CottonMusic_${{ github.ref_name }}_armv7a_android.apk"
 
+      - uses: actions/upload-artifact@v4
+        if: ${{ !contains(github.ref_name, 'beta') && !contains(github.ref_name, 'rc') }}
+        with:
+          name: artifacts-channel-apk-${{ github.ref_name }}
+          path: |
+            ${{github.workspace}}/app/armv7a/channel/CottonMusic_${{ github.ref_name }}.apk
+            ${{github.workspace}}/app/arm64/channel/CottonMusic_${{ github.ref_name }}.apk
+
       - name: Create Release
         id: create_remote_release
         uses: softprops/action-gh-release@v1
