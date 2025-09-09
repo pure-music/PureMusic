@@ -23,4 +23,4 @@ jobs:
           host: ${{ secrets.SERVER_IP }}
           port: ${{ secrets.SERVER_PORT }}
           username: ${{ secrets.SERVER_USERNAME }}
-          target: /www/wwwroot/mirrors.musiccotton.com/music/
+          target: /www/wwwroot/
