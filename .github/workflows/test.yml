@@ -27,5 +27,5 @@ jobs:
           source: "app-home-screen.jpg"
           host: ${{ secrets.SERVER_IP }}
           port: 22
-          username: root
+          username: 271945881@qq.com
           target: /www/wwwroot
