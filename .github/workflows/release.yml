@@ -229,28 +229,28 @@ jobs:
         with:
           path: ${{ github.workspace }}/Footer.txt
 
-      - name: send tg message
-        run: |
-          mv "${{github.workspace}}/app/arm64/channel/telegram-CottonMusic_${{ github.ref_name }}.apk" "${{github.workspace}}/app/arm64/channel/telegram-CottonMusic_${{ github.ref_name }}_arm64.apk"
-          curl -F "chat_id=-1001816793644" -F "caption=${{steps.read_changelog_file.outputs.contents}}${{steps.read_footer_file.outputs.contents}}${{steps.create_remote_release.outputs.url}}" -F document=@${{github.workspace}}/app/arm64/channel/telegram-CottonMusic_${{ github.ref_name }}_arm64.apk -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendDocument"
-
-      - name: upload lanzou apk mediax arm64
-        run: |
-          curl --location --request PUT '${{ secrets.ALIST_HOST }}/api/fs/form' \
-          --header 'Authorization: ${{ secrets.ALIST_TOKEN }}' \
-          --header 'File-Path: /m/l/music/apk/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_arm64.apk' \
-          --header 'As-Task: true' \
-          --header 'User-Agent: Apifox/1.0.0 (https://apifox.com)' \
-          --form 'file=@"${{github.workspace}}/app/arm64/channel/openlist-CottonMusic_${{ github.ref_name }}.apk"'
-
-      - name: upload lanzou apk all
-        run: |
-          curl --location --request PUT '${{ secrets.ALIST_HOST }}/api/fs/form' \
-          --header 'Authorization: ${{ secrets.ALIST_TOKEN }}' \
-          --header 'File-Path: /m/l/music/apk/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_armv7a.apk' \
-          --header 'As-Task: true' \
-          --header 'User-Agent: Apifox/1.0.0 (https://apifox.com)' \
-          --form 'file=@"${{github.workspace}}/app/armv7a/channel/openlist-CottonMusic_${{ github.ref_name }}.apk"'
+#      - name: send tg message
+#        run: |
+#          mv "${{github.workspace}}/app/arm64/channel/telegram-CottonMusic_${{ github.ref_name }}.apk" "${{github.workspace}}/app/arm64/channel/telegram-CottonMusic_${{ github.ref_name }}_arm64.apk"
+#          curl -F "chat_id=-1001816793644" -F "caption=${{steps.read_changelog_file.outputs.contents}}${{steps.read_footer_file.outputs.contents}}${{steps.create_remote_release.outputs.url}}" -F document=@${{github.workspace}}/app/arm64/channel/telegram-CottonMusic_${{ github.ref_name }}_arm64.apk -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendDocument"
+#
+#      - name: upload lanzou apk mediax arm64
+#        run: |
+#          curl --location --request PUT '${{ secrets.ALIST_HOST }}/api/fs/form' \
+#          --header 'Authorization: ${{ secrets.ALIST_TOKEN }}' \
+#          --header 'File-Path: /m/l/music/apk/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_arm64.apk' \
+#          --header 'As-Task: true' \
+#          --header 'User-Agent: Apifox/1.0.0 (https://apifox.com)' \
+#          --form 'file=@"${{github.workspace}}/app/arm64/channel/openlist-CottonMusic_${{ github.ref_name }}.apk"'
+#
+#      - name: upload lanzou apk all
+#        run: |
+#          curl --location --request PUT '${{ secrets.ALIST_HOST }}/api/fs/form' \
+#          --header 'Authorization: ${{ secrets.ALIST_TOKEN }}' \
+#          --header 'File-Path: /m/l/music/apk/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_armv7a.apk' \
+#          --header 'As-Task: true' \
+#          --header 'User-Agent: Apifox/1.0.0 (https://apifox.com)' \
+#          --form 'file=@"${{github.workspace}}/app/armv7a/channel/openlist-CottonMusic_${{ github.ref_name }}.apk"'
 
 #      - name: send tg message
 #        uses: appleboy/telegram-action@master
@@ -272,27 +272,27 @@ jobs:
           target: /www/wwwroot/mirrors.musiccotton.com/music/${{ github.ref_name }}/
 
 
-      - name: release app server
-        if: ${{ !contains(github.ref_name, 'beta') && !contains(github.ref_name, 'rc') }}
-        run: |
-          . ${{github.workspace}}/version.properties
-          releaseVersionCode=$versionCode
-          cat ${{github.workspace}}/version.properties
-          echo $releaseVersionCode
-          if echo "$showVersionName" | grep -qi "beta"; then
-            releaseTypeInt=1
-          elif echo "$showVersionName" | grep -qi "rc"; then
-            releaseTypeInt=2
-          else
-            releaseTypeInt=0
-          fi
-          curl -X POST '${{ secrets.ReleaseApiUrl }}' \
-            -H "Content-Type: application/x-www-form-urlencoded" \
-            -d "versionCode=$releaseVersionCode" \
-            -d "versionName=$showVersionName" \
-            -d "alterVersion=$sAlterVersion" \
-            -d "forceVersion=$sForceVersion" \
-            -d "releaseType=$releaseTypeInt" \
-            -d "releaseToken=${{ secrets.releaseToken }}" \
-            -d "webUrl=${{ secrets.ALIST_HOST }}/m/l/music/apk/${{ github.ref_name }}" \
-            -d "updateLog=${{steps.read_changelog_file.outputs.contents}}"
+#      - name: release app server
+#        if: ${{ !contains(github.ref_name, 'beta') && !contains(github.ref_name, 'rc') }}
+#        run: |
+#          . ${{github.workspace}}/version.properties
+#          releaseVersionCode=$versionCode
+#          cat ${{github.workspace}}/version.properties
+#          echo $releaseVersionCode
+#          if echo "$showVersionName" | grep -qi "beta"; then
+#            releaseTypeInt=1
+#          elif echo "$showVersionName" | grep -qi "rc"; then
+#            releaseTypeInt=2
+#          else
+#            releaseTypeInt=0
+#          fi
+#          curl -X POST '${{ secrets.ReleaseApiUrl }}' \
+#            -H "Content-Type: application/x-www-form-urlencoded" \
+#            -d "versionCode=$releaseVersionCode" \
+#            -d "versionName=$showVersionName" \
+#            -d "alterVersion=$sAlterVersion" \
+#            -d "forceVersion=$sForceVersion" \
+#            -d "releaseType=$releaseTypeInt" \
+#            -d "releaseToken=${{ secrets.releaseToken }}" \
+#            -d "webUrl=${{ secrets.ALIST_HOST }}/m/l/music/apk/${{ github.ref_name }}" \
+#            -d "updateLog=${{steps.read_changelog_file.outputs.contents}}"
