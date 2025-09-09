@@ -26,6 +26,6 @@ jobs:
           key: ${{ secrets.PRIVATE_KEY }}
           source: "app-home-screen.jpg"
           host: ${{ secrets.SERVER_IP }}
-          port: ${{ secrets.SERVER_PORT }}
-          username: ${{ secrets.SERVER_USERNAME }}
+          port: 22
+          username: root
           target: /www/wwwroot
