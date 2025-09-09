@@ -15,6 +15,11 @@ jobs:
           java-version: '18'
           distribution: 'temurin'
           cache: gradle
+
+      - name: ls
+        run: |
+          ls
+
       - name: Deploy to Server
         uses: appleboy/scp-action@v1
         with:
@@ -23,4 +28,4 @@ jobs:
           host: ${{ secrets.SERVER_IP }}
           port: ${{ secrets.SERVER_PORT }}
           username: ${{ secrets.SERVER_USERNAME }}
-          target: /www/wwwroot/
+          target: /www/wwwroot
