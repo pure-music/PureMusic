@@ -229,70 +229,109 @@ jobs:
         with:
           path: ${{ github.workspace }}/Footer.txt
 
-#      - name: send tg message
-#        run: |
-#          mv "${{github.workspace}}/app/arm64/channel/telegram-CottonMusic_${{ github.ref_name }}.apk" "${{github.workspace}}/app/arm64/channel/telegram-CottonMusic_${{ github.ref_name }}_arm64.apk"
-#          curl -F "chat_id=-1001816793644" -F "caption=${{steps.read_changelog_file.outputs.contents}}${{steps.read_footer_file.outputs.contents}}${{steps.create_remote_release.outputs.url}}" -F document=@${{github.workspace}}/app/arm64/channel/telegram-CottonMusic_${{ github.ref_name }}_arm64.apk -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendDocument"
-#
-#      - name: upload lanzou apk mediax arm64
-#        run: |
-#          curl --location --request PUT '${{ secrets.ALIST_HOST }}/api/fs/form' \
-#          --header 'Authorization: ${{ secrets.ALIST_TOKEN }}' \
-#          --header 'File-Path: /m/l/music/apk/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_arm64.apk' \
-#          --header 'As-Task: true' \
-#          --header 'User-Agent: Apifox/1.0.0 (https://apifox.com)' \
-#          --form 'file=@"${{github.workspace}}/app/arm64/channel/openlist-CottonMusic_${{ github.ref_name }}.apk"'
-#
-#      - name: upload lanzou apk all
-#        run: |
-#          curl --location --request PUT '${{ secrets.ALIST_HOST }}/api/fs/form' \
-#          --header 'Authorization: ${{ secrets.ALIST_TOKEN }}' \
-#          --header 'File-Path: /m/l/music/apk/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_armv7a.apk' \
-#          --header 'As-Task: true' \
-#          --header 'User-Agent: Apifox/1.0.0 (https://apifox.com)' \
-#          --form 'file=@"${{github.workspace}}/app/armv7a/channel/openlist-CottonMusic_${{ github.ref_name }}.apk"'
+      - name: send tg message
+        run: |
+          mv "${{github.workspace}}/app/arm64/channel/telegram-CottonMusic_${{ github.ref_name }}.apk" "${{github.workspace}}/app/arm64/channel/telegram-CottonMusic_${{ github.ref_name }}_arm64.apk"
+          curl -F "chat_id=-1001816793644" -F "caption=${{steps.read_changelog_file.outputs.contents}}${{steps.read_footer_file.outputs.contents}}${{steps.create_remote_release.outputs.url}}" -F document=@${{github.workspace}}/app/arm64/channel/telegram-CottonMusic_${{ github.ref_name }}_arm64.apk -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendDocument"
 
-#      - name: send tg message
-#        uses: appleboy/telegram-action@master
-#        with:
-#          to: -1001816793644
-#          token: ${{ secrets.TELEGRAM_TOKEN }}
-#          message: "${{steps.read_file.outputs.contents}}"
-#          document: ${{github.workspace}}/artifacts/PureMusic_${{ env.version }}_android.apk
+      - uses: actions/upload-artifact@v4
+        with:
+          name: artifacts_upload_apk
+          if-no-files-found: error
+          path: |
+            ${{github.workspace}}/app/arm64/channel/openlist-CottonMusic_${{ github.ref_name }}.apk
+            ${{github.workspace}}/app/armv7a/channel/openlist-CottonMusic_${{ github.ref_name }}.apk
+            ${{github.workspace}}/app/arm64/channel/server-CottonMusic_${{ github.ref_name }}.apk
+            ${{github.workspace}}/app/armv7a/channel/server-CottonMusic_${{ github.ref_name }}.apk
 
+  upload_drive_apk_armv7a:
+    needs: release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download armv7a apk artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: artifacts_upload_apk
+          path: artifacts/artifacts_upload_apk
 
+      - name: upload lanzou apk arm64
+        run: |
+          curl --location --request PUT '${{ secrets.ALIST_HOST }}/api/fs/form' \
+          --header 'Authorization: ${{ secrets.ALIST_TOKEN }}' \
+          --header 'File-Path: /m/l/music/apk/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_arm64.apk' \
+          --header 'As-Task: true' \
+          --header 'User-Agent: Apifox/1.0.0 (https://apifox.com)' \
+          --form 'file=@"artifacts/artifacts_upload_apk/app/arm64/channel/openlist-CottonMusic_${{ github.ref_name }}.apk"'
+
+  upload_drive_apk_arm64:
+    needs: release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download armv7a apk artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: artifacts_upload_apk
+          path: artifacts/artifacts_upload_apk
+
+      - name: upload lanzou apk mediax arm64
+        run: |
+          curl --location --request PUT '${{ secrets.ALIST_HOST }}/api/fs/form' \
+          --header 'Authorization: ${{ secrets.ALIST_TOKEN }}' \
+          --header 'File-Path: /m/l/music/apk/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_arm64.apk' \
+          --header 'As-Task: true' \
+          --header 'User-Agent: Apifox/1.0.0 (https://apifox.com)' \
+          --form 'file=@"artifacts/artifacts_upload_apk/app/arm64/channel/openlist-CottonMusic_${{ github.ref_name }}.apk"'
+
+  upload_server:
+    needs: release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download armv7a apk artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: artifacts_upload_apk
+          path: artifacts/artifacts_upload_apk
       - name: Deploy to Server
         uses: appleboy/scp-action@v1
         with:
           key: ${{ secrets.PRIVATE_KEY }}
-          source: ${{github.workspace}}/app/arm64/channel/server-CottonMusic_${{ github.ref_name }}.apk,${{github.workspace}}/app/armv7a/channel/server-CottonMusic_${{ github.ref_name }}.apk
+          source: artifacts/artifacts_upload_apk/app/arm64/channel/server-CottonMusic_${{ github.ref_name }}.apk,artifacts/artifacts_upload_apk/app/armv7a/channel/server-CottonMusic_${{ github.ref_name }}.apk
           host: ${{ secrets.SERVER_IP }}
-          port: 22
-          username: root
+          port: ${{ secrets.SERVER_PORT }}
+          username: ${{ secrets.SERVER_USERNAME }}
           target: /www/wwwroot/mirrors.musiccotton.com/music/${{ github.ref_name }}/
 
+  release_app_server:
+    needs: [upload_server,upload_drive_apk_arm64,upload_drive_apk_armv7a]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          repository: Caij/pure-music
+          ref: ${{github.ref_name}}
+          token: ${{secrets.GLOBAL_GITHUB_TOKEN}}
 
-#      - name: release app server
-#        if: ${{ !contains(github.ref_name, 'beta') && !contains(github.ref_name, 'rc') }}
-#        run: |
-#          . ${{github.workspace}}/version.properties
-#          releaseVersionCode=$versionCode
-#          cat ${{github.workspace}}/version.properties
-#          echo $releaseVersionCode
-#          if echo "$showVersionName" | grep -qi "beta"; then
-#            releaseTypeInt=1
-#          elif echo "$showVersionName" | grep -qi "rc"; then
-#            releaseTypeInt=2
-#          else
-#            releaseTypeInt=0
-#          fi
-#          curl -X POST '${{ secrets.ReleaseApiUrl }}' \
-#            -H "Content-Type: application/x-www-form-urlencoded" \
-#            -d "versionCode=$releaseVersionCode" \
-#            -d "versionName=$showVersionName" \
-#            -d "alterVersion=$sAlterVersion" \
-#            -d "forceVersion=$sForceVersion" \
-#            -d "releaseType=$releaseTypeInt" \
-#            -d "releaseToken=${{ secrets.releaseToken }}" \
-#            -d "webUrl=${{ secrets.ALIST_HOST }}/m/l/music/apk/${{ github.ref_name }}" \
-#            -d "updateLog=${{steps.read_changelog_file.outputs.contents}}"
+      - name: release app server
+        if: ${{ !contains(github.ref_name, 'beta') && !contains(github.ref_name, 'rc') }}
+        run: |
+          . ${{github.workspace}}/version.properties
+          releaseVersionCode=$versionCode
+          cat ${{github.workspace}}/version.properties
+          echo $releaseVersionCode
+          if echo "$showVersionName" | grep -qi "beta"; then
+            releaseTypeInt=1
+          elif echo "$showVersionName" | grep -qi "rc"; then
+            releaseTypeInt=2
+          else
+            releaseTypeInt=0
+          fi
+          curl -X POST '${{ secrets.ReleaseApiUrl }}' \
+            -H "Content-Type: application/x-www-form-urlencoded" \
+            -d "versionCode=$releaseVersionCode" \
+            -d "versionName=$showVersionName" \
+            -d "alterVersion=$sAlterVersion" \
+            -d "forceVersion=$sForceVersion" \
+            -d "releaseType=$releaseTypeInt" \
+            -d "releaseToken=${{ secrets.releaseToken }}" \
+            -d "webUrl=${{ secrets.ALIST_HOST }}/m/l/music/apk/${{ github.ref_name }}" \
+            -d "updateLog=${{steps.read_changelog_file.outputs.contents}}"

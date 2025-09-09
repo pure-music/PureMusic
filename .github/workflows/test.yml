@@ -1,4 +1,4 @@
-name: Release CI
+name: Test CI
 
 on:
   workflow_dispatch:
@@ -19,13 +19,3 @@ jobs:
       - name: ls
         run: |
           ls
-
-      - name: Deploy to Server
-        uses: appleboy/scp-action@v1
-        with:
-          key: ${{ secrets.PRIVATE_KEY }}
-          source: "app-home-screen.jpg"
-          host: ${{ secrets.SERVER_IP }}
-          port: 22
-          username: root
-          target: /www/wwwroot
