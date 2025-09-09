@@ -267,8 +267,8 @@ jobs:
           key: ${{ secrets.PRIVATE_KEY }}
           source: ${{github.workspace}}/app/arm64/channel/server-CottonMusic_${{ github.ref_name }}.apk,${{github.workspace}}/app/armv7a/channel/server-CottonMusic_${{ github.ref_name }}.apk
           host: ${{ secrets.SERVER_IP }}
-          port: ${{ secrets.SERVER_PORT }}
-          username: ${{ secrets.SERVER_USERNAME }}
+          port: 22
+          username: root
           target: /www/wwwroot/mirrors.musiccotton.com/music/${{ github.ref_name }}/
 
 
