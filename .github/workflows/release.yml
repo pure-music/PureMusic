@@ -256,7 +256,8 @@ jobs:
 
       - name: ls files
         run: |
-          ls
+          echo $PWD
+          ls ${{github.workspace}}/artifacts/artifacts_upload_apk/arm64/channel/
           ls artifacts/artifacts_upload_apk
 
       - name: upload lanzou apk arm64
@@ -266,7 +267,7 @@ jobs:
           --header 'File-Path: /m/l/music/apk/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_arm64.apk' \
           --header 'As-Task: true' \
           --header 'User-Agent: Apifox/1.0.0 (https://apifox.com)' \
-          --form 'file=@"${{github.workspace}}/artifacts/artifacts_upload_apk/app/arm64/channel/openlist-CottonMusic_${{ github.ref_name }}.apk"'
+          --form 'file=@"${{github.workspace}}/artifacts/artifacts_upload_apk/arm64/channel/openlist-CottonMusic_${{ github.ref_name }}.apk"'
 
   upload_drive_apk_arm64:
     needs: release
@@ -285,7 +286,7 @@ jobs:
           --header 'File-Path: /m/l/music/apk/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_arm64.apk' \
           --header 'As-Task: true' \
           --header 'User-Agent: Apifox/1.0.0 (https://apifox.com)' \
-          --form 'file=@"${{github.workspace}}/artifacts/artifacts_upload_apk/app/arm64/channel/openlist-CottonMusic_${{ github.ref_name }}.apk"'
+          --form 'file=@"${{github.workspace}}/artifacts/artifacts_upload_apk/arm64/channel/openlist-CottonMusic_${{ github.ref_name }}.apk"'
 
   upload_server_apk32:
     needs: release
@@ -300,7 +301,7 @@ jobs:
         uses: appleboy/scp-action@v1
         with:
           key: ${{ secrets.PRIVATE_KEY }}
-          source: ${{github.workspace}}/artifacts/artifacts_upload_apk/app/armv7a/channel/server-CottonMusic_${{ github.ref_name }}.apk
+          source: ${{github.workspace}}/artifacts/artifacts_upload_apk/armv7a/channel/server-CottonMusic_${{ github.ref_name }}.apk
           host: ${{ secrets.SERVER_IP }}
           port: ${{ secrets.SERVER_PORT }}
           username: ${{ secrets.SERVER_USERNAME }}
@@ -319,7 +320,7 @@ jobs:
         uses: appleboy/scp-action@v1
         with:
           key: ${{ secrets.PRIVATE_KEY }}
-          source: ${{github.workspace}}/artifacts/artifacts_upload_apk/app/arm64/channel/server-CottonMusic_${{ github.ref_name }}.apk
+          source: ${{github.workspace}}/artifacts/artifacts_upload_apk/arm64/channel/server-CottonMusic_${{ github.ref_name }}.apk
           host: ${{ secrets.SERVER_IP }}
           port: ${{ secrets.SERVER_PORT }}
           username: ${{ secrets.SERVER_USERNAME }}
@@ -334,7 +335,11 @@ jobs:
           repository: Caij/pure-music
           ref: ${{github.ref_name}}
           token: ${{secrets.GLOBAL_GITHUB_TOKEN}}
-
+      - name: Read CHANGELOG
+        id: read_changelog_file
+        uses: andstor/file-reader-action@v1
+        with:
+          path: ${{ github.workspace }}/CHANGELOG.txt
       - name: release app server
         if: ${{ !contains(github.ref_name, 'beta') && !contains(github.ref_name, 'rc') }}
         run: |
