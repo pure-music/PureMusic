@@ -189,12 +189,12 @@ jobs:
         run: |
           mkdir -p "${{github.workspace}}/app/arm64/channel"
           mv "artifacts/all_arm64_apk_${{ github.ref_name }}/app/build/outputs/apk/china/release/app-china-release.apk" "${{github.workspace}}/app/arm64/channel/CottonMusic_${{ github.ref_name }}.apk"
-          java -jar ${{github.workspace}}/app/VasDolly.jar put -c "github,telegram,lanzou,openlist" "${{github.workspace}}/app/arm64/channel/CottonMusic_${{ github.ref_name }}.apk" ${{github.workspace}}/app/arm64/channel
+          java -jar ${{github.workspace}}/app/VasDolly.jar put -c "github,telegram,server,openlist" "${{github.workspace}}/app/arm64/channel/CottonMusic_${{ github.ref_name }}.apk" ${{github.workspace}}/app/arm64/channel
           mv "${{github.workspace}}/app/arm64/channel/github-CottonMusic_${{ github.ref_name }}.apk" "artifacts/CottonMusic_${{ github.ref_name }}_arm64_android.apk"
           
           mkdir -p "${{github.workspace}}/app/armv7a/channel"
           mv "artifacts/all_armv7a_apk_${{ github.ref_name }}/app/build/outputs/apk/china/release/app-china-release.apk" "${{github.workspace}}/app/armv7a/channel/CottonMusic_${{ github.ref_name }}.apk"
-          java -jar ${{github.workspace}}/app/VasDolly.jar put -c "github,telegram,lanzou,openlist" "${{github.workspace}}/app/armv7a/channel/CottonMusic_${{ github.ref_name }}.apk" ${{github.workspace}}/app/armv7a/channel
+          java -jar ${{github.workspace}}/app/VasDolly.jar put -c "github,telegram,server,openlist" "${{github.workspace}}/app/armv7a/channel/CottonMusic_${{ github.ref_name }}.apk" ${{github.workspace}}/app/armv7a/channel
           mv "${{github.workspace}}/app/armv7a/channel/github-CottonMusic_${{ github.ref_name }}.apk" "artifacts/CottonMusic_${{ github.ref_name }}_armv7a_android.apk"
 
       - uses: actions/upload-artifact@v4
@@ -259,6 +259,19 @@ jobs:
 #          token: ${{ secrets.TELEGRAM_TOKEN }}
 #          message: "${{steps.read_file.outputs.contents}}"
 #          document: ${{github.workspace}}/artifacts/PureMusic_${{ env.version }}_android.apk
+
+
+      - name: Deploy to Server
+        uses: appleboy/scp-action@v1
+        with:
+          key: ${{ secrets.PRIVATE_KEY }}
+          source: ${{github.workspace}}/app/arm64/channel/server-CottonMusic_${{ github.ref_name }}.apk,${{github.workspace}}/app/armv7a/channel/server-CottonMusic_${{ github.ref_name }}.apk
+          host: ${{ secrets.SERVER_IP }}
+          port: ${{ secrets.SERVER_PORT }}
+          username: ${{ secrets.SERVER_PORT }}
+          target: /www/wwwroot/mirrors.musiccotton.com/music/${{ github.ref_name }}/
+
+
       - name: release app server
         if: ${{ !contains(github.ref_name, 'beta') && !contains(github.ref_name, 'rc') }}
         run: |
