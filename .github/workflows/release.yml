@@ -282,7 +282,7 @@ jobs:
           --header 'User-Agent: Apifox/1.0.0 (https://apifox.com)' \
           --form 'file=@"artifacts/artifacts_upload_apk/app/arm64/channel/openlist-CottonMusic_${{ github.ref_name }}.apk"'
 
-  upload_server:
+  upload_server_apk32:
     needs: release
     runs-on: ubuntu-latest
     steps:
@@ -295,14 +295,33 @@ jobs:
         uses: appleboy/scp-action@v1
         with:
           key: ${{ secrets.PRIVATE_KEY }}
-          source: artifacts/artifacts_upload_apk/app/arm64/channel/server-CottonMusic_${{ github.ref_name }}.apk,artifacts/artifacts_upload_apk/app/armv7a/channel/server-CottonMusic_${{ github.ref_name }}.apk
+          source: artifacts/artifacts_upload_apk/app/armv7a/channel/server-CottonMusic_${{ github.ref_name }}.apk
+          host: ${{ secrets.SERVER_IP }}
+          port: ${{ secrets.SERVER_PORT }}
+          username: ${{ secrets.SERVER_USERNAME }}
+          target: /www/wwwroot/mirrors.musiccotton.com/music/${{ github.ref_name }}/
+
+  upload_server_apk64:
+    needs: release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download armv7a apk artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: artifacts_upload_apk
+          path: artifacts/artifacts_upload_apk
+      - name: Deploy to Server
+        uses: appleboy/scp-action@v1
+        with:
+          key: ${{ secrets.PRIVATE_KEY }}
+          source: artifacts/artifacts_upload_apk/app/arm64/channel/server-CottonMusic_${{ github.ref_name }}.apk
           host: ${{ secrets.SERVER_IP }}
           port: ${{ secrets.SERVER_PORT }}
           username: ${{ secrets.SERVER_USERNAME }}
           target: /www/wwwroot/mirrors.musiccotton.com/music/${{ github.ref_name }}/
 
   release_app_server:
-    needs: [upload_server,upload_drive_apk_arm64,upload_drive_apk_armv7a]
+    needs: [upload_server_apk64,upload_server_apk32,upload_drive_apk_arm64,upload_drive_apk_armv7a]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
