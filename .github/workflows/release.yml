@@ -285,8 +285,8 @@ jobs:
           path: artifacts/artifacts_upload_apk
       - name: cd to path
         run: |
-          cd ${{github.workspace}}/artifacts/artifacts_upload_apk/armv7a/channel/
-          ls
+          ls ${{github.workspace}}/artifacts/artifacts_upload_apk/armv7a/channel/
+          mv "${{github.workspace}}/artifacts/artifacts_upload_apk/armv7a/channel/server-CottonMusic_${{ github.ref_name }}.apk" "${{github.workspace}}/server-CottonMusic_${{ github.ref_name }}.apk"
       - name: Deploy to Server
         uses: appleboy/scp-action@v1
         with:
@@ -308,8 +308,8 @@ jobs:
           path: artifacts/artifacts_upload_apk
       - name: cd to path
         run: |
-          cd ${{github.workspace}}/artifacts/artifacts_upload_apk/arm64/channel/
-          ls
+          ls ${{github.workspace}}/artifacts/artifacts_upload_apk/arm64/channel/
+          mv "${{github.workspace}}/artifacts/artifacts_upload_apk/arm64/channel/server-CottonMusic_${{ github.ref_name }}.apk" "${{github.workspace}}/server-CottonMusic_${{ github.ref_name }}.apk"
       - name: Deploy to Server
         uses: appleboy/scp-action@v1
         with:
