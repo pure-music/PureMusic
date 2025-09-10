@@ -197,14 +197,6 @@ jobs:
           java -jar ${{github.workspace}}/app/VasDolly.jar put -c "github,telegram,server,openlist" "${{github.workspace}}/app/armv7a/channel/CottonMusic_${{ github.ref_name }}.apk" ${{github.workspace}}/app/armv7a/channel
           mv "${{github.workspace}}/app/armv7a/channel/github-CottonMusic_${{ github.ref_name }}.apk" "artifacts/CottonMusic_${{ github.ref_name }}_armv7a_android.apk"
 
-      - uses: actions/upload-artifact@v4
-        if: ${{ !contains(github.ref_name, 'beta') && !contains(github.ref_name, 'rc') }}
-        with:
-          name: artifacts-channel-apk-${{ github.ref_name }}
-          path: |
-            ${{github.workspace}}/app/armv7a/channel/CottonMusic_${{ github.ref_name }}.apk
-            ${{github.workspace}}/app/arm64/channel/CottonMusic_${{ github.ref_name }}.apk
-
       - name: Create Release
         id: create_remote_release
         uses: softprops/action-gh-release@v1
@@ -229,10 +221,10 @@ jobs:
         with:
           path: ${{ github.workspace }}/Footer.txt
 
-#      - name: send tg message
-#        run: |
-#          mv "${{github.workspace}}/app/arm64/channel/telegram-CottonMusic_${{ github.ref_name }}.apk" "${{github.workspace}}/app/arm64/channel/telegram-CottonMusic_${{ github.ref_name }}_arm64.apk"
-#          curl -F "chat_id=-1001816793644" -F "caption=${{steps.read_changelog_file.outputs.contents}}${{steps.read_footer_file.outputs.contents}}${{steps.create_remote_release.outputs.url}}" -F document=@${{github.workspace}}/app/arm64/channel/telegram-CottonMusic_${{ github.ref_name }}_arm64.apk -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendDocument"
+      - name: send tg message
+        run: |
+          mv "${{github.workspace}}/app/arm64/channel/telegram-CottonMusic_${{ github.ref_name }}.apk" "${{github.workspace}}/app/arm64/channel/telegram-CottonMusic_${{ github.ref_name }}_arm64.apk"
+          curl -F "chat_id=-1001816793644" -F "caption=${{steps.read_changelog_file.outputs.contents}}${{steps.read_footer_file.outputs.contents}}${{steps.create_remote_release.outputs.url}}" -F document=@${{github.workspace}}/app/arm64/channel/telegram-CottonMusic_${{ github.ref_name }}_arm64.apk -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendDocument"
 
       - uses: actions/upload-artifact@v4
         with:
@@ -253,12 +245,6 @@ jobs:
         with:
           name: artifacts_upload_apk
           path: artifacts/artifacts_upload_apk
-
-      - name: ls files
-        run: |
-          echo $PWD
-          ls ${{github.workspace}}/artifacts/artifacts_upload_apk/arm64/channel/
-          ls artifacts/artifacts_upload_apk
 
       - name: upload lanzou apk arm64
         run: |
@@ -297,11 +283,14 @@ jobs:
         with:
           name: artifacts_upload_apk
           path: artifacts/artifacts_upload_apk
+      - name: cd to path
+        run: |
+          cd ${{github.workspace}}/artifacts/artifacts_upload_apk/armv7a/channel
       - name: Deploy to Server
         uses: appleboy/scp-action@v1
         with:
           key: ${{ secrets.PRIVATE_KEY }}
-          source: ${{github.workspace}}/artifacts/artifacts_upload_apk/armv7a/channel/server-CottonMusic_${{ github.ref_name }}.apk
+          source: server-CottonMusic_${{ github.ref_name }}.apk
           host: ${{ secrets.SERVER_IP }}
           port: ${{ secrets.SERVER_PORT }}
           username: ${{ secrets.SERVER_USERNAME }}
@@ -316,11 +305,14 @@ jobs:
         with:
           name: artifacts_upload_apk
           path: artifacts/artifacts_upload_apk
+      - name: cd to path
+        run: |
+          cd ${{github.workspace}}/artifacts/artifacts_upload_apk/arm64/channel
       - name: Deploy to Server
         uses: appleboy/scp-action@v1
         with:
           key: ${{ secrets.PRIVATE_KEY }}
-          source: ${{github.workspace}}/artifacts/artifacts_upload_apk/arm64/channel/server-CottonMusic_${{ github.ref_name }}.apk
+          source: server-CottonMusic_${{ github.ref_name }}.apk
           host: ${{ secrets.SERVER_IP }}
           port: ${{ secrets.SERVER_PORT }}
           username: ${{ secrets.SERVER_USERNAME }}
