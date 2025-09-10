@@ -285,7 +285,8 @@ jobs:
           path: artifacts/artifacts_upload_apk
       - name: cd to path
         run: |
-          cd ${{github.workspace}}/artifacts/artifacts_upload_apk/armv7a/channel
+          cd ${{github.workspace}}/artifacts/artifacts_upload_apk/armv7a/channel/
+          ls
       - name: Deploy to Server
         uses: appleboy/scp-action@v1
         with:
@@ -307,7 +308,8 @@ jobs:
           path: artifacts/artifacts_upload_apk
       - name: cd to path
         run: |
-          cd ${{github.workspace}}/artifacts/artifacts_upload_apk/arm64/channel
+          cd ${{github.workspace}}/artifacts/artifacts_upload_apk/arm64/channel/
+          ls
       - name: Deploy to Server
         uses: appleboy/scp-action@v1
         with:
