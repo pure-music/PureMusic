@@ -286,12 +286,12 @@ jobs:
       - name: cd to path
         run: |
           ls ${{github.workspace}}/artifacts/artifacts_upload_apk/armv7a/channel/
-          mv "${{github.workspace}}/artifacts/artifacts_upload_apk/armv7a/channel/server-CottonMusic_${{ github.ref_name }}.apk" "${{github.workspace}}/server-CottonMusic_${{ github.ref_name }}.apk"
+          mv "${{github.workspace}}/artifacts/artifacts_upload_apk/armv7a/channel/server-CottonMusic_${{ github.ref_name }}.apk" "${{github.workspace}}/server-CottonMusic_${{ github.ref_name }}_armv7a.apk"
       - name: Deploy to Server
         uses: appleboy/scp-action@v1
         with:
           key: ${{ secrets.PRIVATE_KEY }}
-          source: server-CottonMusic_${{ github.ref_name }}.apk
+          source: server-CottonMusic_${{ github.ref_name }}_armv7a.apk
           host: ${{ secrets.SERVER_IP }}
           port: ${{ secrets.SERVER_PORT }}
           username: ${{ secrets.SERVER_USERNAME }}
@@ -309,12 +309,12 @@ jobs:
       - name: cd to path
         run: |
           ls ${{github.workspace}}/artifacts/artifacts_upload_apk/arm64/channel/
-          mv "${{github.workspace}}/artifacts/artifacts_upload_apk/arm64/channel/server-CottonMusic_${{ github.ref_name }}.apk" "${{github.workspace}}/server-CottonMusic_${{ github.ref_name }}.apk"
+          mv "${{github.workspace}}/artifacts/artifacts_upload_apk/arm64/channel/server-CottonMusic_${{ github.ref_name }}.apk" "${{github.workspace}}/server-CottonMusic_${{ github.ref_name }}_arm64.apk"
       - name: Deploy to Server
         uses: appleboy/scp-action@v1
         with:
           key: ${{ secrets.PRIVATE_KEY }}
-          source: server-CottonMusic_${{ github.ref_name }}.apk
+          source: server-CottonMusic_${{ github.ref_name }}_arm64.apk
           host: ${{ secrets.SERVER_IP }}
           port: ${{ secrets.SERVER_PORT }}
           username: ${{ secrets.SERVER_USERNAME }}
