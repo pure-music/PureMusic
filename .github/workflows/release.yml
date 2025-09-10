@@ -250,10 +250,10 @@ jobs:
         run: |
           curl --location --request PUT '${{ secrets.ALIST_HOST }}/api/fs/form' \
           --header 'Authorization: ${{ secrets.ALIST_TOKEN }}' \
-          --header 'File-Path: /m/l/music/apk/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_arm64.apk' \
+          --header 'File-Path: /m/l/music/apk/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_armv7a.apk' \
           --header 'As-Task: true' \
           --header 'User-Agent: Apifox/1.0.0 (https://apifox.com)' \
-          --form 'file=@"${{github.workspace}}/artifacts/artifacts_upload_apk/arm64/channel/openlist-CottonMusic_${{ github.ref_name }}.apk"'
+          --form 'file=@"${{github.workspace}}/artifacts/artifacts_upload_apk/armv7a/channel/openlist-CottonMusic_${{ github.ref_name }}.apk"'
 
   upload_drive_apk_arm64:
     needs: release
