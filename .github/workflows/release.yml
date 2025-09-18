@@ -93,20 +93,12 @@ jobs:
             ${{github.workspace}}/app/build/outputs/bundle/googleRelease/app-google-release.aab
             ${{github.workspace}}/app/build/outputs/apk/china/release/app-china-release.apk 
 
-      - name: set up JDK 8
-        if: matrix.target == 'apk' && matrix.arch == 'all_arm64'
-        uses: actions/setup-java@v3
-        with:
-          java-version: '8'
-          distribution: 'temurin'
-
       - name: Upload mapping 1
         if: matrix.target == 'apk' && matrix.arch == 'all_arm64'
         run: |
           . ${{github.workspace}}/version.properties
           echo $showVersionName
           cat ${{github.workspace}}/version.properties
-          java -jar ${{github.workspace}}/app/buglyqq-upload-symbol.jar -appid 1a1daf5790 -appkey ${{secrets.BUGLY_APP_KEY}} -bundleid com.caij.puremusic -version $showVersionName -platform Android -inputMapping ${{github.workspace}}/app/build/outputs/mapping/chinaRelease/mapping.txt
           gzip -c ${{github.workspace}}/app/build/outputs/mapping/chinaRelease/mapping.txt > ${{github.workspace}}/app/build/outputs/mapping/chinaRelease/mapping.txt.gz
           curl -F "chat_id=-1002062702442" -F "caption=$showVersionName" -F document=@${{github.workspace}}/app/build/outputs/mapping/chinaRelease/mapping.txt.gz -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendDocument"
 
