@@ -228,44 +228,6 @@ jobs:
             ${{github.workspace}}/app/arm64/channel/server-CottonMusic_${{ github.ref_name }}.apk
             ${{github.workspace}}/app/armv7a/channel/server-CottonMusic_${{ github.ref_name }}.apk
 
-  upload_drive_apk_armv7a:
-    needs: release
-    runs-on: ubuntu-latest
-    steps:
-      - name: Download armv7a apk artifacts
-        uses: actions/download-artifact@v4
-        with:
-          name: artifacts_upload_apk
-          path: artifacts/artifacts_upload_apk
-
-      - name: upload lanzou apk arm64
-        run: |
-          curl --location --request PUT '${{ secrets.ALIST_HOST }}/api/fs/form' \
-          --header 'Authorization: ${{ secrets.ALIST_TOKEN }}' \
-          --header 'File-Path: /m/l/music/apk/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_armv7a.apk' \
-          --header 'As-Task: true' \
-          --header 'User-Agent: Apifox/1.0.0 (https://apifox.com)' \
-          --form 'file=@"${{github.workspace}}/artifacts/artifacts_upload_apk/armv7a/channel/openlist-CottonMusic_${{ github.ref_name }}.apk"'
-
-  upload_drive_apk_arm64:
-    needs: release
-    runs-on: ubuntu-latest
-    steps:
-      - name: Download armv7a apk artifacts
-        uses: actions/download-artifact@v4
-        with:
-          name: artifacts_upload_apk
-          path: artifacts/artifacts_upload_apk
-
-      - name: upload lanzou apk mediax arm64
-        run: |
-          curl --location --request PUT '${{ secrets.ALIST_HOST }}/api/fs/form' \
-          --header 'Authorization: ${{ secrets.ALIST_TOKEN }}' \
-          --header 'File-Path: /m/l/music/apk/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_arm64.apk' \
-          --header 'As-Task: true' \
-          --header 'User-Agent: Apifox/1.0.0 (https://apifox.com)' \
-          --form 'file=@"${{github.workspace}}/artifacts/artifacts_upload_apk/arm64/channel/openlist-CottonMusic_${{ github.ref_name }}.apk"'
-
   upload_server_apk32:
     needs: release
     runs-on: ubuntu-latest
@@ -278,12 +240,12 @@ jobs:
       - name: cd to path
         run: |
           ls ${{github.workspace}}/artifacts/artifacts_upload_apk/armv7a/channel/
-          mv "${{github.workspace}}/artifacts/artifacts_upload_apk/armv7a/channel/server-CottonMusic_${{ github.ref_name }}.apk" "${{github.workspace}}/server-CottonMusic_${{ github.ref_name }}_armv7a.apk"
+          mv "${{github.workspace}}/artifacts/artifacts_upload_apk/armv7a/channel/server-CottonMusic_${{ github.ref_name }}.apk" "${{github.workspace}}/CottonMusic_${{ github.ref_name }}_armv7a.apk"
       - name: Deploy to Server
         uses: appleboy/scp-action@v1
         with:
           key: ${{ secrets.PRIVATE_KEY }}
-          source: server-CottonMusic_${{ github.ref_name }}_armv7a.apk
+          source: CottonMusic_${{ github.ref_name }}_armv7a.apk
           host: ${{ secrets.SERVER_IP }}
           port: ${{ secrets.SERVER_PORT }}
           username: ${{ secrets.SERVER_USERNAME }}
@@ -301,12 +263,12 @@ jobs:
       - name: cd to path
         run: |
           ls ${{github.workspace}}/artifacts/artifacts_upload_apk/arm64/channel/
-          mv "${{github.workspace}}/artifacts/artifacts_upload_apk/arm64/channel/server-CottonMusic_${{ github.ref_name }}.apk" "${{github.workspace}}/server-CottonMusic_${{ github.ref_name }}_arm64.apk"
+          mv "${{github.workspace}}/artifacts/artifacts_upload_apk/arm64/channel/server-CottonMusic_${{ github.ref_name }}.apk" "${{github.workspace}}/CottonMusic_${{ github.ref_name }}_arm64.apk"
       - name: Deploy to Server
         uses: appleboy/scp-action@v1
         with:
           key: ${{ secrets.PRIVATE_KEY }}
-          source: server-CottonMusic_${{ github.ref_name }}_arm64.apk
+          source: CottonMusic_${{ github.ref_name }}_arm64.apk
           host: ${{ secrets.SERVER_IP }}
           port: ${{ secrets.SERVER_PORT }}
           username: ${{ secrets.SERVER_USERNAME }}
