@@ -275,7 +275,7 @@ jobs:
           target: /www/wwwroot/mirrors.musiccotton.com/music/${{ github.ref_name }}/
 
   release_app_server:
-    needs: [upload_server_apk64,upload_server_apk32,upload_drive_apk_arm64,upload_drive_apk_armv7a]
+    needs: [upload_server_apk64,upload_server_apk32]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
