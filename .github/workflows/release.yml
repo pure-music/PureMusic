@@ -310,5 +310,5 @@ jobs:
             -d "forceVersion=$sForceVersion" \
             -d "releaseType=$releaseTypeInt" \
             -d "releaseToken=${{ secrets.releaseToken }}" \
-            -d "webUrl=${{ secrets.ALIST_HOST }}/m/l/music/apk/${{ github.ref_name }}" \
+            -d "webUrl=https://mirrors.musiccotton.com/music/apk/${{ github.ref_name }}" \
             -d "updateLog=${{steps.read_changelog_file.outputs.contents}}"
