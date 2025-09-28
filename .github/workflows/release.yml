@@ -249,7 +249,7 @@ jobs:
           host: ${{ secrets.SERVER_IP }}
           port: ${{ secrets.SERVER_PORT }}
           username: ${{ secrets.SERVER_USERNAME }}
-          target: /www/wwwroot/mirrors.musiccotton.com/music/${{ github.ref_name }}/
+          target: /www/wwwroot/mirrors.musiccotton.com/files/music/${{ github.ref_name }}/
 
   upload_server_apk64:
     needs: release
@@ -272,7 +272,7 @@ jobs:
           host: ${{ secrets.SERVER_IP }}
           port: ${{ secrets.SERVER_PORT }}
           username: ${{ secrets.SERVER_USERNAME }}
-          target: /www/wwwroot/mirrors.musiccotton.com/music/${{ github.ref_name }}/
+          target: /www/wwwroot/mirrors.musiccotton.com/files/music/${{ github.ref_name }}/
 
   release_app_server:
     needs: [upload_server_apk64,upload_server_apk32]
