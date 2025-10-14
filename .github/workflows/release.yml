@@ -16,33 +16,36 @@ jobs:
             target: apk
             arch: all_arm64
             module: app
-            task: assembleChinaRelease -PabiFilters=arm64-v8a
+            task: assembleChinaRelease
+            params: -PabiFilters=arm64-v8a -Pbuildkonfig.flavor=release
 
           - os: ubuntu-latest
             target: apk
             arch: all_armv7a
             module: app
-            task: assembleChinaRelease -PabiFilters=armeabi-v7a
+            task: assembleChinaRelease
+            params: -PabiFilters=armeabi-v7a -Pbuildkonfig.flavor=release
 
           - os: ubuntu-latest
             target: aab
             arch: all
             module: app
             task: bundleGoogleRelease
+            params: -Pbuildkonfig.flavor=release
 
           - os: macos-13
             target: dmg
             arch: x86_64
             module: desktopApp
             task: packageReleaseDmg
-            params: -PdeviceType=2
+            params: -PdeviceType=2 -Pbuildkonfig.flavor=release
 
           - os: macos-14
             target: dmg
             arch: arm64
             module: desktopApp
             task: packageReleaseDmg
-            params: -PdeviceType=1
+            params: -PdeviceType=1 -Pbuildkonfig.flavor=release
 
 #          - os: windows-latest
 #            target: exe
