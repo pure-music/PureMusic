@@ -176,9 +176,9 @@ jobs:
 
       - name: Rename pc artifacts
         run: |
-          mv "artifacts/x86_64_dmg_${{ github.ref_name }}/desktopApp/build/compose/binaries/main-release/dmg/Cotton Music-${{ env.version }}.dmg" "artifacts/CottonMusic_${{ github.ref_name }}_mac_x86_64.dmg"
+          mv "artifacts/x86_64_dmg_${{ github.ref_name }}/desktopApp/build/compose/binaries/main-release/dmg/Cotton Music-${{ env.version }}.dmg" "artifacts/CottonMusic_${{ github.ref_name }}_mac_cpu_inter.dmg"
 
-          mv "artifacts/arm64_dmg_${{ github.ref_name }}/desktopApp/build/compose/binaries/main-release/dmg/Cotton Music-${{ env.version }}.dmg" "artifacts/CottonMusic_${{ github.ref_name }}_mac_arm64.dmg"
+          mv "artifacts/arm64_dmg_${{ github.ref_name }}/desktopApp/build/compose/binaries/main-release/dmg/Cotton Music-${{ env.version }}.dmg" "artifacts/CottonMusic_${{ github.ref_name }}_mac_cpu_apple.dmg"
 
       - name: Build channel apk
         run: |
