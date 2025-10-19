@@ -83,7 +83,7 @@ jobs:
       - name: Build
         run: |
           ./gradlew clean
-          ./gradlew ${{ matrix.module }}:${{ matrix.task }} ${{ matrix.params }}
+          ./gradlew ${{ matrix.module }}:${{ matrix.task }} ${{ matrix.params }} --stacktrace --debug
 
       - uses: actions/upload-artifact@v4
         with:
