@@ -17,42 +17,42 @@ jobs:
             arch: all_arm64
             module: app
             task: assembleChinaRelease
-            params: -PabiFilters=arm64-v8a -Pbuildkonfig.flavor=release
+            params: -PabiFilters=arm64-v8a
 
           - os: ubuntu-latest
             target: apk
             arch: all_armv7a
             module: app
             task: assembleChinaRelease
-            params: -PabiFilters=armeabi-v7a -Pbuildkonfig.flavor=release
+            params: -PabiFilters=armeabi-v7a
 
           - os: ubuntu-latest
             target: aab
             arch: all
             module: app
             task: bundleGoogleRelease
-            params: -Pbuildkonfig.flavor=release
+            params:
 
           - os: macos-13
             target: dmg
             arch: x86_64
             module: desktopApp
             task: packageReleaseDmg
-            params: -PdeviceType=2 -Pbuildkonfig.flavor=release
+            params: -PdeviceType=2
 
           - os: macos-14
             target: dmg
             arch: arm64
             module: desktopApp
             task: packageReleaseDmg
-            params: -PdeviceType=1 -Pbuildkonfig.flavor=release
+            params: -PdeviceType=1
 
           - os: windows-latest
             target: exe
             arch: x86_64
             module: desktopApp
             task: packageReleaseExe
-            params: -PdeviceType=4 -Pbuildkonfig.flavor=release
+            params: -PdeviceType=4
 #
 #          - os: ubuntu-latest
 #            target: deb
@@ -83,6 +83,9 @@ jobs:
       - name: Build
         run: |
           ./gradlew clean
+          # 将根目下 文件local.properties 添加buildkonfig.flavor=release
+          echo "buildkonfig.flavor=release" >> gradle.properties
+          cat gradle.properties
           ./gradlew ${{ matrix.module }}:${{ matrix.task }} ${{ matrix.params }}
 
       - uses: actions/upload-artifact@v4
