@@ -47,12 +47,12 @@ jobs:
             task: packageReleaseDmg
             params: -PdeviceType=1 -Pbuildkonfig.flavor=release
 
-#          - os: windows-latest
-#            target: exe
-#            arch: x86_64
-#            module: desktopApp
-#            task: packageReleaseExe
-#            params: -PdeviceType=4
+          - os: windows-latest
+            target: exe
+            arch: x86_64
+            module: desktopApp
+            task: packageReleaseExe
+            params: -PdeviceType=4 -Pbuildkonfig.flavor=release
 #
 #          - os: ubuntu-latest
 #            target: deb
@@ -138,11 +138,11 @@ jobs:
           name: artifacts_x86_64_dmg_${{ github.ref_name }}
           path: artifacts/x86_64_dmg_${{ github.ref_name }}
 
-#      - name: Download x86_64 exe artifacts
-#        uses: actions/download-artifact@v4
-#        with:
-#          name: artifacts_x86_64_exe_${{ github.ref_name }}
-#          path: artifacts/x86_64_exe_${{ github.ref_name }}
+      - name: Download x86_64 exe artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: artifacts_x86_64_exe_${{ github.ref_name }}
+          path: artifacts/x86_64_exe_${{ github.ref_name }}
 
 #      - name: Download x86_64 deb artifacts
 #        uses: actions/download-artifact@v4
@@ -177,8 +177,8 @@ jobs:
       - name: Rename pc artifacts
         run: |
           mv "artifacts/x86_64_dmg_${{ github.ref_name }}/desktopApp/build/compose/binaries/main-release/dmg/Cotton Music-${{ env.version }}.dmg" "artifacts/CottonMusic_${{ github.ref_name }}_mac_cpu_inter.dmg"
-
           mv "artifacts/arm64_dmg_${{ github.ref_name }}/desktopApp/build/compose/binaries/main-release/dmg/Cotton Music-${{ env.version }}.dmg" "artifacts/CottonMusic_${{ github.ref_name }}_mac_cpu_apple.dmg"
+          mv "artifacts/x86_64_exe_${{ github.ref_name }}/desktopApp/build/compose/binaries/main-release/exe/PureMusic-${{ env.version }}.exe" "artifacts/CottonMusic_${{ github.ref_name }}_windows_x86_64.exe"
 
       - name: Build channel apk
         run: |
