@@ -33,7 +33,7 @@ jobs:
             task: bundleGoogleRelease
             params:
 
-          - os: macos-13
+          - os: macos-15-intel
             target: dmg
             arch: x86_64
             module: desktopApp
