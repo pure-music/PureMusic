@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<incidents format="6" by="lint 7.2.2" type="configured_issues">
-    <config id="Instantiatable" severity="warning"/>
-    <config id="ImpliedQuantity" severity="warning"/>
-    <config id="MissingQuantity" severity="warning"/>
-    <config id="MissingTranslation" severity="warning"/>
-
-</incidents>
