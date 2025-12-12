@@ -282,17 +282,20 @@ jobs:
 
   upload_to_backup:
     needs: [ upload_server_apk64,upload_server_apk32 ]
-    run: |
-      curl --location --request POST 'https://api.musiccotton.com/upload/lanzou' \
-      --header "User-Agent: Github-Action-Release" \
-      --header "Content-Type: application/x-www-form-urlencoded" \
-      --data-urlencode "folder_id=7187216" \
-      --data-urlencode "file_path=/www/wwwroot/mirrors.musiccotton.com/files/music/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_arm64.apk" \
-      --data-urlencode "key=${{ secrets.UPLOAD_BACK_KEY }}"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Upload apk to backup server
+        run: |
+          curl --location --request POST 'https://api.musiccotton.com/upload/lanzou' \
+          --header "User-Agent: Github-Action-Release" \
+          --header "Content-Type: application/x-www-form-urlencoded" \
+          --data-urlencode "folder_id=7187216" \
+          --data-urlencode "file_path=/www/wwwroot/mirrors.musiccotton.com/files/music/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_arm64.apk" \
+          --data-urlencode "key=${{ secrets.UPLOAD_BACK_KEY }}"
 
 
   release_app_server:
-    needs: upload_to_backup
+    needs: [ upload_to_backup ]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
