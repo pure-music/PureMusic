@@ -255,7 +255,7 @@ jobs:
           host: ${{ secrets.SERVER_IP }}
           port: ${{ secrets.SERVER_PORT }}
           username: ${{ secrets.SERVER_USERNAME }}
-          target: /www/wwwroot/mirrors.musiccotton.com/files/music/${{ github.ref_name }}/
+          target: /www/wwwroot/mirrors.musiccotton.com/temp/music/${{ github.ref_name }}/
 
   upload_server_apk64:
     needs: release
@@ -278,7 +278,7 @@ jobs:
           host: ${{ secrets.SERVER_IP }}
           port: ${{ secrets.SERVER_PORT }}
           username: ${{ secrets.SERVER_USERNAME }}
-          target: /www/wwwroot/mirrors.musiccotton.com/files/music/${{ github.ref_name }}/
+          target: /www/wwwroot/mirrors.musiccotton.com/temp/music/${{ github.ref_name }}/
 
   upload_to_backup:
     needs: [ upload_server_apk64,upload_server_apk32 ]
@@ -290,8 +290,19 @@ jobs:
           --header "User-Agent: Github-Action-Release" \
           --header "Content-Type: application/x-www-form-urlencoded" \
           --data-urlencode "folder_id=7187216" \
-          --data-urlencode "file_path=/www/wwwroot/mirrors.musiccotton.com/files/music/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_arm64.apk" \
+          --data-urlencode "file_path=/www/wwwroot/mirrors.musiccotton.com/temp/music/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_arm64.apk" \
           --data-urlencode "key=${{ secrets.UPLOAD_BACK_KEY }}"
+      - name: copy temp to file
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.SERVER_IP }}
+          username: ${{ secrets.SERVER_USERNAME }}
+          port: ${{ secrets.SERVER_PORT }}
+          key: ${{ secrets.PRIVATE_KEY }}
+          script: |
+            mv "/www/wwwroot/mirrors.musiccotton.com/temp/music/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_arm64.apk" "/www/wwwroot/mirrors.musiccotton.com/files/music/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_arm64.apk"
+            mv "/www/wwwroot/mirrors.musiccotton.com/temp/music/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_armv7a.apk" "/www/wwwroot/mirrors.musiccotton.com/files/music/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_armv7a.apk"
+            mv "/www/wwwroot/mirrors.musiccotton.com/temp/music/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_arm64.apk.lanzou.url" "/www/wwwroot/mirrors.musiccotton.com/files/music/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_armv7a.apk.lanzou.url"
 
 
   release_app_server:
