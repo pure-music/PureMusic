@@ -21,3 +21,6 @@ Pure Music [官网](https://music.caij.xyz/)
 最新版已经基于跨平台重写开发，不再开源。  
 
 
+![Star History Chart](https://api.star-history.com/svg?repos=pure-music/PureMusic&type=Date)
+
+
