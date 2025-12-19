@@ -5,12 +5,12 @@ Pure Music [官网](https://music.caij.xyz/)
 
 如果你觉得对你有帮助**关注一下开发者** [Caij](https://github.com/Caij) 非常感谢  
 
-**目前pc版仅兴趣维护，不做强力支持，iOS版预计2025年会来**
+**目前pc版仅兴趣维护，不做强力支持**
 
 # 棉花音乐
 随时随地听音乐
 
-目前支持Android、Mac，Windows、Linux 后续继续支持其他平台  
+目前支持Android、iOS、Mac、Windows、Linux 后续继续支持其他平台  
 支持本地歌曲、百度网盘、阿里云盘、WebDAV、GoogleDrive、OneDrive、Dropbox等网盘歌曲播放，支持Plex、Emby、Jelly、Subsonic媒体服务器。
 **存在需要付费服务，具体可以到官网查看**
  
