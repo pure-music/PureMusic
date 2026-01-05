@@ -17,7 +17,7 @@ Pure Music [官网](https://music.caij.xyz/)
 ![app-home-screen.jpg](app-home-screen.jpg)
 
 # 音乐工具
-[music-tag-web](https://github.com/xhongc/music-tag-web) 音乐标签编辑器，可编辑本地音乐文件的元数据（Editable local music file metadata), 支持主流的文件格式，并且后台支持Subsonic服务。
+[music-tag-web](https://github.com/xhongc/music-tag-web) 音乐标签编辑器，可编辑本地音乐文件的元数据（Editable local music file metadata), 支持主流的文件格式，并且后台支持Subsonic服务。  
 [navidrome](https://github.com/navidrome/navidrome) 音乐挂载服务
 
 # Thanks   
