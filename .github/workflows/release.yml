@@ -171,11 +171,11 @@ jobs:
           name: artifacts_all_armv7a_apk_${{ github.ref_name }}
           path: artifacts/all_armv7a_apk_${{ github.ref_name }}
 
-      - name: Download all aab artifacts
-        uses: actions/download-artifact@v4
-        with:
-          name: artifacts_all_aab_${{ github.ref_name }}
-          path: artifacts/all_aab_${{ github.ref_name }}
+#      - name: Download all aab artifacts
+#        uses: actions/download-artifact@v4
+#        with:
+#          name: artifacts_all_aab_${{ github.ref_name }}
+#          path: artifacts/all_aab_${{ github.ref_name }}
 
       - name: Rename pc artifacts
         run: |
