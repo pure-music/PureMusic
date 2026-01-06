@@ -125,6 +125,7 @@ jobs:
         with:
           java-version: '18'
           distribution: 'temurin'
+          cache: gradle
 
       - name: Query version number
         run: |
