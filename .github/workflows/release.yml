@@ -220,10 +220,10 @@ jobs:
         with:
           path: ${{ github.workspace }}/Footer.txt
 
-      - name: send tg message
-        run: |
-          mv "${{github.workspace}}/app/arm64/channel/telegram-CottonMusic_${{ github.ref_name }}.apk" "${{github.workspace}}/app/arm64/channel/telegram-CottonMusic_${{ github.ref_name }}_arm64.apk"
-          curl -F "chat_id=-1001816793644" -F "caption=${{steps.read_changelog_file.outputs.contents}}${{steps.read_footer_file.outputs.contents}}${{steps.create_remote_release.outputs.url}}" -F document=@${{github.workspace}}/app/arm64/channel/telegram-CottonMusic_${{ github.ref_name }}_arm64.apk -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendDocument"
+#      - name: send tg message
+#        run: |
+#          mv "${{github.workspace}}/app/arm64/channel/telegram-CottonMusic_${{ github.ref_name }}.apk" "${{github.workspace}}/app/arm64/channel/telegram-CottonMusic_${{ github.ref_name }}_arm64.apk"
+#          curl -F "chat_id=-1001816793644" -F "caption=${{steps.read_changelog_file.outputs.contents}}${{steps.read_footer_file.outputs.contents}}${{steps.create_remote_release.outputs.url}}" -F document=@${{github.workspace}}/app/arm64/channel/telegram-CottonMusic_${{ github.ref_name }}_arm64.apk -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendDocument"
 
       - uses: actions/upload-artifact@v4
         with:
@@ -251,20 +251,17 @@ jobs:
           $proxyFileName="${{github.workspace}}/CottonMusic_${{ github.ref_name }}_armv7a.apk.github.url"
           echo "$githubProxyUrl" > "$proxyFileName"
           mv "${{github.workspace}}/artifacts/artifacts_upload_apk/armv7a/channel/server-CottonMusic_${{ github.ref_name }}.apk" "${{github.workspace}}/CottonMusic_${{ github.ref_name }}_armv7a.apk"
+          $winExeGithubProxyUrl="https://gh-proxy.org/https://github.com/pure-music/PureMusic/releases/download/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_windows_x86_64.exe" 
+          $winExeProxyFileName="${{github.workspace}}/CottonMusic_${{ github.ref_name }}_windows_x86_64.exe.302"
+          echo "$winExeGithubProxyUrl" > "$winExeProxyFileName"
+          $macDmgArmGithubProxyUrl="https://gh-proxy.org/https://github.com/pure-music/PureMusic/releases/download/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_mac_cpu_apple.dmg" 
+          $macDmgArmProxyFileName="${{github.workspace}}/CottonMusic_${{ github.ref_name }}_mac_cpu_apple.dmg.302"
+          echo "$macDmgArmGithubProxyUrl" > "$macDmgArmProxyFileName"
       - name: Deploy to Server
         uses: appleboy/scp-action@v1
         with:
           key: ${{ secrets.PRIVATE_KEY }}
-          source: CottonMusic_${{ github.ref_name }}_armv7a.apk
-          host: ${{ secrets.SERVER_IP }}
-          port: ${{ secrets.SERVER_PORT }}
-          username: ${{ secrets.SERVER_USERNAME }}
-          target: /www/wwwroot/mirrors.musiccotton.com/temp/music/${{ github.ref_name }}/
-      - name: Deploy to Server url
-        uses: appleboy/scp-action@v1
-        with:
-          key: ${{ secrets.PRIVATE_KEY }}
-          source: CottonMusic_${{ github.ref_name }}_armv7a.apk.github.url
+          source: CottonMusic_${{ github.ref_name }}_armv7a.apk,CottonMusic_${{ github.ref_name }}_armv7a.apk.github.url,CottonMusic_${{ github.ref_name }}_windows_x86_64.exe.302,CottonMusic_${{ github.ref_name }}_mac_cpu_apple.dmg.302
           host: ${{ secrets.SERVER_IP }}
           port: ${{ secrets.SERVER_PORT }}
           username: ${{ secrets.SERVER_USERNAME }}
@@ -331,6 +328,8 @@ jobs:
             mv "/www/wwwroot/mirrors.musiccotton.com/temp/music/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_armv7a.apk" "/www/wwwroot/mirrors.musiccotton.com/files/music/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_armv7a.apk"
             mv "/www/wwwroot/mirrors.musiccotton.com/temp/music/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_armv7a.apk.github.url" "/www/wwwroot/mirrors.musiccotton.com/files/music/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_armv7a.apk.github.url"
             mv "/www/wwwroot/mirrors.musiccotton.com/temp/music/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_arm64.apk.lanzou.url" "/www/wwwroot/mirrors.musiccotton.com/files/music/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_arm64.apk.lanzou.url"
+            mv "/www/wwwroot/mirrors.musiccotton.com/temp/music/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_windows_x86_64.exe.302" "/www/wwwroot/mirrors.musiccotton.com/files/music/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_windows_x86_64.exe.302"
+            mv "/www/wwwroot/mirrors.musiccotton.com/temp/music/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_mac_cpu_apple.dmg.302" "/www/wwwroot/mirrors.musiccotton.com/files/music/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_mac_cpu_apple.dmg.302"
 
   release_app_server:
     needs: [ upload_to_backup ]
