@@ -247,7 +247,6 @@ jobs:
       - name: cd to path
         run: |
           ls ${{github.workspace}}/artifacts/artifacts_upload_apk/armv7a/channel/
-#         https://github.com/pure-music/PureMusic/releases/download/v3.6.13/CottonMusic_v3.6.13_armv7a_android.apk
           $githubProxyUrl="https://gh-proxy.org/https://github.com/pure-music/PureMusic/releases/download/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_armv7a_android.apk" 
           $proxyFileName="${{github.workspace}}/CottonMusic_${{ github.ref_name }}_armv7a.apk.github.url"
           echo "$githubProxyUrl" > "$proxyFileName"
