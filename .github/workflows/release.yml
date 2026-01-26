@@ -345,6 +345,12 @@ jobs:
             mv "/www/wwwroot/mirrors.musiccotton.com/temp/music/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_windows_x86_64.exe.github.url" "/www/wwwroot/mirrors.musiccotton.com/files/music/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_windows_x86_64.exe.github.url"
             mv "/www/wwwroot/mirrors.musiccotton.com/temp/music/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_mac_cpu_apple.dmg.github.url" "/www/wwwroot/mirrors.musiccotton.com/files/music/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_mac_cpu_apple.dmg.github.url"
             mv "/www/wwwroot/mirrors.musiccotton.com/temp/music/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_mac_cpu_inter.dmg.github.url" "/www/wwwroot/mirrors.musiccotton.com/files/music/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_mac_cpu_inter.dmg.github.url"
+      - name: delete cdn cache
+        run: |    
+          curl -X POST 'https://api.musiccotton.com/tencent/eo/clear' \
+          -H "Content-Type: application/x-www-form-urlencoded" \
+          -d "zone_id=zone-3fpx54aaivki" \
+          -d "delete_url=https://mirrors.musiccotton.com/music"
 
   release_app_server:
     needs: [ upload_to_backup ]
@@ -384,8 +390,3 @@ jobs:
             -d "releaseToken=${{ secrets.releaseToken }}" \
             -d "webUrl=https://mirrors.musiccotton.com/music/apk/${{ github.ref_name }}" \
             -d "updateLog=${{steps.read_changelog_file.outputs.contents}}"
-          
-          curl -X POST 'https://api.musiccotton.com/tencent/eo/clear' \
-            -H "Content-Type: application/x-www-form-urlencoded" \
-            -d "zone_id=zone-3fpx54aaivki" \
-            -d "delete_url=https://mirrors.musiccotton.com/music"
