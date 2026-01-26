@@ -248,21 +248,21 @@ jobs:
         run: |
           ls ${{github.workspace}}/artifacts/artifacts_upload_apk/armv7a/channel/
           pcBackDownUrl="https://github.com/pure-music/PureMusic/releases/tag/${{ github.ref_name }}"
-          githubProxyUrl="https://gh-proxy.org/https://github.com/pure-music/PureMusic/releases/download/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_armv7a_android.apk" 
+          githubProxyUrl="https://cfghproxy.aa3a.com/https://github.com/pure-music/PureMusic/releases/download/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_armv7a_android.apk" 
           proxyFileName="${{github.workspace}}/CottonMusic_${{ github.ref_name }}_armv7a.apk.github.url"
           echo "$githubProxyUrl" > "$proxyFileName"
           mv "${{github.workspace}}/artifacts/artifacts_upload_apk/armv7a/channel/server-CottonMusic_${{ github.ref_name }}.apk" "${{github.workspace}}/CottonMusic_${{ github.ref_name }}_armv7a.apk"
-          winExeGithubProxyUrl="https://gh-proxy.org/https://github.com/pure-music/PureMusic/releases/download/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_windows_x86_64.exe" 
+          winExeGithubProxyUrl="https://cfghproxy.aa3a.com/https://github.com/pure-music/PureMusic/releases/download/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_windows_x86_64.exe" 
           winExeProxyFileName="${{github.workspace}}/CottonMusic_${{ github.ref_name }}_windows_x86_64.exe.302"
           winExeBackFileName="${{github.workspace}}/CottonMusic_${{ github.ref_name }}_windows_x86_64.exe.github.url"
           echo "$winExeGithubProxyUrl" > "$winExeProxyFileName"
           echo "$pcBackDownUrl" > "$winExeBackFileName"
-          macDmgArmGithubProxyUrl="https://gh-proxy.org/https://github.com/pure-music/PureMusic/releases/download/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_mac_cpu_apple.dmg" 
+          macDmgArmGithubProxyUrl="https://cfghproxy.aa3a.com/https://github.com/pure-music/PureMusic/releases/download/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_mac_cpu_apple.dmg" 
           macDmgArmProxyFileName="${{github.workspace}}/CottonMusic_${{ github.ref_name }}_mac_cpu_apple.dmg.302"
           macDmgArmBackFileName="${{github.workspace}}/CottonMusic_${{ github.ref_name }}_mac_cpu_apple.dmg.github.url"
           echo "$macDmgArmGithubProxyUrl" > "$macDmgArmProxyFileName"
           echo "$pcBackDownUrl" > "$macDmgArmBackFileName"
-          macDmgInterGithubProxyUrl="https://gh-proxy.org/https://github.com/pure-music/PureMusic/releases/download/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_mac_cpu_inter.dmg" 
+          macDmgInterGithubProxyUrl="https://cfghproxy.aa3a.com/https://github.com/pure-music/PureMusic/releases/download/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_mac_cpu_inter.dmg" 
           macDmgInterProxyFileName="${{github.workspace}}/CottonMusic_${{ github.ref_name }}_mac_cpu_inter.dmg.302"
           macDmgInterBackFileName="${{github.workspace}}/CottonMusic_${{ github.ref_name }}_mac_cpu_inter.dmg.github.url"
           echo "$macDmgInterGithubProxyUrl" > "$macDmgInterProxyFileName"
@@ -290,7 +290,7 @@ jobs:
       - name: cd to path
         run: |
           ls ${{github.workspace}}/artifacts/artifacts_upload_apk/arm64/channel/
-          githubProxyUrl="https://gh-proxy.org/https://github.com/pure-music/PureMusic/releases/download/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_arm64_android.apk" 
+          githubProxyUrl="https://cfghproxy.aa3a.com/https://github.com/pure-music/PureMusic/releases/download/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_arm64_android.apk" 
           proxyFileName="${{github.workspace}}/CottonMusic_${{ github.ref_name }}_arm64.apk.github.url"
           echo "$githubProxyUrl" > "$proxyFileName"          
           mv "${{github.workspace}}/artifacts/artifacts_upload_apk/arm64/channel/server-CottonMusic_${{ github.ref_name }}.apk" "${{github.workspace}}/CottonMusic_${{ github.ref_name }}_arm64.apk"
