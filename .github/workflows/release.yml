@@ -247,21 +247,32 @@ jobs:
       - name: cd to path
         run: |
           ls ${{github.workspace}}/artifacts/artifacts_upload_apk/armv7a/channel/
+          pcBackDownUrl="https://github.com/pure-music/PureMusic/releases/tag/${{ github.ref_name }}"
           githubProxyUrl="https://gh-proxy.org/https://github.com/pure-music/PureMusic/releases/download/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_armv7a_android.apk" 
           proxyFileName="${{github.workspace}}/CottonMusic_${{ github.ref_name }}_armv7a.apk.github.url"
           echo "$githubProxyUrl" > "$proxyFileName"
           mv "${{github.workspace}}/artifacts/artifacts_upload_apk/armv7a/channel/server-CottonMusic_${{ github.ref_name }}.apk" "${{github.workspace}}/CottonMusic_${{ github.ref_name }}_armv7a.apk"
           winExeGithubProxyUrl="https://gh-proxy.org/https://github.com/pure-music/PureMusic/releases/download/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_windows_x86_64.exe" 
           winExeProxyFileName="${{github.workspace}}/CottonMusic_${{ github.ref_name }}_windows_x86_64.exe.302"
+          winExeBackFileName="${{github.workspace}}/CottonMusic_${{ github.ref_name }}_windows_x86_64.exe.github.url"
           echo "$winExeGithubProxyUrl" > "$winExeProxyFileName"
+          echo "$pcBackDownUrl" > "$winExeBackFileName"
           macDmgArmGithubProxyUrl="https://gh-proxy.org/https://github.com/pure-music/PureMusic/releases/download/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_mac_cpu_apple.dmg" 
           macDmgArmProxyFileName="${{github.workspace}}/CottonMusic_${{ github.ref_name }}_mac_cpu_apple.dmg.302"
+          macDmgArmBackFileName="${{github.workspace}}/CottonMusic_${{ github.ref_name }}_mac_cpu_apple.dmg.github.url"
           echo "$macDmgArmGithubProxyUrl" > "$macDmgArmProxyFileName"
+          echo "$pcBackDownUrl" > "$macDmgArmBackFileName"
+          macDmgInterGithubProxyUrl="https://gh-proxy.org/https://github.com/pure-music/PureMusic/releases/download/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_mac_cpu_inter.dmg" 
+          macDmgInterProxyFileName="${{github.workspace}}/CottonMusic_${{ github.ref_name }}_mac_cpu_inter.dmg.302"
+          macDmgInterBackFileName="${{github.workspace}}/CottonMusic_${{ github.ref_name }}_mac_cpu_inter.dmg.github.url"
+          echo "$macDmgInterGithubProxyUrl" > "$macDmgInterProxyFileName"
+          echo "$pcBackDownUrl" > "$macDmgInterBackFileName"
+
       - name: Deploy to Server
         uses: appleboy/scp-action@v1
         with:
           key: ${{ secrets.PRIVATE_KEY }}
-          source: CottonMusic_${{ github.ref_name }}_armv7a.apk,CottonMusic_${{ github.ref_name }}_armv7a.apk.github.url,CottonMusic_${{ github.ref_name }}_windows_x86_64.exe.302,CottonMusic_${{ github.ref_name }}_mac_cpu_apple.dmg.302
+          source: CottonMusic_${{ github.ref_name }}_armv7a.apk,CottonMusic_${{ github.ref_name }}_armv7a.apk.github.url,CottonMusic_${{ github.ref_name }}_windows_x86_64.exe.302,CottonMusic_${{ github.ref_name }}_mac_cpu_apple.dmg.302,CottonMusic_${{ github.ref_name }}_mac_cpu_inter.dmg.302,CottonMusic_${{ github.ref_name }}_windows_x86_64.exe.github.url,CottonMusic_${{ github.ref_name }}_mac_cpu_apple.dmg.github.url,CottonMusic_${{ github.ref_name }}_mac_cpu_inter.dmg.github.url
           host: ${{ secrets.SERVER_IP }}
           port: ${{ secrets.SERVER_PORT }}
           username: ${{ secrets.SERVER_USERNAME }}
@@ -330,6 +341,9 @@ jobs:
             mv "/www/wwwroot/mirrors.musiccotton.com/temp/music/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_arm64.apk.lanzou.url" "/www/wwwroot/mirrors.musiccotton.com/files/music/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_arm64.apk.lanzou.url"
             mv "/www/wwwroot/mirrors.musiccotton.com/temp/music/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_windows_x86_64.exe.302" "/www/wwwroot/mirrors.musiccotton.com/files/music/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_windows_x86_64.exe.302"
             mv "/www/wwwroot/mirrors.musiccotton.com/temp/music/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_mac_cpu_apple.dmg.302" "/www/wwwroot/mirrors.musiccotton.com/files/music/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_mac_cpu_apple.dmg.302"
+            mv "/www/wwwroot/mirrors.musiccotton.com/temp/music/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_windows_x86_64.exe.github.url" "/www/wwwroot/mirrors.musiccotton.com/files/music/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_windows_x86_64.exe.github.url"
+            mv "/www/wwwroot/mirrors.musiccotton.com/temp/music/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_mac_cpu_apple.dmg.github.url" "/www/wwwroot/mirrors.musiccotton.com/files/music/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_mac_cpu_apple.dmg.github.url"
+            mv "/www/wwwroot/mirrors.musiccotton.com/temp/music/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_mac_cpu_inter.dmg.github.url" "/www/wwwroot/mirrors.musiccotton.com/files/music/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_mac_cpu_inter.dmg.github.url"
 
   release_app_server:
     needs: [ upload_to_backup ]
