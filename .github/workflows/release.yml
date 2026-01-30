@@ -220,10 +220,10 @@ jobs:
         with:
           path: ${{ github.workspace }}/Footer.txt
 
-#      - name: send tg message
-#        run: |
-#          mv "${{github.workspace}}/app/arm64/channel/telegram-CottonMusic_${{ github.ref_name }}.apk" "${{github.workspace}}/app/arm64/channel/telegram-CottonMusic_${{ github.ref_name }}_arm64.apk"
-#          curl -F "chat_id=-1001816793644" -F "caption=${{steps.read_changelog_file.outputs.contents}}${{steps.read_footer_file.outputs.contents}}${{steps.create_remote_release.outputs.url}}" -F document=@${{github.workspace}}/app/arm64/channel/telegram-CottonMusic_${{ github.ref_name }}_arm64.apk -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendDocument"
+      - name: send tg message
+        run: |
+          mv "${{github.workspace}}/app/arm64/channel/telegram-CottonMusic_${{ github.ref_name }}.apk" "${{github.workspace}}/app/arm64/channel/telegram-CottonMusic_${{ github.ref_name }}_arm64.apk"
+          curl -F "chat_id=-1001816793644" -F "caption=${{steps.read_changelog_file.outputs.contents}}${{steps.read_footer_file.outputs.contents}}${{steps.create_remote_release.outputs.url}}" -F document=@${{github.workspace}}/app/arm64/channel/telegram-CottonMusic_${{ github.ref_name }}_arm64.apk -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendDocument"
 
       - uses: actions/upload-artifact@v4
         with:
