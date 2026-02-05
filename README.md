@@ -1,7 +1,7 @@
 # Cotton Music 棉花音乐
 
-Pure Music [官网](https://music.caij.xyz/)  
-下载：[https://github.com/pure-music/PureMusic/releases](https://github.com/pure-music/PureMusic/releases)
+CottonMusic 棉花音乐 [官网](https://music.caij.xyz/)  
+Dowload 下载：[https://github.com/pure-music/PureMusic/releases](https://github.com/pure-music/PureMusic/releases)
 
 如果你觉得对你有帮助**关注一下开发者** [Caij](https://github.com/Caij) 非常感谢  
 
@@ -21,8 +21,8 @@ Pure Music [官网](https://music.caij.xyz/)
 [navidrome](https://github.com/navidrome/navidrome) 音乐挂载服务
 
 # Thanks   
-该项目早期复制于RetroMusicPlayer，已开源代码。  
-最新版已经基于跨平台重写开发，不再开源。  
+该项目早期复制于*RetroMusicPlayer*，相关代码已开源代码。  
+目前最新版本已经基于跨平台重写开发，不再开源。  
 
 
 ![Star History Chart](https://api.star-history.com/svg?repos=pure-music/PureMusic&type=Date)
