@@ -1,7 +1,7 @@
 # Cotton Music 棉花音乐
 
 CottonMusic 棉花音乐 [官网](https://music.caij.xyz/)  
-Google Play [https://play.google.com/store/apps/details?id=com.caij.puremusic](Download)  
+Google Play: [Install](https://play.google.com/store/apps/details?id=com.caij.puremusic)  
 APK/PC 下载：[https://github.com/pure-music/PureMusic/releases](https://github.com/pure-music/PureMusic/releases)
 
 如果你觉得对你有帮助**关注一下开发者** [Caij](https://github.com/Caij) 非常感谢  
