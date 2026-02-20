@@ -16,14 +16,14 @@ jobs:
             target: apk
             arch: all_arm64
             module: app
-            task: assembleChinaRelease
+            task: assembleNoadRelease
             params: -PabiFilters=arm64-v8a
 
           - os: ubuntu-latest
             target: apk
             arch: all_armv7a
             module: app
-            task: assembleChinaRelease
+            task: assembleNoadRelease
             params: -PabiFilters=armeabi-v7a
 
           - os: ubuntu-latest
@@ -97,7 +97,7 @@ jobs:
             ${{github.workspace}}/desktopApp/build/compose/binaries/main-release/exe/*.exe
             ${{github.workspace}}/desktopApp/build/compose/binaries/main-release/dmg/*.dmg
             ${{github.workspace}}/app/build/outputs/bundle/googleRelease/app-google-release.aab
-            ${{github.workspace}}/app/build/outputs/apk/china/release/app-china-release.apk 
+            ${{github.workspace}}/app/build/outputs/apk/noad/release/app-noad-release.apk 
 
       - name: Upload mapping 1
         if: matrix.target == 'apk' && matrix.arch == 'all_arm64'
@@ -105,8 +105,8 @@ jobs:
           . ${{github.workspace}}/version.properties
           echo $showVersionName
           cat ${{github.workspace}}/version.properties
-          gzip -c ${{github.workspace}}/app/build/outputs/mapping/chinaRelease/mapping.txt > ${{github.workspace}}/app/build/outputs/mapping/chinaRelease/mapping.txt.gz
-          curl -F "chat_id=-1002062702442" -F "caption=$showVersionName" -F document=@${{github.workspace}}/app/build/outputs/mapping/chinaRelease/mapping.txt.gz -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendDocument"
+          gzip -c ${{github.workspace}}/app/build/outputs/mapping/noadRelease/mapping.txt > ${{github.workspace}}/app/build/outputs/mapping/noadRelease/mapping.txt.gz
+          curl -F "chat_id=-1002062702442" -F "caption=$showVersionName" -F document=@${{github.workspace}}/app/build/outputs/mapping/noadRelease/mapping.txt.gz -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendDocument"
 
 
   release:
@@ -187,12 +187,12 @@ jobs:
       - name: Build channel apk
         run: |
           mkdir -p "${{github.workspace}}/app/arm64/channel"
-          mv "artifacts/all_arm64_apk_${{ github.ref_name }}/app/build/outputs/apk/china/release/app-china-release.apk" "${{github.workspace}}/app/arm64/channel/CottonMusic_${{ github.ref_name }}.apk"
+          mv "artifacts/all_arm64_apk_${{ github.ref_name }}/app/build/outputs/apk/noad/release/app-noad-release.apk" "${{github.workspace}}/app/arm64/channel/CottonMusic_${{ github.ref_name }}.apk"
           java -jar ${{github.workspace}}/app/VasDolly.jar put -c "github,telegram,server,openlist" "${{github.workspace}}/app/arm64/channel/CottonMusic_${{ github.ref_name }}.apk" ${{github.workspace}}/app/arm64/channel
           mv "${{github.workspace}}/app/arm64/channel/github-CottonMusic_${{ github.ref_name }}.apk" "artifacts/CottonMusic_${{ github.ref_name }}_arm64_android.apk"
           
           mkdir -p "${{github.workspace}}/app/armv7a/channel"
-          mv "artifacts/all_armv7a_apk_${{ github.ref_name }}/app/build/outputs/apk/china/release/app-china-release.apk" "${{github.workspace}}/app/armv7a/channel/CottonMusic_${{ github.ref_name }}.apk"
+          mv "artifacts/all_armv7a_apk_${{ github.ref_name }}/app/build/outputs/apk/noad/release/app-noad-release.apk" "${{github.workspace}}/app/armv7a/channel/CottonMusic_${{ github.ref_name }}.apk"
           java -jar ${{github.workspace}}/app/VasDolly.jar put -c "github,telegram,server,openlist" "${{github.workspace}}/app/armv7a/channel/CottonMusic_${{ github.ref_name }}.apk" ${{github.workspace}}/app/armv7a/channel
           mv "${{github.workspace}}/app/armv7a/channel/github-CottonMusic_${{ github.ref_name }}.apk" "artifacts/CottonMusic_${{ github.ref_name }}_armv7a_android.apk"
 
