@@ -17,14 +17,14 @@ jobs:
             arch: all_arm64
             module: app
             task: assembleNoadRelease
-            params: -PabiFilters=arm64-v8a
+            params: -PabiFilters=arm64-v8a -PversionLast=0
 
           - os: ubuntu-latest
             target: apk
             arch: all_armv7a
             module: app
             task: assembleNoadRelease
-            params: -PabiFilters=armeabi-v7a
+            params: -PabiFilters=armeabi-v7a -PversionLast=0
 
           - os: ubuntu-latest
             target: aab
