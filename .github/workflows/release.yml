@@ -208,23 +208,6 @@ jobs:
           files: ./artifacts/**/*
           prerelease: ${{env.PRERELEASE}}
 
-      - name: Read CHANGELOG
-        id: read_changelog_file
-        uses: andstor/file-reader-action@v1
-        with:
-          path: ${{ github.workspace }}/CHANGELOG.txt
-
-      - name: Read CHANGELOG
-        id: read_footer_file
-        uses: andstor/file-reader-action@v1
-        with:
-          path: ${{ github.workspace }}/Footer.txt
-
-      - name: send tg message
-        run: |
-          mv "${{github.workspace}}/app/arm64/channel/telegram-CottonMusic_${{ github.ref_name }}.apk" "${{github.workspace}}/app/arm64/channel/telegram-CottonMusic_${{ github.ref_name }}_arm64.apk"
-          curl -F "chat_id=-1001816793644" -F "caption=${{steps.read_changelog_file.outputs.contents}}${{steps.read_footer_file.outputs.contents}}${{steps.create_remote_release.outputs.url}}" -F document=@${{github.workspace}}/app/arm64/channel/telegram-CottonMusic_${{ github.ref_name }}_arm64.apk -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendDocument"
-
       - uses: actions/upload-artifact@v4
         with:
           name: artifacts_upload_apk
@@ -234,12 +217,13 @@ jobs:
             ${{github.workspace}}/app/armv7a/channel/openlist-CottonMusic_${{ github.ref_name }}.apk
             ${{github.workspace}}/app/arm64/channel/server-CottonMusic_${{ github.ref_name }}.apk
             ${{github.workspace}}/app/armv7a/channel/server-CottonMusic_${{ github.ref_name }}.apk
+            ${{github.workspace}}/app/arm64/channel/telegram-CottonMusic_${{ github.ref_name }}.apk
 
   upload_server_apk32:
     needs: release
     runs-on: ubuntu-latest
     steps:
-      - name: Download armv7a apk artifacts
+      - name: Download apk artifacts
         uses: actions/download-artifact@v4
         with:
           name: artifacts_upload_apk
@@ -407,3 +391,32 @@ jobs:
             -d "releaseToken=${{ secrets.releaseToken }}" \
             -d "webUrl=https://mirrors.musiccotton.com/music/apk/${{ github.ref_name }}" \
             -d "updateLog=${{steps.read_changelog_file.outputs.contents}}"
+
+      - uses: actions/checkout@v3
+        with:
+          repository: Caij/pure-music
+          ref: ${{github.ref_name}}
+          token: ${{secrets.GLOBAL_GITHUB_TOKEN}}
+
+      - name: Read CHANGELOG
+        id: read_changelog_file
+        uses: andstor/file-reader-action@v1
+        with:
+          path: ${{ github.workspace }}/CHANGELOG.txt
+
+      - name: Read CHANGELOG
+        id: read_footer_file
+        uses: andstor/file-reader-action@v1
+        with:
+          path: ${{ github.workspace }}/Footer.txt
+
+      - name: Download apk artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: artifacts_upload_apk
+          path: artifacts/artifacts_upload_apk
+
+      - name: send tg message
+        run: |
+          mv "${{github.workspace}}/artifacts/artifacts_upload_apk/arm64/channel/telegram-CottonMusic_${{ github.ref_name }}.apk" "${{github.workspace}}/telegram-CottonMusic_${{ github.ref_name }}_arm64.apk"
+          curl -F "chat_id=-1001816793644" -F "caption=${{steps.read_changelog_file.outputs.contents}}${{steps.read_footer_file.outputs.contents}}${{steps.create_remote_release.outputs.url}}" -F document=@${{github.workspace}}/telegram-CottonMusic_${{ github.ref_name }}_arm64.apk -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendDocument"
