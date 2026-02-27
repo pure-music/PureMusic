@@ -392,18 +392,6 @@ jobs:
             -d "webUrl=https://mirrors.musiccotton.com/music/apk/${{ github.ref_name }}" \
             -d "updateLog=${{steps.read_changelog_file.outputs.contents}}"
 
-      - uses: actions/checkout@v3
-        with:
-          repository: Caij/pure-music
-          ref: ${{github.ref_name}}
-          token: ${{secrets.GLOBAL_GITHUB_TOKEN}}
-
-      - name: Read CHANGELOG
-        id: read_changelog_file
-        uses: andstor/file-reader-action@v1
-        with:
-          path: ${{ github.workspace }}/CHANGELOG.txt
-
       - name: Read CHANGELOG
         id: read_footer_file
         uses: andstor/file-reader-action@v1
