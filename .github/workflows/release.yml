@@ -281,15 +281,6 @@ jobs:
           port: ${{ secrets.SERVER_PORT }}
           username: ${{ secrets.SERVER_USERNAME }}
           target: /www/wwwroot/mirrors.musiccotton.com/temp/music/${{ github.ref_name }}/
-      - name: Deploy to Server url
-        uses: appleboy/scp-action@v1
-        with:
-          key: ${{ secrets.PRIVATE_KEY }}
-          source: CottonMusic_${{ github.ref_name }}_arm64.apk.github.url
-          host: ${{ secrets.SERVER_IP }}
-          port: ${{ secrets.SERVER_PORT }}
-          username: ${{ secrets.SERVER_USERNAME }}
-          target: /www/wwwroot/mirrors.musiccotton.com/temp/music/${{ github.ref_name }}/
 
   upload_to_backup:
     needs: [ upload_server_apk64,upload_server_apk32 ]
