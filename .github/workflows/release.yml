@@ -336,8 +336,8 @@ jobs:
             
             mv "$winExeProxyFileName" "/www/wwwroot/mirrors.musiccotton.com/files/music/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_windows_x86_64.exe.302"
             mv "$winExeBackFileName" "/www/wwwroot/mirrors.musiccotton.com/files/music/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_windows_x86_64.exe.github.url"
-            mv "$winExeGithubBackUrl2" "/www/wwwroot/mirrors.musiccotton.com/files/music/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_windows_x86_64.exe.国内线路优化.url"
-            mv "$winExeGithubBackUrl3" "/www/wwwroot/mirrors.musiccotton.com/files/music/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_windows_x86_64.exe.edgeone.url"
+            mv "$winExeBackFileName2" "/www/wwwroot/mirrors.musiccotton.com/files/music/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_windows_x86_64.exe.国内线路优化.url"
+            mv "$winExeBackFileName3" "/www/wwwroot/mirrors.musiccotton.com/files/music/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_windows_x86_64.exe.edgeone.url"
             
             mv "$macDmgArmProxyFileName" "/www/wwwroot/mirrors.musiccotton.com/files/music/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_mac_cpu_apple.dmg.302"
             mv "$macDmgArmBackFileName" "/www/wwwroot/mirrors.musiccotton.com/files/music/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_mac_cpu_apple.dmg.github.url"
