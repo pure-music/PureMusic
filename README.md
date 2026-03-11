@@ -12,7 +12,7 @@ APK/PC 下载：[https://github.com/pure-music/PureMusic/releases](https://githu
 随时随地听音乐
 
 目前支持Android、iOS、Mac、Windows、Linux 后续继续支持其他平台  
-支持本地歌曲、百度网盘、阿里云盘、WebDAV、GoogleDrive、OneDrive、Dropbox等网盘歌曲播放，支持Plex、Emby、Jelly、Subsonic媒体服务器。
+支持本地歌曲、百度网盘、阿里云盘、WebDAV、GoogleDrive、OneDrive、Dropbox等网盘歌曲播放，支持Plex、Emby、Jelly、Subsonic、Navidrome媒体服务器。
 **存在需要付费服务，具体可以到官网查看**
  
 ![app-home-screen.jpg](app-home-screen.jpg)
