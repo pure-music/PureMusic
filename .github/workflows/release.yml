@@ -470,4 +470,22 @@ jobs:
       - name: send tg message
         run: |
           mv "${{github.workspace}}/artifacts/artifacts_upload_apk/arm64/channel/telegram-CottonMusic_${{ github.ref_name }}.apk" "${{github.workspace}}/telegram-CottonMusic_${{ github.ref_name }}_arm64.apk"
-          curl -F "chat_id=-1001816793644" -F "caption=全平台:\\n${{steps.read_changelog_file.outputs.contents}}\\nAndroid:\\n${{steps.read_android_changelog_file.outputs.contents}}\\nPC:\\n${{steps.read_pc_changelog_file.outputs.contents}}\\niOS:\\n${{steps.read_ios_changelog_file.outputs.contents}}${{steps.read_footer_file.outputs.contents}}\\n下载地址: https://mirrors.musiccotton.com/music/${{ github.ref_name }}" -F document=@${{github.workspace}}/telegram-CottonMusic_${{ github.ref_name }}_arm64.apk -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendDocument"
+          curl -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendDocument" \
+            -F chat_id=-1001816793644 \
+            -F "caption=全平台:
+            ${{ steps.read_changelog_file.outputs.contents }}
+            
+            Android:
+            ${{ steps.read_android_changelog_file.outputs.contents }}
+            
+            PC:
+            ${{ steps.read_pc_changelog_file.outputs.contents }}
+            
+            iOS:
+            ${{ steps.read_ios_changelog_file.outputs.contents }}
+              
+            ${{ steps.read_footer_file.outputs.contents }}
+            
+            下载地址:
+            https://mirrors.musiccotton.com/music/${{ github.ref_name }}" \
+            -F document=@${{ github.workspace }}/telegram-CottonMusic_${{ github.ref_name }}_arm64.apk
