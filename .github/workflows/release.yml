@@ -478,12 +478,12 @@ jobs:
             Android:
             ${{ steps.read_android_changelog_file.outputs.contents }}
             
+            iOS:
+            ${{ steps.read_ios_changelog_file.outputs.contents }}
+          
             PC:
             ${{ steps.read_pc_changelog_file.outputs.contents }}
             
-            iOS:
-            ${{ steps.read_ios_changelog_file.outputs.contents }}
-              
             ${{ steps.read_footer_file.outputs.contents }}
             
             下载地址:
