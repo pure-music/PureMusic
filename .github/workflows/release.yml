@@ -430,7 +430,7 @@ jobs:
           echo $releaseVersionCode
           if echo "$showVersionName" | grep -qi "beta"; then
             releaseTypeInt=1
-          if echo "$showVersionName" | grep -qi "alpha"; then
+          elif if echo "$showVersionName" | grep -qi "alpha"; then
             releaseTypeInt=1
           elif echo "$showVersionName" | grep -qi "rc"; then
             releaseTypeInt=2
