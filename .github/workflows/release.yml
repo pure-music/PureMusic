@@ -430,7 +430,7 @@ jobs:
           echo $releaseVersionCode
           if echo "$showVersionName" | grep -qi "beta"; then
             releaseTypeInt=1
-          elif if echo "$showVersionName" | grep -qi "alpha"; then
+          elif echo "$showVersionName" | grep -qi "alpha"; then
             releaseTypeInt=1
           elif echo "$showVersionName" | grep -qi "rc"; then
             releaseTypeInt=2
@@ -460,7 +460,6 @@ jobs:
             -d "releaseToken=${{ secrets.releaseToken }}" \
             -d "webUrl=https://mirrors.musiccotton.com/music/${{ github.ref_name }}" \
             -d "updateLog=${{steps.read_changelog_file.outputs.contents}}${{steps.read_pc_changelog_file.outputs.contents}}"
-
       - name: Download apk artifacts
         uses: actions/download-artifact@v4
         with:
