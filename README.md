@@ -1,31 +1,31 @@
-# Cotton Music 棉花音乐
+# Cotton Music
+[English](README.md) [中文](README.zh-CN.md)  
+  
 
-CottonMusic 棉花音乐 [官网](https://music.caij.xyz/)  
+Cotton Music official website: [https://music.caij.xyz/](https://music.caij.xyz/)  
 Google Play: [Install](https://play.google.com/store/apps/details?id=com.caij.puremusic)  
-APK/PC 下载：[https://github.com/pure-music/PureMusic/releases](https://github.com/pure-music/PureMusic/releases)
+APK/PC downloads: [https://github.com/pure-music/PureMusic/releases](https://github.com/pure-music/PureMusic/releases)
 
-如果你觉得对你有帮助**关注一下开发者** [Caij](https://github.com/Caij) 非常感谢  
+If this project helps you, please consider following the developer [Caij](https://github.com/Caij). Thank you very much.
 
-**目前pc版仅兴趣维护，不做强力支持**
+**The PC version is currently maintained as a hobby project and does not receive strong support.**
 
-# 棉花音乐
-随时随地听音乐
+# Cotton Music
+Listen to music anytime, anywhere.
 
-目前支持Android、iOS、Mac、Windows、Linux 后续继续支持其他平台  
-支持本地歌曲、百度网盘、阿里云盘、WebDAV、GoogleDrive、OneDrive、Dropbox等网盘歌曲播放，支持Plex、Emby、Jelly、Subsonic、Navidrome媒体服务器。
-**存在需要付费服务，具体可以到官网查看**
- 
+Currently supports Android, iOS, macOS, Windows, and Linux, with more platforms planned in the future.  
+Supports playback of Local stored, BaiduDrive, AlibabaDrive, WebDAV, Google Drive, OneDrive, Dropbox, and other cloud storage services. Also supports media servers such as Plex, Emby, Jellyfin, Subsonic, and Navidrome.
+**Some services may require a paid subscription. Please check the official website for details.**
+
 ![app-home-screen.jpg](app-home-screen.jpg)
 
-# 音乐工具
-[music-tag-web](https://github.com/xhongc/music-tag-web) 音乐标签编辑器，可编辑本地音乐文件的元数据（Editable local music file metadata), 支持主流的文件格式，并且后台支持Subsonic服务。  
-[navidrome](https://github.com/navidrome/navidrome) 音乐挂载服务
+# Music Tools
+[music-tag-web](https://github.com/xhongc/music-tag-web) A music tag editor for editing metadata in local music files. It supports mainstream file formats and also provides backend support for the Subsonic service.  
+[navidrome](https://github.com/navidrome/navidrome) A music library hosting service.
 
-# Thanks   
-该项目早期复制于*RetroMusicPlayer*，相关代码已开源代码。  
-目前最新版本已经基于跨平台重写开发，不再开源。  
-
+# Thanks
+This project was originally based on *RetroMusicPlayer*, and the related code was open source.  
+The latest version has since been rewritten as a cross-platform application and is no longer open source.  
 
 ![Star History Chart](https://api.star-history.com/svg?repos=pure-music/PureMusic&type=Date)
-
 
