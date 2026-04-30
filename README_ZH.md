@@ -1,5 +1,5 @@
 # Cotton Music 棉花音乐
-[English](README.md) ｜ [中文](README.zh-CN.md)  
+[English](README.md) ｜ [中文](README_ZH.md)  
   
 
 CottonMusic 棉花音乐 [官网](https://music.caij.xyz/)\

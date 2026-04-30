@@ -1,5 +1,5 @@
 # Cotton Music
-[English](README.md) ｜ [中文](README.zh-CN.md)  
+[English](README.md) ｜ [中文](README_ZH.md)  
   
 
 Cotton Music official website: [https://music.caij.xyz/](https://music.caij.xyz/)  
@@ -14,7 +14,7 @@ If this project helps you, please consider following the developer [Caij](https:
 Listen to music anytime, anywhere.
 
 Currently supports Android, iOS, macOS, Windows, and Linux, with more platforms planned in the future.  
-Supports playback of Local stored, BaiduDrive, AlibabaDrive, WebDAV, Google Drive, OneDrive, Dropbox, and other cloud storage services. Also supports media servers such as Plex, Emby, Jellyfin, Subsonic, and Navidrome.
+Supports playback of Local stored, BaiduDrive, AlibabaDrive, WebDAV, Google Drive, OneDrive, Dropbox, and other cloud storage services. Also supports media servers such as Plex, Emby, Jellyfin, Subsonic, and Navidrome.  
 **Some services may require a paid subscription. Please check the official website for details.**
 
 ![app-home-screen.jpg](app-home-screen.jpg)
