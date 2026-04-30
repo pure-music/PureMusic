@@ -1,5 +1,5 @@
 # Cotton Music
-[English](README.md) [中文](README.zh-CN.md)  
+[English](README.md) ｜ [中文](README.zh-CN.md)  
   
 
 Cotton Music official website: [https://music.caij.xyz/](https://music.caij.xyz/)  
