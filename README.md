@@ -5,6 +5,7 @@
 Cotton Music official website: [https://music.caij.xyz/](https://music.caij.xyz/)  
 Google Play: [Install](https://play.google.com/store/apps/details?id=com.caij.puremusic)  
 APK/PC downloads: [https://github.com/pure-music/PureMusic/releases](https://github.com/pure-music/PureMusic/releases)
+App Store: [https://apps.apple.com/cn/app/%E6%A3%89%E8%8A%B1%E9%9F%B3%E4%B9%90/id6752617064]
 
 If this project helps you, please consider following the developer [Caij](https://github.com/Caij). Thank you very much.
 
