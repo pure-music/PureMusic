@@ -4,8 +4,8 @@
 
 CottonMusic 棉花音乐 [官网](https://music.caij.xyz/)\
 Google Play: [Install](https://play.google.com/store/apps/details?id=com.caij.puremusic)\
-APK/PC 下载：<https://github.com/pure-music/PureMusic/releases>
-App Store: [https://apps.apple.com/cn/app](https://apps.apple.com/cn/app/%E6%A3%89%E8%8A%B1%E9%9F%B3%E4%B9%90/id6752617064)
+APK/PC 下载：<https://github.com/pure-music/PureMusic/releases>  
+Apple Store: [https://apps.apple.com/cn/app](https://apps.apple.com/cn/app/%E6%A3%89%E8%8A%B1%E9%9F%B3%E4%B9%90/id6752617064)
 
 如果你觉得对你有帮助**关注一下开发者** [Caij](https://github.com/Caij) 非常感谢
 
