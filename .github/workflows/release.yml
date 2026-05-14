@@ -80,6 +80,10 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
+      - name: Clean build cache
+        run: |
+          ./gradlew clean
+
       - name: Download desktop vlc binaries
         if: matrix.module == 'desktopApp'
         run: |
@@ -87,7 +91,6 @@ jobs:
 
       - name: Build
         run: |
-          ./gradlew clean
           ./gradlew ${{ matrix.module }}:${{ matrix.task }} ${{ matrix.params }}
 
       - uses: actions/upload-artifact@v4
