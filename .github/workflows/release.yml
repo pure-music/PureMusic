@@ -70,10 +70,10 @@ jobs:
           ref: ${{github.ref_name}}
           token: ${{secrets.GLOBAL_GITHUB_TOKEN}}
 
-      - name: set up JDK 21
+      - name: set up JDK 22
         uses: actions/setup-java@v3
         with:
-          java-version: '21'
+          java-version: '22'
           distribution: 'temurin'
           cache: gradle
 
