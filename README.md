@@ -28,5 +28,4 @@ Supports playback of Local stored, BaiduDrive, AlibabaDrive, WebDAV, Google Driv
 This project was originally based on *RetroMusicPlayer*, and the related code was open source.  
 The latest version has since been rewritten as a cross-platform application and is no longer open source.  
 
-![Star History Chart](https://api.star-history.com/svg?repos=pure-music/PureMusic&type=Date)
-
+[![Star History Chart](https://api.star-history.com/chart?repos=pure-music/PureMusic&type=date&legend=top-left&sealed_token=cj_UB1F-oP4LY_Xbq7Q-VumRPGZoPu-cQ6I0VCK2jVA8A8ILlQ-6a8tIpdN7oW6APobplFgYAnwyKlNoXO9v67z9YiiPJYVIsjWEVSbmjZ8uPqSpxE2LOkPWNSKM-2rO0iFq_tInLFRKKK-crD6MuT7nHRc4vXc5Ir2NWf8Wby9_crYS60uJTHjuStSy)](https://www.star-history.com/?repos=pure-music%2FPureMusic&type=date&legend=top-left)
