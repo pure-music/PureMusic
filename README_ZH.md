@@ -31,4 +31,4 @@ Apple Store: [https://apps.apple.com/cn/app](https://apps.apple.com/cn/app/%E6%A
 该项目早期复制于*RetroMusicPlayer*，相关代码已开源代码。\
 目前最新版本已经基于跨平台重写开发，不再开源。
 
-![Star History Chart](https://api.star-history.com/svg?repos=pure-music/PureMusic\&type=Date)
+[![Star History Chart](https://api.star-history.com/chart?repos=pure-music/PureMusic&type=date&legend=top-left&sealed_token=cj_UB1F-oP4LY_Xbq7Q-VumRPGZoPu-cQ6I0VCK2jVA8A8ILlQ-6a8tIpdN7oW6APobplFgYAnwyKlNoXO9v67z9YiiPJYVIsjWEVSbmjZ8uPqSpxE2LOkPWNSKM-2rO0iFq_tInLFRKKK-crD6MuT7nHRc4vXc5Ir2NWf8Wby9_crYS60uJTHjuStSy)](https://www.star-history.com/?repos=pure-music%2FPureMusic&type=date&legend=top-left)
