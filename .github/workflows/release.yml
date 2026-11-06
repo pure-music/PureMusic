@@ -33,13 +33,6 @@ jobs:
             task: bundleGoogleRelease
             params: -PversionLast=1 -Prelease=true
 
-          - os: macos-15-intel
-            target: dmg
-            arch: x86_64
-            module: desktopApp
-            task: packageReleaseDmg
-            params: -PdeviceType=2 -Prelease=true
-
           - os: macos-latest
             target: dmg
             arch: arm64
@@ -83,11 +76,6 @@ jobs:
       - name: Clean build cache
         run: |
           ./gradlew clean
-
-      - name: Download desktop vlc binaries
-        if: matrix.module == 'desktopApp'
-        run: |
-          ./gradlew ${{ matrix.module }}:vlcSetup
 
       - name: Build
         run: |
@@ -141,12 +129,6 @@ jobs:
           echo "version=$lastVersionName" >> $GITHUB_ENV
           cat ${{github.workspace}}/version.properties
 
-      - name: Download x86_64 dmg artifacts
-        uses: actions/download-artifact@v4
-        with:
-          name: artifacts_x86_64_dmg_${{ github.ref_name }}
-          path: artifacts/x86_64_dmg_${{ github.ref_name }}
-
       - name: Download x86_64 exe artifacts
         uses: actions/download-artifact@v4
         with:
@@ -185,7 +167,6 @@ jobs:
 
       - name: Rename pc artifacts
         run: |
-          mv "artifacts/x86_64_dmg_${{ github.ref_name }}/desktopApp/build/compose/binaries/main-release/dmg/Cotton Music-${{ env.version }}.dmg" "artifacts/CottonMusic_${{ github.ref_name }}_mac_cpu_inter.dmg"
           mv "artifacts/arm64_dmg_${{ github.ref_name }}/desktopApp/build/compose/binaries/main-release/dmg/Cotton Music-${{ env.version }}.dmg" "artifacts/CottonMusic_${{ github.ref_name }}_mac_cpu_apple.dmg"
           mv "artifacts/x86_64_exe_${{ github.ref_name }}/desktopApp/build/compose/binaries/main-release/exe/Cotton Music-${{ env.version }}.exe" "artifacts/CottonMusic_${{ github.ref_name }}_windows_x86_64.exe"
 
@@ -358,11 +339,6 @@ jobs:
             echo "$macDmgArmGithubBackUrl2" > "$macDmgArmBackFileName2"
             echo "$macDmgArmGithubBackUrl3" > "$macDmgArmBackFileName3"
           
-            macDmgInterGithubProxyUrl="https://v6.gh-proxy.org/https://github.com/pure-music/PureMusic/releases/download/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_mac_cpu_inter.dmg"
-            macDmgInterProxyFileName="/www/wwwroot/mirrors.musiccotton.com/temp/music/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_mac_cpu_inter.dmg.302"
-            macDmgInterBackFileName="/www/wwwroot/mirrors.musiccotton.com/temp/music/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_mac_cpu_inter.dmg.github.url"
-            echo "$macDmgInterGithubProxyUrl" > "$macDmgInterProxyFileName"
-            echo "$pcBackDownUrl" > "$macDmgInterBackFileName"
           
             mv "/www/wwwroot/mirrors.musiccotton.com/temp/music/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_arm64.apk" "/www/wwwroot/mirrors.musiccotton.com/files/music/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_arm64.apk"
             mv "$apk64ProxyFileName" "/www/wwwroot/mirrors.musiccotton.com/files/music/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_arm64.apk.github.url"
@@ -381,8 +357,6 @@ jobs:
             mv "$macDmgArmBackFileName2" "/www/wwwroot/mirrors.musiccotton.com/files/music/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_mac_cpu_apple.dmg.国内线路优化.url"
             mv "$macDmgArmBackFileName3" "/www/wwwroot/mirrors.musiccotton.com/files/music/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_mac_cpu_apple.dmg.edgeone.url"
             
-            mv "$macDmgInterProxyFileName" "/www/wwwroot/mirrors.musiccotton.com/files/music/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_mac_cpu_inter.dmg.302"
-            mv "$macDmgInterBackFileName" "/www/wwwroot/mirrors.musiccotton.com/files/music/${{ github.ref_name }}/CottonMusic_${{ github.ref_name }}_mac_cpu_inter.dmg.github.url"
       - name: delete cdn cache
         run: |    
           curl -X POST 'https://api.musiccotton.com/tencent/eo/clear' \
