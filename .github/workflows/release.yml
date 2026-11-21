@@ -102,6 +102,121 @@ jobs:
           curl -F "chat_id=-1002062702442" -F "caption=$showVersionName" -F document=@${{github.workspace}}/app/build/outputs/mapping/noadRelease/mapping.txt.gz -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendDocument"
 
 
+  build_ios:
+    name: iOS App Store Connect
+    if: ${{ startsWith(github.ref, 'refs/tags/') }}
+    permissions:
+      contents: read
+    concurrency:
+      group: ios-app-store-connect
+      cancel-in-progress: false
+    runs-on: xcode-27
+    timeout-minutes: 120
+    steps:
+      - name: Initialize CI paths
+        run: |
+          echo "SIGNING_DIR=$RUNNER_TEMP/ios-signing" >> "$GITHUB_ENV"
+          echo "EXPORT_OPTIONS_PLIST=$RUNNER_TEMP/ios-signing/ExportOptions.plist" >> "$GITHUB_ENV"
+
+      - uses: actions/checkout@v4
+        with:
+          repository: Caij/pure-music
+          ref: ${{ github.ref_name }}
+          token: ${{ secrets.GLOBAL_GITHUB_TOKEN }}
+          persist-credentials: false
+
+      - name: Select Xcode
+        env:
+          # Requires a runner with Xcode 27 installed; never fall back to Xcode 26.
+          XCODE_APP_PATH: /Applications/Xcode_27.app
+          MIN_IOS_SDK_MAJOR: '27'
+        run: |
+          if [[ ! -d "$XCODE_APP_PATH/Contents/Developer" ]]; then
+            echo "::error::Xcode 27 is required but not installed at $XCODE_APP_PATH. Use a runner with Xcode 27 and set XCODE_APP_PATH to its installed location."
+            exit 1
+          fi
+          sudo xcode-select --switch "$XCODE_APP_PATH/Contents/Developer"
+          xcodebuild -version
+          sdk_version="$(xcrun --sdk iphoneos --show-sdk-version)"
+          echo "Selected iOS SDK: $sdk_version"
+          if [[ "${sdk_version%%.*}" -lt "$MIN_IOS_SDK_MAJOR" ]]; then
+            echo "::error::iOS SDK $MIN_IOS_SDK_MAJOR or later is required; selected $sdk_version."
+            exit 1
+          fi
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '22'
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+
+      - name: Prepare CocoaPods
+        run: gem install cocoapods -v 1.16.2 --no-document
+
+      - name: Cache CocoaPods downloads
+        uses: actions/cache@v4
+        with:
+          path: ~/Library/Caches/CocoaPods
+          key: ${{ runner.os }}-${{ runner.arch }}-cocoapods-1.16.2-${{ hashFiles('iosApp/Podfile.lock') }}
+
+      - name: Prepare signing
+        id: signing
+        run: bash iosApp/ci/prepare-signing.sh
+
+      - name: Archive and export IPA
+        id: archive
+        env:
+          # All version fields come from the checked-out ios_version.properties.
+          UPLOAD_CRASHLYTICS: 'false'
+        run: bash iosApp/archive-ci.sh
+
+      - name: Upload to App Store Connect
+        env:
+          ASC_KEY_ID: ${{ steps.signing.outputs.key_id }}
+          ASC_ISSUER_ID: ${{ steps.signing.outputs.issuer_id }}
+          IPA_DIR: ${{ steps.archive.outputs.export_path }}
+          API_PRIVATE_KEYS_DIR: ${{ runner.temp }}/ios-signing/private_keys
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          ipas=("$IPA_DIR"/*.ipa)
+          if [[ ${#ipas[@]} -ne 1 ]]; then
+            echo '::error::Expected exactly one exported IPA.'
+            exit 1
+          fi
+          xcrun altool --upload-app --type ios --file "${ipas[0]}" \
+            --apiKey "$ASC_KEY_ID" --apiIssuer "$ASC_ISSUER_ID" \
+            2>&1 | tee "$RUNNER_TEMP/ios-archive/upload.log"
+          echo 'IPA uploaded. Check App Store Connect / TestFlight after Apple finishes processing.' >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Remove signing material
+        if: always()
+        run: |
+          [[ -n "${SIGNING_DIR:-}" ]] || exit 0
+          security delete-keychain "$SIGNING_DIR/signing.keychain-db" || true
+          for profile in "$SIGNING_DIR/profiles/"*.mobileprovision; do
+            [[ -f "$profile" ]] || continue
+            filename="$(basename "$profile")"
+            rm -f "$HOME/Library/MobileDevice/Provisioning Profiles/$filename"
+            rm -f "$HOME/Library/Developer/Xcode/UserData/Provisioning Profiles/$filename"
+          done
+          rm -rf "$SIGNING_DIR"
+
+      - name: Save IPA, dSYMs and logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ios-${{ github.run_number }}-${{ github.run_attempt }}
+          retention-days: 7
+          if-no-files-found: ignore
+          path: |
+            ${{ runner.temp }}/ios-archive/*.log
+            ${{ runner.temp }}/ios-archive/export/*.ipa
+            ${{ runner.temp }}/ios-archive/iosApp.xcarchive/dSYMs/
+
   release:
     needs: build
     runs-on: ubuntu-latest
