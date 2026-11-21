@@ -22,12 +22,12 @@ Supports playback of Local stored, BaiduDrive, AlibabaDrive, WebDAV, Google Driv
   <img src="screenshots/Screenshot_20261121_173657.png" alt="1" width="240" />
   <img src="screenshots/Screenshot_20261027_153343.png" alt="2" width="240" />
   <img src="screenshots/Screenshot_20261121_173709.png" alt="3" width="240" />
-  <img src="screenshots/Screenshot_20261121_173727.png" alt="3" width="240" />
 </p>
 
 <p align="center">
-  <img src="screenshots/Screenshot_20261018_173630.png" alt="竖屏黑胶界面" width="280" />
-  <img src="screenshots/Screenshot_20261018_173831.png" alt="竖屏歌词界面" width="280" />
+  <img src="screenshots/Screenshot_20261121_173727.png" alt="3" width="240" />
+  <img src="screenshots/Screenshot_20261018_173630.png" alt="竖屏黑胶界面" width="240" />
+  <img src="screenshots/Screenshot_20261018_173831.png" alt="竖屏歌词界面" width="240" />
 </p>
 
 <p align="center">
