@@ -31,12 +31,26 @@ Supports playback of Local stored, BaiduDrive, AlibabaDrive, WebDAV, Google Driv
 </p>
 
 <p align="center">
-  <img src="screenshots/Screenshot_20261018_173855.png" alt="横屏黑胶界面" width="800" />
+  <img src="screenshots/Screenshot_20261018_173855.png" alt="横屏黑胶界面" width="720" />
 </p>
 
 <p align="center">
-  <img src="screenshots/Screenshot_20261018_173847.png" alt="横屏歌词界面" width="800" />
+  <img src="screenshots/Screenshot_20261018_173847.png" alt="横屏歌词界面" width="720" />
 </p>
+
+<p align="center">
+  <img src="screenshots/Screenshot_hor1.png" alt="横屏歌词界面" width="720" />
+</p>
+
+<p align="center">
+  <img src="screenshots/Screenshot_hor2.png" alt="横屏歌词界面" width="720" />
+</p>
+
+
+<p align="center">
+  <img src="screenshots/Screenshot_hor3.png" alt="横屏歌词界面" width="720" />
+</p>
+
 
 
 # Music Tools
