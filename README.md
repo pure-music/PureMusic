@@ -18,7 +18,12 @@ Currently supports Android, iOS, macOS, Windows, and Linux, with more platforms 
 Supports playback of Local stored, BaiduDrive, AlibabaDrive, WebDAV, Google Drive, OneDrive, Dropbox, and other cloud storage services. Also supports media servers such as Plex, Emby, Jellyfin, Subsonic, and Navidrome.  
 **Some services may require a paid subscription. Please check the official website for details.**
 
-![app-home-screen.jpg](app-home-screen.jpg)
+<p align="center">
+  <img src="screenshots/Screenshot_20261121_173657.png" alt="1" width="240" />
+  <img src="screenshots/Screenshot_20261027_153343.png" alt="2" width="240" />
+  <img src="screenshots/Screenshot_20261121_173709.png" alt="3" width="240" />
+</p>
+
 
 # Music Tools
 [music-tag-web](https://github.com/xhongc/music-tag-web) A music tag editor for editing metadata in local music files. It supports mainstream file formats and also provides backend support for the Subsonic service.  
